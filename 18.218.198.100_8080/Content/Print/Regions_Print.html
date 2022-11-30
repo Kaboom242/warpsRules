@@ -1,0 +1,953 @@
+<html>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Print/Regions_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:04:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Print Regions</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style></head>
+<style type='text/css'>
+    
+        body { width: 800px;}
+        page {
+            height: 11in;
+            width: 8.5in; /*825px;*/
+            background: white; 
+            box-sizing: border-box;
+            border-radius: 0px;
+            border-style: solid;
+            /*Print Helper Borders*/
+            /*border-color: <?=HSL('Red',true,90)?>;*/
+            /*border-width: 0.125in 0.25in 1.20in 0.25in;*/
+            /*Display Borders*/
+            border-color: white;
+            border-width: 0.125in 0.25in 1.20in 0.25in;
+            margin: 1px;
+            /*overflow: hidden;*/
+                
+            position: relative;
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-rows: min-content;
+            grid-gap: 2px;
+            
+            color: black;
+            font-size: 10px;
+        }
+        RegionPage {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            grid-auto-flow: column dense;
+            grid-gap:1px;
+        }
+        RegionTitle {
+            border: solid 0px black;
+            border-radius: 4px 4px 0px 0px;
+            padding: 1px 2px 1px 2px;
+            font-size: 20px;
+            font-weight: 700;
+            grid-column: 1/-1;
+            background:  var(--Purple-4);
+            color: white;
+        }
+        InnerTitle {
+            border: solid 0px black;
+            border-radius: 0px 0px 0px 0px;
+            padding: 0px 1px 1px 1px;
+            font-size: 15px;
+            font-weight: 700;
+            grid-column: 1/-1;
+            background:  var(--Purple-4);
+            color: white;
+        }
+        InnerContainer {
+            border: solid 3px var(--Purple-4);
+            border-radius: 4px;
+            /*padding: 1px 2px 1px 2px;*/
+            margin:0px 2px 0px 2px;
+            display:grid;
+        }
+        InnerSectionContainer {
+            /*padding: 1px 2px 1px 2px;*/
+            width: 100%;
+            padding:1px;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            grid-auto-flow: column dense;
+            grid-gap:1px;
+        }
+        SectionContainer {
+            border: solid 3px var(--Purple-3);
+            border-radius: 4px;
+            /*padding: 1px 2px 1px 2px;*/
+            width: 100%;
+        }
+        SectionTitle {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            background:  var(--Purple-3);
+            color: white;
+            width: 100%;
+            padding-left: 5px; 
+            padding-bottom: 2px; 
+            margin-bottom:1px;
+            /*right:0px;*/
+        }
+        gf { 
+            font-weight: 700;
+            font-size: 80%;
+        }
+        innerforage { 
+            font-weight: 500;
+            font-size: 10px;
+            display:grid;
+            grid-template-columns:auto 1fr;
+            grid-gap:2px;
+        }
+        tabDiv {
+            padding-left: 5px;
+            margin-bottom: 1px;
+            display: flex;
+        }
+        
+        .green1bg {
+            background: var(--Green-1);
+        }
+        .green1border {
+            border-color: var(--Green-1);
+        }
+        
+        .green2bg {
+            background: var(--Green-2);
+        }
+        .green2border {
+            border-color: var(--Green-2);
+        }
+        
+        .green3bg {
+            background: var(--Green-3);
+        }
+        .green3border {
+            border-color: var(--Green-3);
+        }
+        
+        .green4bg {
+            background: var(--Green-4);
+        }
+        .green4border {
+            border-color: var(--Green-4);
+        }
+        
+        .turqouise3bg {
+            background: var(--Turquoise-3);
+        }
+        .turqouise3border {
+            border-color: var(--Turquoise-3);
+        }
+        
+        .turqouise4bg {
+            background: var(--Turquoise-4);
+        }
+        .turqouise4border {
+            border-color: var(--Turquoise-4);
+        }
+        
+        .yellow2bg {
+            background: var(--Yellow-2);
+        }
+        .yellow2border {
+            border-color: var(--Yellow-2);
+        }
+        
+        .yellow3bg {
+            background: var(--Yellow-3);
+        }
+        .yellow3border {
+            border-color: var(--Yellow-3);
+        }
+        
+        .yellow4bg {
+            background: var(--Yellow-4);
+        }
+        .yellow4border {
+            border-color: var(--Yellow-4);
+        }
+        
+        .purple4bg {
+            background: var(--Purple-4);
+        }
+        .purple4border {
+            border-color: var(--Purple-4);
+        }
+        
+        .blue2bg {
+            background: var(--Blue-2);
+        }
+        .blue2border {
+            border-color: var(--Blue-2);
+        }
+        
+        .blue3bg {
+            background: var(--Blue-3);
+        }
+        .blue3border {
+            border-color: var(--Blue-3);
+        }
+        
+        .blue4bg {
+            background: var(--Blue-4);
+        }
+        .blue4border {
+            border-color: var(--Blue-4);
+        }
+        
+    </style>
+
+<body style='background:black;'>
+    <div style='display:grid; grid-gap:10px; grid-auto-flow:rows;'><RegionPage style='background:white; color:black;'><RegionTitle class='yellow2bg'>Plains <f10>Arid, Temperate</f10></RegionTitle><SectionContainer class='yellow2border' style='font-size:10px; grid-column:1/-1; padding:1px 4px 1px 4px;'>Area of sparse woodlands along with grass and shrubs.</SectionContainer><SectionContainer class='yellow2border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Temperature</div><div style='padding:1px 2px 1px 2px; font-size:9px;'>
+    <b>Fall/Spring/Winter:</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <sc>0S:</sc> No Exposure. <sc>1S:</sc> Heat 1. <sc>2S:</sc> Heat 2. 
+    <div style='height:1px;'></div>
+    <b>Summer:</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <sc>0S/1S:</sc> Heat 1. <sc>2S:</sc> Heat 2. <sc>3S:</sc> Heat 3.
+    <div style='height:1px;'></div>
+    <b>Winter:</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <sc>0S:</sc> No Exposure. <sc>1S:</sc> Cold 1. <sc>2S:</sc> Cold 2. 
+</div></div></SectionContainer><SectionContainer class='yellow2border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><SectionTitle class='yellow2bg' style='font-size:14px;'>Scenery</SectionTitle><div style='display:grid; grid-gap:2px; grid-template-columns:1fr;'><div class='' style='font-size:9px; background:lightgrey; padding:1px;'><b>Grass (Horse Feed):</b> Available in all Spaces.</div><div style='padding:0px 0px 1px 0px; font-size:9px;'><div style='display:grid; grid-gap:2px 0px; grid-template-columns:auto auto auto 1fr 120px;'>
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 1. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Rolling Hills</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Dirty Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>slow rounded hills, curve over the landscape, dusted with dirt and grass.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 2. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Dusty Plains</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Once grassy feilds, now lay endless dirt and dust, rare to even find a large rock.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Dust Storm</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 3. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Muddy Plains</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A long stretch of muddy hills and pits seem to go on for miles.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> +1 Travel Fatigue</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 4. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Dirt Plains</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A flat expanse of dirt with small and sparse patched of grass goes on for miles.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 5. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Bone Field</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>/<div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>/<div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>/<div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A valley of bones and rocks where many anials came to die.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 6. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Rocky Grass</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Green grass land, small sharp rocky cliffs and boulders break up the blankets of green. A small mossy spring,  trickles down part of a rocky cliff.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Short Cliffs</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 7. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Lone Oak</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Soft grassy hills, with a lone Okay tree atop a large hill</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 8. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Geyser</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Dirty Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>The plains are broken by a small pool and geyser. Many birds make this palce their home.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 9. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Sparse Fields</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Large patches of dense grass are broken up by rocks, hills, and dirt.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 10. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Granite Pillars</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Large Granite Stones reach for the sky, popping out of green grassy feilds.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 11. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Dense Grass</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Dense files of grass go on as far as the eye can see.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 12. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Winding River</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A winding river walks it's way through the hill side rocks and grass.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Rapids</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 13. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Muddy Ponds</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Swallow Ponds surrounded by tall brush, the earth squishes underneath, the ponds all but disapear in the summer.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b>Muddy Ground: +1 Travel Fatigue</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 14. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Grown Over battlefeild</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Grass has all but hidden the war, rusted weapons and earthen bodies are strewn about.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 15. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Shrubbery Hills</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Hills covered in dense shrubs and other plants roll into the horizon.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 16. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Blue-Green Lake</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A large blue green lake covers the horizon. Many animals come to drink the cool water.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Wide Lake</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 17. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Lush Grassland</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A dense grass covers the rolling hillsides. Animals can be heard moving through it.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 18. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Flower Fields</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Sprinled through the green grass are bright purples, whites and yellows of new sprouting flowers</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Rich Grasses</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 19. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Wandering River</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A cool, deep river slips through the grassy hills. The current can be quiet quick.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> River barrier</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 20. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Babbling Creeks</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Small creeks move through the grass, coupled with a a few trees</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        </div></div></div></SectionContainer><SectionContainer class='yellow2border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><SectionTitle class='yellow2bg' style='font-size:14px;'>
+                    Events
+                    <span style='font-size:9px;'>&nbsp;&nbsp; 1-8 None,&nbsp;&nbsp; 9-10: Weather,&nbsp;&nbsp; 11-12: Obstacle,&nbsp;&nbsp; 13: Interior/Entrance,&nbsp;&nbsp;
+                    14-15: Boon,&nbsp;&nbsp; 16-17: Inhabitants,&nbsp;&nbsp; 18-19: Encounters,&nbsp;&nbsp; 20: Hooks</span>
+                </SectionTitle><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; flex-direction:column;'>
+                            <div>Weather</div>
+                            <div style='font-size:7px; display:inline-block;'>
+                                <div>
+                                    Daily Progression (d6)
+                                    <br>1/2: End Event
+                                    <br>3: Less Severe
+                                    <br>4/5: No Change
+                                    <br>6: More Severe
+                                </div>
+                            </div>
+                        </div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 4 : </span></b></div><div><b>  Drizzling Rain:</b>  <span style='padding: 0px 2px;'>A wet drizzle makes starting a fire impossible. <b>Wet</b></span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 - 8 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Spring/Winter/Fall</div> Storm:</b>  <span style='padding: 0px 2px;'>A wet drizzle makes starting a fire impossible. <b>Wet</b>, <b>+1 Cold Exposure</b>, <b>+1 Travel Fatigue</b></span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Spring/Winter/Fall</div> Lightning Storm:</b>  <span style='padding: 0px 2px;'>
+        The sky is filled with rain and clouds. Thunder and lightining periodically crash down.
+        <br> <b>Wet</b>, <b>+1 Cold Exposure</b>, <b>+1 Travel Fatigue</b>, Each Shift: <b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <sc>4S:</sc> Lightning starts fire nearby. <sc>5S:</sc> Random Character outside takes <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Blast Dmg.
+    </span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b>  Dust Storm:</b>  <span style='padding: 0px 2px;'>
+        Wind kicks up a hige clud of dust in the area making it difficult to see and breathe.
+        <br> <b>+1 Travel Fatigue</b>, Characters attempt Sense Challenge: <sc>0S:</sc> Resist 1 Fatigue w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div> if not in Shelter. <sc>2S:</sc> Find shelter from the Dust. 
+    </span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b>  Tornado:</b>  <span style='padding: 0px 2px;'>
+        A swirl of wind and dust creates a tornado powerful enough to lift large rocks and animals alike. 
+        <br> <b>+1 Cold Exposure</b>, <b>+1 Travel Fatigue</b> 
+        <br> Characters attempt <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div> Challenge: <sc>2S:</sc> Avoid Tornado. <sc>1S or Less:</sc> Must outrun Tornado.
+        <br> Outrun Tornado: 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div> Challenge <sc>0S:</sc> Get pulled into Tornado. Impact: <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wounds. <sc>1S:</sc> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div> Challenge to reduce Impact: <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound from debris.
+
+    </span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Obstacle</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 4 : </span></b></div><div><b>  Muddy Ground:</b>  <span style='padding: 0px 2px;'>The ground is covered in thick mud, making travel difficult. <b>+1 Travel Fatigue</b></span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 - 7 : </span></b></div><div><b>  Steep Hills:</b>  <span style='padding: 0px 2px;'>The hills ahead are rocky and steep, and slow down travel. <b>+1 Travel Fatigue</b></span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 - 10 : </span></b></div><div><b>  Wide River/Lake:</b>  <span style='padding: 0px 2px;'>A wide river can only be crossed by swimming or going a Travel Space around. Resist 2 Fatigue w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div>.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Very Rough</div> River Rapids:</b>  <span style='padding: 0px 2px;'>A creek cross through a rocky hillside with swift white water. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jump across boulders:  <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div>+<div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div> (2 times) <sc>2S:</sc> No Effect.	<sc>1S:</sc> +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Impact Wound. (Wet)  <fc>0S:</fc> +1 Fatigue. +<b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Impact Wound. (Wet)</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Off Path</div> Shallow Cliff:</b>  <span style='padding: 0px 2px;'>A rocky hillside requires characters to either go around or climb. 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div> <sc>2S:</sc> +1 Fatigue	<sc>1S:</sc> +1 Fatigue. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Impact Wound. <fc>0S:</fc> +2 Fatigue. +<b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Impact Wound.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b>  Large River:</b>  <span style='padding: 0px 2px;'>Must go around $1S<div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Spaces. Requires Water Vessel to Pass. Resist 1-3 Fatigue per Space (See Water Vessel).</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'><div style='text-align:center;'>Interior/ Entrance</div></div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Small Earthen crack:</b>  <span style='padding: 0px 2px;'>The earth seemingly opened up in this spot revealing whats below</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Burrow:</b>  <span style='padding: 0px 2px;'>A Med sized creature has been digging, a large amount of piled dirt sits outside the burrow.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Sink Hole:</b>  <span style='padding: 0px 2px;'>A circlur hole jutting down.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Muddy Cave:</b>  <span style='padding: 0px 2px;'>Rocks and mudd form a half collapsed cave. The ground is rough and uncertain and little light enters.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Bone Structure:</b>  <span style='padding: 0px 2px;'>A structure mostly made of bones and rocks is built around a rocky cave. It feels very old.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Boon</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Old Campsite:</b>  <span style='padding: 0px 2px;'>Firepit with wood, if searching around can find some arrows, and old knife</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Fake Rock:</b>  <span style='padding: 0px 2px;'>Large rock can be opened up and gold found inside. Stick around and bandits might show up.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Rich Grasses:</b>  <span style='padding: 0px 2px;'>A patch of earth has vibrant plantlife containing some rare herbs. Gain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Abandoned Kill:</b>  <span style='padding: 0px 2px;'>A creature has died recently but the hunter never claimed his kill for some reason. Gain 7 Raw Meat.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Inhabitants</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Hermit:</b>  <span style='padding: 0px 2px;'>An old practitioner of shamanistic practices lives in the fileds far from civilization.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Group of 4 Adventures, heavy wounded, one missing a leg, another missing a hand. </span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Hunter and son, out searching for game for a few days.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>3 Dwarves pulling a wagon full of rocks</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Soldiers riding horses, protecting the land</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Farming Family, with everything they own and 1 sickly horse looking worse for wear.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Fancy Carriage with 2 Good Horses, 4 heavily armed gaurds, escort a noble of high standing</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Fortification:</b>  <span style='padding: 0px 2px;'>Highway Bandits have created a "Toll road"</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Fortification:</b>  <span style='padding: 0px 2px;'>Kings Soldiers, defending the road established a "Toll"</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b>  Fortification:</b>  <span style='padding: 0px 2px;'>Bandits Hidden Hideout</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Village:</b>  <span style='padding: 0px 2px;'>A small collection of huts is built around a watering hole. Some pasture animals wander the outskirts.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b>  Outpost:</b>  <span style='padding: 0px 2px;'>A small fort is dug into the earth, with various soldiers patrolling the nearby area.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Caravan:</b>  <span style='padding: 0px 2px;'>2 Mechants, 3 Gaurds, and 3 horse loaded up.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 4 : </span></b></div><div><b>  Hell Pig:</b>  <span style='padding: 0px 2px;'>A pack of 3 to 7 Hell Pig salks the party, hoping ofr a meal.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 - 8 : </span></b></div><div><b>  Giant Cat:</b>  <span style='padding: 0px 2px;'>1 to 3 Giant Cats stalk the area, and may find the party a source of food if they are not careful.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 - 12 : </span></b></div><div><b>  Gnolls:</b>  <span style='padding: 0px 2px;'>A band of 3 to 6 Gnolls moves throuhg this area, robbing and killing anyone to weak to stop them</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 16 : </span></b></div><div><b>  Dire Elephants:</b>  <span style='padding: 0px 2px;'>1 Massive Dire Elephant, likes to keep its distance, but if the party gets close will charge them down.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>17 - 19 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Lizardmen:</b>  <span style='padding: 0px 2px;'>A hunting party of 2 to 5 Lizardmen stalks through the area.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>20 - 22 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Terror Bird:</b>  <span style='padding: 0px 2px;'>This area is hunting ground for a ground of 2-6 Terror Birds which chase their quary across the plains.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>23 - 25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Rhino:</b>  <span style='padding: 0px 2px;'>1-2 Dire Rhinos like to silently grass, butt will charge if provoked.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 - 28 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Chimera:</b>  <span style='padding: 0px 2px;'>1 best not lock eyes with one, will hunt the party down, for a meal or sport.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>29 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Cyclops:</b>  <span style='padding: 0px 2px;'>A cyclops has a cave in the area which he occasionaly leaves to hunt on anyone unlucky enough to be nearby.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>30 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Drake:</b>  <span style='padding: 0px 2px;'>A nest of 2-4 Drakes has been made on the cliffs nearby, and they may hunt the party for food if seen.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>31 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Skeletons:</b>  <span style='padding: 0px 2px;'>A slaughtered village has cursed the men who attacked it, who now hold a barren fort as undead guardians.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Traveler's Scream:</b>  <span style='padding: 0px 2px;'>Traveler is under attack by bandits.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Localized Storm:</b>  <span style='padding: 0px 2px;'>On the horrizon the party spots dark clouds that seem to stay unmoving above a certain point. </span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Slave Trade:</b>  <span style='padding: 0px 2px;'>Party encounters a group of slaves being carted off by some guards</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Burning Village:</b>  <span style='padding: 0px 2px;'>A village is being ravaged by a band gnolls, possible uner orders from a local warlord.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Hunting Party:</b>  <span style='padding: 0px 2px;'>A nearby settlement has decided to hunt a nearby Dire Elephant, hoping it's tusks will being good fortune. They are willing to pay those who wish to come along for the fight.</span> </div></div></div></div><div></div></SectionContainer></RegionPage></div><page></page>
+</body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Print/Regions_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:04:36 GMT -->
+</html>

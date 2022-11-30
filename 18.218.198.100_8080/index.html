@@ -1,0 +1,574 @@
+<style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='Resources/style.css'><link rel='stylesheet' type='text/css' href='Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><html>
+    
+<!-- Mirrored from 18.218.198.100:8080/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:00:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <title>Index</title>
+        <style>
+            body {
+                color: white;
+                background-color: black;
+            }
+            a {
+                color: white;
+                padding-left: 20px;
+            }
+            .folder {
+                font-size: 26px;
+            }
+            .folderContainer {
+                padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style='padding: 10px; margin-bottom: 100px;'>
+            <link rel="preconnect" href="https://fonts.googleapis.com/">
+            <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jomhuria&amp;display=swap" rel="stylesheet">
+            <div style="font-size: 156px;  font-family: 'Jomhuria', cursive; line-height: 70px; margin-top: 10px;">
+                WARPS
+            </div>
+            <a href='Content/Compendiums/Rule_Compendium.html' target='_blank'>Rules</a>
+            <a href='Content/Print/Rules_Print.html' target='_blank'>Rules (Print)</a>
+            <div>
+                <div style='Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'> Items</div>
+                <a href='Content/Pages/Item_Page.html' target='_blank'>Page</a>
+                <a href='Content/Compendiums/Items_Compendium.html' target='_blank'>Compendium</a>
+                <a href='Content/Compendiums/Carrier_Compendium.html' target='_blank'>Carriers</a>
+                <a href='Content/Compendiums/Vehicle_Compendium.html' target='_blank'>Vehicle</a>
+            </div>
+            <div>
+                <div style='Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'> Abilities</div>
+                <a href='Content/Pages/Abilities_Page.html' target='_blank'>Page</a>
+                <a href='Content/Compendiums/Talents_Compendium.html' target='_blank'>Talents</a>
+                <a href='Content/Compendiums/Class_Compendium.html' target='_blank'>Classes</a>
+            </div>
+            <div>
+                <div style='Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'> Aspects</div>
+                <a href='Content/Pages/Aspect_Page.html' target='_blank'>Page</a>
+                <a href='Content/Compendiums/Aspect_Compendium.html' target='_blank'>Compendium</a>
+            </div>
+            <div>
+                <div style='Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'> Character</div>
+                <a href='Content/Compendiums/CharacterSheet_Compendium.html' target='_blank'>Character Sheets</a>
+                <a href='Content/Compendiums/Culture_Compendium.html' target='_blank'>Cultures</a>
+                <a href='Content/Print/BackgroundCard_Print.html' target='_blank'>Backgrounds</a>
+            </div>
+            <div>
+                <div style='Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'> Settlement Info </div>
+                <a href='Content/Print/Settlements/VillageGeneral.html' target='_blank'>Village</a>
+                <a href='Content/Print/Settlements/TownGeneral.html' target='_blank'>Town</a>
+                <a href='Content/Print/Settlements/CityGeneral.html' target='_blank'>City</a>
+            </div>
+            <div>
+                <div style='Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'> Region </div>
+                <a href='Content/Pages/Setting_Page.html' target='_blank'>Settings</a>
+                <a href='Content/Compendiums/Region_Compendium.html' target='_blank'>Regions</a>
+                <a href='Content/Compendiums/Ocean_Compendium.html' target='_blank'>Oceans</a>
+            </div>
+            <div>
+                <div style=' Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'>Monsters</div>
+                <div style='display: flex; flex-wrap: wrap; max-width: 700px;'>
+                    <a href='Content/Compendiums/Monsters/Aberration_Compendium.html' target='_blank'>Aberrations</a>
+                    <a href='Content/Compendiums/Monsters/Amphibians_Compendium.html' target='_blank'>Amphibians</a>
+                    <a href='Content/Compendiums/Monsters/Angels_Compendium.html' target='_blank'>Angels</a>
+                    <a href='Content/Compendiums/Monsters/Aquatic_Compendium.html' target='_blank'>Aquatic</a>
+                    <a href='Content/Compendiums/Monsters/Artificial_Compendium.html' target='_blank'>Artificial</a>
+                    <a href='Content/Compendiums/Monsters/Birds_Compendium.html' target='_blank'>Birds</a>
+                    <a href='Content/Compendiums/Monsters/Chimeric_Compendium.html' target='_blank'>Chimerics</a>
+                    <a href='Content/Compendiums/Monsters/Cursed_Compendium.html' target='_blank'>Cursed</a>
+                    <a href='Content/Compendiums/Monsters/Demons_Compendium.html' target='_blank'>Demons</a>
+                    <a href='Content/Compendiums/Monsters/Dinosaur_Compendium.html' target='_blank'>Dinosaur</a>
+                    <a href='Content/Compendiums/Monsters/Dragons_Compendium.html' target='_blank'>Dragons</a>
+                    <a href='Content/Compendiums/Monsters/Elf_Dwarf_Compendium.html' target='_blank' style='white-space: nowrap;'>Elves and Dwarves</a>
+                    <a href='Content/Compendiums/Monsters/Ghosts_Compendium.html' target='_blank'>Ghosts</a>
+                    <a href='Content/Compendiums/Monsters/Goblinoid_Compendium.html' target='_blank'>Goblinoids</a>
+                    <a href='Content/Compendiums/Monsters/Humans_Compendium.html' target='_blank'>Humans</a>
+                    <a href='Content/Compendiums/Monsters/Insectoids_Compendium.html' target='_blank'>Insectoids</a>
+                    <a href='Content/Compendiums/Monsters/Mammal_Compendium.html' target='_blank'>Mammals</a>
+                    <a href='Content/Compendiums/Monsters/Ogroid_Compendium.html' target='_blank'>Ogroid</a>
+                    <a href='Content/Compendiums/Monsters/OtherSapient_Compendium.html' target='_blank' style='white-space: nowrap;'>Other Sapient</a>
+                    <a href='Content/Compendiums/Monsters/Plant_Compendium.html' target='_blank'>Plants</a>
+                    <a href='Content/Compendiums/Monsters/Reptiles_Compendium.html' target='_blank'>Reptiles</a>
+                    <a href='Content/Compendiums/Monsters/Undead_Compendium.html' target='_blank'>Undead</a>
+                    <a href='Content/Compendiums/Monsters/Underground_Compendium.html' target='_blank'>Underground</a>
+                    <a href='Content/Compendiums/Monsters/Vampires_Compendium.html' target='_blank'>Vampires</a>
+                </div>
+            </div>
+            <div>
+                <div style='Font-size: 32px; margin:10px 10px 0px 10px; font-weight: 600;'> GM Resources</div>
+                <a href='Content/Print/TimeTable_Print.html' target='_blank'>Time Table</a> 
+                <a href='Content/Print/GMStatus_Print.html' target='_blank'>Gm Status Cards</a> 
+            </div>
+        </div>
+        Version: 2022-11-14<div class='folderContainer'><div class='folder'>Content</div>
+<div>
+<div class='folderContainer'><div class='folder'>Combat Calculator</div>
+<div>
+<div><a href='Content/Combat%20Calculator/combatCalculator.html' target='_blank'>combatCalculator.php</a></div><div><a href='Content/Combat%20Calculator/combatCalculator2.html' target='_blank'>combatCalculator2.php</a></div></div>
+</div>
+<div class='folderContainer'><div class='folder'>Compendiums</div>
+<div>
+<div class='folderContainer'><div class='folder'>Monsters</div>
+<div>
+<div><a href='Content/Compendiums/Monsters/Aberration_Compendium.html' target='_blank'>Aberration_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Amphibians_Compendium.html' target='_blank'>Amphibians_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Angels_Compendium.html' target='_blank'>Angels_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Aquatic_Compendium.html' target='_blank'>Aquatic_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Birds_Compendium.html' target='_blank'>Birds_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Chimeric_Compendium.html' target='_blank'>Chimeric_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Cursed_Compendium.html' target='_blank'>Cursed_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Demons_Compendium.html' target='_blank'>Demons_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Dinosaur_Compendium.html' target='_blank'>Dinosaur_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Dragons_Compendium.html' target='_blank'>Dragons_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Elf_Dwarf_Compendium.html' target='_blank'>Elf_Dwarf_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Ghosts_Compendium.html' target='_blank'>Ghosts_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Goblinoid_Compendium.html' target='_blank'>Goblinoid_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Humans_Compendium.html' target='_blank'>Humans_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Insectoids_Compendium.html' target='_blank'>Insectoids_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Mammal_Compendium.html' target='_blank'>Mammal_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Ogroid_Compendium.html' target='_blank'>Ogroid_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/OtherSapient_Compendium.html' target='_blank'>OtherSapient_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Plant_Compendium.html' target='_blank'>Plant_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Reptiles_Compendium.html' target='_blank'>Reptiles_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Undead_Compendium.html' target='_blank'>Undead_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Underground_Compendium.html' target='_blank'>Underground_Compendium.php</a></div><div><a href='Content/Compendiums/Monsters/Vampires_Compendium.html' target='_blank'>Vampires_Compendium.php</a></div></div>
+</div>
+<div><a href='Content/Compendiums/Aspect_Compendium.html' target='_blank'>Aspect_Compendium.php</a></div><div><a href='Content/Compendiums/Carrier_Compendium.html' target='_blank'>Carrier_Compendium.php</a></div><div><a href='Content/Compendiums/CharacterSheet_Compendium.html' target='_blank'>CharacterSheet_Compendium.php</a></div><div><a href='Content/Compendiums/Class_Compendium.html' target='_blank'>Class_Compendium.php</a></div><div><a href='Content/Compendiums/Culture_Compendium.html' target='_blank'>Culture_Compendium.php</a></div><div><a href='Content/Compendiums/Items_Compendium.html' target='_blank'>Items_Compendium.php</a></div><div><a href='Content/Compendiums/Ocean_Compendium.html' target='_blank'>Ocean_Compendium.php</a></div><div><a href='Content/Compendiums/Region_Compendium.html' target='_blank'>Region_Compendium.php</a></div><div><a href='Content/Compendiums/Rule_Compendium.html' target='_blank'>Rule_Compendium.php</a></div><div><a href='Content/Compendiums/Talents_Compendium.html' target='_blank'>Talents_Compendium.php</a></div><div><a href='Content/Compendiums/Vehicle_Compendium.html' target='_blank'>Vehicle_Compendium.php</a></div><div><a href='Content/Compendiums/monsternotes.txt' target='_blank'>monsternotes.txt</a></div></div>
+</div>
+<div class='folderContainer'><div class='folder'>Print</div>
+<div>
+<div class='folderContainer'><div class='folder'>Settlements</div>
+<div>
+<div><a href='Content/Print/Settlements/ArcadiaCity.html' target='_blank'>ArcadiaCity.php</a></div><div><a href='Content/Print/Settlements/CityGeneral.html' target='_blank'>CityGeneral.php</a></div><div><a href='Content/Print/Settlements/ColdrockCity.html' target='_blank'>ColdrockCity.php</a></div><div><a href='Content/Print/Settlements/TownGeneral.html' target='_blank'>TownGeneral.php</a></div><div><a href='Content/Print/Settlements/VillageGeneral.html' target='_blank'>VillageGeneral.php</a></div></div>
+</div>
+<div><a href='Content/Print/Abilities_Print.html' target='_blank'>Abilities_Print.php</a></div><div><a href='Content/Print/BackgroundCard_Print.html' target='_blank'>BackgroundCard_Print.php</a></div><div><a href='Content/Print/Carrier_Print.html' target='_blank'>Carrier_Print.php</a></div><div><a href='Content/Print/Character_Print.html' target='_blank'>Character_Print.php</a></div><div><a href='Content/Print/GMStatus_Print.html' target='_blank'>GMStatus_Print.php</a></div><div><a href='Content/Print/Inventory_Print.html' target='_blank'>Inventory_Print.php</a></div><div><a href='Content/Print/Items_Print.html' target='_blank'>Items_Print.php</a></div><div><a href='Content/Print/MonsterStatusCard_Print.html' target='_blank'>MonsterStatusCard_Print.php</a></div><div><a href='Content/Print/Monsters_Print.html' target='_blank'>Monsters_Print.php</a></div><div><a href='Content/Print/NPCStatusCard_Print.html' target='_blank'>NPCStatusCard_Print.php</a></div><div><a href='Content/Print/Regions_Print.html' target='_blank'>Regions_Print.php</a></div><div><a href='Content/Print/Rules_Print.html' target='_blank'>Rules_Print.php</a></div><div><a href='Content/Print/TimeTable_Print.html' target='_blank'>TimeTable_Print.php</a></div></div>
+</div>
+<div class='folderContainer'><div class='folder'>X-Men</div>
+<div>
+<div><a href='Content/X-Men/X-Men_Compendium.html' target='_blank'>X-Men_Compendium.php</a></div></div>
+</div>
+<div class='folderContainer'><div class='folder'>Pages</div>
+<div>
+<div><a href='Content/Pages/Abilities_Page.html' target='_blank'>Abilities_Page.php</a></div><div><a href='Content/Pages/Aspect_Page.html' target='_blank'>Aspect_Page.php</a></div><div><a href='Content/Pages/Item_Page.html' target='_blank'>Item_Page.php</a></div><div><a href='Content/Pages/Setting_Page.html' target='_blank'>Setting_Page.php</a></div></div>
+</div>
+</div>
+</div>
+    </body>
+<html>

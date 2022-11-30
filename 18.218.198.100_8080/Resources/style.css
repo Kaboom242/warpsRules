@@ -1,0 +1,247 @@
+#page {
+    box-sizing: border-box;
+     
+    margin:0px;
+    padding: 5px 15px 5px 5px;
+    background: white;
+    height: 1038px; /*3300px;*/
+    width: 800px; /* 2550*/
+    /*max-height: 1024px;
+    max-width: 790px;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+    
+    display: grid;
+    grid-template-columns: repeat(37, 16.440px); 
+    grid-template-rows: repeat(48, 16.543px);
+    grid-gap: 5px 5px;
+    
+    align-items: stretch ;
+    /*
+    height/width
+    X*1.3/X
+    24.35
+    
+    grid-template-columns: repeat(--W--, Ppx);
+    grid-template-rows: repeat(H, Ppx);
+    
+    height: 1038 = H*P + 5*(P-1)+5
+    width:  800  = W*P + 5*(P-1)+5 
+            H    = W*1.3
+            
+            
+            P(W) = 790 / (W+5) = P
+            H(W) = W + 1.2975 = H
+            
+    
+    */
+}
+
+#blankpage {
+    box-sizing: border-box;
+    
+    margin:0px;
+    padding: 5px 15px 5px 5px;
+    background: white;
+    height: 1038px; /*3300px;*/
+    width: 800px; /* 2550*/
+    /*max-height: 1024px;
+    max-width: 790px;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+    /*
+    height/width
+    X*1.3/X
+    24.35
+    
+    grid-template-columns: repeat(--W--, Ppx);
+    grid-template-rows: repeat(H, Ppx);
+    
+    height: 1038 = H*P + 5*(P-1)+5
+    width:  800  = W*P + 5*(P-1)+5 
+            H    = W*1.3
+            
+            
+            P(W) = 790 / (W+5) = P
+            H(W) = W + 1.2975 = H
+            
+    
+    */
+}
+
+#underlay
+{
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    display: grid;
+    grid-template-columns: repeat(37, 20.440px); 
+    grid-template-rows: repeat(48, 20.543px);
+    grid-gap: 1px 1px;
+    
+    margin:0px;
+    padding: 2px 5px 2px 3px;
+    
+    align-items: stretch;
+}
+
+* {
+    box-sizing: border-box;
+}
+html{
+    overflow-y: scroll;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    font-size: 14px;
+    color: Fuchsia;
+    padding: 0px;
+    position: absolute;
+}
+
+div {
+    border-radius:4px;
+}
+h1 {
+    display: block;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.textimage {
+    height: 12px;
+    width: auto;
+    display: block;
+}
+img{
+    margin: -2px 0px;
+    vertical-align: center;
+}
+@page {
+    size: 8.5in 11in;
+    margin: 0in;
+}
+@media print {
+    #noprint { display: none; }
+}
+
+
+:root {
+    --Vig: #e39898;
+    --Vig-2: #613131;
+    
+    --Ath: #f2c463;
+    --Ath-2: #986f12;
+    
+    --Dex: #2c8019;
+    --Dex-2: #4d5f25;
+    
+    --Awr: #8fd8e3;
+    --Awr-2: #0236bf;
+    
+    --Int: #106493;
+    --Int-2: #3d4761;
+    
+    
+    --Agility: #8b4627;
+    --Fitness: #b90713;
+    --Precision: #2c8019;
+    --Sense: #106493;
+    --Social: #22776a;
+    --Spirit: #3c00b7;
+    --Strength: #670c33;
+    --Toughness: #b53b04;
+    
+    
+    --Dmg-1: #f7d5c4;
+    --Dmg-2: #ed7c66;
+    --Dmg-3: #cd4242;
+    --Dmg-4: #b52c37;
+    --Dmg-5: #8e262f;
+    
+    
+    --Gray-0: white;
+    --Gray-1: #e6e6e6;
+    --Gray-2: #a6a6a6;
+    --Gray-3: #636363;
+    --Gray-4: #343434;
+    --Gray-5: black;
+    
+    --Red-1: #f7e2d6;
+    --Red-2: #d25c41;
+    --Red-3: #ab3535;
+    --Red-4: #8e252c;
+    /*--Red-5: #6a2528;*/
+    
+    --Orange-1: var(--Red-1);
+    --Orange-2: #ca7f21;
+    --Orange-3: #be5926;
+    --Orange-4: #8b4627;
+    /*--Orange-5: #59332f;*/
+    
+    --Yellow-1: #f9f5da;
+    --Yellow-2: #e7ad2b;
+    --Yellow-3: #ca941b;
+    --Yellow-4: var(--Orange-4);
+    /*--Yellow-4: var(--Orange-4);*/
+    
+    --Green-1: var(--Yellow-1);
+    --Green-2: #82b821;
+    --Green-3: #4ea61b;
+    --Green-4: #2c8019;
+    /*--Green-4: #1b5a2b;*/
+    
+    --Turquoise-1: #e9f9e4;
+    --Turquoise-2: #28b559;
+    --Turquoise-3: #239b6a;
+    --Turquoise-4: #22776a;
+    /*--Turquoise-4: #165663;*/
+    
+    --Blue-1: var(--Turquoise-1);
+    --Blue-2: #24adc8;
+    --Blue-3: #1a95bd;
+    --Blue-4: #106493;
+    /*--Blue-5: #043e62;*/
+    
+    --Purple-1: #f1d8d9;
+    --Purple-2: #9c4ac3;
+    --Purple-3: #772d8e;
+    --Purple-4: #472a83;
+    /*--Purple-5: #22296b;*/
+    
+    --Pink-1: var(--Purple-1);
+    --Pink-2: #ab3858;
+    --Pink-3: #91244d;
+    --Pink-4: #670c33;
+    /*--Pink-5:  #4f2251;*/
+    
+    --DarkGreen-1: var(--Yellow-1);
+    --DarkGreen-2: #92ad99;
+    --DarkGreen-3: #647568;
+    --DarkGreen-4: #323b34;
+    
+    --DarkBlue-1: var(--Turquoise-1);
+    --DarkBlue-2: #718c91;
+    --DarkBlue-3: #445457;
+    --DarkBlue-4: #2e393b;
+    
+    --DarkYellow-1: #f9f5da;
+    --DarkYellow-2: #94793d;
+    --DarkYellow-3: #5e4e29;
+    --DarkYellow-4: #332b18;
+
+    --DarkRed-1: #f7e2d6;
+    --DarkRed-2: #996559;
+    --DarkRed-3: #5c3f38;
+    --DarkRed-4: #332420;
+
+    --DarkPurple-1: #f1d8d9;
+    --DarkPurple-2: #673d7a;
+    --DarkPurple-3: #43294f;
+    --DarkPurple-4: #2a1c30;
+}

@@ -1,0 +1,1100 @@
+<html>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Print/Settlements/ColdrockCity.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:04:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Coldrock (City)</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 2px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+</head>
+<style type="text/css">
+    body { width: 800px;}
+    page {
+        height: 11in;
+        width: 8.5in; /*825px;*/
+        background: white; 
+        box-sizing: border-box;
+        border-radius: 0px;
+        border-style: solid;
+        /*Print Helper Borders*/
+        /*border-color: hsla(0,55%,90%,1);*/
+        /*border-width: 0.125in 0.25in 1.20in 0.25in;*/
+        /*Display Borders*/
+        border-color: white;
+        border-width: 0.125in 0.25in 1.20in 0.25in;
+        margin: 1px;
+        /*overflow: hidden;*/
+            
+        position: relative;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: min-content;
+        grid-gap: 2px;
+        
+        color: black;
+        font-size: 10px;
+    }
+    RegionPage {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-auto-flow: column dense;
+        grid-gap:1px;
+    }
+    RegionTitle {
+        border: solid 0px black;
+        border-radius: 4px 4px 0px 0px;
+        padding: 1px 2px 1px 2px;
+        font-size: 20px;
+        font-weight: 700;
+        grid-column: 1/-1;
+        background:  var(--Purple-4);
+        color: white;
+    }
+    InnerTitle {
+        border: solid 0px black;
+        border-radius: 0px 0px 0px 0px;
+        padding: 0px 1px 1px 1px;
+        font-size: 15px;
+        font-weight: 700;
+        grid-column: 1/-1;
+        background:  var(--Purple-4);
+        color: white;
+    }
+    InnerContainer {
+        border: solid 3px var(--Purple-4);
+        border-radius: 4px;
+        /*padding: 1px 2px 1px 2px;*/
+        margin:0px 2px 0px 2px;
+        display:grid;
+    }
+    InnerSectionContainer {
+        /*padding: 1px 2px 1px 2px;*/
+        width: 100%;
+        padding:1px;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-auto-flow: column dense;
+        grid-gap:1px;
+    }
+    SectionContainer {
+        border: solid 3px var(--Purple-3);
+        border-radius: 4px;
+        /*padding: 1px 2px 1px 2px;*/
+        width: 100%;
+    }
+    SectionTitle {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        background:  var(--Purple-3);
+        color: white;
+        width: 100%;
+        padding-left: 5px; 
+        padding-bottom: 2px; 
+        margin-bottom:1px;
+        /*right:0px;*/
+    }
+    gf { 
+        font-weight: 700;
+        font-size: 80%;
+    }
+    tabDiv {
+        padding-left: 5px;
+        margin-bottom: 1px;
+        display: flex;
+    }
+    
+</style>
+<body>
+<page>
+    <RegionPage><RegionTitle>Coldrock <f12>(City)</f12></RegionTitle><SectionContainer style='grid-column:1/-1;'><div style='padding:1px 4px 1px 4px;'>
+                    Coldrock is considered the great fortress city of Western Ersonia.
+                    Starting as mine in ancient days, it bacame a port during the reign of Arthurus, and then a fortress during the the proceeding wars between Ersonia and Venica.
+                    The town has been carved out of large rock formation on the base of wide river bank, with a busy port not far from the ocean.
+                    It is protected by both city walls and a walled port. Legend has, the city has never fallen.
+                    A castle with a large lighthouse sits ontop of the rock, where the rulers reign.
+                </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Weather</SectionTitle><div>&nbsp;&nbsp; Coldrock, while not the coldest part of the world, is not warm either.</div><div>&nbsp;&nbsp; <b>Spring/Summer/Fall:</b> <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+                <cs>0S:</cs> +1 Cold (Morning, Midday, Afternoon), +2 Cold (Evening, Night)
+                <br><cs>1S:</cs> +1 Cold (Morning, Midday, Afternoon), +2 Cold (Evening, Night)
+            </div><div>&nbsp;&nbsp; <b>Winter:</b> Resist 2 Cold w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div> if outdoors Night/Twilight. Resist 1 Cold w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div> if outdoors Morning/Midday/Afternoon/Evening.</div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Events</SectionTitle><div>&nbsp;&nbsp; <blue><b>January 24, Day of the Burning Ships:</b> Festival in the port where ships are burnt at night to commerate a victory against Skelvaar pirates.</blue></div><div>&nbsp;&nbsp; <blue><b>August 25, Summer Festival:</b> Festival of games and dancing. Flowers brought in from all over the region.</blue></div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Administration</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                <div></div>
+                <div><b>Leadership:</b> 
+                    Arcadia is run by House Ironside, a long family line with direct ties to Ersonian royalty. 
+                    The heads of House Ironside run the city, command it's garrison (along with the Western regiments of the Ersoniana army), and administer justice as they see fit.
+                </div>
+            </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                <div></div>
+                <div><blue><b>Peacekeeping:</b> 
+                    Guards of House Ironside keep order in the city, patrol during the day and knight, and bring anyone breaking the peace to their commander's judgement.
+                </blue></div>
+            </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Underworld</SectionTitle><div style='padding-left: 5px;'> 
+                <blue>In addition to the usual centers of illicit dealings (gambling dens, drug dealers), a cavern carved deep into the rock that once served the mining is used as a large arena for fighting.
+                While not legal, authorities look the other way, and many come to watch exotic animals and powerful warriors due battle, betting heavily on the outcomes.</blue>
+            </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Work</SectionTitle><div style='padding-left: 5px;'> 
+                <b style='width: 250px;'>Farmhand (Labor):</b>  The farmers around Arcadia are always looking for a helping hand willing to work for cheap.
+            </div><div style='padding-left: 5px;'> <b style='width: 250px;'>Dockhand (Labor):</b>  Load and unload ships. </div><div style='padding-left: 5px;'> <b style='width: 250px;'>Quarry Worker (Labor):</b>  Move stones. </div><div style='padding-left: 5px;'> <b style='width: 250px;'>Mine Shaft:</b> (Shift) <b style='font-weight:700; color: black;'>8<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Gold. Resist <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>+<b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Fatigue w/ (<div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Pink-4);
+        
+        font-weight:700;
+    '>
+        Str
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div>). </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Training</SectionTitle><div style='padding-left: 5px;'> 
+                Coldrock is a hub for Fighters, Rogues, and Archers who may be able to provide training for Rare abilities.
+            </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Encounters</SectionTitle><div>&nbsp;&nbsp; <blue><b>1:</b> Petty theives demand payment at knife point.</blue></div><div>&nbsp;&nbsp; <blue><b>2:</b> Docked Skelvaar pirates challenge the party to a test of mettle.</blue></div><div>&nbsp;&nbsp; <blue><b>3:</b> A confrontation between visting delegations of High Elves and Stone Dwarves threatens to drag the party into it.</blue></div><div>&nbsp;&nbsp; <blue><b>4:</b> Bored Guards attempt to extort the party for funds.</blue></div><div>&nbsp;&nbsp; <blue><b>5:</b> A robbery occurs directly next tothe party, threatening to drag them into the conflict.</blue></div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Quests</SectionTitle><div style='padding-left: 5px;'> 
+                <b style='width: 250px;'>1:</b>  Skelvaar pirates are attemmpting raids, and the party can work to defend the city.
+            </div><div style='padding-left: 5px;'> 
+                <b style='width: 250px;'>2:</b> A deep mining cavern fell through. The party is offered to kill the underground creatures now roaming the city tunnels.
+            </div><div style='padding-left: 5px;'> 
+                <b style='width: 250px;'>3:</b> The party is paid to storm a ship that will dock with illicit goods.
+            </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Epic Quests</SectionTitle><div style='padding-left: 5px;'> 
+                <b style='width: 250px;'>1: Giant's Attack:</b> Several giants are assulating the walls, probably brought on by some evil force.
+                    The party can attempt to protect the city or possibly just try to survive.
+            </div><div style='padding-left: 5px;'> 
+                <b style='width: 250px;'>2: Skelvaar War:</b> The Skelvaar and nobility of Coldrock are at war, with pirates beseiging the walled port and attempting to raid the city.
+                    The party may find themselves on either end of this deadly conflict.
+            </div></SectionContainer></RegionPage></page>
+<page>
+    <RegionPage><InnerContainer style='grid-column:1/-1;'><InnerTitle>Rock Face</InnerTitle><InnerSectionContainer><div style='grid-column:1/-1;'><div style='padding:1px 3px 1px 3px;'> 
+                        The main part of the city the sprawls out from the face of the rock, and surrounds both the river and neighboring fields.
+                        The Rockface district is home to most of the deziens of the city, and contains a large mix of both poor and mixed sections.
+                        It has shops and centers of all kinds, usually very busy trading.
+                        It also has a large river dock bustling with activtiy.
+                        The city is surrounded by large rock walls, with a wall ringing the port as well.
+                    </div></div><SectionContainer style='grid-column:1/-1;'><SectionTitle>Backdrop</SectionTitle><div>&nbsp;&nbsp; <blue><b>1:</b> The rock casts a cold shadow against the sunlight and the bustling town below.</blue></div><div>&nbsp;&nbsp; <blue><b>2:</b> Snows fall against the city, lining the streets, and putting white powder against the rock.</blue></div><div>&nbsp;&nbsp; <blue><b>3:</b> Bustling crowds fill the narrow alleyways in the cold weather.</blue></div><div>&nbsp;&nbsp; <blue><b>4:</b> The fires of the lighthouse tower atop the rock are all the can be seen through the mist.</blue></div><div>&nbsp;&nbsp; <blue><b>5:</b> A cool mist .</blue></div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Key Locations</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Town Center:</b> 
+                            Includes Gates to Inner City and a Town Hall/Court here one can buy passes to the Inner City.
+                            The City Magistrate office is here as well, though for any important decisions they will defer to orders from The Tower of Illumination.
+                            <br> Week Pass for Inner City <gf>3G</gf>, Day Pass for Inner City <gf>1G</gf>
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Saviours Child (Church of Azeal):</b> 
+                            A small church for such a big city, it still frequently hosts humans and dwarves who follow Azeal’s teachings.
+                        </div>
+                    </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Stores</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Toag's Board and Store (General Store):</b> 
+                            As well as other general items, the failed out Mage student who runs the palace often sells various magical implements as well.
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Daisy-Mage (Florist):</b> 
+                            A Witch named Daisy grows the biggest flowers and plants with a special blend of magic and love. Her flowers have unique colors too, from Blue Azul Roses to glowing sunflowers.
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Robe N Globe (Tailor):</b> 
+                            A clothing store specializing in mage robes.
+                        </div>
+                    </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Inns/Taverns</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Grim Grows:</b> 
+                            A dimly lit tavern and inn, frequented by dwarves and some humans.
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Abracada-Bread:</b> 
+                            Favored by students and professors, the recipes are rumored to contain a hint of ether.
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Witches Brew & Slumber:</b> 
+                             A dark and hip place, glowing bubbling cauldrons with coloured smoke distort the air.
+                        </div>
+                    </div></SectionContainer></InnerSectionContainer></InnerContainer><InnerContainer style='grid-column:1/-1;'><InnerTitle>Underrock</InnerTitle><InnerSectionContainer><div style='grid-column:1/-1;'><div style='padding:1px 3px 1px 3px;'> 
+                        The inner sanctum in the city is for those who are guests of or working for The Academy, very few others are let inside. 
+                        While mostly human, Elves and Dwarves on magical business can be found as well. 
+                        The cobble streets are kept pearly white and the ivory white halls of The Tower of Illumination looms above.
+                    </div></div><SectionContainer style='grid-column:1/-1;'><SectionTitle>Backdrop</SectionTitle><div>&nbsp;&nbsp; <blue><b>1:</b> The sun catches the Ivory of the Tower of Illumination in a dazzling light.</blue></div><div>&nbsp;&nbsp; <blue><b>2:</b> From the tower various bizarre electrical sounds can be heard as an experiment continues throughout the day.</blue></div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Key Locations</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Tower of Illumination:</b> 
+                            A huge tower made entirely of white marble, piercing the sky against the backdrop of the horizon. 
+                            It has many staircases, windows, and porches. It is the central authority of The Academy. 
+                            Requires special permission to enter, with all levels except the lower and middle being very hard to get accessed to. 
+                            Guarded by The Sentry, the elite guard corps.
+                            <br> &nbsp;&nbsp;&nbsp;  <b>Sub-Floors:</b> Vault, Secret research areas, dungeons.
+                            <br> &nbsp;&nbsp;&nbsp;  <b>Lower Levels:</b> Servants quarters, dormitory, cafeteria.
+                            <br> &nbsp;&nbsp;&nbsp;  <b>Middle Levels:</b> Classrooms, research rooms, laboratories, experimental facilities.
+                            <br> &nbsp;&nbsp;&nbsp;  <b>Upper Levels:</b> Chambers of The Council, Court of High Magic.
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>The Grand Libray:</b> 
+                            (Closed Saturday.)  The Greatest Library in the land. The library stands 5 stories tall and takes up 6 city blocks. 
+                            It’s not unheard of people getting lost within the library for a few days or longer. 
+                            Almost every book can be found here though many are only for sail on special permission.
+                            <br> &nbsp;&nbsp;&nbsp;  <blue><b>Very Rare Books:</b> May take days to be ready. May cost <df>20 to 100G </gf>.</blue>
+                            <br> &nbsp;&nbsp;&nbsp;  <b>Deep Library:</b> Deep down in the furthest most forgotten corners there are rumors of the dead walking the aisles.
+                        </div>
+                    </div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Stores</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Rolls of Scrolls (Magic Scrolls):</b> 
+                            <blue>Has excellent selection including many rare scrolls.</blue>
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>The Trolls Tongue (Artifact Shop):</b> 
+                            <blue>Offers buying and selling of Artifacts as well as appraisal and identification.</blue>
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Neval's Brews (Potions):</b> 
+                            <blue>Extremely good potion selection, though the ground is usually covered with potions, some of which are dangerous.</blue>
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Olexander’s Exotic Pets:</b> 
+                            <blue>An exotic pet store run by an eccentric. Weird animals line the walls and some say he can get even stranger stuff for the right price.
+                                <br> &nbsp;&nbsp;&nbsp;  Hawk/Raven/Owl/Bat/Python/Weasel (Req. Animal Handle 1) <gf>20G</gf>, Bear/Cobra (Req. Animal Handle 2) <gf>35G</gf>
+                            </blue>
+                        </div>
+                    </div></SectionContainer></InnerSectionContainer></InnerContainer><InnerContainer style='grid-column:1/-1;'><InnerTitle>Stonecrown</InnerTitle><InnerSectionContainer><div style='grid-column:1/-1;'><div style='padding:1px 3px 1px 3px;'> 
+                        The area around the city includes farms owned and administered directly by The Academy. 
+                        To the north is a Dwarf encampment for the dwarves who work in the city’s mines.
+                        To the east, various non-humans congregate in a makeshift camp, including various exoctic non-humans such as Lizardmen and Centaurs.
+                    </div></div><SectionContainer style='grid-column:1/-1;'><SectionTitle>Backdrop</SectionTitle><div>&nbsp;&nbsp; <blue><b>1:</b> Trees shade the paths in an out of the city.</blue></div><div>&nbsp;&nbsp; <blue><b>2:</b> A large group of wagons are waiting at the gate as a guard inspects them.</blue></div><div>&nbsp;&nbsp; <blue><b>3:</b> The non-humans are having a raucous gathering where many friendly (and unfriendly) impromptu games and combats are held.</blue></div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Locations</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Watch Towers:</b> Garrisoned by the local forces, several based high upon the Mystic Mountain Cliffs.</div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Ether Mines:</b> 
+                            Rich in rare ether, these are used by the academy for their various experiments. 
+                            Due to the expertise required in safely mining it, the workforce is almost entirely contracted out to dwarves.
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Lizard Camp:</b> 
+                            Includes Lizard Chieftain, Lizard Guard Towers, and Lizard Huts. 
+                            Lizard-Men have an unclear relationship with The Academy, seemingly based on rare materials the Lizard-Men provide. 
+                            They keep a camp here and are tolerated by the Mage’s but untrusted by the local population.
+                        </div>
+                    </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                        <div></div>
+                        <div><b>Church of Ernok:</b> An old shrine to Ernok, rarely visited, is tucked away in the cliffs around the city.</div>
+                    </div></SectionContainer></InnerSectionContainer></InnerContainer></RegionPage></page>
+</body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Print/Settlements/ColdrockCity.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:04:36 GMT -->
+</html>

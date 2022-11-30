@@ -1,0 +1,968 @@
+<html>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Print/Settlements/TownGeneral.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Town General</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 2px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+</head>
+<style type="text/css">
+    body { width: 800px;}
+    page {
+        height: 11in;
+        width: 8.5in; /*825px;*/
+        background: white; 
+        box-sizing: border-box;
+        border-radius: 0px;
+        border-style: solid;
+        /*Print Helper Borders*/
+        /*border-color: hsla(0,55%,90%,1);*/
+        /*border-width: 0.125in 0.25in 1.20in 0.25in;*/
+        /*Display Borders*/
+        border-color: white;
+        border-width: 0.125in 0.25in 1.20in 0.25in;
+        margin: 1px;
+        /*overflow: hidden;*/
+            
+        position: relative;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: min-content;
+        grid-gap: 2px;
+        
+        color: black;
+        font-size: 10px;
+    }
+    RegionPage {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-auto-flow: column dense;
+        grid-gap:1px;
+    }
+    RegionTitle {
+        border: solid 0px black;
+        border-radius: 4px 4px 0px 0px;
+        padding: 1px 2px 1px 2px;
+        font-size: 20px;
+        font-weight: 700;
+        grid-column: 1/-1;
+        background:  var(--Yellow-4);
+        color: white;
+    }
+    SectionContainer {
+        border: solid 3px var(--Yellow-3);
+        border-radius: 4px;
+        /*padding: 1px 2px 1px 2px;*/
+        width: 100%;
+    }
+    SectionTitle {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        background:  var(--Yellow-3);
+        color: white;
+        width: 100%;
+        padding-left: 5px; 
+        padding-bottom: 2px; 
+        margin-bottom:1px;
+        /*right:0px;*/
+    }
+    gf { 
+        font-weight: 700;
+        font-size: 80%;
+    }
+    tabDiv {
+        padding-left: 5px;
+        margin-bottom: 1px;
+        display: flex;
+    }
+    
+</style>
+<body>
+<page>
+    <RegionPage><RegionTitle>Town <f12>(General)</f12></RegionTitle><SectionContainer style='grid-column:1/-1;'><SectionTitle>Government</SectionTitle><div>&nbsp;&nbsp; Most towns are ruled by a local lord who is a member of the nobility, though some may have a delegated or elected Mayor.</div><div>&nbsp;&nbsp; <b>Audience:</b> Most Lords/Mayors will only allow an audience of those with fame or nobility, but may allow or even request and audience in times of crisis.</div><div>&nbsp;&nbsp; <blue><b>Peacekeeping:</b> The Town Guard will patrol the streets, enfroce laws, and guard valuable areas. They serve the Lord/Mayor directly.</blue></div></SectionContainer><SectionContainer style='grid-column:1/-1;'><SectionTitle>Crime/Punishment</SectionTitle><div>&nbsp;&nbsp; The Lord/Mayor makes all final decisions on matters of justice.</div><div>&nbsp;&nbsp;<b>Punishment:</b> Forced repayment, the Pillory, Banishment, Lashes, or Death depending on the severity of the crime.</div><div>&nbsp;&nbsp;<b>Pillory:</b> Hands bound in a wooden plank. -<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> to attemts to Rest. May be fed by others.</div><div>&nbsp;&nbsp;<b>Banishment:</b> Forced to leav the town on threat of death if ever to return.</div><div>&nbsp;&nbsp;<b>Lashes:</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Torso Wound per Lash.</div><div>&nbsp;&nbsp;<b>Cleanliness:</b> While not necessarily illegal, walking around covered in filth is frowned upon and will disbar entry into some establishments.</div></SectionContainer><div style='display:grid; grid-gap:1px; grid-column:1;'><SectionContainer><SectionTitle>Sleeping Outside</SectionTitle><div>&nbsp;&nbsp; Resist Elements (See Region).<br> &nbsp;&nbsp; <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <sc>1S:</sc> Get Mugged.<br> &nbsp;&nbsp; <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <sc>1S:</sc> Arrested an punished (2 Gold repayment or lashes).</div></SectionContainer><SectionContainer><SectionTitle>Inn/Tavern</SectionTitle><div>&nbsp;&nbsp;<gf>4G</gf> <b>Stay (Week):</b> Beds for Party (+1 Comfort, +2 Warm/Cool Dice) </div><div>&nbsp;&nbsp;<gf>2G</gf> <b>Stay (3 Day):</b> Beds for Party (+1 Comfort, +2 Warm/Cool Dice) </div><div>&nbsp;&nbsp;<gf>1G</gf> <b>Stay (1 Day):</b> Beds for Party (+1 Comfort, +2 Warm/Cool Dice) </div><div>&nbsp;&nbsp;<gf>1G</gf> <b>Food:</b> 5 Meal + 10 Water </div><div>&nbsp;&nbsp;<gf>1G</gf> <b>Ale:</b> 5 Ale. </div><div> <f8>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<b>Round of Ale:</b> Gain +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale and Resist 1 Fatigue w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Pink-4);
+        
+        font-weight:700;
+    '>
+        Str
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>.
+                                </f8></div><div>&nbsp;&nbsp;<gf>1G</gf> <b>Show:</b> (Evening Only). Gain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale. </div><div> <f8>
+                                    &nbsp;&nbsp;<b>Horses:</b> Stable is free for paying customers.
+                                    <br>&nbsp;&nbsp;<b>Laundry:</b> Laundry is free for paying customerswhen staying at the inn.
+                                </f8></div></SectionContainer><SectionContainer><SectionTitle>Stable</SectionTitle><div>&nbsp;&nbsp;<b>Lodging:</b> Stable and hose for a week <gf>1G</gf></div><div>&nbsp;&nbsp;<b>Horses:</b> Sickly Horse <gf>20G</gf>, Horse <gf>30G</gf></div><div>&nbsp;&nbsp;<b>Accessories:</b> Saddle Bags <gf>5G</gf>, Saddle <gf>5G</gf>, Cart <gf>20G</gf></div></SectionContainer><SectionContainer><SectionTitle>Raven House</SectionTitle><div>&nbsp;&nbsp; Handles communication betweem various locations using ravens.</div><div>&nbsp;&nbsp; <b>Services:</b> Check Messages (Free), Send Message <gf>1G</gf>, Send Package <gf>5G</gf></div><div>&nbsp;&nbsp; <b>Quest Board:</b> May check for jobs or other adventurer related information.</div></SectionContainer><SectionContainer style='grid-column:1;'><SectionTitle>Training</SectionTitle><div>&nbsp;&nbsp;<b>Common:</b> May gain Inspiration for a price.</div></SectionContainer><SectionContainer style='grid-column:1;'><SectionTitle>Hiring</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><blue><b>Hired Hand:</b> Will carry things and provide basic assistance. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp &nbsp Avoids combat when possible. <gf>3G</gf> per Day.</blue></div>
+                </div><div>&nbsp;&nbsp; Quality of help and their personalities are GM discretion.</div></SectionContainer><SectionContainer style='grid-column:1;'><SectionTitle>Work</SectionTitle><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><b>Beg:</b> (Day). Gain <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha
+    </div> Gold and <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Stress.</div>
+                </div></SectionContainer><SectionContainer style='grid-column:1;'><SectionTitle>Herbalist</SectionTitle><div>&nbsp;&nbsp;<b>Potions:</b> Stamina Potion <gf>3G</gf>, Healing Potion <gf>5G</gf>  </div><div>&nbsp;&nbsp;<b>Resources:</b> Herbs <gf>1G</gf>, Vial <gf>1G</gf></div></SectionContainer></div><div style='display:grid; grid-gap:1px; grid-column:2;'><SectionContainer><SectionTitle>Church</SectionTitle><div>&nbsp;&nbsp; A place of Healing and the worship of Azeal the God of Light and Justice.</div><div>&nbsp;&nbsp;<b>Holy Items:</b> Vial of Holy Water <gf>3G</gf>, Holy Fragment <gf>3G</gf>, Book of Azeal <gf>5G</gf></div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><b>Nursing:</b> (Day). 1 Wounded Character may Rest here with 2 Comfort. <gf>3G</gf> 
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <cs>2S:</cs> Remove 1 Wound/Broken/Mortal Wound/Infection.
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <f7>Check counts as Give Treatment.</f7></div>
+                </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><b>Set Bone:</b> Once per Broken Instance. <gf>5G</gf>
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reduce Broken by <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>.</div>
+                </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><b>Limb Reattachment:</b> (Day). Must have the missing limb. <gf>35G</gf>
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resist 1 Illness (Rot) w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div>. Limb is Broken 10.
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Roll Dice Equal to Rot. <cs>1S:</cs> +1 Rot. <cs>3S:</cs> +1 Infection.</div>
+                </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><b>Remembrance:</b> (Day). <gf>3G</gf>
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Have ceremony and leave momento of recently dead at church. 
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All Characters attending remove <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dread.</div>
+                </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><b>Funeral:</b> (Day). <gf>5G</gf>
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bury deceased teammate in adjaccent cemetary. 
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All Characters attending remove <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>+<div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div> Dread.</div>
+                </div><div style='display:grid; grid-template-columns:7px 1fr;'>
+                    <div></div>
+                    <div><b>Beg Church:</b> (Day). May do once per Day.
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Meals (Bread) and <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water. 
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Followers of Azeal gain <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Bread and <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</div>
+                </div></SectionContainer><SectionContainer style='grid-column:1;'><SectionTitle>General Store</SectionTitle><div>&nbsp;&nbsp;<b>Camping:</b> Tinder Box <gf>5G</gf>, Fishing Pole <gf>5G</gf>, Cooking Pot <gf>5G</gf>, </div><div>&nbsp;&nbsp;<b>Exploration:</b> Oil <gf>1G</gf> for 3,  Candle <gf>1G</gf>, Torch <gf>3G</gf>, Rope (Weak) <gf>3G</gf> per 50', 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp; Rope (Sturdy) <gf>10G</gf> per 50', Walking Stick <gf>5G</gf>, Lantern <gf>10G</gf></div><div>&nbsp;&nbsp;<b>Storage:</b> Pouch <gf>3G</gf>, Waterskin <gf>3G</gf>, Large Sack <gf>3G</gf>, Backpack <gf>5G</gf></div><div>&nbsp;&nbsp;<b>Medical:</b> Bandage <gf>3G</gf>, Crutch <gf>5G</gf>, Cane <gf>10G</gf>, Medicine <gf>5G</gf></div><div>&nbsp;&nbsp;<b>Other:</b> 3 Vegeables <gf>1G</gf>, Mortar and Pestle <gf>5G</gf>, Deck of Cards <gf>15G</gf>, 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp; Glasses <gf>5G</gf>, Cheap Instrument <gf>10G</gf></div><div>&nbsp;&nbsp;<b>Drugs:</b>  Tobacco <gf>1G</gf>, Pipe <gf>3G</gf></div> <div>&nbsp;&nbsp;<b>Scrolls:</b> Common Scrolls <gf>3G</gf> </div><div>&nbsp;&nbsp;<b>Archery:</b> Low Quality Bow <gf>10G</gf>, Improvised Arrow <gf>1G for 3</gf>, Arrow <gf>1G for 2</gf>,
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp; Bolt <gf>1G for 2</gf>,  Quiver <gf>3G</gf>
+                </div><div>&nbsp;&nbsp;<b>Books:</b> Novel <gf>5G</gf>, Textbook-Common <gf>5G</gf>,  </div></SectionContainer><SectionContainer><SectionTitle>Blacksmith</SectionTitle><div>&nbsp;&nbsp;<b>Repair:</b> Remove All Dmg from weapon/armor <gf>1G</gf>, 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp; Remove 2 Brk weapon/armor <gf>1G</gf>
+                </div><div>&nbsp;&nbsp;<b>Weapons:</b>  Club <gf>5G</gf>, Edged Club <gf>10G</gf>, Hatchet <gf>10G</gf>, 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp; Low Quality Sword <gf>10G</gf>, Knife <gf>10G</gf>, Low Quality Spear <gf>15G</gf> 
+                </div><div>&nbsp;&nbsp;<b>Shields:</b> Round Shield <gf>10G</gf> </div><div>&nbsp;&nbsp;<b>Armor:</b> LeatherVambrace/ShouldPads <gf>5G</gf>, Leather Leg Guards <gf>5G</gf>, 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp; Leather Vest <gf>10G</gf>, Gambeson  <gf>20G</gf>, Gambeson-Long <gf>25G</gf>, 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp; Metal Skullcap <gf>25G</gf>,
+                </div><div>&nbsp;&nbsp;<b>Other:</b> Sharpen Sword <gf>1G</gf>, Weapon Reapir Kit <gf>5G</gf></div></SectionContainer><SectionContainer style='grid-column:1;'><SectionTitle>Tailor</SectionTitle><div>&nbsp;&nbsp;<b>Basic:</b> Rags <gf>1G</gf>, Outfit (Basic) <gf>3G</gf>, Outfit (Pocketed) <gf>5G</gf> </div><div>&nbsp;&nbsp;<b>Weather:</b> Cold Weather Clothes <gf>5G</gf>, Warm Weather Clothes <gf>5G</gf> </div><div>&nbsp;&nbsp;<b>Accessories:</b> Cloak <gf>3G</gf></div></SectionContainer></div></RegionPage></page>
+<page>
+    </page>
+</body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Print/Settlements/TownGeneral.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:59 GMT -->
+</html>

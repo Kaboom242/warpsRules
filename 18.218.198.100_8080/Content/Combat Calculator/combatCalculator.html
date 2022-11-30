@@ -1,0 +1,658 @@
+<HTML>
+    
+<!-- Mirrored from 18.218.198.100:8080/Content/Combat Calculator/combatCalculator.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:04:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<HEAD>
+        <TITLE>Combat Calculator</TITLE>
+        <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style>        <style>
+            .characterContainer {
+                border: solid 1px black;
+                border-radius: 4px;
+                background: white;
+                color: black;
+                padding: 10px;
+            }
+            .runButton {
+              margin: 5px; 
+              color: white; 
+              background: Orange; 
+              padding: 20px; 
+              font-size: 24px; 
+              border: none;  
+            }
+            .runButton:hover {
+                background: Green;
+                cursor: pointer;
+            }
+        </style>
+    </HEAD>
+<BODY>
+<div style='color: white; font-size: 20px; font-weight: 600; padding: 20px;'>
+    <div style='width:2000px;'><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 1</div> (0.995)<br> [0.25]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 2</div> (1.114)<br> [0.34]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 3</div> (1.303)<br> [0.37]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 4</div> (1.474)<br> [0.392]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 5</div> (1.47)<br> [0.447]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 6</div> (1.57)<br> [0.475]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 7</div> (1.758)<br> [0.558]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 8</div> (1.858)<br> [0.402]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 9</div> (1.938)<br> [0.589]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>1, 10</div> (2.078)<br> [0.664]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 1</div> (1.017)<br> [0.62]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 2</div> (1.173)<br> [0.725]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 3</div> (1.232)<br> [0.926]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 4</div> (1.432)<br> [0.864]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 5</div> (1.621)<br> [0.953]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 6</div> (1.668)<br> [1.041]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 7</div> (1.793)<br> [1.052]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 8</div> (1.793)<br> [1.167]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 9</div> (2.044)<br> [1.196]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>2, 10</div> (2.242)<br> [1.375]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 1</div> (1.06)<br> [0.969]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 2</div> (1.016)<br> [1.155]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 3</div> (1.187)<br> [1.318]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 4</div> (1.304)<br> [1.311]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 5</div> (1.423)<br> [1.392]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 6</div> (1.46)<br> [1.618]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 7</div> (1.576)<br> [1.711]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 8</div> (1.849)<br> [1.904]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 9</div> (2.074)<br> [1.839]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>3, 10</div> (1.977)<br> [2.143]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 1</div> (0.937)<br> [1.317]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 2</div> (0.997)<br> [1.428]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 3</div> (1.031)<br> [1.69]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 4</div> (1.164)<br> [1.773]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 5</div> (1.375)<br> [1.834]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 6</div> (1.432)<br> [2.079]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 7</div> (1.454)<br> [2.261]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 8</div> (1.616)<br> [2.379]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 9</div> (1.865)<br> [2.611]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>4, 10</div> (1.767)<br> [2.641]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 1</div> (0.788)<br> [1.629]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 2</div> (0.907)<br> [1.8]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 3</div> (1.008)<br> [1.902]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 4</div> (0.95)<br> [2.158]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 5</div> (1.084)<br> [2.416]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 6</div> (1.114)<br> [2.506]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 7</div> (1.222)<br> [2.719]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 8</div> (1.507)<br> [2.761]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 9</div> (1.612)<br> [3.017]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>5, 10</div> (1.626)<br> [3.397]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 1</div> (0.678)<br> [1.909]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 2</div> (0.872)<br> [2.042]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 3</div> (0.818)<br> [2.252]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 4</div> (0.859)<br> [2.563]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 5</div> (0.968)<br> [2.867]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 6</div> (1.11)<br> [2.907]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 7</div> (1.109)<br> [3.154]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 8</div> (1.253)<br> [3.329]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 9</div> (1.295)<br> [3.564]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>6, 10</div> (1.283)<br> [3.836]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 1</div> (0.59)<br> [2.112]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 2</div> (0.608)<br> [2.329]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 3</div> (0.75)<br> [2.506]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 4</div> (0.694)<br> [2.904]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 5</div> (0.827)<br> [3.138]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 6</div> (0.908)<br> [3.249]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 7</div> (0.935)<br> [3.661]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 8</div> (0.954)<br> [3.812]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 9</div> (1.062)<br> [4.119]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>7, 10</div> (1.106)<br> [4.188]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 1</div> (0.486)<br> [2.281]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 2</div> (0.527)<br> [2.637]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 3</div> (0.559)<br> [2.866]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 4</div> (0.533)<br> [3.107]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 5</div> (0.688)<br> [3.338]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 6</div> (0.706)<br> [3.549]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 7</div> (0.838)<br> [3.823]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 8</div> (0.759)<br> [4.089]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 9</div> (0.825)<br> [4.426]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>8, 10</div> (0.944)<br> [4.556]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 1</div> (0.349)<br> [2.522]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 2</div> (0.42)<br> [2.68]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 3</div> (0.426)<br> [2.966]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 4</div> (0.48)<br> [3.306]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 5</div> (0.545)<br> [3.529]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 6</div> (0.617)<br> [3.81]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 7</div> (0.634)<br> [4.123]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 8</div> (0.7)<br> [4.324]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 9</div> (0.671)<br> [4.81]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>9, 10</div> (0.591)<br> [4.969]</div></div><div style='height:30px;'></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 1</div> (0.26)<br> [2.652]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 2</div> (0.341)<br> [2.82]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 3</div> (0.313)<br> [3.207]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 4</div> (0.35)<br> [3.467]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 5</div> (0.432)<br> [3.687]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 6</div> (0.47)<br> [4.047]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 7</div> (0.4)<br> [4.318]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 8</div> (0.549)<br> [4.592]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 9</div> (0.485)<br> [4.935]</div></div><div style='display:inline-block; width:150px;'><div style='display: flex;'><div style='width: 50px;'>10, 10</div> (0.619)<br> [5.024]</div></div><div style='height:30px;'></div><div></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--
+    <div style='display: grid; grid-template-columns: 1fr 1fr;'>
+                <div class='characterContainer'>
+            <div>
+                Stats:
+                <div>
+                    <div style='font-size: 10px;'> Vigor </div>
+                    <input type='number' id='Vigorchar1'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Athletics </div>
+                    <input type='number' id='Athleticschar1'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Dexterity </div>
+                    <input type='number' id='Dexteritychar1'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Awareness </div>
+                    <input type='number' id='Awarenesschar1'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Intellect </div>
+                    <input type='number' id='Intellectchar1'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Stamina </div>
+                    <input type='number' id='Staminachar1'  value='0' placeholder=''>
+                </div>
+            </div>
+            <div>
+                Body Areas:
+                <div>
+                    <div style='font-size: 10px;'> Head </div>
+                    <input type='number' id='Headchar1'  value='0' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Torso </div>
+                    <input type='number' id='Torsochar1'  value='8' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Right Arm </div>
+                    <input type='number' id='RAchar1'  value='5' placeholder=''>
+                </div>
+            </div>
+            <div>
+                Item:
+            </div>
+            <div>
+                Abilities:
+            </div>
+        </div>
+                <div class='characterContainer'>
+            <div>
+                Stats:
+                <div>
+                    <div style='font-size: 10px;'> Vigor </div>
+                    <input type='number' id='Vigorchar2'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Athletics </div>
+                    <input type='number' id='Athleticschar2'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Dexterity </div>
+                    <input type='number' id='Dexteritychar2'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Awareness </div>
+                    <input type='number' id='Awarenesschar2'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Intellect </div>
+                    <input type='number' id='Intellectchar2'  value='3' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Stamina </div>
+                    <input type='number' id='Staminachar2'  value='0' placeholder=''>
+                </div>
+            </div>
+            <div>
+                Body Areas:
+                <div>
+                    <div style='font-size: 10px;'> Head </div>
+                    <input type='number' id='Headchar2'  value='0' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Torso </div>
+                    <input type='number' id='Torsochar2'  value='8' placeholder=''>
+                </div>
+                <div>
+                    <div style='font-size: 10px;'> Right Arm </div>
+                    <input type='number' id='RAchar2'  value='5' placeholder=''>
+                </div>
+            </div>
+            <div>
+                Item:
+            </div>
+            <div>
+                Abilities:
+            </div>
+        </div>
+                <div class='characterContainer' style='grid-column: span 2;'>
+            <div>
+                <div style='font-size: 10px;'> Iterations </div>
+                <input type='number' id='Iterations'  value='10' placeholder=''>
+            </div>
+            <button onClick="ArrangeFights()" class="runButton">Run</button>
+            <div id='output'> </div>
+        </div>
+    </div>
+    <script>
+    function ArrangeFights ()  
+    {
+        var t = new Date();
+        let output = "";
+        output += 'Fight On <br>';
+        let char1 = {
+            "Vigor": document.getElementById("Vigorchar1").value,
+            "Athletics": document.getElementById("Athleticschar1").value,
+            "Dexterity": document.getElementById("Dexteritychar1").value,
+            "Awareness": document.getElementById("Awarenesschar1").value,
+            "Intellect": document.getElementById("Intellectchar1").value,
+            "Stamina": document.getElementById("Staminachar1").value,
+        };
+        let char2 = {
+            "Vigor": document.getElementById("Vigorchar2").value,
+            "Athletics": document.getElementById("Athleticschar2").value,
+            "Dexterity": document.getElementById("Dexteritychar2").value,
+            "Awareness": document.getElementById("Awarenesschar2").value,
+            "Intellect": document.getElementById("Intellectchar2").value,
+            "Stamina": document.getElementById("Staminachar2").value,
+        };
+        var fightData = [];
+        var length = document.getElementById('Iterations').value;
+        for(var i = 0; i < length; i++ )
+        {
+            fightData.push( Fight(char1,char2) );
+        }
+        length = fightData.length;
+        console.log(fightData);
+        var tally = {};
+        for(var i = 0; i < length; i++) 
+        {
+            //if (Number.isInteger(fightData[i].dmg))
+                tally.dmg += fightData[i].dmg;
+        }
+        output += 'Vig Check: '+ roll (char1.Vigor) + '<br>';
+        output += 'Total Damage: '+ tally.dmg + '<br>';
+        //output += successes;
+        document.getElementById('output').innerHTML = output;
+        console.log("Time to process: " + new Date() - t + "ms");
+    }
+    function Fight(char1,char2) {
+        let data = {};
+        data.dmg = 0;
+        let hitSucc = (roll(char1.Dexterity)+1) - roll(char2.Athletics)
+        if( hitSucc > 0 ) {
+            data.dmg = roll(char1.Vigor) + 1;
+        }
+        return data;
+    }
+    function roll (num) {
+        let successes = 0;
+        for(var i = 0; i < num; i++) {
+            let dice = [0, 0, 1];
+            var index = Math.floor(Math.random() * 3); //3 is Length;
+            successes += dice[index];
+        }
+        return successes;
+    }
+    </script>
+    !-->
+</BODY>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Combat Calculator/combatCalculator.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:04:36 GMT -->
+</HTML>
+
+ 

@@ -1,0 +1,1202 @@
+<html>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Pages/Setting_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Setting Pages</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 2px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+</head>
+<style type="text/css">
+    body { width: 800px;}
+    page {
+        height: 11in;
+        width: 8.5in; /*825px;*/
+        background: white; 
+        box-sizing: border-box;
+        border-radius: 0px;
+        border-style: solid;
+        /*Print Helper Borders*/
+        /*border-color: hsla(0,55%,90%,1);*/
+        /*border-width: 0.125in 0.25in 1.20in 0.25in;*/
+        /*Display Borders*/
+        border-color: white;
+        border-width: 0.125in 0.25in 1.20in 0.25in;
+        margin: 1px;
+        /*overflow: hidden;*/
+            
+        position: relative;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: min-content;
+        grid-gap: 2px;
+        
+        color: black;
+        font-size: 10px;
+    }
+    ItemPage {
+        display:grid;
+        grid-template-columns:1fr;
+        grid-gap:1px;
+    }
+    IPTitle {
+        border: solid 0px black;
+        border-radius: 4px 4px 0px 0px;
+        padding: 1px 2px 1px 2px;
+        font-size: 20px;
+        font-weight: 700;
+        grid-column: 1/-1;
+        background:  var(--Yellow-4);
+        color: white;
+    }
+    IPSubTitle {
+        border: solid 0px black;
+        border-radius: 4px 4px 0px 0px;
+        padding: 1px 2px 1px 2px;
+        font-size: 11px;
+        font-weight: 600;
+        grid-column: 1/-1;
+        background:  var(--Yellow-4);
+        color: white;
+    }
+    ItemTitle {
+        color: white;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 4px 10px 10px 4px;
+    }
+    gf { 
+        font-weight: 700;
+        font-size: 80%;
+    }
+    tabDiv {
+        padding-left: 5px;
+        margin-bottom: 1px;
+        display: flex;
+    }
+    text {
+        background:var(--Gray-1);
+        border-radius:2px;
+        padding:2px;
+        color:black;
+    }
+    
+</style>
+<body>
+<page>
+    <div style='display:grid; grid-template-columns:1fr; grid-gap:2px;'><IPTitle style='background:var(--Gray-4);'>Urdun</IPTitle><text>
+            Urdun is a calssic magical medieval setting. 
+            It contains pastorial and fantastic regions, valient and brutal knights, powerful and terrifing gods, and mysterious and dangerous monsters.
+            In order to survive the dangerous and unforgiving terrain and dangerous beasts of the world they will need to grow into valient swordfighters, powerful mages, dashing theives, and more.
+            Characters can find adventure in classic monster slaying quests, palace intrigue, or even trip to unexplored continents.
+        </text><IPSubTitle style='background:var(--Gray-4);'>General<f12></f12></IPSubTitle><text>
+            <b>Formation:</b>
+            As far as the mages of Urdun can tell, everything is created from two substances matter and ether.
+            While matter functions much like it does in our world, static and physical, ether is dynamic and often harnessed for magical and spirtual abilities.
+            <div style='height:2px;'></div> <b>Metaphysics:</b> 
+            It is even said that souls are created by ether as well, and dissolve back it's general flow upon death.
+            While most live in the physical/material world, there is said to be an ether world as well, acting somewhat as a magical shadow to the physical world.
+            <div style='height:2px;'></div> <b>Gods:</b> 
+            Most people of Urdun that powerful entities exist in an around Urdun called gods.
+            Little is known about the nature of these entities, but they are older than recorded history and seem to be either made of or able to powerfully manipulate ether.
+            Studies seem to indicate that these gods are each associated with a different states or flavors of ether.
+            <div style='height:2px;'></div> <b>Doctrines:</b> 
+            As ether can take on the essence of these Gods, so can souls, and Doctrines describing their worship exist.
+            These Doctrines may grant great power to ther adherants, though many are forbidden among polite society.
+            <div style='height:2px;'></div> <b>Magic:</b>
+            There are two primary types of magic in Udrun, Arcane and Divine.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Arcane Magic:</b> Practiced my mages, Involves manipulating ether through concentration and mastery of mathimatical and alchemic arcane formulas.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Divine magic:</b> Granted by the favor a god or similar divine being, in which the user channels a fraction of their power.
+            <div style='height:2px;'></div> <b>Materials:</b>
+            Urdun contains special materials of great value.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Gold:</b> The primary measure in value in Urdun, Gold is used as currency throughout the world.
+                Lesser metals like bronze and silver are often also reffered to by their cost in gold (1/10 for bronze and 1/2 for Silver.)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Mythril:</b> The hardest known metal in Urdun. Can only be forged by highly trained smiths and using special forges.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Orichalcum:</b> A material made mostly out of inert ether, and highly valued for it's magical uses.
+            <div style='height:2px;'></div> <b>Realms Beyond:</b> Little is known about exactly what lies beyond the edges of the map.
+            Some say a great waterfall along with the mechanisms that keeps the celestial bodies in the sky, others say a vast emptiness that goes on forever.
+            Rumors speak of several lands fantastical lands which might possible be reached.
+            <div style='display:grid; grid-gap:3px; grid-template-columns:80px 1fr; margin-left:8px;'>
+                <div><b>The Moon and Cloudlands</b></div>
+                <div>
+                    It is said the moon, as well as a network of solid clouds can be reached by those able to go high enough.
+                    Rumors say the winged creatures that live here guard it's secrets carefully.
+                </div>
+                <div><b>The Celestial Sea</b></div>
+                <div>
+                    Some say the stars are made of the drops of crystal sea that hangs above all of Urdun.
+                    Nothing else is known of it, other than it is said to be the home of angels, as well as the lost home of the elves.
+                </div>
+                <div><b>Terra/Earth</b></div>
+                <div>
+                    This layer is what most are familiar with and includes the mountiains, valleys, and seas of Urdun.
+                </div>
+                <div><b>The Deep</b></div>
+                <div>
+                    A vast network of caves are said to exist below the ground, including huge caverns, underground forests, and rivers of lava.
+                    Dwarves, as well as many monsterous creatures are said to call this place their home.
+                </div>
+                <div><b>The Infernal Pits</b></div>
+                <div>
+                    While maps exist for parts of the Deep, almost nothing is known about the Infernal Pits.
+                    It is said they are made of oceans of lava and pits of infinite darkness and is the home of demons and other unspeakable things.
+                </div>
+            </div>
+        </text><IPSubTitle style='background:var(--Gray-4);'>Gods of Urdun<f12></f12></IPSubTitle><text>
+            <div style='display:grid; grid-gap:5px; grid-template-columns:47px 1fr; margin-left:6px;'>
+                <div><b>Azeal</b></div>
+                <div>
+                    <b>The God of Life, Light, Justice</b>
+                    <br><b>Favors:</b> Order, Honor, Conviction, Tradition
+                    <br><b>Description:</b> A benevolent but stern God. His followers are known for feeding the poor as well as burning heretics alive.
+                    <br><b>Worship:</b> The Church of Azeal is very ordered, and mainly made up of humans. They are known for large extravagant churches and solemn ceremony.
+                </div>
+                <div><b>Ernok</b></div>
+                <div>
+                    <b>The God of Nature, Beasts, Trees</b>
+                    <br><b>Favors:</b> Altruism, Balance, Fellowship, Survival 
+                    <br><b>Description:</b> A protector of nature and it’s beasts. Ernok avoids and dislikes cities and prefers places where nature reigns supreme.
+                    <br><b>Worship:</b> Those close to nature often cultivate a relationship with Ernok as well as all the beasts of the land and water. Most are wanderers though some woodland temples exist as well.
+                </div>
+                <div><b>Yavera</b></div>
+                <div>
+                    <b>The God of Art, Chaos, Mischief</b>
+                    <br><b>Favors:</b> Freedom, Adventure, Pleasure, Egoism
+                    <br><b>Description:</b> A many faced God who can be a mischievous trickster, a muse of art, or wild serial killer. Yavera  loves chaos and despises order.
+                    <br><b>Worship:</b> Worship of Yavera is done by those who bring art and chaos into the universe. Yavera will develop relationships with truly talented artists of all kinds, whether kind or violent.
+                </div>
+                <div><b>Tyrannus</b></div>
+                <div>
+                    <b>The God of War, Bloodshed, Destruction</b>
+                    <br><b>Favors:</b> Status, Mastery, Allegiance, Order
+                    <br><b>Description:</b> Ruthless Tyrannus wishes the world to be overrun with constant unending war. Life should be a constant test of strength.
+                    <br><b>Worship:</b> Traveling bands of warriors are other savage peoples will chant and make blood sacrifice to Tyrannus, often before battle. Also mountain dwellers and those who rough lives outside of civilization.
+                </div>
+                <div><b>Morgeth</b></div>
+                <div>
+                    <b>The God of Death, Darkness, Rot</b>
+                    <br><b>Favors:</b> Egoism, Knowledge, Nihilism, Security 
+                    <br><b>Description:</b> Varys between an aloof purveyor of death and a dark lust for power. A deal with Morgeth is a dangerous one indeed.
+                    <br><b>Worship:</b> Tend to be hidden in most realms, as worship is often outlawed. Secret grave cults and hidden rituals always crop up though, sometimes led by very powerful wizards.
+                </div>
+                <div><b>Xythuul</b></div>
+                <div>
+                    Little is known about the Mad Alien God Xythuul. Most say he doesn't exisit.
+                    All agree though he is different from the others, and his name is synonymous with fear and insanity.
+                </div>
+            </div>
+        </text><IPSubTitle style='background:var(--Gray-4);'>History<f12></f12></IPSubTitle><text>
+            <b>1500 Before AC (Pre-History):</b>
+                Little is known of these ancient days.
+                It is said Urdun was created, as well as the gods, and that there were constant wars between them, ceased only by wars against others more terrible still.
+                It is also said humanoids were created at this time, though by what and why is unknown.
+            <div style='height:2px;'></div> <b>-1500 to -1000AC (The Dim Ages):</b>
+                Very little is known about the Dim Ages only that humanoids and the lands of Urdun had taken their shape by it's beginning.
+                Tales of these times are sparse, though what exists relates to humans forming in bands and exploring their world.
+            <div style='height:2px;'></div> <b>-1000AC to -500AC (The Dawn Age):</b>
+                History says this was the height of human civilization.
+                The Empire of the Dawn was created spanning all the lands of Urdun, and in their great sky towers powerful mages were capable of bending reality itself.
+                While other humanoids thrived as well, humans themselves supposedly were able to create machines that could rival the gods.
+                Many artifacts from these times can still be found in current day Urdun and are often very valuable.
+                Some say it was internal strife, others say the jealousy of the gods, either way the fall occured, destroying the empire and casting Urdun into the dark ages.
+            <div style='height:2px;'></div> <b>-500AC to 0AC (The Dark Age):</b>
+                Also known as the The Age of Monsters, humanoids all struggled to survive as the monsterous races of Urdun rose to power.
+                It is said that most cities were abandoned, technology was lost, and humans almost lost the ways of magic completely.
+                In addition the alliance between the great humanoids of Humans, Elves, and Dwarves was lost as they fought each over resources.
+            <div style='height:2px;'></div> <b>0AC - 300AC (The Current Age):</b>
+                Various heroes throughout the world would eventually push back the monstrous armies and restablish human civilization. 
+                In Arthia, the Arthurian Calandar (AC) would be established along with The Dragon Kingdom though it would splinter into wit his passing.
+                Contact between continents would be reestablished, though only through distant trade routes.
+                Now with the monstrous races pushing back, and most kingdoms on the brink of war, what destinys will be forged in these dangerous times.
+            <div style='height:2px;'></div> <b>300AC (Current Day)</b>
+        </text></div></page>
+<page>
+    <div style='display:grid; grid-template-columns:1fr; grid-gap:2px;'><IPTitle style='background:var(--Gray-4);'>Arthia</IPTitle><text>
+            In Arthia the heirs to the long dead Dragon Kingdom, Ersonia, Venica, and Cressen, vie for contentintal supremacy both through secrecy and sometimes through open warfare.
+            The trading compaines of Salessia fight on the high seas agaibst the bandits of the Crossbone Isles with the brutal Skelvaar lurking and raiding the far North.
+            Meanwhile Forest Elves frotify the Great Wood, High Elves experiment with high magic on the Misty Isles, and Stone Dwarves forge treasure in war in their deep lairs.
+            Arthia is classic fantasy setting briming with adventure.
+        </text><IPSubTitle style='background:var(--Gray-4);'>History of Arthia<f12></f12></IPSubTitle><text>
+            <b>Before 0AC:</b>
+                While humans fought petty wars among themselves.
+                The Elfs would migrate into Arthia and splinter into three factions, the High Elves on the misty isles, the Forest Elves in the Great Wood, and the Night Elves in the Dark Forest in the far east.
+            <div style='height:2px;'></div> <b>0AC - 100AC (The Arthurian Age):</b>
+                In 0AC, Arthurus, the great hero of the humans would draw the Dragon Sword, forge an alliance with the elves and dwarves, and win the First Battle of Loncia and drive the Monstrous Races beyond the gated mountiains and into the waste.
+                Soon after, the Arthurian Calandar (AC) would be established along The Dragon Kingdom.
+                Other heroes on other continents would emmerge as well.
+                While it would pale compared to the Empire of old, it would firmly establish human lands and second, though short golden age would follow.
+            <div style='height:2px;'></div> <b>100AC to 300AC (The Succesion Wars):</b>
+                When Arthurus died his kingdom would slowly break apart in a series of bloody wars.
+                This would eventually split into the three kingdoms of Ersonia, Venica, and Cressen.
+                Cycles of war and peace would continue to the present day with no single realm able to establish a strong advantage over the others.
+        </text><div style='height:3px;'></div><IPSubTitle style='background:var(--Gray-4);'>Arthia<f12></f12></IPSubTitle><text>
+            <b><u>Kingdom of Ersonia</u></b> 
+             <br> One of the three descendants of the Arthian Kingdom, Ersonia was formed by the second son of Arthurus in the wake of his death.
+            The Eronians are a hardy people, who both toil in the lands of mind of the kingdom, as well as patrol the Gated Mountains in the east, behind which lies the Wastelands, ruled by goblin bands and monsters.
+            <br><b>Government</b>
+                <br> They are ruled by the <b>Wyvern King</b>, the ruler is a direct descendant via male primogeniture who keeps a <b>King's Council</b> including the <b>Master of War</b>, <b>Master of Magic</b>, and the <b>Master of Coin</b>.
+                Ersonia is split into 5 Duchies each ruled by one of the 5 most powerful houses in the realm. In addition there is the Royal Duchy of Greater Loncia, the semi-autonomous zone of Arcadia, and Gated Pass adminstrated directly by the military.
+            <br><b>Districts</b>
+            <div style='margin-left:10px;'>
+            <b>Greater Loncia:</b> Around Lonica. Capital Loncia.
+            <br><b>Wyvern Coast:</b> North east.
+            <br><b>The Moors:</b> South West. Capital Greymoor.
+            <br><b>Ersen Plains:</b> Central. Capital Ravenport.
+            <br><b>The Skilligs:</b> North West. Capital Coldrock.
+            <br><b>The Slivers:</b> Far North West.
+            <br><b>Arcadia:</b>
+            <br><b>Gated Pass:</b>
+            </div>
+            <b>Regions/Cities</b>
+            <div style='margin-left:10px;'>
+                <b>Loncia:</b> The triple walled mountain fortress of Loncia was the original capital of Arthia, and acts as a major bulwark against any force trying to pass the Gated Mountains.
+                    It is considered one of the strongest fortresses in all the world. Loncia was the original capital of Arthia, created during Arthuris wars to end the Age of Monsters.
+                <br><b>Ravenport:</b> The central trading hub of Ersonia and one of it's most populous cities. Was the site of the first Raven House.
+                <br><b>Graymoor:</b> The old fortress city of Graymoor was supposedly risen in the Dark Ages, and carried a lone torch of human power.
+                    Today it is a ruin, but many hear the ancient tunnels underneath go on for miles and are full of treasure, those most who seek it do not return.
+                <br><b>Coldrock:</b> 
+                <br><b>The Gated Mountains:</b> Constructed in the time of the empire, this network of fortifications seals Arthia from the wastelands of the east.
+                    Some stretches include huge walls over 200 feet tall and that go on for miles.
+                <br><b>Quiet Valley:</b>
+                <br><b>The Dragon Hills:</b>
+                <br><b>The Skelligs:</b>
+                <br><b>Giant's Glade:</b>
+            </div>
+            <div style='height:3px;'></div>
+            <b><u>Dominion of Venica</u></b> 
+            <br> Formed by the daughter of Arthurus, Venica claimed power from their holding of the crown and throne of the fallen king, as well as the reining capital of Brook Haven.
+            Venicans are the most cultured of the major realms, and fund large art and music projects. They also have a culture of knightly chivalry and engage in regular tournys with large attendance.
+            <br><b>Government</b>
+                <br> The <b>Siren Queen</b> is always picked from among the <b>Ladies of Blood</b> an inner circle chosen by the queen from those directly desecended from Arthrus.
+                The Queen also appoints the <b>Hand of the Queen</b> to lead the Venican armies in battle.
+                The Queen and the Hand appoint <b>Governorships</b> to administer the districts of Venica. These positions are highly coveted and obtaining them is often a matter of influence at courtly intrigue.  
+            <br><b>Districts</b>
+            <div style='margin-left:10px;'>
+                <b>Crystal Falls:</b> North West. Around Venicia.
+                <br><b>Pyria:</b> Around Pyria. 
+                <br><b>Bordon:</b> Easters swamps and port. 
+                <br><b>Tussere:</b> South, near the great wood and Salessia.
+            </div>
+            <br><b>Regions/Cities</b>
+            <div style='margin-left:10px;'>
+                <b>Venicia:</b> The former summer palace and eventual second capital of the empire, Brook Haven is considered one of the most beautiful cities in the world and is ringed by several waterfalls.
+                    Inside Brook Haven is the Crystal Palace where the Queen reigns. Other sites include a giant gemmed cavern used for concerts and balls.  
+                <br><b>Pyr:</b> One of the largest cities in the north west, and one of the few places where humans, elves, and dwarves all live.
+                <br><b>Basilisk Valley:</b>
+                <br><b>Siren Pass:</b>
+                <br><b>The Water Forest:</b>
+            </div>
+            <div style='height:3px;'></div>
+            <b><u>Republic of Cressen</u></b> 
+            <br> The final of three splinter regions of the Arthian Empire, Cressen was formed in by Arthurus's friend and head general along with his child son, and would claim upon possesion of The Dragon Sword.
+            Cressen is warmed than the other kigdoms and neighbors the south eastern deserts, as well as the Southern Seas, which are a large part of inter-continental trade.
+            When the youngest son of Arthurus would come of age he would declare a republic, giving all land owners a vote in the senate.
+            <br><b>Government</b>
+                <b>The Cressen Senate</b> has one member for each of the 300 most presitgious families of Cressen. Every 5 years the Seante elects 3 <b>Consuls</b>, who rule for 5 years at a time and head the government.
+                The lands of Cressen are ruled over directly by the rich landowning families.
+            <br><b>Regions/Cities</b>
+            <div style='margin-left:10px;'>
+                <b>Ivera:</b> The largest city of Cressen is a bustling port city, and one of the world centers of trade.
+                    It is said you can find anything in White Port, as long as you can may the price.
+                <br><b>Skarres:</b> This city is known for it's fighting pits where challengers come from all over the world to fight in brutal combat.
+                <br><b>Centaur Plains:</b>
+                <br><b>Lizard Ridge:</b>
+                <br><b>The Dusty Mountains:</b>
+            </div>
+        </text></div></page>
+<page>
+    <div style='display:grid; grid-template-columns:1fr; grid-gap:2px;'><IPSubTitle style='background:var(--Gray-4);'>Additional People's of Arthia<f12></f12></IPSubTitle><text>
+            <u><b>Forest Elves of the Great Wood</b></u>
+                <br> These are elves who decided to make their home in the Great Wood, and devote their lives to nature.
+                They prefer to keep their interactions with humans to a minimum and mostly live in small bands occasionally organized into a Council of Elders.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Drevanah:</b> The largest settlement of the forest elves is made of several intertwined treetop structures.
+            <div style='height:3px;'></div><u><b>The High Elves of the Misty Isles</b></u>
+                <br> Settling here in the Dark Ages, these elves never gave up their obsession with the arcane arts.
+                The Misty Isles are surrounded by a treacherous reef, some say made by the elves themselves, and trade in valuable magical artifacts.
+                They are ruled by a High Elder chosen from the most distinguished of the islands.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Mystvail:</b> The central city of the High Elves, and contains the Etherium Tower, a center of magic throughout the world.
+            <div style='height:3px;'></div><u><b>Stone Dwaves of the Iron Mountains</b></u>
+                <br> Once a great kingdom throughout the mountains and deep, a great cataclysm fractured dwarven society.
+                The Stone Dwarves keep the reamians of their kingdom in the metal rich Iron Mountains, and are considered the best smiths in all of Arthia.
+                The are ruled by a king with a lineage that goes back to before the Dark Ages.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>The Iron Keep:</b> The capital of Stone Dwarf Kingdom, famed for it's many layers of defense and it's vast treasury.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Stone Town:</b> One of the very few dwarven settlements mostly at ground level. Acts a major trading hub in rare metals often only available here.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Fell Keep:</b> 
+            <div style='height:3px;'></div><u><b>The Salessia Trading Companies</b></u>
+                <br> Nominally a vassal of Venica, the Sallessian are de facto autonomous due to the incredible wealth the region has access too.
+                The largest and most powerful merchant in the world make their home here, as well as the banks that some say hold the strings of power throughout Arthia.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Salessia City:</b> A bustling port city made mostly of stone and line with canals. Home to many wealthy who often engage in costumed balls.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Porcelain Isles:</b> Only the extreamly wealthy can go here. Most of the isles are owened by elite private citizines, though there are meeting places for balls and other extravagant events.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Selessia Canal:</b> A giant canal built to faccilaite trate through the peninsula.
+            <div style='height:3px;'></div><u><b>The Pirates of the Crossbone Isles</b></u>
+                <br> These mostly rocky isles are populated by large bands of pirates who live off attempts to raid Salessia trading ships.
+                The population of the islands has grown to support several settlements, though leadership of the islands, The Crossbone King, rarely can hold the position long.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Skull Cove:</b> Spilling out of caved cove and hugging the rocky walls around it, this city is known for it's debauchery.
+            <div style='height:3px;'></div><u><b>The Vorsak Mountain Clans</b></u>
+                <br> Along several of the mountains of Arthia, but particuarly the gated mountains, a lose confederation of mountain tribes make their home.
+                These tribes fear nothing in battle, refuse to bend to authority, and are know for the furiosity and survival skills.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Halo Peak:</b> One of the few permanent settlements of the montain clans, built around a deep cave structure said to serve as a test of strength.
+            <div style='height:3px;'></div><u><b>Skelvaar War Bands</b></u>
+                <br> The north sea is home to the Skelvaar, who often leave the desolate coasts they call home to plunder what they can from the sourthern lands.
+                They are lossely ruled by a War Cheiften who is decided by contest and rite of a blood challenge.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Fjudur:</b> The largest city of the Skelvaari is built around a waterfall that partially freezes in the winter with half its population tied at sea.
+        </text><div style='height:3px;'></div><IPSubTitle style='background:var(--Gray-4);'>Organizations of Arthia<f12></f12></IPSubTitle><text>
+            <div style='height:1px;'></div> <b><u>The Church of Azeal</u></b> 
+            <br> Most humans consider thenselves followers of Azeal, and look to the Church of Azeal for spirtual guidance.
+                Churchs can be found throughout Arthia, including giant cathedrals in the major cities to humble chapels in small villages.
+                Members of the church are versed in the art of healing, and some can call on the power of Azeal to aid in this task.
+                Additionally, the church hands out food and water to beggers when possible.
+                <br> <b>The Sacred City:</b> On and island in the north sea, the Sacred City acts the center of the church.
+                    In it resides the leader of the church, called the Eye of Azeal, who reigns over the Council of Bishops.
+                    The city is also known to contain several holy artifcats of incredible value and power.                    
+            <div style='height:3px;'></div><b><u>The Academy</u></b> 
+            <br> Headquarted in the City of Arcadia, which acts as an autonomous city-state within Ersonia, the Citadel stands as the foremost school of science, history, and magic in Arthia.
+            The Academy is run by The Council of Archmages, each chosen from one of the 6 Schools of the Academy.
+            They task themselves with finding, perserving, and teaching knowledge, as well as the study of magic.
+            Several mages of the academy act as advisors in the royal households of Arthia, and are known to have contact with similar organizations on other continents as well.
+            <br> <b>Arcadia:</b> Called 'the magical city' it contains The Citadel where young mages are taught and Archamge Counsil meets.
+            <br> <b>The Schools of Arthia:</b> There is one school in Arthia for each type of chromatic magic, and one for non-magical learning.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Red:</b> The manipulation of fire and light and other combustible energies.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Blue:</b> The manipulation of water, ice, and storms.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Green:</b> The art of mental awareness, including scrying and mide control.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Yellow:</b> The creation of illusions and other manipulation of the senses.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Purple:</b> The manipulation of gravity and the earth. Some arts can alter time itself.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Grey:</b> The non-magical studies, including langauges, history, and logic.
+            <br> <b>Dark Magic:</b> Though forbidden by the Citadel, it said some still study the Dark Magics. It is said to study these requires the power of Morgeth.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Plague:</b> The manipulation of vermin, poison, acid, and other kinds of decay.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Shadow:</b> The manipulation of the darkness itself. Also related to control of nightmares and other dark illusions.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Death:</b> The creation of undead creatures and the manipulation of dead flesh.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Soul:</b> Power to control and consme soul ether.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Null:</b> The art of anti-matter magic and nothingness.
+            <div style='height:3px;'></div> <b><u>The Marble Bank</u></b> 
+            <br> Headquarted in Salessia, The Marble Bank has branches in every region of Arthia, and controls vast amounts of money, and indrectly money and people.
+                Many say that pull strings throughout all of Arthia with many noble houses in its debt.
+            <div style='height:3px;'></div> <b><u>The Raven House</u></b> 
+            <br> A guild that uses ravens to send letters throughout Arthia. Can also send packages throughout Arthia. It is said they can communcate outside Arthia as well, though at a steep price.
+            <br> <b>Adventurers:</b> Another aspect of the guild is faciliating adventurers and quests. Most Raven Houses manage a Quest Board in which locals may list jobs which they would pay adventurers to do.
+            These quests can range from simple (ex: killing some rats) to very dangerous (ex: killing a dragon).
+            Parties and Companies may also regester their services here as a way of finding jobs. The Raven House keeps a log of infromation about these groups in order to faciliating their use.
+            Also The Raven House may faciliate adventurers looking for parties to join as well as parties looking for additional members.
+            Typically in busy area, in inns nearby are often meeting spaces for adventurers in the world.
+            <div style='height:3px;'></div> <b><u>The Black Hand</u></b> 
+            <br> An guild made up of assassins and theives. It has no central location and is known mostly though whispers.
+                The leader is known as The Lord of Secrets and it said few ever seem him alive.
+        </text></div></page>
+<page>
+    <IPTitle style='background:var(--Gray-4);'>The World of Urdun</IPTitle><text>
+            The greater world of Urdun is full of many different peoples and cultures. The history of these areas is less known in Arthia, but are just as storied.
+            What is known by scholars is that during the Dawn Ages all these lands were unified into a single global civilization, but sense then it has fractured with many areas faling completely outside the knowledge of all but the most learned of scholars.
+            Long distance trade is very dangerous yet very lucrative pursuit, so there are trade routes crossing all over Urdun though not all survive the journey.
+        </text><IPSubTitle style='background:var(--Gray-4);'><f12>Outer Arthia</f12></IPSubTitle><text>
+        <b><u>The Wild Lands</u></b>
+            <br> The Wild Lands are a almsot completley uncivilizaed area, mostly populated by golbins and other monsrous peoples. War between fractuous tribes is unending.
+            Some attempt to cross the Jade Path in order to get rich on the lucrative trade betweein the lands of east and west, but is it exceedingly dangerous.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Monstertown:</b> A town built around some ceremonial caves and hills said to be sacred by golbinkind. One of the few places where anytime of monstrous settlement can surive, only occasionaly getting burnt down by squabbling factions.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Zar'een:</b> The largest settlement of the Night Elves. It is built within a ding tree that covers almost the hole city, and farious forest caves so that a large percentage is undergound.
+                Also contains several large waterfalls that roll of the dying tree into the forest caves below.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Everfall City:</b> A land populated by humans in the middle of the Wastelands. They surive through constant villigence and military might.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Shivar's Rend:</b> A very old trench cuth through so that it is sadi to go into the underworld. Acts as a barrier between the Wild Lands and Jahandra.
+        <div style='height:1px;'></div> <b><u>Jahandra</u></b>
+            <br> Jahandra is ruled by the Opal Emperor, who has complete authority over all the lands of Jahandra. There is much palace intrigue and many Opal Emperors devote all their energy to keeping the throne from their backstabbing families.
+            Jahandra is also often at war with the Naga to it's east.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Bangilir:</b> Built on a gianr bridge acorss the pensiula, the floor of the city is almost entirely stone. Contains rich markets as well as deep canals under the city floor.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>The Sunkin City:</b> Built in a swamp thie city is partailly sumberged. It is well known for its poison markets and is one of the few places than humans, lizardmen, and naga share a city.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Steps of Stellnir:</b> This city is built into a canyon of the Stillnir Mountains. It famously contains the Path of Clouds in which one may attempt the perilous jounrey to the Skybridge of the Avens.
+        </text><IPSubTitle style='background:var(--Gray-4);'><f12>Ziberia</f12></IPSubTitle><div style='display:grid; grid-template-columns:1fr; grid-gap:2px;'><text>
+            <b><u>Rabesia</u></b> 
+                <br> A mostly desert area with very rich Sultans vying for power and prestige against one another. The head of the entire area if the Khalif, but they are typically a figurehead of the various sultan factions.
+                The area is rich with trade as it had havy stop over the traffic through the Sapphire Sea.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Al Afar:</b> An extreamly wealthy city with many maganificent onion shaped domes. Also filled with busy bizaares in which all manor of things can be found.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Nasqan:</b> Built along the side of a mountain, Nasqan is the home of order of agents and assassins which influence control of the city. Conains many buildings and temples carved out of the mountain rocks.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Ankhai:</b> Called the capital of the sun god, who claims to be a god on earth and rules from 2000' pyramid. Will sometimes attempt invasions of Al Afar and surrounding areas, though is often paid off.
+                    Little is known about the sun god, only that they claim to be immortal or even reincanated into the body of their children.
+            <div style='height:1px;'></div> <b><u>Ken'ara</u></b>
+                <br> Mostly isolated Ken'ara is typically hostile to outsiders. It is said the area still contains working ruins from the Dawn Age and those manufacture them.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Cassou:</b> City famous for it's hanging guardans, sand stone walls and towers, and ornate cloth banners. The Princes who rule the city control the south Sare river trade. 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Kinanja:</b> Huge ivory and marble towers built against the cliff face and surrounded by dense jungle. Supposedly these towers are some of the few strcutures to survive from the Dawn Age.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Ze Hai Lu:</b> A beatiful beach city built mostly on piers and giant coral. It is renowned for it's relaxing atmosphere and has rich trade with merfolk.
+            <div style='height:1px;'></div> <b><u>The Zibarian Wastes</u></b>
+                <br> A huge desert filled with red sand dunes and very little water. Few humans can survive hear or hope to cross it. Scorpian Men often patrol the dunes around their burrowed hives and attack any who come near.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Zyathustra:</b> Supposed one of the few cities from the Dawn Age that reamins completely intact. Some even say that people from from the Dawn Age still live there.
+                    Unfrotunately it is beyond the Sanguine Desolation and said to be protected by golems and other constrcuts which patrol it and the surrounding areas killing whoever they find.
+            <div style='height:1px;'></div> <b><u>Kharrmhor</u></b>
+                <br> Kharrmhor is a mostly abadoned area of the world filled with volcanic seas and black basalt mountains. Some buildings can be found carved from filed of obidean, and though it is said rich treasure can be found here it is extreamly dangerous.
+                It is also said that some dark power lurks here, growing sense before the Dawn Age and those that enter tread lightly.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Korath:</b> One of the few cities that retains a population, Korath is made of basalt and obisidean. It is often used as an entry point for the rich and dangerous lands deeper in Kharrmhor. 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>The Braken Ruins:</b> Is said to be a place with large black sky scraping building and deep lava rivers. Few who wish to find it, ever come back.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>The Slagmar Breach:</b> Here an intense magical disaster has caused a breach in the rift. All sailors avoid the souher coast of Kharmorro for this reason.
+                </text><IPSubTitle style='background:var(--Gray-4);'><f12>Shandu</f12></IPSubTitle><text>
+            <b><u>Xi'an</u></b>
+                <br> Xi'An is one of the largest of the three great powers of the east. It claims its emporeror is the rightful ruler of the enitre continent and has direct line of descent from great rulers of the dawn age.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Fu'Shuan:</b> The largest city in the world. Soem say the port, markets, and even the swers are a large are by themsleves the size of a smaller city. Almost anythign in the world can be found in Fu'Shuan.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Zai Xin Palace:</b> This place is repored to be as large as a city as well as to be enchanted in such a way that the walls and floors often shift. It contains most of what a city would reuire inside it.
+                    This is the home of the Xi'an Emporer. By tradition he is not allowed to ever set foot otside the palce as it would make him impure.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Ja'jing Valley:</b> A holy city built into the misty canyons. It contains a port where commoners can do business, but few are allowed to entier the temples built among the cloudy mists of the inner valley. 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>The Shield of Xi'An:</b> A huge wall contstructed to protect the people of the east from those of the wild lands. It is manned mostly by conscripts even though it was once considerd an honor to man it. 
+            <div style='height:1px;'></div><b><u>Syoto</u></b>
+                <br> An chain of islands obstensibly ruled by an emporer said to be secended directly form Azeal. In actuallity though, the Shogun, the leader of the militray holds all the real power.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Suzu:</b> The military captial of Syoto where the Shogun presides over the barracks and great port, where ships are built daily for the regular invasions of Xi'An. 
+                    Has a population almost rivaling Fu'Shuan.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Kyosaru:</b> Built at the base of Mount Kyosa, Kyosaru is where the emporer lives and is renound for being one of the most tranquil places in the world
+                    Cherry blossums fall year round here are hundred of temples and roads built of white marble polished daily. No one is allowed to see the empoerer.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Nijotsu:</b> A hidden city tucked away in the northern island mountains. Is it said that this is the court of the Order of the Shadow, the myseterous figure some call the Master of Shadows resides.
+            <div style='height:1px;'></div><b><u>Byin'Sur</u></b>
+                <br> This land is populated by nomadic horse people, as well as centuars. They live most of hteir lives in the saddle and are very efficent at warfare, often invading the lands to the south for plunder.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Ughrat:</b> This is the city of tents where the current Khan lives. The city is known to move whenever a new Kahn holds court. At it's center is a tent over 1000' wide.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Bayur Lake:</b> A sacred place for the people of Byin'Sur. It's water is conisderd holy and one of the few places where fighting is not allowed.
+            </text></div></page>
+<page>
+    <IPSubTitle style='background:var(--Gray-4);'><f12>Distant Lands</f12></IPSubTitle><text>
+        <div style='height:1px;'></div> <b><u>Anatokia</u></b>
+            <br> A land of dense jungle and mystery. Few can surive these hot often poiosnous jungles filled with bigs both small and gigantic. The land is rich in minerals and precious spices and herbs, making it extreamly coovted, but impossible to hold.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Port of Arthia:</b> A colony town created by the Salessian Trading Companies to attemtp to harvest the bast resources of Anatokia. 
+            Several other colonies have been created but due to desease, bug infestations, and massacres of blood rot this is the only one that has been able to survive til now.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Jalteca:</b> A city of leveled pyarmids where shalans practice powerful magic and live in harmony with the jungle. The central terraced pyamrid is said to have 100 levels.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Pachote:</b> Along the peaks of the Toquino Mountains are the cities of Pachote built among the peaks and clouds. It is said the area contains one of the few bridges to the overworld.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Xocatal:</b> Deep within the jungles of Anatokia is the pyrmaid city of Anatokia. Sacrfices are made daily and the central pyramid of the blood god has a fountain of blood that runs down it into the center of the city.
+        <div style='height:1px;'></div> <b><u>Ty'rok</u></b>
+            <br> One of the farthest points from civilization, Ty'rok contains giant reptiles that often fight for supremacy. 
+            Few people live here, though it is said that those that do live in small simple villages and that some know how to ride the flying reptiles.
+        <div style='height:1px;'></div> <b><u>Leng</u></b>
+            <br> The northern continent of Leng supposedly holds many burried evil powers. Dark magic is practiced in the open among the populace and power is shared, often violently, between several principalities.
+            It is said the farther north traveled the more dark and dangerous the magic.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Talus:</b> The largest city of Leng. It is home of several dark magic guilds and the Council of Night where the various factions attempt to share power.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Abysm:</b> This city is built decending a deep put that plunges into the underworld. Heavilty stratafied and very dangerous, few dare to go here.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>The Nameless City:</b> It is rumored that deep within Leng, bordering the rift, is a city said to be as old as time. No one is known to have returned.
+        <div style='height:1px;'></div> <b><u>Xanadhor</u></b>
+            <br> This continent is mostly only rumored and not present on most maps. What few information there is describes an impossible land rivin by rifts and polluted my ether radiation.
+                Radioactive sand storms come through often blasting the land and anything living on it. Not only is the air unsafe to breath, but supposedly the toxic waters and plants breed aboniations which stalk the wastelands.
+                The people who do live here are said to have access to uniqe magic and techonolgy not seen sicne the Dawn Age.
+                Also in Xanadhor is found a very rare kind of crystailized ether called Etheryte which can be used to power machines of great size.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Zylynn:</b> A city made from flotillas of hot air ballons and floating islands (a fairly common in Xanadhor). Many people hear use hangglider and other similar apparatus to naviagete the skies.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Kranix:</b> A city built in a radioactive desert next to a large depoit of Etheryte. It is impossible to breath the air and everyone is required to wear a gasmask unless inside a seccured building.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Qizzan:</b> Built on the ruins of an ancient city and a radioactive lake, people travel mostly by boat from small island to small island.
+                    The submerged ancient city is sometimes accessible in low tides for scavengers to attempt to raid it for wealth and not get trapped when the by the radioactive waters when the tide returns.
+
+        </text></div></page>
+</body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Pages/Setting_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:59 GMT -->
+</html>

@@ -1,0 +1,1817 @@
+<html>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Compendiums/Culture_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Culture Compendium</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 2px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+</head>
+<style type="text/css">
+    body {
+     width: 100%;
+    }
+</style>
+<body style='background:hsla(0,0%,40%,1);'>
+<div style='display: grid;grid-template-rows: 1fr;grid-template-columns: repeat(auto-fill, 356px);grid-gap: 8px 8px;grid-auto-flow: row;'><div id='Cultures' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Cultures</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Gray-4);'>
+            <div>Human of Arthia</div>
+        </rulecardtitle><abilitysection class='asecGray' style='font-size:7px;'>
+            Humans are common all throughout Arthia. Most claim some decent from the Arthian Empire ruled by the Dragon King.
+            His death wold lead the the Succesion Wars which wold break up his kingdom into the warring realms of Ersonia, Venica, and Cressen.
+        </abilitysection><abilitysection style='display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; background:white; border-radius:4px; color:black; font-size:11px; text-align:right; border:none;'>
+                <div style='font-weight:700; border:solid black 1px; padding:1px 2px 1px 2px;'>/25&nbsp; <div style='display:inline; color:black; font-weight:800;'>CP</div></div>
+                <div style='font-weight:700; border:solid black 1px; padding:1px 2px 1px 2px;'>/7&nbsp; <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
+        </abilitysection><abilitysection style='padding:1px 2px 1px 2px; font-size:10px; font-weight:600;'>
+            Capacity Mod: +10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Size: Standard (15<b6>E</b6>)
+            <br> Hunger: 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thirst: 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sleep: 1
+        </abilitysection><abilitysubtitle class='astGray'>
+            Stats
+        </abilitysubtitle><abilitysection class='asecGray' style='font-size:9px; background:white; display:grid; grid-template-columns:1fr; grid-gap:2px; border:none; padding:0px;'>
+            <div style='text-align:left; padding:1px 2px 1px 2px;'>
+                <b>Add 6 Stat Points</b>
+            </div>
+            <div style='display:grid; grid-template-columns:1fr 1fr 1fr; grid-gap:1px;'>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Pink-4);
+        
+        font-weight:700;
+    '>
+        Strength
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fortitude
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endurance
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agility
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Dexterity
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Charisma
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Intellect
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px;  display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+            </div>
+        </abilitysection><abilitysubtitle class='astGray'>
+            Subculture
+        </abilitysubtitle><abilitysection class='asecGray' style='font-size:7px;'>
+            <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Ersonia</b> is a hardy kingdom in the north-east, formally of Arthia and ruled by The Wyvern King. 
+            <div style='height:1px;'></div>
+            <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Venica</b> is a cultured queendom realm west, formally of Arthia and ruled by The Siren Queen.
+            <div style='height:1px;'></div>
+            <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Cressen</b> is a republic region in the south, formally of Arthia and ruled 3 elected consuls.
+            <div style='height:1px;'></div>
+            <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Salessia</b> a merchant republic and nominal vassal of Venica.
+            <div style='height:1px;'></div>
+            <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Skelvaar</b> are people from a cold land in the north who live mostly off raiding.
+            <div style='height:1px;'></div>
+            <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Vorsek</b> are mountain people considered warrior barbarians by outsiders.
+            <div style='height:1px;'></div>
+            <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>The Crossbone Isles</b> are rocky islands populated mostly by pirates.
+        </abilitysection><abilitysubtitle class='astGray'>
+            Background <f7>- Pick One</f7>
+        </abilitysubtitle><abilitysection class='asecGray' style='background:white; display:grid; grid-template-columns:1fr; grid-gap:2px; border:none; padding:0px;'>
+            <div style='display:grid; grid-auto-flow:rows; grid-gap:1px;'>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Peasant</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Normal Clothes, 3 Meals, 35<b6>G</b6>. 
+                        <br> Rugged. 
+                        <br> Follower of Azeal (5<div style='display:inline; color:black; font-weight:800;'>AP</div>) <b>OR</b> Horse Rider (5<div style='display:inline; color:black; font-weight:800;'>AP</div>) <b>OR</b> Strong Stomach. </div></div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Urchin</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Rags, 25<b6>G</b6>. Knife.
+                        <br> Street Smarts, Underworld (5<div style='display:inline; color:black; font-weight:800;'>AP</div>).
+                    </div></div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Wilderness</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Rags, 25<b6>G</b6>.
+                        <br> Strong Stomach, Survivalist (10<div style='display:inline; color:black; font-weight:800;'>AP</div>).
+                    </div></div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Apprentice</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Clothes, 35<b6>G</b6>.
+                        <br> 10<div style='display:inline; color:black; font-weight:800;'>AP</div> toward any Talents/Doctrines.
+                    </div></div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Sailor</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Normal Clothes, 25<b6>G</b6>. 
+                        <br> Gain 15<div style='display:inline; color:black; font-weight:800;'>AP</div> spread in Sailor and Athlete:Swimmer.</div></div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Merchant</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Fancy Clothes, 70<b6>G</b6>, 
+                        <br> Merchant (5<div style='display:inline; color:black; font-weight:800;'>AP</div>).
+                    </div></div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Noble</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Fancy Clothes. 
+                        <br> See <b>Noble</b> Abilitiy Card.
+                    </div></div>
+                </div>
+            </div>
+        </abilitysection></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Gray-4);'>
+            <div>Elf</div>
+        </rulecardtitle><abilitysection class='asecGray' style='font-size:7px;'>
+            Elves are slighter than humans, and typically slightly shorter and thinner.
+            Most are very fair in apperance and depending on the type may have strange colors of skin and hair.
+            Elves enter adulthood at the same age as humans, but stay young adults until around the age 50, and commonly live as long as 150.
+        </abilitysection><abilitysection style='display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; background:white; border-radius:4px; color:black; font-size:11px; text-align:right; border:none;'>
+                <div style='font-weight:700; border:solid black 1px; padding:1px 2px 1px 2px;'>/20&nbsp; <div style='display:inline; color:black; font-weight:800;'>CP</div></div>
+                <div style='font-weight:700; border:solid black 1px; padding:1px 2px 1px 2px;'>/6&nbsp; <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
+        </abilitysection><abilitysection style='padding:1px 2px 1px 2px; font-size:10px; font-weight:600;'>
+            Capacity Mod: +8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Size: Light (12<b6>E</b6>)
+            <br> Hunger: 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thirst: 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sleep: 1
+        </abilitysection><abilitysubtitle class='astGray'>
+            Stats
+        </abilitysubtitle><abilitysection class='asecGray' style='font-size:9px; background:white; display:grid; grid-template-columns:1fr; grid-gap:2px; border:none; padding:0px;'>
+            <div style='text-align:left; padding:1px 2px 1px 2px;'>
+                <b>Add 4 Stat Points</b>
+            </div>
+            <div style='display:grid; grid-template-columns:1fr 1fr 1fr; grid-gap:1px;'>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Pink-4);
+        
+        font-weight:700;
+    '>
+        Strength
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/1</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fortitude
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/1</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endurance
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agility
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Dexterity
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div> <b>&nbsp;&nbsp; 2 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Charisma
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Intellect
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px;  display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+            </div>
+        </abilitysection><abilitysubtitle class='astGray'>
+            Background <f7>- Pick One</f7>
+        </abilitysubtitle><abilitysection class='asecGray' style='background:white; display:grid; grid-template-columns:1fr; grid-gap:2px; border:none; padding:0px;'>
+            <div style='display:grid; grid-auto-flow:rows; grid-gap:1px;'>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black; grid-gap:0px;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:62px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Forest Elf</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center; display:grid; grid-template-rows:auto auto auto; grid-gap:1px;'>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Forest Elves live mostly in the Great Wood are highly in tune with nature and favor the god Ernok.
+                            Often have green tinted hair, and sometimes green tinted skin as well.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Dex
+    </div>. <b>Choose 1:</b> +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div>, +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Gain Survialist (15<div style='display:inline; color:black; font-weight:800;'>AP</div>).
+                            <br> Normal Clothes, 3 Food (Tasty Meal), 30<b6>G</b6>.
+                        </div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:62px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>High Elf</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center; display:grid; grid-template-rows:auto auto auto; grid-gap:1px;'>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            High Elves live mostly on the isolated Misty Isles, and favor the stufy of Arcane Magic.
+                            Often have strange colored hair such as blue, purple, and pink.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int
+    </div>. <b>Choose 1:</b> +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha
+    </div>, +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Gain Scholar (15<div style='display:inline; color:black; font-weight:800;'>AP</div>).
+                            <br> Normal Clothes, 3 Food (Tasty Meal), 30<b6>G</b6>.
+                        </div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:62px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Night Elf</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center; display:grid; grid-template-rows:auto auto auto; grid-gap:1px;'>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Night Elves live in the Shadow Forest in the north-east, and tend to favor the god Morgeth.
+                            Night Elves tend to have purple tinted skin and white or purple tinted hair.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div>. <b>Choose 1:</b> +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Dex
+    </div>, +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Dark Vision 1R (Applies +1R Visibility in Low Light.), Athlete (10<div style='display:inline; color:black; font-weight:800;'>AP</div>)
+                            <br> Normal Clothes, 3 Food (Tasty Meal), 30<b6>G</b6>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </abilitysection><abilitysubtitle class='astGray'>
+            Other
+        </abilitysubtitle><div style='border:solid 1px black; padding:1px 2px 1px 2px; font-size:8px;'>
+            <b>Fragile:</b> Can take 1 Less Torso Wound than Humans.
+            <br> <b>Keen Senses:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div> Challenges.
+            <br> <b>Survivability:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Resist Hunger, Thirst, and Sleep.
+            <br> <b>Discouraged Classes:</b> Barbarian, Cleric, Monk.  <f7>Can't take at Character creation.</f7>
+        </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Gray-4);'>
+            <div>Dwarf</div>
+        </rulecardtitle><abilitysection class='asecGray' style='font-size:7px;'>
+            Most Dwarves are just under 5' tall, and wider and brawnier than most humans.
+            Dwarves revere rocks and great works of architechture and masonry. Dwarf craftsmanship is thought to be some of the best in the known world.
+            The men are also known for styling their long beards and drinking strong alcohol.
+        </abilitysection><abilitysection style='display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; background:white; border-radius:4px; color:black; font-size:11px; text-align:right; border:none;'>
+                <div style='font-weight:700; border:solid black 1px; padding:1px 2px 1px 2px;'>/25&nbsp; <div style='display:inline; color:black; font-weight:800;'>CP</div></div>
+                <div style='font-weight:700; border:solid black 1px; padding:1px 2px 1px 2px;'>/6&nbsp; <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
+        </abilitysection><abilitysection style='padding:1px 2px 1px 2px; font-size:10px; font-weight:600;'>
+            Capacity Mod: +12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Size: Standard (15<b6>E</b6>)
+            <br> Hunger: 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thirst: 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sleep: 1
+        </abilitysection><abilitysubtitle class='astGray'>
+            Stats
+        </abilitysubtitle><abilitysection class='asecGray' style='font-size:9px; background:white; display:grid; grid-template-columns:1fr; grid-gap:2px; border:none; padding:0px;'>
+            <div style='text-align:left; padding:1px 2px 1px 2px;'>
+                <b>Add 3 Stat Points</b>
+            </div>
+            <div style='display:grid; grid-template-columns:1fr 1fr 1fr; grid-gap:1px;'>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Pink-4);
+        
+        font-weight:700;
+    '>
+        Strength
+    </div> <b>&nbsp;&nbsp; 2 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fortitude
+    </div> <b>&nbsp;&nbsp; 2 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endurance
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agility
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/1</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Dexterity
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style='border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Charisma
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px; display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Intellect
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border-style:solid; border-width:1px; border-color:black; padding:1px;'>
+                    <div style=' border-radius:4px 0px 0px 4px; padding:0px;  display:flex; align-items:center; justify-content:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div> <b>&nbsp;&nbsp; 1 +</b></div>
+                    <div style='background:white; border-radius:0px 4px 4px 0px; color:black; font-size:9px; display:grid; justify-content:center; grid-template-columns:auto 1fr auto; padding:0px 1px 0px 1px;'>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'></div>
+                        <div style='display:flex; align-items:center; font-weight:700;'>/3</div>
+                    </div>
+                </div>
+            </div>
+        </abilitysection><abilitysubtitle class='astGray'>
+            Background <f7>- Pick One</f7>
+        </abilitysubtitle><abilitysection class='asecGray' style='background:white; display:grid; grid-template-columns:1fr; grid-gap:2px;'>
+            <div style='display:grid; grid-auto-flow:rows; grid-gap:1px;'>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:80px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Stone Dwarf</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center; display:grid; grid-template-rows:auto auto auto; grid-gap:1px;'>
+                        <div style='border:solid 1px black; padding:1px; font-size:8px;'>
+                            Stone Dwarves mostly live in the Iron Mountains of Northern Arthia.
+                            They live closer to the surface than other dwarves and tend to have friendly, though limited, relations with humans.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div>
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Normal Clothes, 2 Food (Meal), 45<b6>G</b6>. 
+                        </div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:80px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Deep Dwarf</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center; display:grid; grid-template-rows:auto auto auto; grid-gap:1px;'>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Deep Dwarves live deeper than any other dwarves in the darkest pits of the earth.
+                            It is said they don't know what rest is, toil all ther lives, and often capture and enslave others to work them to death in their mines.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            +2 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div>.
+                            <br> Too Bright Con Point <b>TB</b> whenever in sunlight. 
+                            <br> Morale Limit is 0. Can’t be a Bard or Musician. 
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Normal Clothes, 2 Food (Meal), 45<b6>G</b6>. 
+                        </div>
+                    </div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:80px;'><div><div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <b>Lava Dwarf</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center; display:grid; grid-template-rows:auto auto auto; grid-gap:1px;'>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Lava Dwarves live clustered around the lava rivers and lakes of the Deep.
+                            They are known for the ingenuity and vast iron work contraptions which lava as source of energy.
+                            Known for their good humor, though considered lazy among dwarf kind.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            +1 <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int
+    </div>. +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Resist Heat.
+                        </div>
+                        <div style='border:solid 1px black; padding:1px;'>
+                            Normal Clothes, 2 Food (Meal), 45<b6>G</b6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </abilitysection><abilitysubtitle class='astGray'>
+            Other
+        </abilitysubtitle><div style='border:solid 1px black; padding:1px 2px 1px 2px; font-size:8px;'>
+            <b>Bad Swimmers:</b> Sink 1 in water. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Crafty:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Repair Weapons and Armor.
+            <br> <b>Sturdy:</b> Can take 1 More Torso Harm than Humans. 
+            <br> <b>Slow:</b> Pace is 2. <img 
+        src='../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Pace is 3 this Round.
+            <br> <b>Acclimatized to Darkness:</b> Dark Vision 1R (Applies +1R Visibility in Low Light.)
+            <br> <b>Discouraged Classes:</b> Mage, Druid, Monk. <f7>Can't take at Character creation.</f7>
+        </div></rulecard></div></div>
+</body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Compendiums/Culture_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:59 GMT -->
+</html>

@@ -1,0 +1,1853 @@
+<html>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Compendiums/CharacterSheet_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Character Sheet Compendium</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 2px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+</head>
+<style type="text/css">
+    body {
+        width: 100%;
+    }
+    .CompendiumInfoBox {
+        position: fixed; 
+        right: 0px;
+        width: 250px;
+        background: white;
+        color: black;
+        padding: 5px;
+        border-radius: 4px;
+    }
+    .CompendiumHead {
+        font-size: 16;
+        font-weight: 700;
+    }
+</style>
+<body style='background:grey;'>
+        <div style='width:fit-content;'><div style='display: grid;grid-template-columns: 1fr 1fr 1fr;grid-template-rows: 1fr;grid-gap: 4px 8px;grid-auto-flow: row;margin:0px 0px 0px 0px;padding: 5px;background: gray;width: auto;justify-content: start;'><div><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'>Humanoids</div></div><div></div><div></div><div style='display:grid;grid-template-rows: 17fr 10px 16fr 10px 28fr;grid-template-columns: 1fr;grid-auto-flow: row;width: 353.175px;height: 979.472px;grid-gap: 2px;padding: 5px;background: white;'><div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 20fr 25fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
+            
+        </div>
+        <div style='display: grid;grid-template-rows: 45px 45px 1fr;grid-template-columns: 1fr;grid-auto-flow: row;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; background:white; color:black; border-style:solid; border-width:1px; border-color:black; font-size:28px; text-align:left; padding:2px 5px 2px 5px;'><div>
+            <b></b>
+        </div></div>
+        <div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:15px 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Species</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:center; justify-content:left; font-size:18px; padding:1px 2px 1px 2px;'>Human</div>
+        </div>
+        </div><div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:15px 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:left; font-size:18px; padding:1px 2px 1px 2px;'>
+    <div style='font-size:25px; 
+    display:grid; grid-auto-flow:row; grid-template-columns:1fr; grid-template-rows:auto 1fr; grid-gap:2px;
+    height:100%; width:100%;
+    '><div style='font-size:10px;'></div>
+                <div style='font-size:25px;'>
+                    <b><sc>3S:</sc> </b>Head<br>
+                    <b><sc>2S:</sc> </b>Torso<br>
+                    <b><sc>1S*:</sc> </b>L/R Arm<br>
+                    <b><sc>1S*:</sc> </b>Legs<br>
+                    <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
+                </div>
+            </div></div>
+        </div>
+        </div></div></div><div style='border-style:none none dashed none;border-color:black;border-width:1px;border-radius:0px;position:relative;left: 0px;bottom:4px;'></div><div style='display: grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'><div style='display: grid;grid-template-columns: auto 1fr;grid-template-rows: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-template-rows:auto 1fr 1fr 1fr; border:solid 1px black; color:black;'>
+            <div style='font-size:18px; padding:0px 5px 0px 2px;'><b style='font-weight:800;'>Human</b></div>
+            <div style='font-size:13px; border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; padding:1px 2px 1px 2px;'>
+                <b>Hunger:</b> <div style='display:inline; font-size:15px;'>1 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div></f9></div>
+            </div>
+            <div style='font-size:13px; border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; padding:1px 2px 1px 2px;'>
+                <b>Thirst:</b> <div style='display:inline; font-size:15px;'>2 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div></f9></div>
+            </div>
+            <div style='font-size:13px; padding:1px 2px 1px 2px;'>
+                <b>Sleep:</b> <div style='display:inline; font-size:15px;'>2 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div></f9></div>
+            </div>
+        </div>
+    
+    <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Pink-4);'>Str</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Endr</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Red-4);'>Fort</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Dex</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Blue-4);'>Sense</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Orange-4);'>Agl</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Int);'>Int</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Turquoise-4);'>Cha</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Purple-4);'>Spirit</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+    </div>
+    </div><div style='display:grid; grid-gap:2px; font-size:10px; align-content: start;'><div style='background:black; font-weight:700; color:white; font-size:9px; padding:1px 2px 1px 5px;'>Abilities/Skills</div></div></div><div style='border-style:none none dashed none;border-color:black;border-width:1px;border-radius:0px;position:relative;left: 0px;bottom:4px;'></div><div style='display:grid; grid-template-rows: auto auto auto 1fr; grid-template-columns:1fr; grid-auto-flow:row; grid-gap:2px;'><div style='display:grid; grid-template-rows:1fr; grid-template-columns:1fr; grid-auto-flow:column; grid-gap:2px;'><div style='background:black;display:grid; grid-template-rows:15px auto auto auto auto auto ; grid-template-columns:auto  auto auto auto auto ; grid-auto-flow:row; grid-gap: 1px; info:;border-radius:4px; padding:1px;'><div style='background:black; color:white; font-size:12px; border-radius:4px; padding:0px; text-align:center;'><b>Body Area</b></div><div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Harm</b></div>
+        <div style='background:var(--Gray-3); color:white; font-size:10px; border-radius:4px 4px 0px 0px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+            <b>Wound</b>
+        </div>
+            <div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+                <div style='text-align:center; postition:relative; top:2px;'>
+                    <b>Harm</b>
+                </div>
+            </div><div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Crit</b></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>3S:</sc> Head</b><br><f8><b>Status:</b></f8><div style='height:2px;'></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>KO</b> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 1px;height: 17px;'><img 
+        src='../../Resources/Art/Images/skull_white.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>2S:</sc> Torso</b><br><f8><b>Status:</b></f8><div style='height:2px;'></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Main Arm <img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Off Arm <img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 4px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Legs <img 
+        src='../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><div style='display:inline; font-size:10px; text-align:left; padding-left:8px; font-weight:600;'><keyword>Pace:</keyword> 3</div><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div></div></div><div style='display:grid; grid-gap:0px; grid-template-columns:1fr 25px 25px 25px auto; grid-template-rows:16px 4fr 3fr;text-align:left; border:1px solid black; background:black;'><div style='font-size:10px; padding:2px 2px 2px 4px; display:flex; align-items:center; justify-content:left;
+            color:white; background:black; border-radius:0px 0px 0px 0px;'>
+                <b><img 
+        src='../../Resources/Art/Images/StaminaBox_White.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Constitution</b>
+            </div><div style='display:grid; grid-column: 2 / span 3; align-items:center; justify-content: center; grid-template-columns:auto auto; grid-gap:3px;
+        background:var(--Gray-3); border-radius:4px 4px 0px 0px;  border-style:none solid solid solid; border-color:black; border-width:1px;
+        font-size:10px; color:white; text-align:center;  padding-top:1px; padding-bottom:0px;'>
+            <div style='display:flex; align-items:center; margin-top:0px;'><b>Weak</b></div> 
+            <div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>6 Only</b> </div></div>
+        </div><div style='display:grid; background:black; border-radius:0px 4px 0px 0px; z-index:100; color:white; font-size:10px; padding:2px; padding-top:3px;'><b>Expire</b></div>
+        <div style='grid-row:2 / span 1; display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; font-size:15px; background:white; border-radius:0px 0px 0px 0px; '>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+        </div><div style='background:var(--Dmg-1); border-radius:0px; border-left:1px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-1); border-radius:0px; border-left:0px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-1); border-radius:0px; border-left:0px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-2); border-radius:0px 0px 4px 0px; border-left:0px solid black; border-right:0px solid black; 
+            display:flex; align-items:center; justify-content:center; grid-row:2 / span 2; color:black; font-size:11px; padding:2px;'></div><div style='display:grid; grid-template-columns:auto 1fr auto 1fr;
+        background:white; border-style:solid none none none; border-radius:0px 0px 0px 4px; border-color:black; border-width:1px; z-index:100; grid-column: 1 / span 1;'>
+            <div style='display:flex; align-items:center; background:black; color:white; padding:2px 4px 2px 2px; border-radius:0px 0px 0px 4px; font-size:9px;'><b>Will</b></div>
+            <div style='background:white;'></div>
+            <div style='display:flex; align-items:center; background:black; color:white; padding:2px 4px 2px 2px; border-radius:0px 0px 0px 0px; font-size:9px;'><b>Morale</b></div>
+            <div style='background:white; color:black; display:flex; align-items:center; justify-content:flex-end; padding-right:3px; font-size:12px'><b>/ <span style='color:var(--Gray-2)'>5</span></b></div>
+        </div></div><div style='border:1px solid black; border-radius:4px;display:grid; grid-template-rows:16px 1fr; grid-gap:2px;'><div style='background:black; color:white; font-size:10px; padding:2px 2px 2px 4px; border-radius:4px 4px 0px 0px;
+        display:flex; align-items:center;'><b><img 
+        src='../../Resources/Art/Images/EWeight_White.svg' 
+        height='9px'
+        width='9px' 
+        style='
+            position: relative;
+            top: -1px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '> Capacity</b></div><div style='display:grid; grid-template-rows:1fr 1fr 1fr; grid-template-columns:1fr 1fr; '><div style='display:flex; align-items:center; justify-content:center; color:black; font-size:24px; grid-row: 1 / span 1; grid-column: 1 / span 2;
+                border-style:none solid none none; border-color:black; border-width:1px; border-radius:0px; text-align:center;'>
+                <div><b>/</b></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 1;
+             border-style:solid none solid none; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Held</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 2;
+             border-style:solid none solid solid; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Readied</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 1;
+             border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Worn</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 2;
+             border-style:none none none solid; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Carried</b></div><div> </div>
+            </div></div></div><div style='font-size:10px; color:black; border:solid black 1px; height:100%; padding:2px'><b>Notes</b></div></div></div><div style='display:grid;grid-template-rows: 17fr 10px 16fr 10px 28fr;grid-template-columns: 1fr;grid-auto-flow: row;width: 353.175px;height: 979.472px;grid-gap: 2px;padding: 5px;background: white;'><div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 20fr 25fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
+            
+        </div>
+        <div style='display: grid;grid-template-rows: 45px 45px 1fr;grid-template-columns: 1fr;grid-auto-flow: row;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; background:white; color:black; border-style:solid; border-width:1px; border-color:black; font-size:28px; text-align:left; padding:2px 5px 2px 5px;'><div>
+            <b></b>
+        </div></div>
+        <div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:15px 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Species</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:center; justify-content:left; font-size:18px; padding:1px 2px 1px 2px;'>Dwarf</div>
+        </div>
+        </div><div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:15px 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:left; font-size:18px; padding:1px 2px 1px 2px;'>
+    <div style='font-size:25px; 
+    display:grid; grid-auto-flow:row; grid-template-columns:1fr; grid-template-rows:auto 1fr; grid-gap:2px;
+    height:100%; width:100%;
+    '><div style='font-size:10px;'></div>
+                <div style='font-size:25px;'>
+                    <b><sc>3S:</sc> </b>Head<br>
+                    <b><sc>2S:</sc> </b>Torso<br>
+                    <b><sc>1S*:</sc> </b>L/R Arm<br>
+                    <b><sc>1S*:</sc> </b>Legs<br>
+                    <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
+                </div>
+            </div></div>
+        </div>
+        </div></div></div><div style='border-style:none none dashed none;border-color:black;border-width:1px;border-radius:0px;position:relative;left: 0px;bottom:4px;'></div><div style='display: grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'><div style='display: grid;grid-template-columns: auto 1fr;grid-template-rows: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-template-rows:auto 1fr 1fr 1fr; border:solid 1px black; color:black;'>
+            <div style='font-size:18px; padding:0px 5px 0px 2px;'><b style='font-weight:800;'>Dwarf</b></div>
+            <div style='font-size:13px; border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; padding:1px 2px 1px 2px;'>
+                <b>Hunger:</b> <div style='display:inline; font-size:15px;'>1 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div></f9></div>
+            </div>
+            <div style='font-size:13px; border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; padding:1px 2px 1px 2px;'>
+                <b>Thirst:</b> <div style='display:inline; font-size:15px;'>2 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div></f9></div>
+            </div>
+            <div style='font-size:13px; padding:1px 2px 1px 2px;'>
+                <b>Sleep:</b> <div style='display:inline; font-size:15px;'>2 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div></f9></div>
+            </div>
+        </div>
+    
+    <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Pink-4);'>Str</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Endr</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Red-4);'>Fort</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Dex</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Blue-4);'>Sense</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Orange-4);'>Agl</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Int);'>Int</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Turquoise-4);'>Cha</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Purple-4);'>Spirit</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+    </div>
+    </div><div style='display:grid; grid-gap:2px; font-size:10px; align-content: start;'><div style='background:black; font-weight:700; color:white; font-size:9px; padding:1px 2px 1px 5px;'>Abilities/Skills</div><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:white; border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:white;'><div style='text-align:left; '>Stout Legs</div></div> <actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Free</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Pace is 2. <img 
+        src='../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> +1 Pace.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:white; border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:white;'><div style='text-align:left; '>Dwarf Vision</div></div> <actionSubtitle style='color:black; '></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Dark Vision 1R (Applies +1R Visibility in Low Light.)</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:white; border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:white;'><div style='text-align:left; '>Bad Swimmers</div></div> <actionSubtitle style='color:black; '></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Sink 1 in water.</div></challengeText></challengeContainer></div></actionContainter></div></div><div style='border-style:none none dashed none;border-color:black;border-width:1px;border-radius:0px;position:relative;left: 0px;bottom:4px;'></div><div style='display:grid; grid-template-rows: auto auto auto 1fr; grid-template-columns:1fr; grid-auto-flow:row; grid-gap:2px;'><div style='display:grid; grid-template-rows:1fr; grid-template-columns:1fr; grid-auto-flow:column; grid-gap:2px;'><div style='background:black;display:grid; grid-template-rows:15px auto auto auto auto auto ; grid-template-columns:auto  auto auto auto auto ; grid-auto-flow:row; grid-gap: 1px; info:;border-radius:4px; padding:1px;'><div style='background:black; color:white; font-size:12px; border-radius:4px; padding:0px; text-align:center;'><b>Body Area</b></div><div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Harm</b></div>
+        <div style='background:var(--Gray-3); color:white; font-size:10px; border-radius:4px 4px 0px 0px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+            <b>Wound</b>
+        </div>
+            <div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+                <div style='text-align:center; postition:relative; top:2px;'>
+                    <b>Harm</b>
+                </div>
+            </div><div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Crit</b></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>3S:</sc> Head</b><br><f8><b>Status:</b></f8><div style='height:2px;'></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>KO</b> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 1px;height: 17px;'><img 
+        src='../../Resources/Art/Images/skull_white.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>2S:</sc> Torso</b><br><f8><b>Status:</b></f8><div style='height:2px;'></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Main Arm <img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Off Arm <img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 4px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Legs <img 
+        src='../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><div style='display:inline; font-size:10px; text-align:left; padding-left:8px; font-weight:600;'><keyword>Pace:</keyword> 2</div><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div></div></div><div style='display:grid; grid-gap:0px; grid-template-columns:1fr 25px 25px 25px auto; grid-template-rows:16px 4fr 3fr;text-align:left; border:1px solid black; background:black;'><div style='font-size:10px; padding:2px 2px 2px 4px; display:flex; align-items:center; justify-content:left;
+            color:white; background:black; border-radius:0px 0px 0px 0px;'>
+                <b><img 
+        src='../../Resources/Art/Images/StaminaBox_White.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Constitution</b>
+            </div><div style='display:grid; grid-column: 2 / span 3; align-items:center; justify-content: center; grid-template-columns:auto auto; grid-gap:3px;
+        background:var(--Gray-3); border-radius:4px 4px 0px 0px;  border-style:none solid solid solid; border-color:black; border-width:1px;
+        font-size:10px; color:white; text-align:center;  padding-top:1px; padding-bottom:0px;'>
+            <div style='display:flex; align-items:center; margin-top:0px;'><b>Weak</b></div> 
+            <div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>6 Only</b> </div></div>
+        </div><div style='display:grid; background:black; border-radius:0px 4px 0px 0px; z-index:100; color:white; font-size:10px; padding:2px; padding-top:3px;'><b>Expire</b></div>
+        <div style='grid-row:2 / span 1; display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; font-size:15px; background:white; border-radius:0px 0px 0px 0px; '>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+        </div><div style='background:var(--Dmg-1); border-radius:0px; border-left:1px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-1); border-radius:0px; border-left:0px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-1); border-radius:0px; border-left:0px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-2); border-radius:0px 0px 4px 0px; border-left:0px solid black; border-right:0px solid black; 
+            display:flex; align-items:center; justify-content:center; grid-row:2 / span 2; color:black; font-size:11px; padding:2px;'></div><div style='display:grid; grid-template-columns:auto 1fr auto 1fr;
+        background:white; border-style:solid none none none; border-radius:0px 0px 0px 4px; border-color:black; border-width:1px; z-index:100; grid-column: 1 / span 1;'>
+            <div style='display:flex; align-items:center; background:black; color:white; padding:2px 4px 2px 2px; border-radius:0px 0px 0px 4px; font-size:9px;'><b>Will</b></div>
+            <div style='background:white;'></div>
+            <div style='display:flex; align-items:center; background:black; color:white; padding:2px 4px 2px 2px; border-radius:0px 0px 0px 0px; font-size:9px;'><b>Morale</b></div>
+            <div style='background:white; color:black; display:flex; align-items:center; justify-content:flex-end; padding-right:3px; font-size:12px'><b>/ <span style='color:var(--Gray-2)'>5</span></b></div>
+        </div></div><div style='border:1px solid black; border-radius:4px;display:grid; grid-template-rows:16px 1fr; grid-gap:2px;'><div style='background:black; color:white; font-size:10px; padding:2px 2px 2px 4px; border-radius:4px 4px 0px 0px;
+        display:flex; align-items:center;'><b><img 
+        src='../../Resources/Art/Images/EWeight_White.svg' 
+        height='9px'
+        width='9px' 
+        style='
+            position: relative;
+            top: -1px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '> Capacity</b></div><div style='display:grid; grid-template-rows:1fr 1fr 1fr; grid-template-columns:1fr 1fr; '><div style='display:flex; align-items:center; justify-content:center; color:black; font-size:24px; grid-row: 1 / span 1; grid-column: 1 / span 2;
+                border-style:none solid none none; border-color:black; border-width:1px; border-radius:0px; text-align:center;'>
+                <div><b>/</b></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 1;
+             border-style:solid none solid none; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Held</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 2;
+             border-style:solid none solid solid; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Readied</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 1;
+             border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Worn</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 2;
+             border-style:none none none solid; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Carried</b></div><div> </div>
+            </div></div></div><div style='font-size:10px; color:black; border:solid black 1px; height:100%; padding:2px'><b>Notes</b></div></div></div><div style='display:grid;grid-template-rows: 17fr 10px 16fr 10px 28fr;grid-template-columns: 1fr;grid-auto-flow: row;width: 353.175px;height: 979.472px;grid-gap: 2px;padding: 5px;background: white;'><div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 20fr 25fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
+            
+        </div>
+        <div style='display: grid;grid-template-rows: 45px 45px 1fr;grid-template-columns: 1fr;grid-auto-flow: row;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; background:white; color:black; border-style:solid; border-width:1px; border-color:black; font-size:28px; text-align:left; padding:2px 5px 2px 5px;'><div>
+            <b></b>
+        </div></div>
+        <div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:15px 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Species</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:center; justify-content:left; font-size:18px; padding:1px 2px 1px 2px;'>Elf</div>
+        </div>
+        </div><div style='display: grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:15px 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:left; font-size:18px; padding:1px 2px 1px 2px;'>
+    <div style='font-size:25px; 
+    display:grid; grid-auto-flow:row; grid-template-columns:1fr; grid-template-rows:auto 1fr; grid-gap:2px;
+    height:100%; width:100%;
+    '><div style='font-size:10px;'></div>
+                <div style='font-size:25px;'>
+                    <b><sc>3S:</sc> </b>Head<br>
+                    <b><sc>2S:</sc> </b>Torso<br>
+                    <b><sc>1S*:</sc> </b>L/R Arm<br>
+                    <b><sc>1S*:</sc> </b>Legs<br>
+                    <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
+                </div>
+            </div></div>
+        </div>
+        </div></div></div><div style='border-style:none none dashed none;border-color:black;border-width:1px;border-radius:0px;position:relative;left: 0px;bottom:4px;'></div><div style='display: grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;grid-gap: 2px;'><div style='display: grid;grid-template-columns: auto 1fr;grid-template-rows: 1fr;grid-auto-flow: column;grid-gap: 2px;'>
+        <div style='display:grid; grid-template-rows:auto 1fr 1fr 1fr; border:solid 1px black; color:black;'>
+            <div style='font-size:18px; padding:0px 5px 0px 2px;'><b style='font-weight:800;'>Elf</b></div>
+            <div style='font-size:13px; border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; padding:1px 2px 1px 2px;'>
+                <b>Hunger:</b> <div style='display:inline; font-size:15px;'>1 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div></f9></div>
+            </div>
+            <div style='font-size:13px; border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; padding:1px 2px 1px 2px;'>
+                <b>Thirst:</b> <div style='display:inline; font-size:15px;'>2 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div></f9></div>
+            </div>
+            <div style='font-size:13px; padding:1px 2px 1px 2px;'>
+                <b>Sleep:</b> <div style='display:inline; font-size:15px;'>2 <br><f9><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div></f9></div>
+            </div>
+        </div>
+    
+    <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Pink-4);'>Str</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Endr</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Red-4);'>Fort</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Dex</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Blue-4);'>Sense</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Orange-4);'>Agl</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Int);'>Int</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Turquoise-4);'>Cha</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto 30px; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Purple-4);'>Spirit</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'></div>
+        </div>
+    </div>
+    </div><div style='display:grid; grid-gap:2px; font-size:10px; align-content: start;'><div style='background:black; font-weight:700; color:white; font-size:9px; padding:1px 2px 1px 5px;'>Abilities/Skills</div><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:white; border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:white;'><div style='text-align:left; '>Keen Senses</div></div> <actionSubtitle style='color:black; '></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div> Challenges.</div></challengeText></challengeContainer></div></actionContainter></div></div><div style='border-style:none none dashed none;border-color:black;border-width:1px;border-radius:0px;position:relative;left: 0px;bottom:4px;'></div><div style='display:grid; grid-template-rows: auto auto auto 1fr; grid-template-columns:1fr; grid-auto-flow:row; grid-gap:2px;'><div style='display:grid; grid-template-rows:1fr; grid-template-columns:1fr; grid-auto-flow:column; grid-gap:2px;'><div style='background:black;display:grid; grid-template-rows:15px auto auto auto auto auto ; grid-template-columns:auto  auto auto auto auto ; grid-auto-flow:row; grid-gap: 1px; info:;border-radius:4px; padding:1px;'><div style='background:black; color:white; font-size:12px; border-radius:4px; padding:0px; text-align:center;'><b>Body Area</b></div><div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Harm</b></div>
+        <div style='background:var(--Gray-3); color:white; font-size:10px; border-radius:4px 4px 0px 0px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+            <b>Wound</b>
+        </div>
+            <div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+                <div style='text-align:center; postition:relative; top:2px;'>
+                    <b>Harm</b>
+                </div>
+            </div><div style='background:black; color:white; font-size:10px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Crit</b></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>3S:</sc> Head</b><br><f8><b>Status:</b></f8><div style='height:2px;'></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>KO</b> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 1px;height: 17px;'><img 
+        src='../../Resources/Art/Images/skull_white.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>2S:</sc> Torso</b><br><f8><b>Status:</b></f8><div style='height:2px;'></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Main Arm <img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Off Arm <img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Hand.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 4px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap><sc>1S:</sc> Legs <img 
+        src='../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><br><div style='display:inline; font-size:10px; text-align:left; padding-left:8px; font-weight:600;'><keyword>Pace:</keyword> 3</div><br><f8>Status:</f8><div style='height:2px;'></div></nowrap></b></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div><div style='display: inline-block;margin: 0px 2px 0px 2px;padding: 0px 0px 0px 0px;border-radius: 4px;width: 10px;height: 10px;color: grey;background-color: white;font-size: 12px;font-weight: 800;text-align: center;'></div></div></div></div></div><div style='display:grid; grid-gap:0px; grid-template-columns:1fr 25px 25px 25px auto; grid-template-rows:16px 4fr 3fr;text-align:left; border:1px solid black; background:black;'><div style='font-size:10px; padding:2px 2px 2px 4px; display:flex; align-items:center; justify-content:left;
+            color:white; background:black; border-radius:0px 0px 0px 0px;'>
+                <b><img 
+        src='../../Resources/Art/Images/StaminaBox_White.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Constitution</b>
+            </div><div style='display:grid; grid-column: 2 / span 3; align-items:center; justify-content: center; grid-template-columns:auto auto; grid-gap:3px;
+        background:var(--Gray-3); border-radius:4px 4px 0px 0px;  border-style:none solid solid solid; border-color:black; border-width:1px;
+        font-size:10px; color:white; text-align:center;  padding-top:1px; padding-bottom:0px;'>
+            <div style='display:flex; align-items:center; margin-top:0px;'><b>Weak</b></div> 
+            <div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>6 Only</b> </div></div>
+        </div><div style='display:grid; background:black; border-radius:0px 4px 0px 0px; z-index:100; color:white; font-size:10px; padding:2px; padding-top:3px;'><b>Expire</b></div>
+        <div style='grid-row:2 / span 1; display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; font-size:15px; background:white; border-radius:0px 0px 0px 0px; '>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+            <div style='border-style:none solid none none; border-color:lightgrey; border-width:1px; border-radius:0px;'></div>
+        </div><div style='background:var(--Dmg-1); border-radius:0px; border-left:1px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-1); border-radius:0px; border-left:0px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-1); border-radius:0px; border-left:0px solid black; border-right:1px solid black; grid-row:2 / span 2;'></div><div style='background:var(--Dmg-2); border-radius:0px 0px 4px 0px; border-left:0px solid black; border-right:0px solid black; 
+            display:flex; align-items:center; justify-content:center; grid-row:2 / span 2; color:black; font-size:11px; padding:2px;'></div><div style='display:grid; grid-template-columns:auto 1fr auto 1fr;
+        background:white; border-style:solid none none none; border-radius:0px 0px 0px 4px; border-color:black; border-width:1px; z-index:100; grid-column: 1 / span 1;'>
+            <div style='display:flex; align-items:center; background:black; color:white; padding:2px 4px 2px 2px; border-radius:0px 0px 0px 4px; font-size:9px;'><b>Will</b></div>
+            <div style='background:white;'></div>
+            <div style='display:flex; align-items:center; background:black; color:white; padding:2px 4px 2px 2px; border-radius:0px 0px 0px 0px; font-size:9px;'><b>Morale</b></div>
+            <div style='background:white; color:black; display:flex; align-items:center; justify-content:flex-end; padding-right:3px; font-size:12px'><b>/ <span style='color:var(--Gray-2)'>5</span></b></div>
+        </div></div><div style='border:1px solid black; border-radius:4px;display:grid; grid-template-rows:16px 1fr; grid-gap:2px;'><div style='background:black; color:white; font-size:10px; padding:2px 2px 2px 4px; border-radius:4px 4px 0px 0px;
+        display:flex; align-items:center;'><b><img 
+        src='../../Resources/Art/Images/EWeight_White.svg' 
+        height='9px'
+        width='9px' 
+        style='
+            position: relative;
+            top: -1px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '> Capacity</b></div><div style='display:grid; grid-template-rows:1fr 1fr 1fr; grid-template-columns:1fr 1fr; '><div style='display:flex; align-items:center; justify-content:center; color:black; font-size:24px; grid-row: 1 / span 1; grid-column: 1 / span 2;
+                border-style:none solid none none; border-color:black; border-width:1px; border-radius:0px; text-align:center;'>
+                <div><b>/</b></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 1;
+             border-style:solid none solid none; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Held</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 2;
+             border-style:solid none solid solid; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Readied</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 1;
+             border-style:none none none none; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Worn</b></div><div></div>
+            </div><div style=' display:grid; align-items:center; justify-content:flex-start; color:black; font-size:9px; grid-column: 2;
+             border-style:none none none solid; border-color:black; border-width:1px; border-radius:0px; grid-template-rows:10px 1fr;
+                '>
+                <div><b>Carried</b></div><div> </div>
+            </div></div></div><div style='font-size:10px; color:black; border:solid black 1px; height:100%; padding:2px'><b>Notes</b></div></div></div><div></div></div></div></body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Compendiums/CharacterSheet_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:59 GMT -->
+</html>

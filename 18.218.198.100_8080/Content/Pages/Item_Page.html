@@ -1,0 +1,1086 @@
+<html>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Pages/Item_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Item Pages</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 2px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+</head>
+<style type="text/css">
+    body { width: 800px; background:white;}
+    page {
+        height: 11in;
+        width: 8.5in; /*825px;*/
+        background: white; 
+        box-sizing: border-box;
+        border-radius: 0px;
+        border-style: solid;
+        /*Print Helper Borders*/
+        /*border-color: hsla(0,55%,90%,1);*/
+        /*border-width: 0.125in 0.25in 1.20in 0.25in;*/
+        /*Display Borders*/
+        border-color: white;
+        border-width: 0.125in 0.25in 1.20in 0.25in;
+        margin: 1px;
+        /*overflow: hidden;*/
+            
+        position: relative;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: min-content;
+        grid-gap: 2px;
+        
+        color: black;
+        font-size: 10px;
+    }
+    ItemPage {
+        display:grid;
+        grid-template-columns:1fr;
+        grid-gap:1px;
+    }
+    IPTitle {
+        border: solid 0px black;
+        border-radius: 4px 4px 0px 0px;
+        padding: 1px 2px 1px 2px;
+        font-size: 20px;
+        font-weight: 700;
+        grid-column: 1/-1;
+        background:  var(--Yellow-4);
+        color: white;
+    }
+    IPSubTitle {
+        border: solid 0px black;
+        border-radius: 4px 4px 0px 0px;
+        padding: 1px 2px 1px 2px;
+        font-size: 11px;
+        font-weight: 600;
+        grid-column: 1/-1;
+        background:  var(--Yellow-4);
+        color: white;
+    }
+    ItemTitle {
+        color: white;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 4px 10px 10px 4px;
+    }
+    gf { 
+        font-weight: 700;
+        font-size: 80%;
+    }
+    tabDiv {
+        padding-left: 5px;
+        margin-bottom: 1px;
+        display: flex;
+    }
+    
+</style>
+<body>
+    <!--
+    -->
+    
+<page>
+    <ItemPage><IPTitle style='background:var(--Gray-4);'>Character Creation Item Guide</IPTitle><IPSubTitle style='background:var(--Yellow-4);'>Survival Items<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Travel Gear<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Waterskin and Backpack.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Cloak<f9> Accessory</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Hooded cloak worn for protection from elements.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Tinder Box<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3<b6>G</b6></f8></div><div style='display:flex; align-items:center;'>Wooden box containing tools for lighting campfires.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Rope<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>100' of cheap rope.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Torch<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Wax or flaming cloth used to light darkness.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Blanket<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A large cloth used to keep warm in cold climates.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Bandages<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G OR 4 for 10G</f8></div><div style='display:flex; align-items:center;'>Cloth strips for bandaging wounds.</div><div></div></div><div style='height:3px;'></div><IPSubTitle style='background:var(--Red-4);'>Weapons<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Knife<f9> Knife/Throwing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Classic knife that can be used as a weapon or tool.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Throwing Blade<f9> Throwing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Small blade for throwing. Ex: Small Throwing Knife, Shuriken.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Low Quality Sword<f9> Sword</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Blade is poorly made or worn. Ex: Rusty Sword, Cheap Sword</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Club<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Crude blunt weapon. Ex: Club, Bat, 2x4</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Edged Club<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>A bladed handle, often primarily used as a non-combat tool. Ex: Pick-Axe, Shovel, Mattock, Rusty Axe, </div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Hatchet<f9> Throwing/Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>A small axe that can be used to chop wood.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Low Quality Spear<f9> Pole-Arm</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>Old or quickly made spear often used by peasents. Ex: Old Spear, Cheap Spear</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Brass Knuckles<f9> Fist Weapon</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Brass knuckles to augment punches.</div><div></div></div><div style='height:3px;'></div><IPSubTitle style='background:var(--Turquoise-4);'>Shields / Armor<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Buckler<f9> Shield</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Small metal hand shield.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Round Shield<f9> Shield</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Round shield made of Wood. Can be worn on Arm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'><f14>Gambeson (Short)</f14><f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Light armor made of thick cloth.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'><f14>Gambeson (Long)</f14><f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>Light armor made of thick cloth. Hangs down to protect the legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Leather Vambrace / Shoulder Pads<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Hardened leather armor piece that protects an arm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Leather Leg Guards<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Hardened leather armor guards that protect the legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Leather Vest<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Hardened leather vest that covers the torso.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Chainmail Hood<f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Chainmail armor worn over the head.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Metal Skullcap<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Metal helm with open face. Ex: Norman, Kettle Helm, Galea, Spangenhelm, Morion, Barbuta.</div><div></div></div><div style='height:3px;'></div><IPSubTitle style='background:var(--Green-4);'>Archery<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Low Quality Bow<f9> Bow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>An old or low quality bow typcially used for hunting.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Crossbow<f9> Bow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>A crossbow for war that has a mechanism to be drawn back. Uses Bolts.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Archer's Bundle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Quiver, 6 Arrows / 6 Bolts.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Arrow Bundle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>10 Arrows / 10 Bolts.</div><div></div></div><div style='height:3px;'></div><IPSubTitle style='background:var(--Yellow-4);'>Clerical<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Vial of Holy Water<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Water that has been purified by the God of Light. Used by Clerics for blessing and rituals.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Holy Fragment<f9> Holy Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Item such as figurine, carved symbol.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>The Book Of Azeal<f9> Holy Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A book with the hymns and fables of Azeal.</div><div></div></div><IPSubTitle style='background:var(--Blue-4);'>Rogue<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Caltrops<f9> Trap</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Spiked objects to make difficult terrain.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Garrote<f9> Weapon</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A Strong Wire.</div><div></div></div><div style='height:3px;'></div><IPSubTitle style='background:var(--Purple-4);'>Arcane<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Spellbook<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A book that organizes arcane scrolls.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Common Scroll Bundle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>4 Common Scrolls.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Color Bundle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>1 Common Scroll and 1 Uncommon Scroll of the same color.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Full Color Bundle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>2 Common Scrolls and 2 Uncommon Scrols of the same color.</div><div></div></div><div style='height:3px;'></div><IPSubTitle style='background:var(--Pink-4);'>Bardic<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Cheap Musical Instrument<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>A cheap begginers Bashument that makes music. Ex: Lute, Fiddle, Flute, Claranet, Horns, Tambourine, etc</div><div></div></div></ItemPage></page>
+    
+<page>
+    <ItemPage><IPTitle style='background:var(--Gray-4);'>Items</IPTitle><IPTitle style='background:var(--Orange-4);'>Exploration Items<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Tinder Box<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3<b6>G</b6></f8></div><div style='display:flex; align-items:center;'>Wooden box containing tools for lighting campfires.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Walking Stick<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Stick crafted for comfortable traveling.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Fishing Pole<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Pole with string and bait used to catch fish.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Lantern<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G, 1G per Oil</f8></div><div style='display:flex; align-items:center;'>Holds an oil fire shielded by elements.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Oil Bottle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G(vial) 1G for 1 Oil</f8></div><div style='display:flex; align-items:center;'>Bottle of oil used for fires and crafting.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto 1fr;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Rope<f9> </f9></div></ItemTitle><div style='display:grid; grid-gap:1px; grid-auto-flow:rows; padding:1px 0px 0px 0px;'><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>For 50': 3G (Weak), 10G (Sturdy), 25G (Superior)</f8></div><div style='display:flex; align-items:center;'>Varies in length and strength, including weak (ex: tied cloth), sturdy (ex: hemp), and superior (ex: spider slik).</div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Candle / Simple Torch<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Wax or flaming wood used to light darkness.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Torch<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Wax or flaming cloth used to light darkness.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Pelt<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5<b6>G</b6></f8></div><div style='display:flex; align-items:center;'>Fur/Skin from a dead beast.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Herb<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1<b6>G</b6></f8></div><div style='display:flex; align-items:center;'>Plant that can be used for seasoning. Ex: Rosemary, Parsley, etc.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Climbing Gear<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Ice picks, climbing shoes, etc.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Orange-4);'>Medical<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Bandages<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Cloth strips for bandaging wounds.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Crutch<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Walking assitance for those who cannot use a leg.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Cane<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Walking assistance for those with damaged legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Wheelchair<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Wooden wheelchair for those who cannot walk under thier own power.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Hook Hand<f9> Prosthetic</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Hook attached to a severed arm to use as a tool or weapon.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Pegleg<f9> Prosthetic</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Wooden peg applied to a leg stump to faciliate some walking.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Medicine<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A unique combination of herbs and healing power</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Orange-4);'>Crafting<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Cooking Supplies<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Cast Iron firm handle, dangeous to hold when hot.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Sewing Kit<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Consists of Needle, Thread, Scissors, pins, pin cushion, and thimble.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Mortar Pestle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Consists of stone bowl and pestle.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Weapon Repair Kit<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Kit for doing field repairs on weapons.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Armor Repair Kit<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Kit for doing field repairs on armor.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Orange-4);'>Books/Parchment/Paint<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Book<f9> Book</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>Typically 1 to 10G</f8></div><div style='display:flex; align-items:center;'>Bounded paper containing knowledge.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(---3);'><ItemTitle style='display:flex; align-items:center; background:var(---3);'><div style='padding: 1px 5px 1px 2px;'><f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>---</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Writing/Drawing Tools<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Includes papers, inks, and paints. Can be used for writing or painting.</div><div></div></div></ItemPage></page>
+
+<page>
+    <ItemPage><IPTitle style='background:var(--Red-4);'>Melee Weapons<f12></f12></IPTitle><IPSubTitle style='background:var(--Red-4);'>Improvised Weapons<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'><f11>Improvised: Bludgeon</f11><f9> Improvised/Throwing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>
+                    Smallish but solid object that may be used to bludgeon or throw. Like a Rock, Brick, or Cooking Pot.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'><f12>Improvised: Shiv</f12><f9> Knife/Throwing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Small Sharp Object used to slash or stab. Like a Broken Bottle, Fork, Small Knives, Ice Pick, Metal Shard.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'><f12>Improvised: Bulky</f12><f9> Improvised</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Large flat object that can be used to bludgeon or as a shield. Ex: Stool, Plank, Ladder.</div><div></div></div><IPSubTitle style='background:var(--Red-4);'>Knives/Throwing<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Knife<f9> Knife/Throwing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Classic knife that can be used as a weapon or tool.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Dagger<f9> Knife</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Pick type blade often used for getting through armor.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Throwing Blade<f9> Throwing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Small blade for throwing. Ex: Small Throwing Knife, Shuriken.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Hatchet<f9> Throwing/Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>A small axe that can be used to chop wood.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Machete<f9> Knife/Sword</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Blade is poorly made or worn. Ex: Rusty Sword, Cheap Sword</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Javelin<f9> Throwing/Pole-Arm</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>Short spear that can be used in combat or thrown.</div><div></div></div><IPSubTitle style='background:var(--Red-4);'>Swords<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Low Quality Sword<f9> Sword</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Blade is poorly made or worn. Ex: Rusty Sword, Cheap Sword</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Straight Sword<f9> Sword</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Long straight blade used to cut or stab. Ex: Long Sword, Claymore, Bastard Sword</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Curved Sword<f9> Sword</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Curved blade optimized for chopping. Ex: Katana, Dao, Schimitar, Shamshir, Saber, Cutlass</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Thrusting Sword<f9> Sword</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Thin fencing blade optimized for stabbing. Ex: Rapier, Estoc</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Great Sword<f9> Large Sword</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>40G</f8></div><div style='display:flex; align-items:center;'>Large blade roughly the height of a man and used with two hands. Ex: Zweihander, Odachi, Flamberge</div><div></div></div><IPSubTitle style='background:var(--Red-4);'>Hafted<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Club<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Crude blunt weapon. Ex: Club, Bat, 2x4</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Edged Club<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>A bladed handle, often primarily used as a non-combat tool. Ex: Pick-Axe, Shovel, Mattock, Rusty Axe, </div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Axe<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>Bladed handle optimized for use in battle.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>War Hammer<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>A hammer optimized for battle and attempting to break through armor.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Mace<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>An edged club optimized for battle and damaging armor.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Flail<f9> Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>A spike ball tied to a chain that can be used to hit around shields.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Large Hammer<f9> Large Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Large hammer that can cause considerable damage. Often used by dwarves.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Large Axe<f9> Large Hafted</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>35G</f8></div><div style='display:flex; align-items:center;'>Large double bladed axe that deal a lot of damage. Often used by dwarves.</div><div></div></div><IPSubTitle style='background:var(--Red-4);'>Spears<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Low Quality Spear<f9> Pole-Arm</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>Old or quickly made spear often used by peasents. Ex: Old Spear, Cheap Spear</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Spear<f9> Pole-Arm</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Pole-arm optimized for thrusting attacks. Ex: Spear, Partisan, Lance, Ranseur</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Glaive<f9> Pole-Arm</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Pole-arm with a long cutting balde at the end. Ex: Glaive, Bardicche, Guisarme, Fauchard</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Halberd<f9> Pole-Arm</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Multi-use pole-arm with a cutting, hooking, and hammering tool at then end. Ex: Halberd, Pole Axe, Bec de Corbin</div><div></div></div><IPSubTitle style='background:var(--Red-4);'>Rusty/Low Quality Armor<f12></f12></IPSubTitle><div style='border:solid 1px var(--Red-4); font-size:10px; padding:1px 2px 1px 2px;'>
+            Loq quality weapons are either rusted, damaged, or made with bad materials.
+            <br> Half Break and Dmg (rounded down). Takes <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg every Hit. Worth 1/2 Gold.
+        </div><IPSubTitle style='background:var(--Red-4);'>Mythril Weapons<f12></f12></IPSubTitle><div style='border:solid 1px Purple; font-size:10px; padding:1px 2px 1px 2px;'>
+            Mythril Weapons are rare and can only be made by Expert Weaponsmiths and made in a Magma Forge with all Special Materials.
+            <br> Applies +3 Brk and Dmg. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> AP, +1 Bleeding (Slash), <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg (Bash). Worth x2 Gold.
+        </div><div style='height:3px;'></div><IPSubTitle style='background:var(--Blue-4);'>Rogue Weapons<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Caltrops<f9> Trap</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Spiked objects to make difficult terrain.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Garrote<f9> Weapon</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A Strong Wire.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Pink-4);'>Instruments<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Cheap Musical Instrument<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>A cheap begginers Bashument that makes music. Ex: Lute, Fiddle, Flute, Claranet, Horns, Tambourine, etc</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Standard Musical Instrument<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>Instrument that makes music. Ex: Lute, Fiddle, Flute, Claranet, Horns, Tambourine, etc</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Quality Musical Instrument<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>50G</f8></div><div style='display:flex; align-items:center;'>A fancy Instrument, people say they sing with an exeptional sweetness and brilliance. Ex: Lute, Fiddle, Flute, Claranet, Horns, Tambourine, etc</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Yellow-4);'>Divine Items<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Vial of Holy Water<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Water that has been purified by the God of Light. Used by Clerics for blessing and rituals.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Holy Fragment<f9> Holy Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Item such as figurine, carved symbol.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Prayer Beads<f9> Holy Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Beads and chained symbols holding the power of Azeal.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>The Book Of Azeal<f9> Holy Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A book with the hymns and fables of Azeal.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Holy Shield<f9> Holy Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>Specially formed Kite Shield with symbols of Azeal carved into it.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Unified Cross<f9> Holy Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>A metal cross with even lengths in the style of Azeal.</div><div></div></div></ItemPage></page>
+
+<page>
+    <ItemPage><IPTitle style='background:var(--Turquoise-4);'>Clothing<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Rags / Furs<f9> Rags/Furs</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Rags or animal pelts, often worn by those who live outside society.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Tunic / Pants / Dress / Shoes<f9> Outfit</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Standard clothing worn by most people. Can be worn in many styles.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Robes<f9> Robes</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>7G</f8></div><div style='display:flex; align-items:center;'>Used Clerics, Mages, or other orders.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Quality Clothes<f9> Quality Outfit</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>35G (Fancy), 52G (Elegant)</f8></div><div style='display:flex; align-items:center;'><f8>The clothing of the elite, often includes intricate designs and colors.</f8></div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Cloak<f9> Accessory</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Hooded cloak worn for protection from elements.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Quality Boots<f9> Accessory</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>Quality leather boots made specially for comfort over long distances.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Cold Weather Clothing<f9> Cold Weather Clothing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Heavy clothing worn to survive cold temperatures.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Warm Weather Clothing<f9> Warm Weather Clothing</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Heavy clothing worn to survive cold temperatures.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Turquoise-4);'>Armor<f12></f12></IPTitle><IPSubTitle style='background:var(--Turquoise-4);'>Light Armor<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'><f14>Gambeson (Short)</f14><f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Light armor made of thick cloth.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'><f14>Gambeson (Long)</f14><f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>Light armor made of thick cloth. Hangs down to protect the legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Leather Vambrace / Shoulder Pads<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Hardened leather armor piece that protects an arm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Leather Leg Guards<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Hardened leather armor guards that protect the legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Leather Vest<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Hardened leather vest that covers the torso.</div><div></div></div><IPSubTitle style='background:var(--Turquoise-4);'>Medium Armor<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Chainmail Tunic (Short)<f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>60G</f8></div><div style='display:flex; align-items:center;'>Chainmail armor that protects the torso and arms.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Chainmail Tunic (Long)<f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>70G</f8></div><div style='display:flex; align-items:center;'>Chainmail armor that protects the torso and arms. Hangs down to protect the legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Chainmail Hood<f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Chainmail armor worn over the head.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Metal Greaves<f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Metal guards worn onthe legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'><f10>Metal Vambrace / Pauldrons</f10><f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Metal armor piece that protects an arm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'><f12>Brigandine</f12>&nbsp;<f9>(Splint Cuirrass)</f9><f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>Metal plantes woven into leather armor. Protects the torso.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Splint&nbsp;<f10>(Full Set)</f10><f9> Medium Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>75G</f8></div><div style='display:flex; align-items:center;'>Metal plates sowed into a leather armor. Covers the arms, body, and legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Metal Skullcap<f9> Light Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Metal helm with open face. Ex: Norman, Kettle Helm, Galea, Spangenhelm, Morion, Barbuta.</div><div></div></div><IPSubTitle style='background:var(--Turquoise-4);'>Heavy Armor<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Scale Cuirass<f9> Heavy Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>40G</f8></div><div style='display:flex; align-items:center;'>Breastplate made from metal scales linked together.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Scale&nbsp;<f10>(Full Set)</f10><f9> Heavy Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>120G</f8></div><div style='display:flex; align-items:center;'>Full armor suit made from metal scales linked together. Covers torso, arms, and legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Breastplate<f9> Heavy Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>50G</f8></div><div style='display:flex; align-items:center;'>Breastplate made of metal.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Plate &nbsp;<f10>(Full Set)</f10><f9> Heavy Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>150G</f8></div><div style='display:flex; align-items:center;'>Full suit of metal plate. Protects the torso, arms, and legs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Armet Helm<f9> Heavy Armor</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>75G</f8></div><div style='display:flex; align-items:center;'>Full metal helm with a visor that may be opend or closed. Ex: Bascinet, Burgonet.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto 1fr;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Great Helm<f9> Heavy Armor</f9></div></ItemTitle><div style='display:grid; grid-gap:1px; grid-auto-flow:rows; padding:1px 0px 0px 0px;'><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>65G</f8></div><div style='display:flex; align-items:center;'>Full metal helmet that covers the face with narrow slit for vision. Ex: Crusader Helmet, Sugarloaf, Frog-mouth, Heaume.</div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Turquoise-4);'>Shields<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Buckler<f9> Shield</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Small metal hand shield.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Round Shield<f9> Shield</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Round shield made of Wood. Can be worn on Arm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Kite Shield<f9> Shield</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>Kite shaped shield made of metal. Can be worn on Arm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Tower Shield<f9> Shield</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Shield roughly the size of a person primarily used to advance on projectiles.</div><div></div></div><IPSubTitle style='background:var(--Turquoise-4);'>Rusty/Low Quality Armor<f12></f12></IPSubTitle><div style='border:solid 1px var(--Turquoise-4); font-size:10px; padding:1px 2px 1px 2px;'>
+            Loq quality armor is either rusted, damaged, or made with bad materials.
+            <br> Half Break and Dmg (rounded down). Worth 1/2 Gold.
+        </div><IPSubTitle style='background:var(--Turquoise-4);'>Mythril Armor<f12></f12></IPSubTitle><div style='border:solid 1px var(--Turquoise-4); font-size:10px; padding:1px 2px 1px 2px;'>
+            Mythril Armor/Shields are rare and can only be made by Expert Armorers and made in a Magma Forge with all Special Materials.
+            <br> +3 Brk and Dmg. -33%<b6>E</b6>. Worth x2 Gold.
+        </div></ItemPage></page>
+
+<page>
+    <ItemPage><IPTitle style='background:var(--Orange-4);'>Horse Items<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Saddle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Allows for riding tamed horses.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Saddle Bags<f9> Carrier</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Carrier worn by worn by horses along with a saddle.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Saddle Pannier Bag<f9> Carrier</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Carrier for horses to carry additional items. Cannot be combined with a saddle.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Cart<f9> Vehicle</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Wooden cart that can be pulled by an animal.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Covered Wagon<f9> Vehicle</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>55G</f8></div><div style='display:flex; align-items:center;'>Large cart that can be pulled by a animal and offer additional room for people and items.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Orange-4);'>Carriers<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Backpack<f9> Carrier</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A simple backpack that can carry up to 40<b6>E</b6>.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Large Sack<f9> Carrier</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Cloth sack that can be used to carry items.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Water Skin<f9> Drink</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Animal skin used to carry water over long journeys.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Quiver<f9> Carrier</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Carrier specialized for quickly drawing arrows.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Green-4);'>Bows<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Low Quality Bow<f9> Bow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>An old or low quality bow typcially used for hunting.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Bow<f9> Bow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>A quality bow made for warfare.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Crossbow<f9> Bow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>A crossbow for war that has a mechanism to be drawn back. Uses Bolts.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Longbow<f9> Bow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>45G</f8></div><div style='display:flex; align-items:center;'>Large and powerful bow made a of specially strong wood.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Elven Bow<f9> Bow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>45G</f8></div><div style='display:flex; align-items:center;'>Specially made elven bow used for precise shooting.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Green-4);'>Arrows<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G for 2</f8></div><div style='display:flex; align-items:center;'>Quality made arrow made out of a metal arrowhead.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Quality Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Specially made arrow with a precision arrowhead.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Armor Piercing Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Arrow with a special head made to penetrate armor.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Barbed Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Arrow with barbed edges made to maximize damage to target.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Poison Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Arrow tipped in poison.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Fire Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Arrow with special head that can be lit on fire. Can egnite targets and structures.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Power Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Arrow made of special metal for a Longbow. Made to maximize damage.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Elven Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Precise arrow made of special materials. Mostly forged by elven archers.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Black Arrow<f9> Arrow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Arrow made out of mythril. Mostly unbreakable and highly effective.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Bolt<f9> Bolt</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G for 2</f8></div><div style='display:flex; align-items:center;'>Bolt for a crossbow.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Quality Bolt<f9> Bolt</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Quality bolt for crossbow that does increased damage.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Purple-4);'>Potions<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Vial<f9> Potion</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Vial for storing small amounts a liquid, like potions.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Healing Potion<f9> Potion</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Potion to restore health. Can remove short term or long term damage.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Stamina Potion<f9> Potion</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>May regain Stamina or remove Fatigue when imbibed.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Explotion Potion<f9> Potion</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Explodes in firey ball when thrown.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Poison<f9> Potion</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G for 4 Doses, 3G for 1 Dose</f8></div><div style='display:flex; align-items:center;'>Causes Illness and sometimes even death when ingested or cut with.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Pink-4);'>Arcane Items<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Spell Material<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3<b6>G</b6></f8></div><div style='display:flex; align-items:center;'>Magically infused item such as Orichalcum or parts of a magical creature.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Spell Book<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G, 1<b6>E</b6></f8></div><div style='display:flex; align-items:center;'>Arcane infused book used to hold a collection of scrolls.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Unstable Orcichalcum<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Orichacum specially over charged to exlpode on impact. Very dangerous and illegal.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Arcane Wand<f9> Magic Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>Wand infused with arane signs and elements in order to better channel arcane power.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Arcane Staff<f9> Magic Implement</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Staff infused with arane signs and elements in order to better channel arcane power.</div><div></div></div></ItemPage></page>
+
+<page>
+    <ItemPage><div style='height:3px;'></div><IPTitle style='background:var(--Purple-4);'>Arcane Scrolls<f12></f12></IPTitle><div style='border:solid 1px Purple; font-size:10px; padding:1px 2px 1px 2px;'>
+            Scrolls come in thee types. <b>Common</b> (can be found in most stores), <b>Uncommon</b> (can be found from specialists), <b>Rare</b> (very hard to to find, often outlawed by the Mage Council).
+        </div><IPSubTitle style='background:var(--Purple-4);'>Common<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Spark<f9> Common Scroll - Red</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Create a spark to start a fire.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Warming Aura<f9> Common Scroll - Red</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Increase Target's inner heat.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Soak<f9> Common Scroll - Blue</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Create a quick spash of water.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Perserving Freeze<f9> Common Scroll - Blue</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Feeze food/flesh to prevent rotting.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Seek<f9> Common Scroll - Green</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Gain knowelge to help find something.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Ward<f9> Common Scroll - Green</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Creating a protective ring to alert you of danger.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Disguise Voice<f9> Common Scroll - Yellow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Change or distort voice.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Distraction<f9> Common Scroll - Yellow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Project a distracting sound.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Telekinesis<f9> Common Scroll - Purple</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Move a small item with your mind.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Lighten Load<f9> Common Scroll - Purple</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Make an item weigh half as much for limited time.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkGreen-3);'><div style='padding: 1px 5px 1px 2px;'>Vermin Scout<f9> Common Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>See through the eyes of nearby rat.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkGreen-3);'><div style='padding: 1px 5px 1px 2px;'>Stink Bomb<f9> Common Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Create a powerful stench.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkRed-3);'><div style='padding: 1px 5px 1px 2px;'>Fake Death<f9> Common Scroll - Death</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Temporarily fake a the effects of death.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkRed-3);'><div style='padding: 1px 5px 1px 2px;'>Final Moments<f9> Common Scroll - Death</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Attempt to see the last sight of the dead.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkYellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkYellow-3);'><div style='padding: 1px 5px 1px 2px;'>Spirit Whispers<f9> Common Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Attempt to contact th soul of someone deceased.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkYellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkYellow-3);'><div style='padding: 1px 5px 1px 2px;'>Draining Carress<f9> Common Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Lose Fatigue by giving to another.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkBlue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkBlue-3);'><div style='padding: 1px 5px 1px 2px;'>Deepen Darkness<f9> Common Scroll - Shadow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Intensify darkness.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkBlue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkBlue-3);'><div style='padding: 1px 5px 1px 2px;'>Nightmare Visions<f9> Common Scroll - Shadow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Gain a vision from nightmare dreams.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkPurple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkPurple-3);'><div style='padding: 1px 5px 1px 2px;'>Memory Wipe<f9> Common Scroll - Void</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Remove someone's recent memories.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkPurple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkPurple-3);'><div style='padding: 1px 5px 1px 2px;'>Dimensional Pocket<f9> Common Scroll - Void</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Open a small pocket dimension.</div><div></div></div><IPSubTitle style='background:var(--Purple-4);'>Uncommon<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Fireball<f9> Uncommon Scroll - Red</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Shoot a flaming ball.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Lightning Bolt<f9> Uncommon Scroll - Red</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Generates a current of arcing eletricity.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Ice Wind<f9> Uncommon Scroll - Blue</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Create a cone of freezing wind.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Air Bubble<f9> Uncommon Scroll - Blue</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Create a bubble around head to hold air.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Mind Projection<f9> Uncommon Scroll - Green</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>See through the eyes of someone else.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Animate Object<f9> Uncommon Scroll - Green</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Make an item come alive to attack your enemies.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Color Blast<f9> Uncommon Scroll - Yellow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>A flashing color blast that dzaes targets.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Disguise Self<f9> Uncommon Scroll - Yellow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Appear as someone else.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Lightning Bolt<f9> Uncommon Scroll - Purple</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Slow a target's fall.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Gravity Wave<f9> Uncommon Scroll - Purple</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Cone that pushes back targets.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkGreen-3);'><div style='padding: 1px 5px 1px 2px;'>Acid Spray<f9> Uncommon Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Create a spray of acid.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkGreen-3);'><div style='padding: 1px 5px 1px 2px;'>Snake Staff<f9> Uncommon Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Turn staff into a venomous snake.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkRed-3);'><div style='padding: 1px 5px 1px 2px;'>Corpse Puppet<f9> Uncommon Scroll - Death</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Control a corpse like a puppet.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkRed-3);'><div style='padding: 1px 5px 1px 2px;'>Blood Mist<f9> Uncommon Scroll - Death</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Createa draining mist of blood.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkYellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkYellow-3);'><div style='padding: 1px 5px 1px 2px;'>Leech Life<f9> Uncommon Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Drain Life from Target.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkYellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkYellow-3);'><div style='padding: 1px 5px 1px 2px;'>Soul Barrier<f9> Uncommon Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Create an aura of souls acting as a defensive barrier.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkBlue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkBlue-3);'><div style='padding: 1px 5px 1px 2px;'>Shadow Spawn<f9> Uncommon Scroll - Shadow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Summon a Shadow Spawn.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkBlue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkBlue-3);'><div style='padding: 1px 5px 1px 2px;'>Shadow Passage<f9> Uncommon Scroll - Shadow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Create an instant passage between two shadows.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkPurple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkPurple-3);'><div style='padding: 1px 5px 1px 2px;'>Disintegration<f9> Uncommon Scroll - Void</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Create a ball that disintegration substance on contact.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkPurple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkPurple-3);'><div style='padding: 1px 5px 1px 2px;'>Gravity Field<f9> Uncommon Scroll - Void</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Manipulate gravity in area.</div><div></div></div><IPSubTitle style='background:var(--Purple-4);'>Rare<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Red-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Red-3);'><div style='padding: 1px 5px 1px 2px;'>Meteor Shower<f9> Rare Scroll - Red</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Have the sky rain with fire and brimstone.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Tidal Wave<f9> Rare Scroll - Blue</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Have a gaint wall of water wash away your foes.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Mind Swap<f9> Rare Scroll - Green</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Swap minds, and enjoy life on the other side for a short time.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Yellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Yellow-3);'><div style='padding: 1px 5px 1px 2px;'>Clone Self<f9> Rare Scroll - Yellow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Create a living identical copy of yourself</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Time Portal<f9> Rare Scroll - Purple</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Create a portal through time.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkGreen-3);'><div style='padding: 1px 5px 1px 2px;'><f14>The Living Swarm</f14><f9> Rare Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>A huge swarm of vermin fills the area.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkRed-3);'><div style='padding: 1px 5px 1px 2px;'>Flawed Resurrection<f9> Rare Scroll - Death</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Bring back an ally from death... mostly.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkYellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkYellow-3);'><div style='padding: 1px 5px 1px 2px;'>Caravan Of Souls<f9> Rare Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Create a rift through which the souls of the dead travel.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkBlue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkBlue-3);'><div style='padding: 1px 5px 1px 2px;'>Summon Demon<f9> Rare Scroll - Shadow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Summon a caged demon.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkPurple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkPurple-3);'><div style='padding: 1px 5px 1px 2px;'>Black Hole<f9> Rare Scroll - Void</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Tear a hole through space that pulls in all nearby.</div><div></div></div></ItemPage></page>
+
+<page>
+    <ItemPage><IPTitle style='background:var(--Green-4);'>Druidic<f12></f12></IPTitle><IPSubTitle style='background:var(--Green-4);'>Items<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Brewing Kit<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>May contain pestle, gourds, stomachs, natural pouches. small stiring bones, clippers, charcoal, clay cup, wax, etc.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Wolfwood Staff<f9> Druidic Staff</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Stick crafted for comfortable traveling.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Oak-bone Staff<f9> Druidic Staff</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Stick crafted for comfortable traveling.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'><f14>Rootantler Staff</f14><f9> Druidic Staff</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Stick crafted for comfortable traveling.</div><div></div></div><IPSubTitle style='background:var(--Green-4);'>Draughts<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Brown Liqour<f9> Draught</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>A disgusting mixture of natural ingredients, with a distinctive smell.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Yellow Liqour<f9> Draught</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>A clumpy fatty mixture of natural ingredients.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Red Liqour<f9> Draught</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>A semi-thick sticky slime of 'natural' ingredients</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'><f14>Aspect of the Wolf</f14><f9> Transform Draught</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Hair sprouts out, nails lengthen and become tough, Gain a ferocious look.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Green-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Green-3);'><div style='padding: 1px 5px 1px 2px;'>Aspect of the Oak<f9> Transform Draught</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>Skin cracks darkens and hardens. Life and energy returns to the body.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Pink-4);'>Drugs<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Pipe<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Small wooden pipe used to smoke drugs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Ale<f9> Alcohol</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5 For 1G</f8></div><div style='display:flex; align-items:center;'>Common alcholic beverages found throughout the land.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Wine<f9> Alcohol</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Expensive alcoholic beverage favored by the wealthy.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Tobacco<f9> Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3 for 1G</f8></div><div style='display:flex; align-items:center;'>Rolled and Smoked, Good to calm nerves.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Trip<f9> Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Mushroom/flower with psychoactive effects.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Sleet<f9> Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Smoked in a pipe to give overwhelming sense of calm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Fizzyn<f9> Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G</f8></div><div style='display:flex; align-items:center;'>Smoked in a pipe to give a boost of energy.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Orange-4);'>Other Items<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Eye Glasses<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Helps those with impaired eyesight.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Deck of Cards<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>25G</f8></div><div style='display:flex; align-items:center;'>Used to pass the time or gamble.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Chessboard<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>35G</f8></div><div style='display:flex; align-items:center;'>Board game used to pass the time and provide mental challenge.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Manacles<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Used to restrain a captive.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Lock Picking Kit<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Lockpicks, Tension Wrench, Pin Rake, Hand drill, etc.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Pet<f9> Pet</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>15G</f8></div><div style='display:flex; align-items:center;'>May be a creature cat sized or smaller. Can't meaningfully fight.
+                    <br>Example: Mouse, Cat, Bunny, Song Bird, Bat, Parot, ect</div><div></div></div></ItemPage></page>
+
+<!--
+-->
+</body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Pages/Item_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:02:53 GMT -->
+</html>

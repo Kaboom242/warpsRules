@@ -1,0 +1,1980 @@
+<html>
+    
+<!-- Mirrored from 18.218.198.100:8080/Content/Compendiums/Monsters/Dragons_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:03:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <title>Dragon Monster Compendium</title>
+        <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    abilitysection{
+        border:solid 1px; 
+        border-radius:4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+        border-color:var(--Gray-3);
+    }
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        font-size: 8px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 2px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+    </head>
+    <style type="text/css">
+        body {
+            width: 100%;
+        }
+        .CompendiumInfoBox {
+            position: fixed; 
+            right: 0px;
+            width: 250px;
+            background: white;
+            color: black;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .CompendiumHead {
+            font-size: 16;
+            font-weight: 700;
+        }
+    </style>
+    <body style='background:hsla(0,0%,40%,1);'>
+                  
+        <div style='display: grid;grid-template-columns: 710px 1fr;grid-template-rows: 1fr;grid-gap: 8px 8px;grid-auto-flow: row;'><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'>Dragons</div><div style='display: grid;grid-template-columns: 1fr;grid-template-rows: 1fr;grid-gap: 8px 8px;grid-auto-flow: row;'><div style='width:90%; display:grid; grid-gap:2px; grid-template-columns:auto;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto 1fr;grid-auto-flow: column;background:white;width: 706.35px;height: 499.154px;grid-gap: 2px;align-items: stretch;'><div style='display:grid;grid-template-rows: auto 215px 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; background:black; color:white; border-style:solid; border-width:1px; border-color:black; font-size:20px; text-align:left; padding:2px 5px 2px 5px;'><div>
+            <b>Wyvern</b>
+        	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Draconic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
+        </div></div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
+            <img src='../../Art/Wyvern.jpg' style='height:200px; width:auto;'>
+        </div>
+        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:14px; padding:1px 2px 1px 2px;'>
+    <div style='font-size:18px; 
+    display:grid; grid-auto-flow:row; grid-template-columns:1fr; grid-template-rows:auto 1fr; grid-gap:2px;
+    height:100%; width:100%;
+    '><div style='font-size:10px;'></div>
+                <div style='font-size:18px; 
+                display:grid; grid-auto-flow:row; grid-template-columns:1fr 1fr 1fr; grid-template-rows:1fr; grid-gap:2px;
+                height:100%; width:100%;
+                '>
+                    <div style='display:grid; grid-auto-flow:row; grid-template-columns: 1fr; grid-template-rows:auto;
+                    align-items:center; justify-items:flex-start; padding:3px;
+                    background:hsla(122.4,0%,85%,1); border-radius:4px;
+                    border:solid 1px black; background:white;'>
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;'>
+                            <div><sc>3S:</sc> Head</div>
+                            <div><sc>1S:</sc> Torso</div>
+                        </div>
+                    </div>
+                    <div style='display:grid; grid-auto-flow:row; grid-template-columns: 1fr; grid-template-rows:auto;
+                    align-items:center; justify-items:flex-start; padding:3px;
+                    background:hsla(122.4,0%,85%,1); border-radius:4px;
+                    border:solid 1px black; background:white;'>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;'>
+                            <div><sc>2S:</sc> Wings</div>
+                            <div><sc>1S*:</sc> Legs</div>
+                            <div><sc>1S*:</sc> Torso</div>
+                            <f10><cs>* <b>d6</b>:</cs> <b>1/2/3:</b> Legs. <b>4/5/6:</b> Torso.</f10>
+                        </div>
+                    </div>
+                    <div style='display:grid; grid-auto-flow:row; grid-template-columns: 1fr; grid-template-rows:auto;
+                    align-items:center; justify-items:flex-start; padding:3px;
+                    background:hsla(122.4,0%,85%,1); border-radius:4px;
+                    border:solid 1px black; background:white;'>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;'>
+                            <div><sc>2S:</sc> Tail</div>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+        </div>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
+            <f8>
+	            Wyverns are a smaller cousin of the dragon.
+	            They are extremely nimble in the air, and tend to live nea the ocean where they can feed on fish, though they have bee known to feed inland as well.
+	            There are legends of those who could ride Wyverns, though few known the art of taiming a Wyvern.
+	            If one were to do so, they would gain a dangerous mount capable of taking them through the air at high speed, though the risk of getting bucked off in such a way causes few to try.
+			</f8>
+			
+            </div>
+        </div>
+        </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Wyvern</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Dire</div></div>
+    <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Pink-4);'>Str</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>2</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Red-4);'>Fort</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>2</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Endr</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>3</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Orange-4);'>Agl</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>3</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Dex</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>2</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Blue-4);'>Sense</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>1</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Turquoise-4);'>Cha</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>1</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Int);'>Int</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>1</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Purple-4);'>Spirit</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>1</div>
+        </div>
+    </div>
+    <div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'><div style='background:black;display:grid; grid-template-rows:15px auto auto auto auto ; grid-template-columns:auto auto auto auto auto auto ; grid-auto-flow:row; grid-gap: 1px; info:;border-radius:4px; padding:1px;'><div style='background:black; color:white; font-size:9px; border-radius:4px; padding:0px; text-align:center;'><b>Body Area</b></div><div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Armor</b></div><div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Harm</b></div>
+        <div style='background:var(--Gray-3); color:white; font-size:8px; border-radius:4px 4px 0px 0px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+            <b>Wound</b>
+        </div>
+            <div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+                <div style='text-align:center; postition:relative; top:2px;'>
+                    <b>Harm</b>
+                </div>
+            </div><div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Crit</b></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>3S:</sc> Head</b></div></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>0</div></div><div style='grid-row: auto / span 2;background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>9</div></div><div style='grid-row: auto / span 2;background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div> <div style='display:inline; font-size:12px; color:white; font-weight:700;'>2</div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 1px;height: 17px;'><img 
+        src='../../../Resources/Art/Images/skull_white.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>2S:</sc> Torso</b></div></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display:inline; font-size:10px; color:black;'><b>DR1</b></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 1;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>5</div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap>
+						<div style='padding-top:1px;'><sc>1S:</sc> Wings <img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+							<div style='font-size:10px; text-align:left; padding-left:1px; font-weight:600;'>
+								<keyword>Pace (Air):</keyword> 3-5
+								<div style='font-size:8px; margin:0px 0px 0px 0px;'><keyword>Ascend:</keyword><div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Agl
+    </div></div>
+								<div style='font-size:8px; margin:0px 0px 0px 0px;'><keyword>Descend:</keyword><div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Agl
+    </div></div>
+							</div>
+						</div></nowrap></b></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>4</div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>4</div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div> <div style='display:inline; font-size:12px; color:white; font-weight:700;'>2 </div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 4px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap>
+						<div style='padding-top:1px;'><sc>1S:</sc> Legs <img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+							<div style='font-size:10px; text-align:left; padding-left:0px; font-weight:600;'>
+								<keyword>Pace <f9>(Grnd)</f9>:</keyword> 2
+							</div>
+						</div></nowrap></b></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>2</div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>3</div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div> <div style='display:inline; font-size:12px; color:white; font-weight:700;'>2 </div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div></div></div></div></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 1px;'><div style='display:grid;grid-template-rows:auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 1px;'>
+        <div style='display:grid; grid-template-columns:52px 1fr; grid-auto-flow:column; border:1px solid black; background:black;'>
+            <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:white; background:black; border-radius:4px 0px 0px 4px;'><b>Stamina</b></div>
+            <div style='font-size:15px; padding:1px 3px 1px 3px; display:flex; align-items:center; justify-content:center; background:white; color:black; background:white; border-radius:0px 4px 4px 0px;'><b>5</b></div>
+        </div>
+        
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <b>Dash</b> &nbsp;&nbsp;<sub><div style='display:inline; font-weight:700; color:var(--Green-4);'>Endr</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline; font-weight:700; color:var(--Orange-4);'>Agl</div></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Active</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 3px 1px 3px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:8px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>
+    </div>
+    
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <b>Dodge</b> &nbsp;&nbsp;<sub><div style='display:inline; font-weight:700; color:var(--Orange-4);'>Agl</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Defend</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 3px 1px 3px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:8px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>
+    </div>
+    
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <b>Breath</b> &nbsp;&nbsp;<sub><div style='display:inline; font-weight:700; color:var(--Green-4);'>Endr</div>+<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Active</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 1px 1px 3px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:8px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>    
+    </div>
+    
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; margin-top:2px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='8px'
+        width='8px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='8px'
+        width='8px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><div style='height:2px;'></div><b>Recover</b> <sub><div style='display:inline; font-weight:700; color:var(--Red-4);'>Fort</div>+<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Free</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 1px 1px 1px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:8px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>
+    </div>
+    <div></div></div></div></div></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'><div style='display:grid; grid-gap:2px; font-size:10px; align-content: start;'><div style='background:black; font-weight:700; color:white; font-size:9px; padding:1px 2px 1px 5px;'>Abilities/Skills</div><actionContainter style='font-size: ; grid-template-columns:1fr; ; '><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:black; padding:2px; color:black; font-size:; background:white; height:100%;'><div>
+                	    <b>Hunger</b> 2 &nbsp;&nbsp;&nbsp;  <b>Thirst</b> 3 &nbsp;&nbsp;&nbsp;  <b>Sleep</b> 3 <br> <b>Skin:</b> 2 Wyvern Pelt (Sp Pelt), 4 Whivern Teeth (Spell Material).
+                		<br>Will mostly fly through the air back and forth using it's <b>Claw</b>, <b>Bite</b>, and <b>Whip</b> Attacks.
+                	</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Claw (Leg)</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Red-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>May continue flying movement after Attack. <img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> May attempt twice.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;<img 
+        src='../../../Resources/Art/Images/Hexagon_1.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Slash</div></div></challengeHead>
+                                <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Bleed 1</b></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Whip (Tail)</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Red-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div><img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> May attempt as Free.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;Cone 3</div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Bash</div></div></challengeHead>
+                                <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>Resist 2 Knockdown with <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Bite</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;<img 
+        src='../../../Resources/Art/Images/Hexagon_1.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Slash</div></div></challengeHead>
+                                <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Bleed 2</b></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    ;'><div style='text-align:center;'><div style='text-align:left;'>Screetch</div></div> <actionSubtitle style='margin-left:3px; margin-top:2px;'>Active/Free<img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='8px'
+        width='8px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Red-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>All in 1R Code Resist 2 Stamina Loss w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>.
+                    </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Snatch (Leg)</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;<img 
+        src='../../../Resources/Art/Images/Hexagon_1.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Hit</div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>Enter Grapple.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Carry</div></div> <actionSubtitle style='margin-left:3px;'>Grapple</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><sb><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Endr</div></sbi></sb> <cb><img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></cb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                    	<sc>0S:</sc> Stay Flyling in mid-air.
+                    	<br><sc>1S:</sc> Carry Target <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Agl
+    </div> into the Air.
+                	</div></challengeText></challengeContainer></div></actionContainter></div></div></div></div></div></div><div style='display: grid;grid-template-columns: 1fr;grid-template-rows: 1fr;grid-gap: 8px 8px;grid-auto-flow: row;'><div></div></div><div style='display: grid;grid-template-columns: 1fr;grid-template-rows: 1fr;grid-gap: 8px 8px;grid-auto-flow: row;'><div style='width:90%; display:grid; grid-gap:2px; grid-template-columns:auto;'><div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 696.932px 5px 696.932px;grid-auto-flow: column;background:white;height: 489.736px;grid-gap: 0px;align-items: stretch;grid-column: auto / span 3;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; background:black; color:white; border-style:solid; border-width:1px; border-color:black; font-size:20px; text-align:left; padding:2px 5px 2px 5px;'><div>
+            <b>Dragon</b>
+        	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Draconic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
+        </div></div>
+        </div>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
+            <img src='../../Art/Dragon3.jpg' style='height:260px; width:auto;'>
+        </div>
+        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:14px; padding:1px 2px 1px 2px;'>
+    <div style='font-size:15px; 
+    display:grid; grid-auto-flow:row; grid-template-columns:1fr; grid-template-rows:auto 1fr; grid-gap:2px;
+    height:100%; width:100%;
+    '><div style='font-size:10px;'></div>
+                <div style='font-size:15px; 
+                display:grid; grid-auto-flow:row; grid-template-columns:1fr 1fr 1fr 1fr; grid-gap:2px; align-content:start;
+                '>
+                    <div style='grid-column: 2';>
+                            <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                                <div><sc>2S:</sc> Head</div>
+                            </div>
+                    </div>
+                    <div style='';>
+                            <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                                <div><sc>2S:</sc> Head</div>
+                            </div>
+                    </div>
+                    <div></div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>2S:</sc> Wings</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Torso</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Torso</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>2S:</sc> Wings</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>2S:</sc> Wings</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Torso</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Torso</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>2S:</sc> Wings</div>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Torso</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Torso</div>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Legs</div>
+                            <div><sc>1S:</sc> Tail</div>
+                        </div>
+                    </div>
+                    <div style=''>                   
+                        <div style='display:grid; grid-auto-flow:row; grid-template-columns:auto; grid-template-rows:auto;border:solid 1px black; background:white;'>
+                            <div><sc>1S:</sc> Legs</div>
+                            <div><sc>1S:</sc> Tail</div>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div></div>
+        </div>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:;  padding:1px 2px 1px 2px;'>
+				Famous for their ferocity and power, Dragons are some of the most revered creatures on the planet.
+				<br><br>
+				Luckily Dragons are not often seen and tend to spend most of their time sleeping.
+				Sometimes Dragons will situate themselves near towns and demand they are given food and loot on a routine basis or are destroyed.
+				<br><br>
+				They are almost always alone, and their personalities vary from dragon to dragon, with some being very intelligent and some being nearly feral.
+				Some few speak the Common tongue as well as Draconic though have little reason to use it to converse with lessar beings.
+			
+            </div>
+        </div>
+        </div></div><div style='border-style:solid; border-width:1px; border-color:black; position:relative; top:0px; background:white;'></div><div style='display:grid;grid-template-rows: 16px 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Dragon</b></div><div style='font-size:13px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Epic</div></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr 1fr;grid-auto-flow: column;background:none;grid-gap: 4px;'><div style='display:grid;grid-template-rows: 80px auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows:auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'>
+    <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Pink-4);'>Str</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>5</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Red-4);'>Fort</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>5</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Endr</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>4</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Orange-4);'>Agl</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>3</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Green-4);'>Dex</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>3</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Blue-4);'>Sense</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>2</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Turquoise-4);'>Cha</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>2</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Int);'>Int</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>2</div>
+        </div>
+        <div style='
+        display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
+        grid-auto-flow:column dense; height:auto; text-align:center;'>
+            <div style='
+        background:white; color:black; text-align:center; font-size:10px; font-weight:600; padding:2px; border-radius:4px 4px 0px 0px;
+        border-style:none none solid none; border-color:black; border-width:1px;
+         color:var(--Purple-4);'>Spirit</div><div style='
+        display:flex; align-items:center; justify-content:center; background:white; text-align:right; 
+        font-size:20px; font-weight:700; color:black; padding-top:2px;'>4</div>
+        </div>
+    </div>
+    <div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr1fr;grid-auto-flow: column;background:none;grid-gap: 1px;'>
+        <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid black; background:black;'>
+            <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:white; background:black; border-radius:0px 4px 4px 0px;'><b>Stamina</b></div>
+            <div style='font-size:15px; padding:1px 3px 1px 3px; display:flex; align-items:center; justify-content:center; background:white; color:black; background:white; border-radius:0px 4px 4px 0px;'><b>9</b></div>
+        </div>
+        <div style='display:grid;grid-template-rows: 1fr 1fr;grid-template-columns: 1fr 1fr;grid-auto-flow: column;background:none;grid-gap: 1px;'>
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <b>Dash</b> &nbsp;&nbsp;<sub><div style='display:inline; font-weight:700; color:var(--Green-4);'>Endr</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline; font-weight:700; color:var(--Orange-4);'>Agl</div></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Active</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 3px 1px 3px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:10px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>7<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>
+    </div>
+    
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <b>Dodge</b> &nbsp;&nbsp;<sub><div style='display:inline; font-weight:700; color:var(--Orange-4);'>Agl</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Defend</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 3px 1px 3px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:10px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>
+    </div>
+    
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <b>Breath</b> &nbsp;&nbsp;<sub><div style='display:inline; font-weight:700; color:var(--Green-4);'>Endr</div>+<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Active</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 1px 1px 3px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:10px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>    
+    </div>
+    
+    <div style='display:grid; grid-template-columns:auto 1fr; grid-auto-flow:column; border:1px solid var(--Red-3); background:white;'>
+        <div style='font-size:9px; margin-top:2px; padding:1px 3px 1px 2px; display:flex; align-items:center; color:black; 
+        background:white; border-radius:4px 0px 0px 4px; border-width:1px; border-style:none solid none none; border-color:var(--Red-3);'><div>
+            <img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='8px'
+        width='8px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='8px'
+        width='8px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '><div style='height:2px;'></div><b>Recover</b> <sub><div style='display:inline; font-weight:700; color:var(--Red-4);'>Fort</div>+<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sub>
+            <div style='font-size:7px; margin-left:5px;'><b><i>Free</i></b></div>
+        </div></div>
+        <div style='font-size:15px; padding:1px 1px 1px 1px; display:flex; align-items:center; justify-content:center; 
+        background:white; color:black; background:white; border-radius:0px 4px 4px 0px; font-size:8px;'>
+            <div style='text-align:center;'>
+                <b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+            </div>
+        </div>
+    </div>
+    </div></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'><div style='background:black;display:grid; grid-template-rows:15px auto auto auto auto auto ; grid-template-columns:auto auto auto auto auto auto ; grid-auto-flow:row; grid-gap: 1px; info:;border-radius:4px; padding:1px;'><div style='background:black; color:white; font-size:9px; border-radius:4px; padding:0px; text-align:center;'><b>Body Area</b></div><div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Armor</b></div><div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Harm</b></div>
+        <div style='background:var(--Gray-3); color:white; font-size:8px; border-radius:4px 4px 0px 0px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+            <b>Wound</b>
+        </div>
+            <div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'>
+                <div style='text-align:center; postition:relative; top:2px;'>
+                    <b>Harm</b>
+                </div>
+            </div><div style='background:black; color:white; font-size:8px; border-radius:4px; padding:2px; display:flex; align-items:flex-end; justify-content:center;'><b>Crit</b></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>2S:</sc> Head</b></div></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display:inline; font-size:10px; color:black;'><b>DR1</b></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; grid-row: span 2;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>10</div></div><div style='grid-row: auto / span 2;background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>12</div></div><div style='grid-row: auto / span 2;background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div> <div style='display:inline; font-size:12px; color:white; font-weight:700;'>2</div></div></div><div style='grid-row: auto / span 2;background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 1px;height: 17px;'><img 
+        src='../../../Resources/Art/Images/skull_white.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: column; align-items: left; justify-content:center; font-size:10px;padding:2px;'><div><b><sc>1S:</sc> Torso</b></div></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display:inline; font-size:10px; color:black;'><b>DR2</b></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px; display: none;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>0</div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap>
+						<div style='padding-top:1px;'><sc>2S:</sc> Wings <img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+							<div style='font-size:10px; text-align:left; padding-left:1px; font-weight:600;'>
+								<keyword>Pace (Air):</keyword> 3-5
+								<div style='font-size:8px; margin:0px 0px 0px 0px;'><keyword>Ascend:</keyword>&nbsp;&nbsp;<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Agl
+    </div></div>
+								<div style='font-size:8px; margin:0px 0px 0px 0px;'><keyword>Descend:</keyword>&nbsp;&nbsp;<b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Agl
+    </div></div>
+							</div>
+						</div></nowrap></b></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display:inline; font-size:10px; color:black;'><b>DR1</b></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>3</div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>5</div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div> <div style='display:inline; font-size:12px; color:white; font-weight:700;'>2 </div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap>
+						<div style='padding-top:1px;'><sc>1S:</sc> Legs <img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+							<div style='font-size:10px; text-align:left; padding-left:0px; font-weight:600;'>
+								<keyword>Pace <f9>(Grnd)</f9>:</keyword> 2
+							</div>
+						</div></nowrap></b></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display:inline; font-size:10px; color:black;'><b>DR1</b></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>7</div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>7</div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><img 
+        src='../../../Resources/Art/Images/Mobile.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>&#10680 </div> <div style='display:inline; font-size:12px; color:white; font-weight:700;'>2 </div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div></div></div><div style='background:white; color:black; border-radius:0px 0px 0px 4px;; display:flex; flex-direction:row; align-items:center; justify-content:left; 
+                font-size:10px;  padding:1px 3px 1px 2px;'><b><nowrap>
+						<sc>1S:</sc> Tail</nowrap></b></div><div style='background:var(--Gray-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction:column; align-items: center; justify-content:center;padding:2px;'><div><div style='display:inline; font-size:10px; color:black;'><b>DR1</b></div></div></div><div style='background:var(--Dmg-2); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>6</div></div><div style='background:var(--Dmg-3); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div style='display:inline; font-size:12px; color:white; font-weight:700;'>6</div></div><div style='background:var(--Dmg-4); color:black; border-radius:0px 0px 0px 0px; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px 4px 2px 4px;'><div> <div style='display:inline; font-size:12px; color:white; font-weight:700;'>2 </div></div></div><div style='background:var(--Dmg-5); color:black; border-radius:0px 0px 0px 0px;; display:flex; flex-direction: row; align-items: center; justify-content:center;padding:2px;'><div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
+        src='../../../Resources/Art/Images/Injured.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> </div></div></div></div></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'><div style='display:grid; grid-gap:2px; font-size:10px; align-content: start;'><div style='background:black; font-weight:700; color:white; font-size:9px; padding:1px 2px 1px 5px;'>Abilities/Skills</div><actionContainter style='font-size: ; grid-template-columns:1fr; ; '><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:black; padding:2px; color:black; font-size:; background:white; height:100%;'><div>
+                	    <b>Hunger</b> 3 &nbsp;&nbsp;&nbsp;  <b>Thirst</b> 2 &nbsp;&nbsp;&nbsp;  <b>Sleep</b> 3
+                	    <br><b>Skin:</b> 2 Dragon Eyes (Count as any Gem for Spell Material, 50G), 4 Dragon Fangs (Spell Material, 30G), 10 Dragon Scales (Spell Material, 10G)
+                		<br>Will typically fly back and forth roasting the field with fire before the battle begins. Then will use <b>Bite</b> and <b>Claw</b> Attacks.
+                		<br><br>
+                		<b>Treasure:</b> Dragons often have a deep love of collecting treasure, some even sleeping on piles of gold.
+                		If raiding a Dragon's liar, it is common to find S+++ Treasure, including some Magic Items.
+                	</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:white; border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:white;'><div style='text-align:left; '>Physique</div></div> <actionSubtitle style='color:black; '></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                    	<keyword>Heavy 3</keyword> (Push and similar reduced by 2).
+                    	</div></challengeText></challengeContainer></div></actionContainter></div></div></div></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'><div style='display:grid; grid-gap:2px; font-size:10px; align-content: start;'><div style='background:black; font-weight:700; color:white; font-size:9px; padding:1px 2px 1px 5px;'>Abilities/Skills</div><div style='padding:0px 1px 1px 5px; margin:0px -3px 0px -3px; background:var(--Red-3); color:white; font-weight:700; font-size:9px; display:flex; align-items:center;'>Attacks</div><actionContainter style='font-size: ; grid-template-columns:1fr; ; '><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:black; padding:2px; color:black; font-size:; background:white; height:100%;'><div>
+                	    Can attempt 2 Attacks per Round with different Body Areas.
+                	</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Claw (Leg)</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Red-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>May continue flying movement after Attack. May attempt twice.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;<img 
+        src='../../../Resources/Art/Images/Hexagon_3.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Slash</div></div></challengeHead>
+                                <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>7<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Bleed 1</b></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Whip (Tail)</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Red-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>May continue flying movement after Attack.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;Cone 1R</div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Bash</div></div></challengeHead>
+                                <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>8<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>Resist 2 Knockdown with <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Bite</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;<img 
+        src='../../../Resources/Art/Images/Hexagon_2.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Slash</div></div></challengeHead>
+                                <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>7<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Bleed 2</b></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '> Fire Breath</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeHead style='border-radius:4px 4px 4px 4px; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Cone&nbsp;<img 
+        src='../../../Resources/Art/Images/Hexagon_1R.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead></challengeContainer><challengeContainer style='grid-template-columns:auto auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Heat</div></div></challengeHead>
+                                <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Purple-4);'>Spirit</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>Blast: Flame 2</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Blast</div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>Flame 2</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Snatch (Leg)</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Strike&nbsp;<img 
+        src='../../../Resources/Art/Images/Hexagon_1.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                <challenge style='border-radius:0px 4px 4px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><sb><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Dex</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></sbi></sb></div></challengeInner>
+                                </challenge>
+                            </challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Hit</div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>Enter Grapple.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Carry</div></div> <actionSubtitle style='margin-left:3px;'>Grapple</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                    <nowrap></nowrap>
+                                    <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><sb><b style='font-weight:700; color: black;'>9<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><sbi><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>=</div><div style='display:inline; font-weight:700; color:var(--Pink-4);'>Str</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Endr</div></sbi></sb> </div></challengeInner>
+                                </challenge>
+                            <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                    	<sc>0S:</sc> Stay Flyling in mid-air.
+                    	<br><sc>1S:</sc> Carry Target <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Agl
+    </div> into the Air.
+                	</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '> Roar</div></div> <actionSubtitle style='margin-left:3px;'>Free</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                    	All in <img 
+        src='../../../Resources/Art/Images/HexagonW_1R.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Resist 2 Terror w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>.
+                	</div></challengeText></challengeContainer></div></actionContainter></div></div></div></div></div></div></div></div><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'></div></div>    </body>
+
+<!-- Mirrored from 18.218.198.100:8080/Content/Compendiums/Monsters/Dragons_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 02:03:29 GMT -->
+</html>
