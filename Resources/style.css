@@ -202,7 +202,7 @@ img{
     --Turquoise-4: #22776a;
     /*--Turquoise-4: #165663;*/
     
-    --Blue-1: var(--Turquoise-1);
+    --Blue-1: #e1f5fa;
     --Blue-2: #24adc8;
     --Blue-3: #1a95bd;
     --Blue-4: #106493;
@@ -244,4 +244,85 @@ img{
     --DarkPurple-2: #673d7a;
     --DarkPurple-3: #43294f;
     --DarkPurple-4: #2a1c30;
+    
+    /*Dark Magic Colors*/
+    --PlagueGreen-1: #b0b49c;
+    --PlagueGreen-2: #698c40;
+    --PlagueGreen-3: #4a4f29;
+    
+    --BloodRed-1: #d2a4b4;
+    --BloodRed-2: #b62e37;
+    --BloodRed-3: #8f202f;
+    
+    --ShadowBlue-1: #aaaeba;
+    --ShadowBlue-2: #43508a;
+    --ShadowBlue-3: #232e5f;
+    
+    --DeathBrown-1: #c1afa5;
+    --DeathBrown-2: #745c50;
+    --DeathBrown-3: #423734;
+    
+    --SoulTurq-1: #b2dacb;
+    --SoulTurq-2: #4d9e69;
+    --SoulTurq-3: #1c4b45;
+    
+    --VoidPurple-1: #a893c0;
+    --VoidPurple-2: #a11e7f;
+    --VoidPurple-3: #74104c; /*#3f0e59*/
+    
+    /*Class Colors*/
+    --Archer-1: #f3e8d4;
+    --Archer-2: #7baadd;
+    --Archer-3: #d9a442;
+    --Archer-4: #648d62;
+    
+    --Barbarian-1: #ffd2bc;
+    --Barbarian-2: #b94e2e;
+    --Barbarian-3: #bf2c2c;
+    --Barbarian-4: #972424;
+    
+/*    --Bard-1: #fff3a2;
+    --Bard-2: #ba7c64;
+    --Bard-3: #b34045;
+    --Bard-4: #994869;*/
+    
+    --Bard-1: #FFBABA;
+    --Bard-2: #C85C8E;
+    --Bard-3: #9D3C72;
+    --Bard-4: #7B2869;
+    
+    --Cleric-1: #ffedc6;
+    --Cleric-2: #ffc478;
+    --Cleric-3: #e8ae2e;
+    --Cleric-4: #8f543c;
+    
+    --Druid-1: #F0EBCE;
+    --Druid-2: #AA8B56;
+    --Druid-3: #4E6C50;
+    --Druid-4: #395144;
+    
+    --Fighter-1: #FFF2E5;
+    --Fighter-2: #ca9f63;
+    --Fighter-3: #ab4836;
+    --Fighter-4: #445b97;
+    
+    --Mage-1: #f3d3d8;
+    --Mage-2: #9E4784;
+    --Mage-3: #66347F;
+    --Mage-4: #37306B;
+    
+    --Monk-1: #E8D0B3;
+    --Monk-2: #7EB5A6;
+    --Monk-3: #C36839;
+    --Monk-4: #86340A;
+        
+    --Rogue-1: #A5D7E8;
+    --Rogue-2: #5f77cf;
+    --Rogue-3: #3f5bb5;
+    --Rogue-4: #383c8f;
+    
+    --Artificer-1: #d7eee1;
+    --Artificer-2: #9babb2;
+    --Artificer-3: #625565;
+    --Artificer-4: #3e3546;
 }
