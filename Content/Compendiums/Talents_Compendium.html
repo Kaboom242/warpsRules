@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Talents_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:16 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Talents_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:44 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Talents Compendium</title>
@@ -375,6 +375,17 @@
         padding:1px 2px 1px 5px;
         background:var(--Gray-3);
     }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
     abilitysectiontitle{
         font-weight:700; 
         color:white;
@@ -466,13 +477,50 @@
     {
         margin-left: 5px; 
         padding-left: 3px; 
-        font-size: 8px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
         font-style: italic; 
         grid-column: span 3; 
+        background: white;
         font-weight:500; 
         border: 1px solid;  
         border-radius: 0px 0px 4px 4px;
     }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
     
 </style>
 </style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
@@ -650,7 +698,7 @@
         color:white;
         font-weight:700;
         font-size:12px;
-        padding:2px 2px 1px 5px;
+        padding:2px 5px 1px 5px;
         border-radius:4px;
     }
     rulecardsubtitle {
@@ -790,7 +838,7 @@
 <div style='display: grid;grid-template-rows: 1fr;grid-template-columns: repeat(auto-fill, 356px);grid-gap: 8px 8px;grid-auto-flow: row;'><div id='Athletics' style='grid-column: 1 / -1;font-size: 25px;font-weight: 900;color: white;margin-bottom:-6px;'>Athletics</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Gray-4);'>
             <div>Athlete <f7>Athletics</f7></div>
         </rulecardtitle><abilitysection class='asecGray'>
-            An <keywordGray>Athlete</keywordGray> is physcially fit and can enhance their physcial skills.
+            An <keywordGray>Athlete</keywordGray> is physically fit and can enhance their physical skills.
         </abilitysection>
         <div style='display:grid; grid-template-columns:100px 1fr auto;'>
             <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
@@ -1147,7 +1195,7 @@
         font-weight:700;
     '>
         Agl
-    </div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>My have Horse move in chosen direction. <sc>1S:</sc> Horse may Dash.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    ;'><div style='text-align:center;'><div style='text-align:left;'>Horse Care</div></div> <actionSubtitle style='margin-left:3px; margin-top:2px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
@@ -2949,7 +2997,7 @@
         </abilitysection><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Sell Trade Cargo</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
-                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
         display: inline-block;
         
         background:white;
@@ -2982,9 +3030,11 @@
     </div></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><f7>
-                    Gain value of Trade Cargo after traveling them to another location.
-                    <br> <cs>1S:</cs> Get 10% Back on Bulk Goods. (Round Down)
-                    <br> <b>Easy Trip:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>. <b>Harsh Trip:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>. <b>Dangerous Trip:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>.
+                    Gain value of Trade Cargo after traveling them to another location.(Round Down)
+                    <br> <b>Easy Trip:</b> Get 100% + <cs>1S:</cs> 10% Back on Bulk Goods. 
+                    <br> <b>Harsh Trip:</b> Get 250% + <cs>1S:</cs> 20% Back on Bulk Goods.
+                    <br> <b>Dangerous Trip:</b> Get 500% + <cs>1S:</cs> 30% Back on Bulk Goods.
+                    <br> Easy (~300mi), Harsh (~600mi), Dangerous ~(900mi). The danger of the paths the must be taken may lower the miles needed.
                 </f7></div></challengeText></challengeContainer></div></actionContainter>
         <div style='display:grid; grid-template-columns:auto 1fr auto;'>
             <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
@@ -3115,7 +3165,7 @@
             <f13><b>House Motto:</b></f13>
             <div style='height:5px;'></div> <div style='height:5px;'></div> 
         </abilitysection><abilitysection class='asecGray' style='background:white;'>
-            <f13><b>House Regon/History:</b></f13>
+            <f13><b>House Region/History:</b></f13>
             <div style='height:5px;'></div> <div style='height:5px;'></div> <div style='height:5px;'></div> <div style='height:5px;'></div> <div style='height:5px;'></div>
         </abilitysection><abilitysection class='asecGray'>
             <b>Becoming a Noble</b>
@@ -4494,7 +4544,7 @@
         <abilitysection style='background:var(--Gray-1); border-color:var(--Gray-3);'>
         	3 Con (<b>B</b>) in Daylight
         	<br> Dark Vision +2
-        	<br> <b>Vile:</b> Weak to Holy Attacks.
+        	<br> <b>Vile:</b> Weak to Azeal's Holy Attacks. 
         	<br> <b>Thirst:</b> Drinking water is meaningless. Every 4 Days Resist 4 Thirst w/ <div style='
         display: inline-block;
         
@@ -4538,7 +4588,7 @@
         	<br> Each Day: Remove <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound/Fatigue.
         	<br> Dark Vision
         	<br> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Challenges to Hide in Darkness
-        	<br> <b>Vile:</b> Weak to Holy Attacks. Churches can’t heal you, Con point while inside, and Burning 2D upon entering.
+        	<br> <b>Vile:</b> Weak to Azeal's Holy Attacks. Churches can’t heal you, Con point while inside, and Burning 2D upon entering.
 	            Touching Holy Implements applies Burning 1S+2D and 1S+3D Dmg.
         	<br> <b>Thirst:</b> Drinking water is meaningless. Every 7 Days Resist 4 Thirst w/ <div style='
         display: inline-block;
@@ -4612,5 +4662,5 @@
                 	</div></challengeText></challengeContainer></div></actionContainter></rulecard></div></div>    </div>
     </body>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Talents_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:16 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Talents_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:44 GMT -->
 </html>

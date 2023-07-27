@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:06 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:33 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Rule Compendium</title>
@@ -375,6 +375,17 @@
         padding:1px 2px 1px 5px;
         background:var(--Gray-3);
     }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
     abilitysectiontitle{
         font-weight:700; 
         color:white;
@@ -466,13 +477,50 @@
     {
         margin-left: 5px; 
         padding-left: 3px; 
-        font-size: 8px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
         font-style: italic; 
         grid-column: span 3; 
+        background: white;
         font-weight:500; 
         border: 1px solid;  
         border-radius: 0px 0px 4px 4px;
     }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
     
 </style>
 </style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
@@ -650,7 +698,7 @@
         color:white;
         font-weight:700;
         font-size:12px;
-        padding:2px 2px 1px 5px;
+        padding:2px 5px 1px 5px;
         border-radius:4px;
     }
     rulecardsubtitle {
@@ -974,7 +1022,7 @@
             padding: 0px 0px 0px 0px;
         '> gains Will.
                     </div></challengeText></challengeContainer></div></actionContainter></div><div style='height:2px;'></div><rulecardsubtitle> Morale </rulecardsubtitle><div style='font-size: 8px; padding: 0px 2px;'>
-                Longterm confidence and resolve. May come from effects, items, or experiences.
+                Long term confidence and resolve. May come from effects, items, or experiences.
             </div><div style='margin-left:5px; display:grid; grid-gap:1px;'><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>-</div><span>1</span> Morale</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Use</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><b>OR:</b> Spend 1 Morale instead of <img 
         src='../../Resources/Art/Images/Stamina.svg' 
         height='10px'
@@ -1105,7 +1153,7 @@
         font-weight:700;
     '>
         Fort
-    </div>. Effect only appies upon 1 or more Dmg.
+    </div>. Effect only applies upon 1 or more Dmg.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each point applies Torso Dmg or Stamina Loss. Effected Character chooses.
             <div style='height:1px;'></div><b9>Flanking:</b9> If attacking Target from opposite sides, each attacker gets <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hit.
         </rulebox>
@@ -1597,16 +1645,16 @@
                     </div>
                 </div></challengeText></challengeContainer></div></actionContainter><rulebox style='margin-top:0px;'>
             <b8>Ranged:</b8> Certain Actions (ex: Disarm) cannot be applied when Grappling at distance.
-            <br><b8>Flying:</b8> Flying Charcters must still succeed in moving every Round or begin to fall.
+            <br><b8>Flying:</b8> Flying Characters must still succeed in moving every Round or begin to fall.
             <br><b8>Size Differences:</b8> A <b>Lift</b> occurs automatically if Grappling a Target below Capacity.
         </rulebox></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Grappling_2'><rulecardtitle> Grapple  <f8>Continued</f8> + Unarmed + Prone <f8></f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>3</span></rulecardtitle><rulecardsubtitle>Grapple Prevent / Assist Actions</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
-                <b>Prevent</b> is used to redce the effectiveness of a Grapple Action targeting you.
+                <b>Prevent</b> is used to reduce the effectiveness of a Grapple Action targeting you.
                 <br> <b>Assisting</b> in a Grapple is one another Character helps an ally in a Grapple.
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When Assisting a Character may do an <b>Grapple Assist</b> and a <b>Prevent Assist</b>.
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Grapple Assist</b> is applied to the Ally's chosen Grapple Action.
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Prevent Assist</b> is applied to an Ally's Prevent Action.
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Character can only be Assisted by a single Ally at a time. 
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters may leave Assited Grapples w/o Escping only if the opponant agrees.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters may leave Assisted Grapples w/o Escaping only if the opponent agrees.
             </div><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Prevent</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Defend</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Reduce</b> Target's Grapple Check by <div style='
         display: inline-block;
@@ -2134,7 +2182,7 @@
     </div></div></challengeInner>
                                     </challenge>
                                 <challengeText style='; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><f8>If Edged: Bleed 1</f8> </div></challengeText></challengeContainer></div></actionContainter></div></div><div style='height:2px;'></div><rulecardsubtitle>Prone</rulecardsubtitle><div style='line-height: 8px; font-size: 8px; padding: 0px 2px;'>
-            A Character is knocked to the ground or off thier feet (or other mobility providing limbs), listed below are the only actions that can be done while prone.
+            A Character is knocked to the ground or off their feet (or other mobility providing limbs), listed below are the only actions that can be done while prone.
         </div><div style='margin-left:5px; display:grid; grid-gap:1px;'><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    ;'><div style='text-align:center;'><div style='text-align:left;'>Act</div></div> <actionSubtitle style='margin-left:3px; margin-top:2px;'>Full: Prone</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Any Active/Full Action. <br> <f8>(Can't Move. Can't Defend, Can't attempt <img 
         src='../../Resources/Art/Images/Mobile.svg' 
         height='12px'
@@ -2347,7 +2395,7 @@
         Cha
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:8px;'>Attmept to taunt, distract, or otherwise influence a Target's Actions.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Priority</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:8px;'>Attempt to taunt, distract, or otherwise influence a Target's Actions.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Priority</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b>Contest:</b> <div style='
@@ -2546,7 +2594,7 @@
         Agl
     </div></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Avoid obsticles. <i>Low wall, fruit stand, car hood.</i><br><fc>Off by 1:</fc> May lose movement that round.<br><fc>Fail:</fc> Typcially fall Prone.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Balance <img 
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Avoid obstacles. <i>Low wall, fruit stand, car hood.</i><br><fc>Off by 1:</fc> May lose movement that round.<br><fc>Fail:</fc> Typically fall Prone.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Balance <img 
         src='../../Resources/Art/Images/Mobile.svg' 
         height='12px'
         width='12px' 
@@ -2592,7 +2640,7 @@
     </div></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Move slowly over precarious ground.<br><i>Thin Ledge, log over chasm, earthquake. </i><br>Typically move 5' per <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>.<br><fc>Fail:</fc> Fall prone or off surface.</div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Challenges_2'><rulecardtitle> Challenges <f8>Continued</f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>5</span></rulecardtitle><rulecardsubtitle> Endurance Challenges </rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
-                Hard physical effort may be represented by resisting an amount of Fatigue recieved.
+                Hard physical effort may be represented by resisting an amount of Fatigue received.
                 <div style='font-size:7px; margin-left:5px;'><i>
                     <b>1 (Easy):</b> Hopping a Fence, Climbing a Hill.
                     <br><b>3 (Hard):</b> Climbing a mountain, Carrying a person.
@@ -2683,7 +2731,7 @@
         Sense
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Used to notice ambushes, stealthed Characters, and other dangers, like falling rocks. Typically the higher the result the more time to react.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Search</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Used to notice ambushes, hidden Characters, and other dangers, like falling rocks. Typically the higher the result the more time to react.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Search</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
@@ -2780,15 +2828,15 @@
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><fc>0S:</fc> +1 Gold to Price. <sc>1S:</sc> No Effect. <br><sc>2S:</sc> -1 Gold to Price. <sc>3S:</sc> -3 Gold to Price.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Prepare</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Day Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
                     Increase preparation (usually per success). Often requires Expertise.
-                    <f7><i>Prepare a magical spell to disarm a trap, practice an infiltration manuever.</i></f7>
+                    <f7><i>Prepare a magical spell to disarm a trap, practice an infiltration maneuver.</i></f7>
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><rulecardsubtitle> Stealth Challenges </rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
             <b>Stealth</b> may occur whenever a Character is not in-sight of another character.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stealth may be ignored until Characters in danger of being noticed.
-            <br><b>Alertness</b> determined how interested a guard is in finding a Stealthed Character.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Distracted</b> Characters don't have any clue stealthed character might exist.
+            <br><b>Alertness</b> determined how interested a guard is in finding a Hidden Character.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Distracted</b> Characters don't have any clue hidden character might exist.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Relaxed</b> Characters may look around, and say 'I think I heard something.'
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Searching</b> Characters are actively trying to find source of noise.
-            <br><b>Disadvatages</b> in Stealth may apply Negative mods.
+            <br><b>Disadvantage</b> in Stealth may apply Negative mods.
                 <i><f7>Ex: Armor, carrying things, noisy actions.</f7></i>
         </div><actionContainter style='font-size: ; grid-template-columns:auto 1fr; ; grid-template-columns: 53px 1fr;'><actionTitle style='background:var(--Gray-4); justify-content:left; flex-direction:row;   align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Sneak</div></div> <actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:b; '></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
@@ -2826,7 +2874,7 @@
     </div></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
-                Sneak past or act quietky. The more successes, the more quiet. When doing as a group, failures may be counted together.
+                Sneak past or act quietly. The more successes, the more quiet. When doing as a group, failures may be counted together.
                 <i><f7>
                     <br><b>Easy:</b> Sneaking past distracted guards.
                     <br><b>Hard:</b> Moving past a guard tower in the night.
@@ -2962,8 +3010,8 @@
     </div> Harm from Inactive Target.</div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><rulecardsubtitle>Constitution</rulecardsubtitle>
         <div style='font-size: 8px; padding: 0px 2px;'>
             A Character's Constitution represents a Character general health and wellbeing.
-            <br><b>Con Points</b> such as Fatigue, Hunger, etc. and get recorded in the Consitution Meter.
-            <br><b>Expire Checks</b> occur when Characters would go over their Consitution limit.
+            <br><b>Con Points</b> such as Fatigue, Hunger, etc. and get recorded in the Constitution Meter.
+            <br><b>Expire Checks</b> occur when Characters would go over their Constitution limit.
             <div style='font-size:8px; display:grid; grid-template-columns:auto 1fr; grid-gap:1px;'>
                 <div style='display:flex; align-items:center; border:1px solid black; padding:1px 2px 1px 2px;'><div><b>Expire<br>Check</b></div></div>
                 <div style='display:flex; align-items:center;'><div>
@@ -2998,10 +3046,10 @@
     '>
         Spirit
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>.
-                    <br><sc>0 Remaining:</sc> Pass out for a bit/KOd if in Combat.<br><sc>1 or more:</sc> Collapsed. If already Collapsed, then Dead
+                    <br><sc>0 Remaining:</sc> Pass out for a bit/KO'd if in Combat.<br><sc>1 or more:</sc> Collapsed. If already Collapsed, then Dead
                 </div></div>
             </div>
-            <b>Collapsed:</b> All Stats are max 1. Can't attept most Actions. Can only move with difficulty.
+            <b>Collapsed:</b> All Stats are max 1. Can't attempt most Actions. Can only move with difficulty.
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Removing Collapsed:</b> If Character would no longer be in Weak, remove Collapsed.
         </div><div style='height:2px;'></div><rulecardsubtitle>Treatment</rulecardsubtitle>
         <div style='font-size: 8px; padding: 0px 2px;'>
@@ -3023,7 +3071,7 @@
     '>
         Endr
     </div>
-                    &nbsp;&nbsp;&nbsp;  <b>Attempt on additonal Character:</b> Resist <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div>.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><challengeHead style='; background:var(--Gray-3);'><div style='display:flex; align-items:center; font-size:9px;'><div>Heal</div></div></challengeHead>
+                    &nbsp;&nbsp;&nbsp;  <b>Attempt on additional Character:</b> Resist <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div>.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><challengeHead style='; background:var(--Gray-3);'><div style='display:flex; align-items:center; font-size:9px;'><div>Heal</div></div></challengeHead>
                                     <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; '>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
@@ -3109,8 +3157,8 @@
             padding: 0px 0px 0px 0px;
         '> </div> Injured</rulecardsubtitle><div style='margin-left:5px; display:grid; grid-gap:1px;'>
             <div style='font-size:8px; padding: 0px 2px;'>
-                <b>Aesthtic Damage:</b> When Injured choose a descriptive scar, lost digit, etc.
-                <br> <b>Finger Damge:</b> If on Arm roll <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. <sc>3S:</sc> Gain Lost Finger Aspect.
+                <b>Aesthetic Damage:</b> When Injured choose a descriptive scar, lost digit, etc.
+                <br> <b>Finger Damage:</b> If on Arm roll <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. <sc>3S:</sc> Gain Lost Finger Aspect.
                 <br> <b>Injury Check:</b> Resist Dmg over Critical w/ <div style='
         display: inline-block;
         
@@ -3145,12 +3193,12 @@
                 <div style='height:1px;'></div>
                 <div style='display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; margin-left:10px;'>
                     <div style='border: 1px black solid; font-size:9px; padding: 0px 2px 0px 0px;' ><div style='display: inline-block; background: black; color: white; font-weight: 800; padding:2px 3px 2px 2px;'>0 Over Critical:</div> <b>Broken</b> 10</div>
-                    <div style='border: 1px black solid; font-size:9px; padding: 0px 2px 0px 0px;' ><div style='display: inline-block; background: black; color: white; font-weight: 800; padding:2px 3px 2px 4px;'>1+ Over Crital:</div> <b>Infection</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div>
+                    <div style='border: 1px black solid; font-size:9px; padding: 0px 2px 0px 0px;' ><div style='display: inline-block; background: black; color: white; font-weight: 800; padding:2px 3px 2px 4px;'>1+ Over Critical:</div> <b>Infection</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div>
                 </div>
             </div>
-            <div style='display: grid; grid-template-columns: 1fr auto;'> 
+            <div style='display: grid; grid-template-columns: 1fr auto;'>
                 <div style='border: 1px black solid; padding: 0px 2px; font-size:8px;'>
-                    <b>Broken:</b> Can't use Limb until removed. Removed w/ <b>Sleep/Recieve Treatment</b>.
+                    <b>Broken:</b> Can't use Limb until removed. Removed w/ <b>Sleep/Receive Treatment</b>.
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Record in the Notes Area with amount and Body Area. 
                 </div>
                 <div style='position: relative; top: 2px;'>
@@ -3556,7 +3604,7 @@
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When applied Characters remove all current Terror/Stress/Dread and gain a Trauma.
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If they already have 2 Traumas they may gain an Insanity instead.
             <br><b>Insane Characters</b> place Terror/Stress/Dread into their Insanity Card's Insanity Meter.
-                <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Insanity meter is full additional points go in the Consitution Meter as normal. 
+                <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Insanity meter is full additional points go in the Constitution Meter as normal. 
         </div><div style='height:2px;'></div><rulecardsubtitle>Traumas</rulecardsubtitle><div style='font-size: 8px; padding: 0px 2px;'>
             Some choices and consequences of adventure may cause acute psychological damage.
             <br><b>Cannibalism:</b> Eating other Humanoids. Resist 3 Dread w/ <div style='
@@ -3993,8 +4041,8 @@
         font-weight:700;
     '>
         Agl
-    </div> <sc>0S:</sc> Fall. (Interupts movement.)
-            <div style='height:1px;'></div><b>Obstacles:</b> <i style='font-size:8px;'>Fallen Column, Fense, Table, etc</i>
+    </div> <sc>0S:</sc> Fall. (Interrupts movement.)
+            <div style='height:1px;'></div><b>Obstacles:</b> <i style='font-size:8px;'>Fallen Column, Fence, Table, etc</i>
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reduce Speed by 1 or 2. May attempt <div style='
         display: inline-block;
         
@@ -4021,7 +4069,7 @@
         <b8>Acid:</b8> Causes <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> Damage to all Body Areas within it every Round.
         <div style='height:1px;'></div>
         <b8>Fires:</b8> Spaces on Fire may cause Blast of Burning 2 to effected Body Areas.
-            <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b6>Spread:</b6> Fires may spread from <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> adjacent flamable Spaces per Round.
+            <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b6>Spread:</b6> Fires may spread from <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> adjacent flammable Spaces per Round.
             <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b6>Smoke:</b6> Visibility 2. Resist 1 to 3 Air Loss per Round w/ <div style='
         display: inline-block;
         
@@ -4121,9 +4169,9 @@
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><f8><sc>1S:</sc>Reduce Falling Damage Level by 1.</f8></div></challengeText></challengeContainer></div></actionContainter></div>
                 </ruleboxTab>
         </div><div style='height:2px;'></div><rulecardsubtitle>Carrying Items</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
-            <b>Encumbrence (<b6>E</b6>)</b> represents a size/weight of an Item to carry.
+            <b>Encumbrance (<b6>E</b6>)</b> represents a size/weight of an Item to carry.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters can only carry up to their <b>Capacity</b> Value.
-            <div style='height:1px;'></div><b>Worn</b> Items can be worn on the body, with a limit of one peice of armor per Body Area.
+            <div style='height:1px;'></div><b>Worn</b> Items can be worn on the body, with a limit of one piece of armor per Body Area.
             <div style='height:1px;'></div><b>Readied</b> Items are those worn on the Hip/Back or that are being Held.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters can switch out Readied Items as a Free Action.
             <div style='height:1px;'></div><b>Carried</b> Items, such as in Backpacks, require an Active Action to pull out/put away.   
@@ -4135,7 +4183,7 @@
             <div style='height:1px;'></div><b>Absorb</b> lists the maximum Dmg applied to the Armor. The rest is applied to the wearer.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Absorb is always applied after DR.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <f7><i><b>Ex:</b> 3 Dmg to an Item with Absorb 1, will apply 1 Dmg to the Armor and 2 to the Wearer.</i></f7>
-            <div style='height:1px;'></div><b>Dmg</b> is usally the first points of a Dmg to an Item and can often be reparied.
+            <div style='height:1px;'></div><b>Dmg</b> is usually the first points of a Dmg to an Item and can often be repaired.
             <div style='height:1px;'></div><b>Brk</b> is applied after Dmg is full and are more difficult to repair.
             <div style='height:1px;'></div><b>Dmg Back</b> is how much Dmg the Item does to whatever is striking it.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This Dmg ignored the DR of whatever it is applied to.
@@ -4146,7 +4194,7 @@
             <br><f7><b>Mythril:</b> x2<b6>G</b6>. +3 Brk and Dmg. Weapon: <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> AP, +1 Bleeding (Slash), <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg (Bash). Armor: -33%<b6>E</b6>. </f7>
         </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Resting'><rulecardtitle> Resting + Weeks  <f8></f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>10</span></rulecardtitle><div style='padding: 0px 2px; font-size: 8px; '>
             <b>Day</b> Actions take an entire Day.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters may also atempt Day long challenges and other activities.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters may also attempt Day long challenges and other activities.
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shorter things such as conversations do not counts as an action.
             <br><b>Interim</b> Actions are those that cannot be done during Combat.
             <br><b>Daily</b> Actions occur at the end of the day.
@@ -4318,7 +4366,7 @@
                     <f7>
                     <b>Exposure</b> ranges from 0 (mild) to 3 (extreme) and can be from Heat or Cold.
                     <br>Rolled once per Exposure type applied (Ex: Cold 1 and Heat 1 would be 2 Checks.)
-                    <br>Exposure may be modeified by conditions such as being wet or having shelter.
+                    <br>Exposure may be modified by conditions such as being wet or having shelter.
                     </f7>
                     </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
@@ -4409,7 +4457,7 @@
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Dark:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Leg Wounds. <i>Ex: Night w/ Light or Full Moon.</i>
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Dangerous:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Leg Wounds.
                 <br><b>Carrying:</b> Adds Fatigue. Can be divided among Characters. <f7>Ex: Person +2</f7>
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters can Rest while carried, but w/o strecher apply Uncomfortable Mod <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>. 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters can Rest while carried, but w/o stretcher apply Uncomfortable Mod <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>. 
                 <br> <b>Other:</b> Additional Travel constraints.
                 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Horses:</b> Horses typically cannot do Level 3 Terrain.
                 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Wagons:</b> Wagons typically cannot do Level 2 Terrain and above.
@@ -4429,7 +4477,7 @@
             
             padding: 0px 0px 0px 0px;
         '>. Required to cook food.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creating A campfire: use Tinderbox Item ot Magic, ect. 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creating A campfire: use Tinderbox Item or Magic, etc. 
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Campfire is put out by rain and heavy snow, Need Shelter in these conditions.
         </div>
         <div  style='font-size: 8px;'>
@@ -4546,7 +4594,7 @@
             <br> <div style='display:inline; color:black; font-weight:800;'>AP</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Characters general experience. Gained through quests and exploration.
             <br>&nbsp;&nbsp;&nbsp;  <b>Note:</b> When receiving <div style='display:inline; color:black; font-weight:800;'>XP</div> or <div style='display:inline; color:black; font-weight:800;'>AP</div>, Characters may choose to gain Morale instead.
             <br>&nbsp;&nbsp;&nbsp;  Also when gaining <div style='display:inline; color:black; font-weight:800;'>XP</div> Characters may use it as <div style='display:inline; color:black; font-weight:800;'>AP</div> at GM's discretion.
-            <br> <b>Inspiration <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>:</b> Knowledge, insight, or epiphanies to progress toward speicifc skills. 
+            <br> <b>Inspiration <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>:</b> Knowledge, insight, or epiphanies to progress toward specific skills. 
             <br> Inspiration can be gained directly, by accumulating enough Successes over multiple Checks, passing a difficult Challenge, and many other ways.
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There are many ways to engage with the world to gain <b>Inspiration</b>.
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Challenges:</b> Taking on difficult feats. Such as a daring climb or risky infiltration.
@@ -4601,7 +4649,7 @@
         font-weight:700;
     '>
         Fort
-    </div>. Effect only appies upon 1 or more Dmg.
+    </div>. Effect only applies upon 1 or more Dmg.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each point applies Torso Dmg or Stamina Loss. Effected Character chooses.
             <div style='height:1px;'></div><b9>Blast:</b9> Dmg that is spread over multiple areas. See <b>Blast/Impact Section</b>.
             <div style='height:1px;'></div><b9>Blind:</b9> Can't see or react. When moving make a <b>Stumble</b>. <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> in some Terrain.
@@ -4637,7 +4685,7 @@
         Sense
     </div> <fc>0S:</fc> Knockdown occurs.
             <div style='height:1px;'></div><b9>Break:</b9> <b>On Limb:</b> Broken 10. <b>On Head:</b> Dying. <b>On Item:</b> Destroy Item.
-            <div style='height:1px;'></div><b9>Burning:</b9> +1 Dmg to Body Area at end of every Round. <f7>(Includes Round recieved).</f7>
+            <div style='height:1px;'></div><b9>Burning:</b9> +1 Dmg to Body Area at end of every Round. <f7>(Includes Round received).</f7>
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Remove(Self) <i><f7>Full:<div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>/Active/Free <img 
         src='../../Resources/Art/Images/Stamina.svg' 
         height='8px'
@@ -4696,7 +4744,7 @@
         '> Actions.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; See <b>Climbing Section</b>.
             <div style='height:1px;'></div><b9>Collision:</b9> Spreads Dmg over multiple areas. See <b>Blast/Impact Section</b>.
-            <div style='height:1px;'></div><b9>Comfort:</b9> Effect quality of rest. Typically provided by Inns. Adds dice to resting acions.
+            <div style='height:1px;'></div><b9>Comfort:</b9> Effect quality of rest. Typically provided by Inns. Adds dice to resting actions.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Negative comfort or discomfort applies a <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> instead.
             <div style='height:1px;'></div><b9>Contest:</b9> A Challenge where Characters attempt the same Check.
             <div style='height:1px;'></div><b9>Cooling Dice:</b9> Aids in Checks to Resist/Reduce Heat Exposure. See <b>Daily Section</b>.
@@ -4705,11 +4753,11 @@
             <div style='height:1px;'></div><b9>Disarm:</b9> Item falls <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> spaces away in random direction.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Two Handed Items are disarmed if the Main Arm is Disarmed.
             <div style='height:1px;'></div><b9>Dmg Back:</b9> Does associated Damage, ignoring DR, to Item/Limb that Strikes it.
-            <div style='height:1px;'></div><b9>DR:</b9> Damage Resistence. Reduces Dmg by that amount. May list applicable type.
+            <div style='height:1px;'></div><b9>DR:</b9> Damage Resistance. Reduces Dmg by that amount. May list applicable type.
             <div style='height:1px;'></div><b9>Dread:</b9> Long term mental damage. Con Point represented by <b style='font-weight:900;'>(D)</b>.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Each use of <b>1 Morale</b> removes <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <b>Dread</b>.
             <div style='height:2px;'></div><b9>Dying:</b9> Slowly dying. Con Point represented by <b style='font-weight:900;'>(D)</b>. See <b>Injuries Section</b>.
-            <div style='height:1px;'></div><b9>Encumbrence:</b9> How difficult an Item is to carry. See <b>Items Section</b>.
+            <div style='height:1px;'></div><b9>Encumbrance:</b9> How difficult an Item is to carry. See <b>Items Section</b>.
             <div style='height:1px;'></div><b9>Exposure:</b9> The effects of cold/warm weather. 
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Con Point represented by <b style='font-weight:900;'>(EH)</b> for Heat and <b style='font-weight:900;'>(EC)</b> for Cold.
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; See <b>Daily Section</b>.
@@ -4781,10 +4829,10 @@
             
             padding: 0px 0px 0px 0px;
         '> (typically legs.)
-            <div style='height:1px;'></div><b9>Morale:</b9> Character's longterm confidence and resolve. See <b>Morale Section</b>.
+            <div style='height:1px;'></div><b9>Morale:</b9> Character's long term confidence and resolve. See <b>Morale Section</b>.
             <div style='height:2px;'></div><b9>Mortal Wound (M):</b9> Slowly dying. See <b>Injuries Section</b>.
             <div style='height:1px;'></div><b9>Pin:</b9> Stop Target's Movement and enter Grapple. If so may attempt Pin Actions. 
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dmg Effect only appies upon 1 or more Dmg. Pin Actions ignore Armor.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dmg Effect only applies upon 1 or more Dmg. Pin Actions ignore Armor.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dmg from Pin Actions is applied to the Body Area Pin was applied to.
             <div style='height:1px;'></div><b9>Poison:</b9> Resist Poison w/ <div style='
         display: inline-block;
@@ -4801,14 +4849,14 @@
         font-weight:700;
     '>
         Fort
-    </div> when recieving. Con Point represented by <b style='font-weight:900;'>(P)</b>. 
+    </div> when receiving. Con Point represented by <b style='font-weight:900;'>(P)</b>. 
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Becomes <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Illness After Combat.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Purge <i><f7>Full</f7></i> </b> Turn 1 Poison into <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Illness.
             <div style='height:1px;'></div><b9>Push/Pull:</b9> Move Target listed Spaces. May apply Collision. 
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Push over 1:</b> Knockdown.
             <div style='height:1px;'></div><b9>Rot:</b9> Limbs becoming gangrene. Con Point represented by <b style='font-weight:900;'>(R)</b>.
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; See <b>Injuries Section</b>.
-            <div style='height:1px;'></div><b9>Sever:</b9> Seperates a Character's from the Hit Body Area.
+            <div style='height:1px;'></div><b9>Sever:</b9> Separates a Character's from the Hit Body Area.
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>On Head:</b> <div style='
         display: inline-block;
         
@@ -4873,7 +4921,7 @@
         '> Actions.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; See <b>Swimming Section</b>. 
             <div style='height:1px;'></div><b9>Terror:</b9> Intense short term Fear. Con Point represented by <b style='font-weight:900;'>(T)</b>. Removed after combat.
-            <div style='height:1px;'></div><b9>Thirst:</b9> Thrist and dehydration. Con Point represented by <b style='font-weight:900;'>(W)</b>.
+            <div style='height:1px;'></div><b9>Thirst:</b9> Thirst and dehydration. Con Point represented by <b style='font-weight:900;'>(W)</b>.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Drinking 1 Drink:</b> Prevents 1 Thirst (daily resist) <b>OR</b> <b style='font-weight:900;'>(W)</b> becomes Fatigue.
             <div style='height:1px;'></div><b9>Two Hands <img 
         src='../../Resources/Art/Images/Hand_L.svg' 
@@ -5533,6 +5581,9 @@
                 Classes are a Character's primary combat skills.
                 Class Abilities are often divided into levels.
                 Classes also have an associated Class Card which contain information about the Class and can be used to track Class Training.
+                <br> <b>Basic Classes:</b> These are the first classes in the game, and act as a foundation for Advanced Classes.
+                <br> <b>Advanced Classes:</b> Skills that require deeper levels of training and typically require at least 3 Base Class levels.
+                <br> <b>Master Classes:</b> Rare skills that few characters progress. Typically take a minimum of 7 Classes to be available.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5562,6 +5613,26 @@
                 Favor is typically granted by a god for doing acts which they support and taken away for acts that go against their interests.
                 Since GM's roleplay the gods, they may choose how much favor is granted or lost, though it typically is from 1, a minor act such a helping a begger, to 5, a large act such as destroying an opposing temple.
                 GM's may role dice to determine how much Favor is granted from a god as well.
+            </div></BasicsText>
+        </BasicsSection>
+        <BasicsSection>
+            <BasicsHeader>Character Level</BasicsHeader>
+            <BasicsText><div>
+                Character level is based on the amount Class Cards they have obtained.
+                <br> <b>Basic Characters:</b> 1-3
+                <br> <b>Advanced Classes:</b> 4-7
+                <br> <b>Elite Characters:</b> 8
+                <br> <b>Epic Characters:</b> 9-12. Elite Characters may put 20XP toward a Stat to raise it by 1.
+            </div></BasicsText>
+        </BasicsSection>
+        <BasicsSection>
+            <BasicsHeader>Legend Points (LP)</BasicsHeader>
+            <BasicsText><div>
+                As Characters progress in their journies they gain fame, fortune, and may start becoming legends in their own right.
+                As thi happens Characters also gain more innate ability to go along with that status.
+                <br><b>Minor Fame (3LP):</b> <b>+1 Stat Point.</b> Character may be newsworthy for some deeds thye have done primarilly ath the local level. 
+                <br><b>Renown (6LP):</b> <b>+1 Stat Point.</b> Many have heard of the Character and word of their exploits has traveled far.
+                <br><b>Legend (9LP):</b> <b>+1 Stat Point.</b> Character is famous and many songs are sung and tales told of their incredible deeds.
             </div></BasicsText>
         </BasicsSection>
                         
@@ -6984,5 +7055,5 @@
 </body>
 
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:10 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:38 GMT -->
 </html>

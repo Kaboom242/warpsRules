@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Aberration_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:17 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Aberration_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:47 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Aberration Monster Compendium</title>
@@ -375,6 +375,17 @@
         padding:1px 2px 1px 5px;
         background:var(--Gray-3);
     }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
     abilitysectiontitle{
         font-weight:700; 
         color:white;
@@ -466,13 +477,50 @@
     {
         margin-left: 5px; 
         padding-left: 3px; 
-        font-size: 8px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
         font-style: italic; 
         grid-column: span 3; 
+        background: white;
         font-weight:500; 
         border: 1px solid;  
         border-radius: 0px 0px 4px 4px;
     }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
     
 </style>
 </style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
@@ -650,7 +698,7 @@
         color:white;
         font-weight:700;
         font-size:12px;
-        padding:2px 2px 1px 5px;
+        padding:2px 5px 1px 5px;
         border-radius:4px;
     }
     rulecardsubtitle {
@@ -791,11 +839,23 @@
             <b>Cultist</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Human</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Cultist.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Cultist_01.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These strange and insane cultists seem to worship some awful alien force.
+	            They rarely listen to reason, and will often give up their lives in trying to advance their cause.
+	            They can be hiding as normal people and often serve more powerful figures to the death.
+	            
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -812,18 +872,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These strange and insane cultists seem to worship some awful alien force.
-	            They rarely listen to reason, and will often give up their lives in trying to advance their cause.
-	            They can be hiding as normal people and often serve more powerful figures to the death.
-	            
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Cultist</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1199,11 +1247,28 @@
             <b>Enlightened One</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Human</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/EnlightenedCultist.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Cultist.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+                <f8>
+	            These strange and insane cultists seem to worship some awful alien force.
+	            They rarely listen to reason, and will often give up their lives in trying to advance their cause.
+	            They can be hiding as normal people and often serve more powerful figures to the death.
+	            <br><br>
+	            An Enlightened One has lost part of their humanity to their strange god, granting them bizaare powers.
+	            They can transform their bodies and call monsters from other worlds.
+	            They tend to lead underground Cultist groups, attempting terrifying rituals to bring about the end of the world.
+	            </f8>
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1220,23 +1285,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-                <f9>
-	            These strange and insane cultists seem to worship some awful alien force.
-	            They rarely listen to reason, and will often give up their lives in trying to advance their cause.
-	            They can be hiding as normal people and often serve more powerful figures to the death.
-	            <br><br>
-	            An Enlightened One has lost part of their humanity to their strange god, granting them bizaare powers.
-	            They can transform their bodies and call monsters from other worlds.
-	            They tend to lead underground Cultist groups, attempting terrifying rituals to bring about the end of the world.
-	            </f9>
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Enlightened One</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1666,11 +1714,21 @@
             <b>Tentacle From Beyond</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Abberation</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Tentacle.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Tentacle.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            A Tentcale coming out of tear in reality. Likely part of some horrible greater being.
+	            The touch is sickening enough to put terror into the hearts of men. Seeing the tear it came from breaks minds.
+            
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1683,16 +1741,6 @@
                     <b><sc>1S:</sc> </b>Tentacle
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            A Tentcale coming out of tear in reality. Likely part of some horrible greater being.
-	            The touch is sickening enough to put terror into the hearts of men. Seeing the tear it came from breaks minds.
-            
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Tentacle From Beyond</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1950,11 +1998,24 @@
             <b>Abomination</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Abberation</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Abomination2.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Abomination_01.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            An inspeakable creature from a strange dimension.
+	            Seems immune to pain, and immates hate and terror almost palpable.
+	            Just to look upon it is mind bending as it shambles forward on mishapen limbs and strange appendages.
+	            The noises it makes are wrong and it smells of something sweet and rotten.
+	            It has come to feed.
+            
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1973,19 +2034,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            An inspeakable creature from a strange dimension.
-	            Seems immune to pain, and immates hate and terror almost palpable.
-	            Just to look upon it is mind bending as it shambles forward on mishapen limbs and strange appendages.
-	            The noises it makes are wrong and it smells of something sweet and rotten.
-	            It has come to feed.
-            
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Abomination</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Dire</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2436,5 +2484,5 @@
                                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove <f7>Active</f7> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> OR <f7>Full</f7> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>+<b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> 
                                 </div></challengeText></challengeContainer></div></actionContainter></div></div></div></div></div></div><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'></div><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'>Eldritch Horror</div></div>    </body>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Aberration_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:19 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Aberration_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:48 GMT -->
 </html>

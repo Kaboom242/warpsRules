@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Aquatic_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:19 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Aquatic_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:48 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Aquatic Monster Compendium</title>
@@ -375,6 +375,17 @@
         padding:1px 2px 1px 5px;
         background:var(--Gray-3);
     }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
     abilitysectiontitle{
         font-weight:700; 
         color:white;
@@ -466,13 +477,50 @@
     {
         margin-left: 5px; 
         padding-left: 3px; 
-        font-size: 8px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
         font-style: italic; 
         grid-column: span 3; 
+        background: white;
         font-weight:500; 
         border: 1px solid;  
         border-radius: 0px 0px 4px 4px;
     }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
     
 </style>
 </style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
@@ -650,7 +698,7 @@
         color:white;
         font-weight:700;
         font-size:12px;
-        padding:2px 2px 1px 5px;
+        padding:2px 5px 1px 5px;
         border-radius:4px;
     }
     rulecardsubtitle {
@@ -791,11 +839,23 @@
             <b>Shark</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Shark.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Shark.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Sharks are common throughout the seas of Urdun, and some varities can even be found in lakes and rivers.
+	            They can smell prey, and if anywhere nearby, one or more will make their way for the hunt.
+	            It is said they can smell blood for leagues away.
+	            While extremely aggresive, they will often leave prey alone if suffciently hurt.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -828,18 +888,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Sharks are common throughout the seas of Urdun, and some varities can even be found in lakes and rivers.
-	            They can smell prey, and if anywhere nearby, one or more will make their way for the hunt.
-	            It is said they can smell blood for leagues away.
-	            While extremely aggresive, they will often leave prey alone if suffciently hurt.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Shark</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1144,11 +1192,20 @@
             <b>Whale</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/SpermWhale.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Whale.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Common All over the world's Seas. Most are harmless, but few want to take revenge on Boats and those that hunt thier kind. 
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1189,15 +1246,6 @@
                     <div style='grid-column: 1 / 4;'>Whales can be between 1R (35ft) and 3R (100ft) long</div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Common All over the world's Seas. Most are harmless, but few want to take revenge on Boats and those that hunt thier kind. 
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Whale</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Dire</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1545,11 +1593,23 @@
             <b>Merfolk</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Merfolk.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mermaid.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Merfolk can be found in the oceans of Urdun.
+	            They rarely treat or trade with humans, tending to avoid all contact with surface folk if possible.
+	            They have a rich culture and large undersea cities, attempting to live in harmony with the other creatures of the sea.
+	            There enemies are the Frog-Folk, who they are locked in a bitter struggle for undersea supremacy.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1566,18 +1626,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Tail.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Merfolk can be found in the oceans of Urdun.
-	            They rarely treat or trade with humans, tending to avoid all contact with surface folk if possible.
-	            They have a rich culture and large undersea cities, attempting to live in harmony with the other creatures of the sea.
-	            There enemies are the Frog-Folk, who they are locked in a bitter struggle for undersea supremacy.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Merfolk</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1943,11 +1991,23 @@
             <b>Merfolk Warrior</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/MerfolkWarrior.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mermaid_Warrior.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Merfolk warriors are trained in the use of the Trident and reigourisly drilled in battle tactics.
+	            Marfolk warriors form the back bone of Merfolk guard and army units.
+	            They rarely fight unless they feel it's required and when they do will fight in careful and pracriced formation.
+	            Often are deployed with Marfolk Mages acting as support.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1964,18 +2024,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Tail.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Merfolk warriors are trained in the use of the Trident and reigourisly drilled in battle tactics.
-	            Marfolk warriors form the back bone of Merfolk guard and army units.
-	            They rarely fight unless they feel it's required and when they do will fight in careful and pracriced formation.
-	            Often are deployed with Marfolk Mages acting as support.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Merfolk Warrior</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal+</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2350,11 +2398,25 @@
             <b>Merfolk Water Mage</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/merfolkmage.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mermaid_Mage.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+                <f8>
+	            Merfolk Mages specialize in Blue and Green magic, particularly water manipulation and telepathy.
+	            Since Merfolk have a natural affinity for these schools of magic they are able to use them without the need to Incant or fear of Backlash.
+	            Merfolk pass down the magic arts through a tradition of a chosen pupil being in the care of single expeienced master.
+	            Being a Mage is a point of high respect within merfolk culture and while they can be found in battle formaations, it's not uncommon to see Mages leading tribes as well.
+			    </f8>
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -2371,18 +2433,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Tail.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Merfolk Mages specialize in Blue and Green magic, particularly water manipulation and telepathy.
-	            Since Merfolk have a natural affinity for these schools of magic they are able to use them without the need to Incant or fear of Backlash.
-	            Merfolk pass down the magic arts through a tradition of a chosen pupil being in the care of single expeienced master.
-	            Being a Mage is a point of high respect within merfolk culture and while they can be found in battle formaations, it's not uncommon to see Mages leading tribes as well.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Merfolk Water Mage</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2872,14 +2922,28 @@
                                     </challenge>
                                 </challengeContainer></div></actionContainter></div></div></div></div></div></div><div style='display: grid;grid-template-columns: 1fr;grid-template-rows: 1fr;grid-gap: 8px 8px;grid-auto-flow: row;'><div style='width:90%; display:grid; grid-gap:2px; grid-template-columns:auto;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto 1fr;grid-auto-flow: column;background:white;width: 706.35px;height: 499.154px;grid-gap: 2px;align-items: stretch;'><div style='display:grid;grid-template-rows: auto 215px 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:flex; align-items:center; background:black; color:white; border-style:solid; border-width:1px; border-color:black; font-size:20px; text-align:left; padding:2px 5px 2px 5px;'><div>
-            <b>Siren (Merfolk)</b>
+            <b>Merfolk Siren</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Siren.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mermaid_Siren.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            <f7>
+	            Sirens are merfolk blessed by Yavarra with powerful musical skills.
+	            Enchantingly beautiful they have typically have little difficulty maniuplating others in normal circumstances, but have a Controlling Song which can make people into their slaves.
+	            Most Sirens have a difficult and cruel nature that finds them shunned from mermolk society, and either live in small conclaves or, once they have enough power, bands on those under their thrall.
+	            For those who spend enough time around the Siren and under their influence being to lose the free will and act as slaves. These slaves are typically humans or other merfolk but other creatures can be ensared as well.
+			    </f7>
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -2897,21 +2961,7 @@
                 </div>
             </div></div>
         </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            <f9>
-	            Sirens are merfolk blessed by Yavarra with powerful musical skills.
-	            Enchantingly beautiful they have typically have little difficulty maniuplating others in normal circumstances, but have a Controlling Song which can make people into their slaves.
-	            Most Sirens have a difficult and cruel nature that finds them shunned from mermolk society, and either live in small conclaves or, once they have enough power, bands on those under their thrall.
-	            For those who spend enough time around the Siren and under their influence being to lose the free will and act as slaves. These slaves are typically humans or other merfolk but other creatures can be ensared as well.
-			    </f9>
-			
-            </div>
-        </div>
-        </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Siren (Merfolk)</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard+</div></div>
+        </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Merfolk Siren</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard+</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
         <div style='
         display:grid; grid-template-columns:1fr; grid-template-rows:auto auto; border:solid 1px hsla(0,0%,25%,1); 
@@ -3379,27 +3429,9 @@
             <b>Fishman</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b></b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/FishMan.png' style='height:200px; width:auto;'>
-        </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:14px; padding:1px 2px 1px 2px;'>
-    <div style='font-size:25px; 
-    display:grid; grid-auto-flow:row; grid-template-columns:1fr; grid-template-rows:auto 1fr; grid-gap:2px;
-    height:100%; width:100%;
-    '><div style='font-size:10px;'></div>
-                <div style='font-size:25px;'>
-                    <b><sc>3S:</sc> </b>Head<br>
-                    <b><sc>2S:</sc> </b>Torso<br>
-                    <b><sc>1S*:</sc> </b>L/R Arm<br>
-                    <b><sc>1S*:</sc> </b>Legs<br>
-                    <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
-                </div>
-            </div></div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Fishman.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
         
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
@@ -3419,6 +3451,24 @@
 	            </f7>
 			
             </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:14px; padding:1px 2px 1px 2px;'>
+    <div style='font-size:25px; 
+    display:grid; grid-auto-flow:row; grid-template-columns:1fr; grid-template-rows:auto 1fr; grid-gap:2px;
+    height:100%; width:100%;
+    '><div style='font-size:10px;'></div>
+                <div style='font-size:25px;'>
+                    <b><sc>3S:</sc> </b>Head<br>
+                    <b><sc>2S:</sc> </b>Torso<br>
+                    <b><sc>1S*:</sc> </b>L/R Arm<br>
+                    <b><sc>1S*:</sc> </b>Legs<br>
+                    <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
+                </div>
+            </div></div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Fishman</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal+</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -3863,11 +3913,20 @@
             <b>Sea Serpent</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/SeaSerpent.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/SeaSerpent.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
+	            Swims in the open ocean, sometimes in small schools. Its common for them to attack Ships.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -3923,15 +3982,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
-	            Swims in the open ocean, sometimes in small schools. Its common for them to attack Ships.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Sea Serpent</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard+</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -4411,11 +4461,20 @@
             <b>Lightning Eel</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/EletricEelWhite.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/LightningEel.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
+	            Swims in the open ocean, sometimes in small schools of Sea Serpent. Its common for them to attack Ships.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -4463,15 +4522,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
-	            Swims in the open ocean, sometimes in small schools of Sea Serpent. Its common for them to attack Ships.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Lightning Eel</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -4968,11 +5018,22 @@
             <b>Jellyfish</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Jellyfish.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/JellyFish.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+                The most common kind of jellyfish and roughly 4' to 8' feel depending on how you measure the tenticles.
+				While ususally they live deep under the oceans, some blumes can find their way to the surface or even above the surface.
+				Jellyfish are mostly mindless and drift without much thought only occasionlly showing interest in other living things to sting them as prey.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -4985,17 +5046,6 @@
                     <b><sc>1S:</sc> </b>Body
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-                The most common kind of jellyfish and roughly 4' to 8' feel depending on how you measure the tenticles.
-				While ususally they live deep under the oceans, some blumes can find their way to the surface or even above the surface.
-				Jellyfish are mostly mindless and drift without much thought only occasionlly showing interest in other living things to sting them as prey.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Jellyfish</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -5320,11 +5370,22 @@
             <b>Jellyfish Dreadnought</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Aquatic</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/JellyfishDreadnought.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/JellyFishHorror.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+                A rarer variety of jellyfish found is espically potent blumes.
+                They are considered extreamly dangerous by sailors across the world for their deadly acidic poison stings.
+                Like smaller jellyfish are esentially mindless and only show interest in the few linving things they decide to use as prey.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -5368,17 +5429,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-                A rarer variety of jellyfish found is espically potent blumes.
-                They are considered extreamly dangerous by sailors across the world for their deadly acidic poison stings.
-                Like smaller jellyfish are esentially mindless and only show interest in the few linving things they decide to use as prey.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Jellyfish Dreadnought</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -5725,7 +5775,7 @@
         </div></div>
         </div>
         <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Kraken.png' style='height:230px; width:auto;'>
+            <img src='../../Art/InkWash/Kraken.jpg' style='height:230px; width:auto;'>
         </div>
         </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
@@ -6270,11 +6320,21 @@
             <b>Pirate Ship</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Ship</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/PirateShip.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/PirateShip.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Pirates live all across the waters of Urdun, though are espically numerous in the South Seas where some of the most profitable tradign routes are.
+	            Some pirates are brave and will fight to the last, others are quick to negotiate. Most pirates follow the lead of their captain who is often a charasmatic and dangerous individual.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -6331,16 +6391,6 @@
                     <div>A double masted sailong ship. About 75' long (15 spaces) and 20ft wide (4 spaces).</div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Pirates live all across the waters of Urdun, though are espically numerous in the South Seas where some of the most profitable tradign routes are.
-	            Some pirates are brave and will fight to the last, others are quick to negotiate. Most pirates follow the lead of their captain who is often a charasmatic and dangerous individual.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Pirate Ship</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -6639,11 +6689,21 @@
             <b>Long Ship</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Ship</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/LongShip.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/VikingLongShip.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Longships are mostly used by Sklevaar raiders of the North Sea. Typically they quickly close on smaller vessels when they then board.
+	            After boarding they typically capture or kill the owners of the ship and then take the ship and whatever valuables it has as their own.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -6718,16 +6778,6 @@
                     <div>About 75' long (15 spaces) and 20ft wide (4 spaces). </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Longships are mostly used by Sklevaar raiders of the North Sea. Typically they quickly close on smaller vessels when they then board.
-	            After boarding they typically capture or kill the owners of the ship and then take the ship and whatever valuables it has as their own.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Long Ship</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -6947,5 +6997,5 @@
                         <br> Pirates may attempt to swing onto the other ship via grappling hooks as well.
                     </div></challengeText></challengeContainer></div></actionContainter></div></div></div></div></div></div><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'></div></div>    </body>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Aquatic_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:47:41 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Aquatic_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:38:54 GMT -->
 </html>

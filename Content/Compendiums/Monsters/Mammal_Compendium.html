@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Mammal_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:48:29 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Mammal_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:39:23 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Mammal Monster Compendium</title>
@@ -375,6 +375,17 @@
         padding:1px 2px 1px 5px;
         background:var(--Gray-3);
     }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
     abilitysectiontitle{
         font-weight:700; 
         color:white;
@@ -466,13 +477,50 @@
     {
         margin-left: 5px; 
         padding-left: 3px; 
-        font-size: 8px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
         font-style: italic; 
         grid-column: span 3; 
+        background: white;
         font-weight:500; 
         border: 1px solid;  
         border-radius: 0px 0px 4px 4px;
     }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
     
 </style>
 </style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
@@ -650,7 +698,7 @@
         color:white;
         font-weight:700;
         font-size:12px;
-        padding:2px 2px 1px 5px;
+        padding:2px 5px 1px 5px;
         border-radius:4px;
     }
     rulecardsubtitle {
@@ -791,11 +839,24 @@
             <b>Low Quality Horse</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Horse.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Horse_LowQuality.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These are commonly domesticated and ridden my humans, though some run wild in certain plains.
+	            <br><br>
+				They rarely engage in direct combat unless and directed by a human. Mostly they offer to flee if threatened.
+				<br><br>
+				This horse may be old, have a bad back, sickly, or otherwise low quality.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -829,19 +890,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These are commonly domesticated and ridden my humans, though some run wild in certain plains.
-	            <br><br>
-				They rarely engage in direct combat unless and directed by a human. Mostly they offer to flee if threatened.
-				<br><br>
-				This horse may be old, have a bad back, sickly, or otherwise low quality.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Low Quality Horse</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1158,11 +1206,22 @@
             <b>Horse</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Horse2.jfif' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Horse.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These are commonly domesticated and ridden my humans, though some run wild in certain plains.
+	            <br><br>
+				They rarely engage in direct combat unless and directed by a human. Mostly they offer to flee if threatened.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1196,17 +1255,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These are commonly domesticated and ridden my humans, though some run wild in certain plains.
-	            <br><br>
-				They rarely engage in direct combat unless and directed by a human. Mostly they offer to flee if threatened.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Horse</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1523,11 +1571,24 @@
             <b>War Horse</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/WarHorseB.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Horse_war.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These are commonly domesticated and ridden my humans, though some run wild in certain plains.
+	            <br><br>
+				They rarely engage in direct combat unless and directed by a human. Mostly they offer to flee if threatened.
+				<br><br>
+				This horse has been bred for finest qualities possible, and has superior carrying capactiy and strength.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1561,19 +1622,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These are commonly domesticated and ridden my humans, though some run wild in certain plains.
-	            <br><br>
-				They rarely engage in direct combat unless and directed by a human. Mostly they offer to flee if threatened.
-				<br><br>
-				This horse has been bred for finest qualities possible, and has superior carrying capactiy and strength.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>War Horse</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1890,11 +1938,21 @@
             <b>Giant Rat</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/GiantRat.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Giant_rat.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These foul creatures, dwell in caves basements and sewers. Ussually not found alone. Said to be carriers of disease and bring famine.
+	            They swarm over any amount of food, no mater how rotten. Will burrow into walls, and create messy large nests.
+	        
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1909,16 +1967,6 @@
                     <b><sc>1S:</sc> </b>Legs
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These foul creatures, dwell in caves basements and sewers. Ussually not found alone. Said to be carriers of disease and bring famine.
-	            They swarm over any amount of food, no mater how rotten. Will burrow into walls, and create messy large nests.
-	        
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Giant Rat</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2335,11 +2383,22 @@
             <b>Hound</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Hound.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Hound.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Hounds are a common type of dog commonly used for guard duty, and sometimes as auxiliaries for fighting units.
+	            They can also be trained for all matter of tasks and make great pets.
+	            Those that are well trained can understand some human speech and make excllent companions.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -2354,17 +2413,6 @@
                     <b><sc>1S:</sc> </b>Legs
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Hounds are a common type of dog commonly used for guard duty, and sometimes as auxiliaries for fighting units.
-	            They can also be trained for all matter of tasks and make great pets.
-	            Those that are well trained can understand some human speech and make excllent companions.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Hound</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2732,11 +2780,20 @@
             <b>Boar</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Boar.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Boar.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These beasts roam the wildnerness in packs and are very territorial. They are surpisingly smart and not afraid of fighting humans.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -2751,15 +2808,6 @@
                     <b><sc>1S:</sc> </b>Legs
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These beasts roam the wildnerness in packs and are very territorial. They are surpisingly smart and not afraid of fighting humans.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Boar</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -3075,11 +3123,22 @@
             <b>Wolf</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Wolf.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Wolf.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These beasts roam the wildnerness in groups of 3 to 7 members. They attack for food and are often satasfied at a single kill that may feed the whole pack.
+	            <br><br>
+				Wolves are smart and will attempt surpise attacks, and during battle to seperate weak targets from strong ones. Will flee if the battle turns agaisnt them.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -3094,17 +3153,6 @@
                     <b><sc>1S:</sc> </b>Legs
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These beasts roam the wildnerness in groups of 3 to 7 members. They attack for food and are often satasfied at a single kill that may feed the whole pack.
-	            <br><br>
-				Wolves are smart and will attempt surpise attacks, and during battle to seperate weak targets from strong ones. Will flee if the battle turns agaisnt them.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Wolf</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -3567,11 +3615,24 @@
             <b>Dire Wolf</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/DireWolf.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Wolf_Dire.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
+            <f8>
+				A wolf the size of a horse. Smarter and more ruthless than most wolves. They often can be found leading packs of smaller wolves.
+		        <br>Luckily they are rare, and found only in remote plains and some northern areas. They have been known to slaughter entire trade caravans and dozens fo men at a time.
+		        <br>Dire-Wolf pelts on the other hand are valued greatly, and can go for a very large price.
+		    </f8>
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -3605,19 +3666,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
-            <f8>
-				A wolf the size of a horse. Smarter and more ruthless than most wolves. They often can be found leading packs of smaller wolves.
-		        <br>Luckily they are rare, and found only in remote plains and some northern areas. They have been known to slaughter entire trade caravans and dozens fo men at a time.
-		        <br>Dire-Wolf pelts on the other hand are valued greatly, and can go for a very large price.
-		    </f8>
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Dire Wolf</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Dire</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -4087,11 +4135,23 @@
             <b>Large Cat</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/LargeCat.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/LargeCat.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            These dangerous predators can be found in many places in Urdun, though mostly in jungles and savannas.
+	            While they often hunt alone many can also be found in pacts.
+	            They are careful predators and will only attack if they see an advantage, and will flee anytime they are hurt or in a disadvantage.
+                Mostly they are fond of ambushes and will use terrain to get the drop on their targets if possible.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -4125,18 +4185,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            These dangerous predators can be found in many places in Urdun, though mostly in jungles and savannas.
-	            While they often hunt alone many can also be found in pacts.
-	            They are careful predators and will only attack if they see an advantage, and will flee anytime they are hurt or in a disadvantage.
-                Mostly they are fond of ambushes and will use terrain to get the drop on their targets if possible.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Large Cat</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Dire</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -4607,11 +4655,20 @@
             <b>Bear</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Mammal</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Bear2.png' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Mammals/Bear.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
+	            A wild animal, often attack defensively, but can be very aggressive when hungry.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -4649,15 +4706,6 @@
                     </div>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
-	            A wild animal, often attack defensively, but can be very aggressive when hungry.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Bear</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Dire</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -5079,5 +5127,5 @@
         Spirit
     </div></b>.</div></challengeText></challengeContainer></div></actionContainter></div></div></div></div></div></div><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'>Herbivore</div></div>    </body>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Mammal_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:48:37 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Mammal_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:39:28 GMT -->
 </html>

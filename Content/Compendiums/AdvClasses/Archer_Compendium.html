@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:49:08 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:39:44 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Archer Compendium</title>
@@ -375,6 +375,17 @@
         padding:1px 2px 1px 5px;
         background:var(--Gray-3);
     }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
     abilitysectiontitle{
         font-weight:700; 
         color:white;
@@ -466,13 +477,50 @@
     {
         margin-left: 5px; 
         padding-left: 3px; 
-        font-size: 8px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
         font-style: italic; 
         grid-column: span 3; 
+        background: white;
         font-weight:500; 
         border: 1px solid;  
         border-radius: 0px 0px 4px 4px;
     }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
     
 </style>
 </style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
@@ -650,7 +698,7 @@
         color:white;
         font-weight:700;
         font-size:12px;
-        padding:2px 2px 1px 5px;
+        padding:2px 5px 1px 5px;
         border-radius:4px;
     }
     rulecardsubtitle {
@@ -785,8 +833,8 @@
             <a class=linkHead0 href='#Mini-Class'>Mini Class</a>
     </div>
     <div style='margin-left: 135px;'>
-    <div style='display: grid;grid-template-rows: 1fr;grid-template-columns: repeat(auto-fill, 356px);grid-gap: 8px 8px;grid-auto-flow: row;'><div id='Basic' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Basic</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Archer-4);'>
-            <div>Archer (Class) <f8>Req: Survivalist</f8></div> 
+    <div style='display: grid;grid-template-rows: 1fr;grid-template-columns: repeat(auto-fill, 356px);grid-gap: 8px 8px;grid-auto-flow: row;'><div id='Basic' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Basic</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard style='background: var(--Archer-2);'><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Archer-4);'>
+            <div>Archer </div> 
         </rulecardtitle><rulebox style='border-color:var(--Archer-3); background:var(--Archer-1);'>
             <b>Archers</b> specialize in using bows for Ranged Combat.
             Most Archers begin to learn their trade hunting in the wilderness.
@@ -794,132 +842,133 @@
             <br> <b>Aim</b> is used by Archers to hone in on Targets and deliver the arrow with enhanced accuracy.
             Doing so allows them to do aim better, do additional damage, and other feats. 
         </rulebox><abilitysubtitle style='background:var(--Archer-4);'>
-            Core
+            <img 
+        src='../../../Resources/Art/Images/ClassBasic.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Basic
         </abilitysubtitle>
-        <div style='display:grid; grid-template-columns:100px 1fr auto;'>
-            <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> Archer 1  
-            </abilitysubtitle>
-            <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-            </abilitysection>
-            <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-            </div>
-        </div>
+        <div style='display:grid; grid-template-columns:1fr 1fr 1fr; grid-gap:0px 2px; margin:2px 0px 1px 0px;'>
         
-        <div style='display:grid; grid-template-columns:100px 1fr auto;'>
-            <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> Archer 2 
-            </abilitysubtitle>
-            <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 0px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-            </abilitysection>
-            <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-row:auto 1fr; grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 4px;'>
+                    Archer 1
+                </abilitysubtitle>
             </div>
-            <div class='classinfo' style='border-color:var(--Archer-3);'>
-                More Aim options (Dmg/Bleed, Knockdown, Range), cheaper Quick Reload, Snipe.
+            
+            <div style='display:grid; grid-template-row:auto 1fr; grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Archer 2
+                </abilitysubtitle>
+            </div>
+            
+            <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Archer 3
+                </abilitysubtitle>
+            </div>
+            <div style='background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid; border-top: 1px solid;  border-radius: 0px; border-color:var(--Archer-3);  margin-left: 5px; grid-column: 1 / span 3; font-size: 8px; padding:1px 0px 0px 4px; '>
+                Survivalist
+            </div>
+            <div class='classinfo' style=' border-color:var(--Archer-3); grid-column: 1 / span 3; margin-top: -1px;'>
+                Archers are masters of long range combat, and one of the very few classes that provide training in bows. 
+                Archers gain the ability to quickly nock arrows and even fire while moving. 
+                By using their Aim skill, Archers can increase their range, dmg, armor bypass, avoid friendly fire, as well arc their shots or go for a powerful bullseye. 
+                Archers may also fletch arrows, making arrows that do poison or fire dmg. 
+            </div>
+         </div>
+        <div style='height:5px;'></div><classsubtitle style='background:var(--Archer-4);'>
+           <img 
+        src='../../../Resources/Art/Images/ClassMulticlass.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Multiclass 
+        </classsubtitle>
+        <div style='display:grid; grid-template-columns:1fr 1fr; grid-gap: 0px 2px; margin-top: 1px;'>
+            <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Ranger  1
+                </abilitysubtitle>
+                <div style='background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 0px 0px 4px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 0px 0px 4px; '>
+                     <b>Archer 2/1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Druid 1/2</b> <b>OR</b> <br> <b>Archer 3</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Survivalist <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Dog Trainer
+                </div>
+            </div>
+            <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Ranger  2
+                </abilitysubtitle>
+                 <div style='background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 0px 0px 4px;'>
+                     <godreq>Ernok</godreq> + Survivalist 2 (1 Environment)
+                </div>
+            </div>
+            <div class='classinfo' style='border-color:var(--Archer-3); grid-column: 1 / span 2; margin-top: 0px;'>
+                Expert of the bow and the wilderness, the Ranger is a master of survival. 
+                Rangers can be the difference between life or death in dangerous remote areas, as they are experts at hinting game and transversing the most hidden of paths. 
+                Rangers keep a dog that not only helps them hunt, but also battle monsters. 
+                Rangers can use the herbs they find for both healing salves and dangerous poison. 
+                Some Rangers even study certain kinds of monsters so they may dispatch them all the more efficiently.
             </div>
         </div>
-        
-        <div style='display:grid; grid-template-columns:100px 1fr auto;'>
-            <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> Archer 3
-            </abilitysubtitle>
-            <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 0px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-            </abilitysection>
-            <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
+        <div style='display:grid; grid-template-columns:1fr 1fr; grid-gap: 0px 2px; margin-top: 1px;'>
+            <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Bandit  1
+                </abilitysubtitle>
+                <div style='background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 0px 0px 4px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 0px 0px 4px; '>
+                    <b>Archer 2/1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Rogue 1/2</b> 
+                </div>
             </div>
-            <div class='classinfo' style='border-color:var(--Archer-3);'>
-                Active Shot, more/improved Aim options (Bullseye, Arc Shot, Disarm).
+            <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Bandit  2
+                </abilitysubtitle>
+                 <div style='background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 0px 0px 4px;'>
+                    Criminal
+                </div>
+            </div>
+            <div class='classinfo' style='border-color:var(--Archer-3); grid-column: 1 / span 2; margin-top: 0px;'>
+                Bandits combine the bow skills of the Archer with the dismissal of authority of the Rogue in order to enrich themselves at the expense of others. 
+                They are excellent at shooting distracted opponents in the back as well as robbing the local roads. 
+                Bandits also tend to charismatic individuals who can recruit loyal followers into the service of their criminal enterprises.
             </div>
         </div>
-        <div style='height:5px;'></div><abilitysubtitle style='background:var(--Archer-4);'>
-            Advanced
-        </abilitysubtitle>
-        <div style='display:grid; grid-template-columns:1fr 1fr;'>
-            <div>
-                <div style='display:grid; grid-template-columns:auto 1fr;'>
-                    <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                        <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <f8> Marksman </f8>
-                    </abilitysubtitle>
-                    <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                        <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>XP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                    </abilitysection>
-                    <div class='classinfo' style='border-color:var(--Archer-3); font-size: 6px;'>
-                        Become the Elite Marksman, Can shoot with extreme presision.
-                    </div>
+        <div style='display:grid; grid-template-columns:1fr 1fr; grid-gap: 0px 2px; margin-top: 1px;'>
+            <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Magic Archer  1
+                </abilitysubtitle>
+                <div style='background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 0px 0px 4px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 0px 0px 4px; '>
+                     <b>Archer 2/1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Mage 1/2</b> 
                 </div>
-                <div style='display:grid; grid-template-columns:auto 1fr;'>
-                    <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                        <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <f8> Mounted Archer </f8>
-                    </abilitysubtitle>
-                    <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                        <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>XP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                    </abilitysection>
-                    <div class='classinfo' style='border-color:var(--Archer-3); font-size: 6px;'>
-                        ...
-                    </div>
-                </div>
-                <div style='display:grid; grid-template-columns:auto 1fr;'>
-                    <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                        <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <f8> Magic Archer </f8>
-                    </abilitysubtitle>
-                    <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                        <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>XP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                    </abilitysection>
-                    <div class='classinfo' style='border-color:var(--Archer-3); font-size: 6px;'>
-                        ...
-                    </div>
+
+            </div>
+            <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
+                <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 4px 0px 0px;'>
+                    Magic Archer  2
+                </abilitysubtitle>
+                 <div style='background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 0px 0px 4px;'>
+                   Scholar (Cosmological Studies 1)
                 </div>
             </div>
-            <div>
-                <div style='display:grid; grid-template-columns:auto 1fr;'>
-                    <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                        <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <f8> Scout </f8>
-                    </abilitysubtitle>
-                    <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                        <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>XP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                    </abilitysection>
-                    <div class='classinfo' style='border-color:var(--Archer-3); font-size: 6px;'>
-                        ...
-                    </div>
-                </div>
-                <div style='display:grid; grid-template-columns:auto 1fr;'>
-                    <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                        <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <f8> Ranger </f8>
-                    </abilitysubtitle>
-                    <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                        <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>XP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                    </abilitysection>
-                    <div class='classinfo' style='border-color:var(--Archer-3); font-size: 6px;'>
-                        ...
-                    </div>
-                </div>
-                <div style='display:grid; grid-template-columns:auto 1fr;'>
-                    <abilitysubtitle  style='background:var(--Archer-4); border-radius:4px 0px 0px 4px;'>
-                        <div style='display:inline-block; background:white; height:9px; width:9px; border:solid 1px black; position:relative; top:2px;'></div> <f8> Bandit </f8>
-                    </abilitysubtitle>
-                    <abilitysection class='asecArcher' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                        <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>XP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                    </abilitysection>
-                    <div class='classinfo' style='border-color:var(--Archer-3); font-size: 6px;'>
-                        ...
-                    </div>
-                </div>
+            <div class='classinfo' style='border-color:var(--Archer-3); grid-column: 1 / span 2; margin-top: 0px;'>
+                A Magic Archer is trained both in the ways of the bow, but also in the arcane arts. 
+                Magic Archers can be Mages who left behind the cloistered life for a more adventurous profession or archers who decided studying the arcane arts would make a perfect addition to their capabilities. 
+                Magic archers use specially prepared arrows which are activated through an incantation that uses their bow as the point of concentration. 
+                This allows them to shoot arrows that explode, inflame, freeze, home on targets, and much more.
             </div>
-        </div><div style='height:5px;'></div><abilitysubtitle style='background:var(--Archer-4);'>
-            Mastery
-        </abilitysubtitle></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Archer-4);'>
+        </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Archer-4);'>
             <div>Archer 1</div> 
         </rulecardtitle><rulebox style='border-color:var(--Archer-3); background:var(--Archer-1);'>
             <b>Can't use Abilities in Heavy Armor</b>
@@ -1622,5 +1671,5 @@
                     <br><cs>1S:</cs><f7> 1 Will to Ally .</f7></div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div id='Pure' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Pure</div><div id='Multiclass' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Multiclass</div><div id='Mini-Class' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Mini-Class</div></div>    </div>
 </body>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:49:08 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:39:44 GMT -->
 </html>

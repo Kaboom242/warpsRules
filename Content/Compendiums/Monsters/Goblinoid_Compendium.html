@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Goblinoid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:48:13 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Goblinoid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:39:09 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Goblinoid Monster Compendium</title>
@@ -375,6 +375,17 @@
         padding:1px 2px 1px 5px;
         background:var(--Gray-3);
     }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
     abilitysectiontitle{
         font-weight:700; 
         color:white;
@@ -466,13 +477,50 @@
     {
         margin-left: 5px; 
         padding-left: 3px; 
-        font-size: 8px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
         font-style: italic; 
         grid-column: span 3; 
+        background: white;
         font-weight:500; 
         border: 1px solid;  
         border-radius: 0px 0px 4px 4px;
     }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
     
 </style>
 </style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
@@ -650,7 +698,7 @@
         color:white;
         font-weight:700;
         font-size:12px;
-        padding:2px 2px 1px 5px;
+        padding:2px 5px 1px 5px;
         border-radius:4px;
     }
     rulecardsubtitle {
@@ -791,11 +839,24 @@
             <b>Goblin</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Goblinoid</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Goblin.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Goblin.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+				Goblins are dirty violent creatures, who typically live in small bands unless unified by a particularly strong and violent hobgoblin.
+	            <br><br>
+	            Will attack humans opportunistically and will typically cook and eat those they kill.
+	            <br><br>
+	            Are not very strong but can be very dangerous in groups.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -812,19 +873,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-				Goblins are dirty violent creatures, who typically live in small bands unless unified by a particularly strong and violent hobgoblin.
-	            <br><br>
-	            Will attack humans opportunistically and will typically cook and eat those they kill.
-	            <br><br>
-	            Are not very strong but can be very dangerous in groups.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Goblin</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1216,11 +1264,22 @@
             <b>Goblin Archer</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Goblinoid</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/GoblinArcher.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/GoblinArcher.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+				Some particularly cowardly goblins, take up archery and wil ltry to stay as far away from their targets as possible.
+	            <br><br>
+	            Goblin Archers tend to be weaker and less agile than normal goblins.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1237,17 +1296,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-				Some particularly cowardly goblins, take up archery and wil ltry to stay as far away from their targets as possible.
-	            <br><br>
-	            Goblin Archers tend to be weaker and less agile than normal goblins.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Goblin Archer</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Normal</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -1632,11 +1680,22 @@
             <b>Goblin Shaman</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Goblinoid</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/GoblinShaman.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/GoblinShaman.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+                Some, more intelligent Goblines, are passed down shamanistic teaching from odler Goblin Shamans.
+                Goblins Shamans revere Tyrannus and encourage Goblins on raids and other cruel activities.
+	            Tend to ask as leaders for goblin raider bands when no hobgoblin is present.
+            
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -1653,17 +1712,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-                Some, more intelligent Goblines, are passed down shamanistic teaching from odler Goblin Shamans.
-                Goblins Shamans revere Tyrannus and encourage Goblins on raids and other cruel activities.
-	            Tend to ask as leaders for goblin raider bands when no hobgoblin is present.
-            
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Goblin Shaman</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2108,11 +2156,22 @@
             <b>Hobgoblin</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Goblinoid</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Hobgoblin.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Hobgoblin.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
+	            Act as leaders for particularly dangerous goblin bands. Often having them act as small armies under their command.
+	            <br><br>
+	            Hobgoblins are fearless warriors and not afraid of a fight to death. Some have a strange sense of honor and willing to dual challangers if they think they can win. Will take on the storngest member of the enemy forces. Only retreats after tactical victory is impossible.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -2129,17 +2188,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:10px;  padding:1px 2px 1px 2px;'>
-	            Act as leaders for particularly dangerous goblin bands. Often having them act as small armies under their command.
-	            <br><br>
-	            Hobgoblins are fearless warriors and not afraid of a fight to death. Some have a strange sense of honor and willing to dual challangers if they think they can win. Will take on the storngest member of the enemy forces. Only retreats after tactical victory is impossible.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Hobgoblin</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2589,11 +2637,22 @@
             <b>Orc</b>
         	<div style='display:inline; font-size:10px;'>&nbsp;&nbsp;<b>Goblinoid</b></div><div style='display:inline-block; position:absolute; bottom:4px; right:4px; font-size:10px;'>&nbsp;&nbsp;v2.0</div>
         </div></div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
-        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/Orc.jpg' style='height:200px; width:auto;'>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 215px 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
+        <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; '>
+            <img src='../../Art/InkWash/Orc.jpg' style='height:215px; width:auto; border-style:solid; border-width:1px; border-color:black; border-radius: 4px;'>
         </div>
-        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
+        
+        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
+        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
+            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
+            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
+	            A cross between an Ogre and a Goblin. These creatures are wild and tend to find themselves as heavies in goblin bands.
+	            <br><br>
+	            They have fearsome strength and size at roughly 7' tall. Will eat anything, but humans are considered a special treat.
+			
+            </div>
+        </div>
+        </div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: column;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
         border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
             <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Hitbox</b></div>
@@ -2610,17 +2669,6 @@
                     <f10><cs>* <b>d6</b>:</cs> <b>1/2:</b> L Arm. <b>3/4:</b> R Arm. <b>5/6:</b> Legs.</f10>
                 </div>
             </div></div>
-        </div>
-        
-        <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
-        border-radius:4px 4px 4px 4px; border-style:solid; border-width:1px; border-color:black;'>
-            <div style='background:black; color:white; border-radius:4px 4px 0px 0px; display:flex; align-items:center; justify-content:left; font-size:10px; padding:2px 2px 2px 4px;'><b>Description</b></div>
-            <div style='background:white; color:black; border-radius:0px 0px 4px 4px; display:flex; align-items:top; justify-content:center; font-size:9px;  padding:1px 2px 1px 2px;'>
-	            A cross between an Ogre and a Goblin. These creatures are wild and tend to find themselves as heavies in goblin bands.
-	            <br><br>
-	            They have fearsome strength and size at roughly 7' tall. Will eat anything, but humans are considered a special treat.
-			
-            </div>
         </div>
         </div></div><div style='border-style:none none none none; border-width:2px; border-color:black; position:relative; top:4px; background:black;'></div><div style='display:grid;grid-template-rows: auto auto auto auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;grid-gap: 2px;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr auto;grid-auto-flow: column;background:black;grid-gap: 2px;padding: 1px 2px 1px 2px;'><div style='font-size:13px; color:white; border-radius:4px; padding:0px 0px 0px 10px;'><b>Orc</b></div><div style='font-size:11px; color:white; padding:0px 4px 0px 0px; display:flex; align-items:center;'>Hard</div></div>
     <div style='display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows:1fr; grid-auto-flow:row;'>
@@ -2976,7 +3024,7 @@
         </div></div>
         </div>
         <div style='display:flex; align-items:center; justify-content:center; background:white; color:white; border-style:solid; border-width:1px; border-color:black; padding:1px'>
-            <img src='../../Art/GoblinRider.jpg' style='height:200px; width:auto; height:360px; width:auto;'>
+            <img src='../../Art/InkWash/GoblinRider.jpg' style='height:200px; width:auto; height:360px; width:auto;'>
         </div>
         </div><div style='display:grid;grid-template-rows: auto 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:none;grid-gap: 2px;'>
         <div style='display:grid; grid-auto-flow:row; grid-template-rows:auto 1fr;
@@ -3799,5 +3847,5 @@
                         </div>
                 	</div></challengeText></challengeContainer></div></actionContainter></div></div></div></div></div></div></div></div></div></div></div>    </body>
 
-<!-- Mirrored from 18.219.23.41:8080/Content/Compendiums/Monsters/Goblinoid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jun 2023 17:48:18 GMT -->
+<!-- Mirrored from 3.129.43.58:8080/Content/Compendiums/Monsters/Goblinoid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2023 08:39:13 GMT -->
 </html>
