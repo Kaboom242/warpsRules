@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Monsters/Amphibians_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:37 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Monsters/Amphibians_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:45 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Amphibians Monster Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -836,5 +874,5 @@
                   
         <div style='display: grid;grid-template-columns: 710px 1fr;grid-template-rows: 1fr;grid-gap: 8px 8px;grid-auto-flow: row;'><div style='grid-column-start: 1;grid-column-end: 3;font-size: 30px;font-weight: 900;color: white;margin:0px 0px -7px 0px;'>Amphibians</div></div>    </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Monsters/Amphibians_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:37 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Monsters/Amphibians_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:45 GMT -->
 </html>

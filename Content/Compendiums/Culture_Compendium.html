@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Culture_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:36 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Culture_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:43 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Culture Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -1119,6 +1157,15 @@
                 <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
                     <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div>
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         <b>Acolyte</b></div></div>
+                    <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
+                        Clothes, 30<b6>G</b6>.
+                        <br> 15<div style='display:inline; color:black; font-weight:800;'>CP</div> toward any Priest, and Follower of Azeal (5CP)
+                    </div></div>
+                </div>
+                <div style='display:grid; grid-template-columns:auto 1fr; border:solid 1px black;'>
+                    <div style='display:flex; align-items:center; background:var(--Gray-2); font-size:9px; padding:2px 1px 1px 1px; border-radius:4px 0px 0px 4px; width:85px;'><div>
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
          <b>Sailor</b></div></div>
                     <div style='padding:2px 1px 1px 1px; font-size:8px; display:flex; align-items:center;'><div>
                         Normal Clothes, 25<b6>G</b6>. 
@@ -1559,7 +1606,7 @@
     </div>.
                         </div>
                         <div style='border:solid 1px black; padding:1px;'>
-                            Dark Vision 1R (Applies +1R Visibility in Low Light), Athlete (10<div style='display:inline; color:black; font-weight:800;'>CP</div>)
+                            Dark Vision 2R (Applies +2R Visibility in Low Light), Athlete (10<div style='display:inline; color:black; font-weight:800;'>CP</div>)
                             <br> Knife Training, Normal Clothes, 3 Food (Tasty Meal), 30<b6>G</b6>.
                         </div>
                     </div>
@@ -1568,7 +1615,8 @@
         </abilitysection><abilitysubtitle class='astGray'>
             Other
         </abilitysubtitle><div style='border:solid 1px black; padding:1px 2px 1px 2px; font-size:8px;'>
-            <b>Fragile:</b> Can take 1 Less Torso Wound than Humans.
+            <b>Languages</b> Know Elvan and 1 Common Language.
+            <br><b>Fragile:</b> Can take 1 Less Torso Wound than Humans.
             <br> <b>Keen Senses:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <div style='
         display: inline-block;
         
@@ -1877,7 +1925,7 @@
         Endr
     </div>.
                              Too Bright Con Point <b>(TB)</b> whenever in sunlight. 
-                            <br> Morale Limit is 0. Can’t be a Bard or Musician. 
+                            <br> Morale Limit -3. Can’t be a Bard or Musician. 
                         </div>
                         <div style='border:solid 1px black; padding:1px;'>
                             Normal Clothes, 2 Food (Meal), 45<b6>G</b6>. 
@@ -1910,7 +1958,7 @@
         font-weight:700;
     '>
         Int
-    </div>. +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Resist Heat.
+    </div>. +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Resist Heat. Can Speak/Read Demonic 
                         </div>
                         <div style='border:solid 1px black; padding:1px;'>
                             Normal Clothes, 2 Food (Meal), 45<b6>G</b6>
@@ -1921,7 +1969,8 @@
         </abilitysection><abilitysubtitle class='astGray'>
             Other
         </abilitysubtitle><div style='border:solid 1px black; padding:1px 2px 1px 2px; font-size:8px;'>
-            <b>Bad Swimmers:</b> Sink 1 in water. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Crafty:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Repair Weapons and Armor.
+            <b>Languages</b> Know Dwarven and 1 Common Language.
+            <br> <b>Bad Swimmers:</b> Sink 1 in water. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Crafty:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Repair Weapons and Armor.
             <br> <b>Sturdy:</b> Can take 1 More Torso Harm than Humans. 
             <br> <b>Slow:</b> Pace is 2. <img 
         src='../../Resources/Art/Images/Stamina.svg' 
@@ -1934,11 +1983,11 @@
             
             padding: 0px 1px 0px 0px;
         '><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Pace is 3 this Round.
-            <br> <b>Acclimatized to Darkness:</b> Dark Vision 1R (Applies +1R Visibility in Low Light.)
+            <br> <b>Acclimatized to Darkness:</b> Dark Vision 2R (Applies +2R Visibility in Low Light.)
             <br> <b>Discouraged Classes:</b> Mage, Druid, Monk. <f7>Can't take at Character creation.</f7>
             <br> <b>Training:</b> Hammer, Axe.
         </div></rulecard></div></div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Culture_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:36 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Culture_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:43 GMT -->
 </html>

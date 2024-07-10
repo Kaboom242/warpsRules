@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Class_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:33 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Class_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:40 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Classes Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -902,131 +940,288 @@
             
             padding: 0px 0px 0px 0px;
         '> Basic
-        </classsubtitle>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                1.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                </div>
-            </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                2.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                </div>
-            </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                3.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                </div>
-            </div>
-        </div><div style='height:3px;'></div><rulecardtitle style='background:var(--Gray-4);'>
-            <img 
-        src='../../Resources/Art/Images/ClassAdvanced.svg' 
-        height='14px'
-        width='14px' 
+        </classsubtitle><rulebox style='border-color:var(--Gray-3); background:white;'>
+           XP not required for Level 1 of Class
+        </rulebox>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    1.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
         style='
             position: relative;
-            top: 1px;
+            top: 0px;
             left: 0;
             
             padding: 0px 0px 0px 0px;
-        '> Advanced 
-        </rulecardtitle>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                4.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                5.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    2.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                6.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    3.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                7.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    4.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div><div style='height:3px;'></div><rulecardtitle style='background:var(--Gray-4);'>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    5.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                </div>
+            </div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    6.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                </div>
+            </div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    7.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                </div>
+            </div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    8.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                </div>
+            </div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    9.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                </div>
+            </div><rulecardtitle style='background:var(--Gray-4);'>
             <img 
         src='../../Resources/Art/Images/ClassMaster.svg' 
         height='14px'
@@ -1037,101 +1232,196 @@
             left: 0;
             
             padding: 0px 0px 0px 0px;
-        '> Epic 
+        '> Master 
         </rulecardtitle><rulebox style='border-color:var(--Gray-3); background:white;'>
-            <b>Master Class:</b> After this point, Characters can now uptain Master Level Classes.
-            <br> <b>Stat Raise:</b> Characters may now put 20XP and 3 <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> toward a Stat to raise it by 1.
+            <b>Master Class:</b> After this point, Characters can now uptain Master Level Classes. (Max 1)
         </rulebox>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                8.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    10.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                9.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    11.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                10.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    12.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                11.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    13.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div>
-        <div style='display:grid; grid-template-columns: 3fr 40px 2fr;'>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                12.
-            </abilitysubtitle>
-            <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:0px 0px 0px 0px; justify-content: space-around; border-left: none; border-right: none;'> 
-                <f8>Req: </f8> <div style='display:inline-block; background:white; color:white; border-style:solid; border-width:1px; border-color:black; width:10px; height:10px;'></div>
-            </abilitysubtitle>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/20<div style='display:inline; color:black; font-weight:800;'>XP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    14.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
                 </div>
             </div>
-        </div><div style='height:5px;'></div><rulecardtitle style='background:var(--Gray-4);'>
-            Epiphany
-        </rulecardtitle>
-        <div style='display:grid; grid-template-columns: 1fr 1fr; grid-gap: 4px;'>
-            <rulebox style='border-color:var(--Gray-3); background:white;'>
-                <b>Epiphany:</b> Gain 1 Inspiration and 5G, can repeat process.
-            </rulebox>
-            <div style='display:grid; height: 20px; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:4px; border: 0.5px solid; border-color:var(--Gray-3);'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/15<b>AP</b><f8></div>
-            </div>
-        </div><div style='height:5px;'></div><rulecardtitle style='background:var(--Gray-4);'>
+            <div style='display:grid; grid-template-columns: 1fr 1fr;'>
+                <abilitysubtitle  style='color: black; display: flex; align-items: center; background: White; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+                    15.
+                </abilitysubtitle>
+                <div style='display:grid; grid-template-columns: auto 1fr auto 1fr; grid-gap: 3px; align-items: center; height: 20px; background:var(--Gray-3); color: white; padding-right: 3px; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Gray-3);'>
+                    <img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                    <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <div style='background: white; height: 17px; color:black;  font-weight: 800; display: flex; align-items: center; flex-direction:row-reverse;'>%</div>
+                </div>
+            </div><div style='height:2px;'></div><rulecardtitle style='background:var(--Gray-4);'>
             Reputation
         </rulecardtitle><rulebox style='border-color:var(--Gray-3); background:white;'>
             <b>Reputation:</b> When reputation is reached raise a choosen Stat by 1.
@@ -1423,7 +1713,7 @@
                 <div>Legendary Outlaw</div>
             </masterabilitysubtitle>
             <div style=' background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
-                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bandit 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Rogue 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div>  Crimminal ( 20 Rep. ) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bandit 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div>  Crimminal ( 20 Rep. ) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
         display: inline-block;
         
         background:white;
@@ -2334,6 +2624,17 @@
                 Gladiators take the power of the Barbarian and hone it to an art with the skill of the Fighters.
                 It is said no class enjoys a good fight more than the Gladiator, and certainly few no how to perform and entertain for the crowd.
                 Gladiators are among the few who can wield a net and as the fight goes on get increasingly better and reading their opponents and pulling off stylish and deadly Showdowns.
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns:auto 1fr auto;'>
+            <abilitysubtitle  style='background:var(--Barbarian-4); border-radius:4px 0px 0px 4px; padding: 0px 3px;  display:flex;   flex-direction:column;  justify-content:space-around;'>
+                Bone Breaker 1
+            </abilitysubtitle>
+            <div style='background:var(--Barbarian-1); border: 1px solid; border-radius: 0px;  border-color:var(--Barbarian-3);  font-size: 8px; padding:1px 0px 1px 4px;'>
+                <b>Barbarian 2/1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Monk 1/2</b>
+            </div>
+            <div style='border-radius: 0px 4px 4px 0px; border: 1px solid; border-left: 0px none; border-color:var(--Barbarian-3);  background: white; padding: 0px 3px; font-size: 7px; font-style: italic; font-weight:500;   display:flex;   flex-direction:column;  justify-content:space-around;'>
+                <span> See <b>Barbarian</b>. </span>
             </div>
         </div>
         <div style='display:grid; grid-template-columns:auto 1fr auto;'>
@@ -4202,12 +4503,7 @@
             <b>Bards</b> specialize in using music to assist allies in combat.
             Bards gain their power from Yavera, the God of Art and mischeif.
             The power of a Bard's music can influence minds, invigorate allys, and confuse enemies.
-            <br><b>Hearten</b> songs are those played to soothe the party on the road, and often involve creating songs and legends around the party itself.
             <br><b>Playing in Combat</b> is used to channel musical power, granted through Yavara, to enhance the Bard's allies or sow discord in their enemies.
-            Songs are mainly played through an instrument, but can be enhanced by singing and dancing.
-            The more <b>Harmony</b> a Bard is able to achieve, the stronger the effect.
-            <br><b>Embelishments</b> are more advanced chords and notes a Bard may play to ehance their performance, but require greater concentration.
-            <br><b>Perfect Harmony</b> is something all Bards strive to acheive, and allows them to channel the power of music to it's full effect.
         </rulebox><classsubtitle style='background:var(--Bard-4);'>
            <img 
         src='../../Resources/Art/Images/ClassBasic.svg' 
@@ -4293,7 +4589,7 @@
                     Spellsong 1
                 </abilitysubtitle>
                 <div style='background:var(--Bard-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 0px 0px 4px;  border-color:var(--Bard-3);  font-size: 8px; padding:1px 0px 0px 4px; '>
-                    <b>Bard 1/2</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Mage 1/2</b> 
+                    <b>Bard 2/1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Mage 1/2</b> 
                 </div>
             </div>
             <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
@@ -4316,7 +4612,7 @@
                 Chaos Knight 1
             </abilitysubtitle>
             <div style='background:var(--Bard-1); border: 1px solid; border-radius: 0px;  border-color:var(--Bard-3);  font-size: 8px; padding:1px 0px 1px 4px;'>
-                <b>Fallen Cleric 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Barbarian 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bard 1</b>  <br> <b>OR</b> <godreq>Yavarra</godreq> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Paladin 1 (Fallen)</b>
+                <b>Fallen Cleric 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Fighter 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bard 1</b>  <br> <b>OR</b> <godreq>Yavarra</godreq> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Paladin 1 (Fallen)</b>
             </div>
             <div style='border-radius: 0px 4px 4px 0px; border: 1px solid; border-left: 0px none; border-color:var(--Bard-3);  background: white; padding: 0px 3px; font-size: 7px; font-style: italic; font-weight:500;   display:flex;   flex-direction:column;  justify-content:space-around;'>
                 <span> See <b>Cleric</b>. </span>
@@ -5423,7 +5719,7 @@
                 </abilitysubtitle>
             </div>
             <div style='background:var(--Cleric-1); border-left: 1px solid; border-right: 1px solid; border-top: 1px solid;  border-radius: 0px; border-color:var(--Cleric-3);  margin-top:1px; margin-left: 5px; grid-column: 1 / span 3; font-size: 8px; padding:1px 0px 0px 4px; '>
-                Healer 1:Nurse <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <godreq>Follower from Azeal</godreq>
+                Healer 1:Nurse or Priest: Acolyte <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <godreq>Follower from Azeal</godreq>
             </div>
             <div class='classinfo' style=' border-color:var(--Cleric-3); grid-column: 1 / span 3; '>
                 Clerics are those devote followers of Azeal who has graced with his power. 
@@ -5476,7 +5772,7 @@
                 Preist
             </abilitysubtitle>
             <div style='background:var(--Cleric-1); border: 1px solid; border-radius: 0px;  border-color:var(--Cleric-3);  font-size: 8px; padding:1px 0px 1px 4px;'>
-                <b>Cleric 2</b> 
+                <b>Cleric 2</b>
             </div>
             <div style='border-radius: 0px 4px 0px 0px; border: 1px solid; border-left: 0px none; border-color:var(--Cleric-3);  background: white; padding: 0px 3px; font-size: 7px; font-style: italic; font-weight:500;   display:flex;   flex-direction:column;  justify-content:space-around;'>
                 <span> See <b>Talents</b>. </span>
@@ -7676,8 +7972,9 @@
             <b>Druid</b> are people who have an intense connection to the natural world. They almost always feel more comfortable out in nature then in cities or other crowded places.
             Druids almost always worship Ernok, the God of Nature, and are devoted to protecting the harmony of nature.
             Druids can come from all walks of life, but all find themselves plled ot wild, untamed lands where nature's power and beauty is at it's strongest.
-            <br> <b>Dominions</b> are the parts of the world that the Druid may connect with those places by <b>Harmonizing</b> with them.
-                When Harmonized with a Domain the Druid may perform communions with less cost, summon creatures, and create special aspects.
+            <br> <b>Dominions</b> are the parts of the world that the Druid may connect with those places by  with them.
+            <br> <b>Atuning to a Domain:</b> Druid must be a Survialist 2 in that domain, and fufill the point cost that domain on thier Druidic Aspect Card.
+            <br> <b>Harmonizing:</b> To Harmonize a Druid must have been Atuned to that domain  and be in that domain and therefore may perform communions with less cost, summon creatures, and create special aspects.
             <br> <b>Companions</b> are much like a pet, but with a more powerful and personal connection. Gain a Druid Companion Card.
             <br> <b>Communions</b> involve channeling the power of nature through the Druid's body.
             This can alter the area arond the Druid, but does take a tole on his Body. <b>Wither</b> is the drain this takes on the Druid's life energies.
@@ -8132,164 +8429,179 @@
         </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard  style='background: var(--Druid-1); '><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Druid-4);'>
             <div>Druidic Aspects</div> 
         </rulecardtitle><classsubtitle style='background:var(--Druid-4);'>
-            Items <f7>These be earned as many times as desired.</f7>
+            Items <f7 style='font-weight: 500;'>These be earned as many times as desired.</f7>
         </classsubtitle>
-        <div style='display:grid; grid-template-columns: auto 1fr auto;'>
-            <div style='display:grid; grid-template-columns: 1fr 50px;'>
-                <abilitysubtitle  style='background:var(--Druid-3); color: white; display: flex; align-items: center;border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+        <div style='display:grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 1px;'>
+            <div style='display:grid; grid-template-columns: 1fr 50px; background:var(--Druid-3);'>
+                <abilitysubtitle  style='color: white; display: flex; align-items: center; border-radius:4px 0px 0px 4px;'>
                     Knarled Staff
                 </abilitysubtitle>
-                <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Druid-3);'>
-                    <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                    <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                        <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    </div>
-                </div>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/1Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
             </div>
-            <div style='display:grid; grid-template-columns: 3fr 2fr;'>
-                <abilitysubtitle  style='background:var(--Druid-3); color: white; align-items: center; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                    <f7>Knarled Staff becomes</f7>
-                    <br> Any Druidic Staff
+            <div style='display:grid; grid-template-columns: 3fr 2fr; background:var(--Druid-3);'>
+                <abilitysubtitle  style=' color: white; align-items: center; border-radius:4px 0px 0px 4px;'>
+                    Upgrade Staff
                 </abilitysubtitle>
-                <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Druid-3);'>
-                    <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                    <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                        <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    </div>
-                </div>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+                <div style='grid-column: span 2; color: white; font-size: 7px;'>Wolfwood, Oakbone, Rootantler</div>
             </div>
-            <div style='display:grid; grid-template-columns: auto auto;'>
-                <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+            <div style='display:grid; grid-template-columns: auto auto; background:var(--Druid-3);'>
+                <div  style='border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
                      Brewing<br> Kit
                 </div>
-                 <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                    <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                        <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                    </div>
-                </div>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/1Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
             </div>
-        </div><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    ;'><div style='text-align:center;'><div style='text-align:left;'><f9>Repair Staff</f9></div></div> <actionSubtitle style='margin-left:3px; margin-top:2px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Druid-2)); border-color:var(--Druid-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
-                                        <nowrap></nowrap>
-                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><f8><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Purple-4);
-        
-        font-weight:700;
-    '>
-        Spirit
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Blue-4);
-        
-        font-weight:700;
-    '>
-        Sense
-    </div></f8></div></challengeInner>
-                                    </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'><f7><sc>2S:</sc> Remove Brk Points. <sc>3S:</sc> Repair Broken Staff.</f7></div></challengeText></challengeContainer></div></actionContainter><classsubtitle style='background:var(--Druid-4);'>
+        </div><classsubtitle style='background:var(--Druid-4);'>
            Domains
-        </classsubtitle><rulebox style='border-color:var(--Druid-3); background:var(--Druid-1);'>
-            Before earning your domain, a druid must learn Survivalist 2 of that same domain.
-        </rulebox>
+        </classsubtitle>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Verdant
+                 Forest
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Temperate gain additional <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs.
+                Req. Survivalist: Verdant.
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Oak
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Hound, Boar, Deer</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Plains</div>      <div style='padding: 0px 4px;'> Boar, Deer</div>      <div style='padding: 0px 4px;'> Agile Cat</div>       <div style='padding: 0px 4px;'> Large Cat</div>
-                    <div style='padding: 0px 4px;'> Pastoral</div>    <div style='padding: 0px 4px;'> Hound, Deer</div>     <div style='padding: 0px 4px;'> Wolf, Elk </div>      <div style='padding: 0px 4px;'> Bear</div>
-                    <div style='padding: 0px 4px;'> Forest</div>      <div style='padding: 0px 4px;'> Boar, Deer</div>      <div style='padding: 0px 4px;'> Wolf, Elk </div>      <div style='padding: 0px 4px;'> Bear</div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Wolf, Elk</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Oak
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Large Cat, Bear</span> 
+                </div>
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Arid
+                 Desert
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Arid gain additional <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs and <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.
+                Req. Survivalist: Arid. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Cactus
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Snake, Deer, Eagle</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Chaparral</div>    <div style='padding: 0px 4px;'> Snake, Deer</div>      <div style='padding: 0px 4px;'> Agile Cat, Terror Bird</div>   <div style='padding: 0px 4px;'> Large Cat</div>
-                    <div style='padding: 0px 4px;'> Desert</div>       <div style='padding: 0px 4px;'> Snake, Eagle</div>     <div style='padding: 0px 4px;'> Agile Cat, Terror Bird</div>   <div style='padding: 0px 4px;'> Crocodile</div>
-                    <div style='padding: 0px 4px;'> Badlands</div>     <div style='padding: 0px 4px;'> Snake, Eagle</div>     <div style='padding: 0px 4px;'> Wolf, Terror Bird</div>        <div style='padding: 0px 4px;'> Crocodile</div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Terror Bird</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Cactus
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Large Cat, Crocodile</span> 
+                </div>
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Lush
+                 Jungle
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Lush gain additional <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs.
+                Req. Survivalist: Lush. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Beast
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Snake, Eagle, Salamander</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Wetlands</div>    <div style='padding: 0px 4px;'> Snake, Eagle</div>        <div style='padding: 0px 4px;'> Agile Cat</div>               <div style='padding: 0px 4px;'> Crocodile</div>
-                    <div style='padding: 0px 4px;'> Rainforest</div>  <div style='padding: 0px 4px;'> Snake, Eagle</div>        <div style='padding: 0px 4px;'> Agile Cat, Terror Bird</div>  <div style='padding: 0px 4px;'> Large Cat </div>
-                    <div style='padding: 0px 4px;'> Jungle</div>      <div style='padding: 0px 4px;'> Snake, Salamander </div>  <div style='padding: 0px 4px;'> Agile Cat, Giant Frog</div>   <div style='padding: 0px 4px;'> Large Cat </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Terror Bird, Giant Frog</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Beast
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Large Cat, Crocodile</span> 
+                </div>
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
@@ -8297,84 +8609,221 @@
                  Arctic
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Artic gain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs and <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to find Shelter.
+                Req. Survivalist: Lush. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Yeti
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Hound, Eagle, Deer, Boar</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;   border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Alpine</div>          <div style='padding: 0px 4px;'> Hound, Eagle</div>    <div style='padding: 0px 4px;'> Agile Cat, Elk</div>      <div style='padding: 0px 4px;'> Bear</div>
-                    <div style='padding: 0px 4px;'> Tundra</div>          <div style='padding: 0px 4px;'> Hound, Deer</div>     <div style='padding: 0px 4px;'> Wolf, Elk</div>           <div style='padding: 0px 4px;'> Bear </div>
-                    <div style='padding: 0px 4px;'> Coniferous </div>     <div style='padding: 0px 4px;'> Boar, Eagle</div>     <div style='padding: 0px 4px;'> Wolf, Elk</div>           <div style='padding: 0px 4px;'> Bear </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Elk, Wolf</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Yeti 
-            </div>
-        </div>
-        <div style='display:grid; grid-template-columns: auto 2fr 60px;'>
-            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Freshwater
-            </div>
-            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                Ignore <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> to Combat Checks while swimming in freshwater.
-            </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Bear</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: auto auto auto auto;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Wetland</div>     <div style='padding: 0px 4px;'> Snake, Piranhas, Salamander </div>    <div style='padding: 0px 4px;'> Turtle, Giant Frog</div>              <div style='padding: 0px 4px;'> Crocodile, Big Turtle</div>
-                    <div style='padding: 0px 4px;'> River</div>       <div style='padding: 0px 4px;'> Crab, Piranhas, Salamander</div>      <div style='padding: 0px 4px;'> Turtle, Dolphin, Giant Frog</div>     <div style='padding: 0px 4px;'> Crocodile, Big Turtle </div>
-                    <div style='padding: 0px 4px;'> Lake </div>       <div style='padding: 0px 4px;'> Crab, Piranhas</div>                  <div style='padding: 0px 4px;'> Turtle, Giant Frog</div>               <div style='padding: 0px 4px;'> Crocodile, Big Turtle </div>
-                </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of Swamp
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Oceanic
+                 Mountain
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                Can Drink Seawater. Ignore <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> to Combat Checks while swimming in seawater.
+                Req. Survivalist: Mountain
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Yeti
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span> </span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span> </span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span> </span> 
                 </div>
             </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr auto auto auto;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Ice Field</div>     <div style='padding: 0px 4px;'> Seals, Crab</div>               <div style='padding: 0px 4px;'> Walrus, Big Crab</div>                                <div style='padding: 0px 4px;'> Shark, Giant Squid</div>
-                    <div style='padding: 0px 4px;'> Reefs</div>         <div style='padding: 0px 4px;'> Eels, Seals</div>               <div style='padding: 0px 4px;'> Giant Ray, Dolphin, Big Crab</div>                    <div style='padding: 0px 4px;'> Shark </div>
-                    <div style='padding: 0px 4px;'> Ocean </div>        <div style='padding: 0px 4px;'> Jellyfish,Eels, Seals</div>     <div style='padding: 0px 4px;'> Dolphin, Swordfish, Octopus, Big Crab </div>  <div style='padding: 0px 4px;'> Shark </div>
-                    <div style='padding: 0px 4px;'> DeepSea </div>      <div style='padding: 0px 4px;'> Jellyfish, Crab</div>           <div style='padding: 0px 4px;'> Octopus, Swordfish, Big Crab</div>                    <div style='padding: 0px 4px;'> Giant Squid </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 River & Swamp
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Survivalist: River & Swamp. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Swamp
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Crab, Piranhas, Salamander</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of Shark 
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Turtle, Dolphin, Giant Frog</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Crocodile, Big Turtle</span> 
+                </div>
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 Ocean
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Survivalist: Ocean and Sailor. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Shark
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Crab, Jellyfish,Eels, Seals</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Dolphin, Swordfish, Octopus, Big Crab, Walrus</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Shark, Giant Squid</span> 
+                </div>
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 Cave
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Survivalist: Cave.
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Stone
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Snake</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Wolf</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Bear</span> 
+                </div>
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 Decay
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Any Survivalist 2 Terrain and Morgeth. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Death
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+            <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Undead Boar, Hound</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Undead Wolf</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Undead Bear, Large Cat</span> 
+                </div>
             </div>
         </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Druid-4);'>
             <div>Druid 1</div>
@@ -8475,7 +8924,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create Circle 1 within 2R for 3 Rounds. All enemies inside are Slow 2.
+            		Create Circle 1 within 1 for 3 Rounds. All enemies inside are Slow 2.
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><f7>Arid/Arctic/Freshwater/Oceanic</f7><br> Mist/Sand Cloud</div></div> <actionSubtitle style='margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
             		Resist 4 Wither (2 Harmonized) w/ <div style='
         display: inline-block;
@@ -8509,7 +8958,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create 1R Circle of Mist around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
+            		Create 1R Circle cloud around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Druid-4);'>
             Brewing
         </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Brew</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
@@ -8650,7 +9099,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create Circle 1 within 2R for 3 Rounds. All enemies inside are Slow 2.
+            		Create Circle 1 within 1 for 3 Rounds. All enemies inside are Slow 2.
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><f7>Arid/Arctic/Freshwater/Oceanic</f7><br> Mist/Sand Cloud</div></div> <actionSubtitle style='margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
             		Resist 4 Wither (2 Harmonized) w/ <div style='
         display: inline-block;
@@ -8684,7 +9133,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create 1R Circle of Mist around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
+            		Create 1R Circle cloud around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Druid-4);'>
             Brewing
         </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Brew</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
@@ -9013,7 +9462,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create 1R Circle of Mist around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
+            		Create 1 Circle cloud around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><f7>Arid/Arctic</f7><br> Sand/Snow Blast</div></div> <actionSubtitle style='margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
             		Resist 4 Wither (2 Harmonized) w/ <div style='
         display: inline-block;
@@ -9082,6 +9531,21 @@
         font-weight:700;
     '>
         Endr
+    </div><div style='height:1px;'></div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
     </div>
                     </div></challengeInner>
                                     </challenge>
@@ -9149,7 +9613,7 @@
             
             padding: 0px 0px 0px 0px;
         '></div><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Druid-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>
-                		 Target Resist 3 Poison w/ <div style='
+                		 Targets Resist 3 Poison w/ <div style='
         display: inline-block;
         
         background:white;
@@ -9216,8 +9680,18 @@
     '>
         Sense
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-                    </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Druid-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>
-                		Head
+                    </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Druid-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>
+                		Push
                     </div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
                 		 <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
         display: inline-block;
@@ -11085,7 +11559,7 @@
                 Grey Mage
             </abilitysubtitle>
             <div style='background:var(--Mage-1); border-top: 1px solid; border-bottom: 1px solid;  border-radius: 0px 4px 0px 0px;   border-color:var(--Mage-3);  font-size: 8px; padding: 0px 4px; display: flex; align-items:center;'>
-                 <b>Mage 1 </b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Scholar (4 Levels)
+                 <b>Mage 1 </b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Scholar (4 Levels), Linquist 3
             </div>
             <div class='classinfo' style='border-color:var(--Mage-3); '>
                 Those who wish to master the art of knowledge are called Grey Mage.
@@ -11258,7 +11732,7 @@
                 <div>Sage</div>
             </masterabilitysubtitle>
             <div style='background:var(--Mage-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Mage-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
-                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Grey Mage</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Scholar (Complete) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div>  <div style='
+                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Grey Mage</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Scholar (Complete) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Linguist (Complete) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div>  <div style='
         display: inline-block;
         
         background:white;
@@ -12024,157 +12498,271 @@
         </classsubtitle><rulebox style='border-color:var(--Mage-3); background:var(--Mage-1);'>
             <b>Chromatic Magic</b> is the standard type of magic. Each has a school in the Citadel.
         </rulebox>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--Red-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Red </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--Red-3); font-size: 6px;'>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Red-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Red </f8>
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
                 Red Magic grants power over light and flames. 
                 This immense destructive potential makes Red Magic highly valued in large-scale warfare, capable of inflicting tremendous damage when supported effectively.
             </div>
+            <ProgContainer style='height: auto; background: var(--Red-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--Blue-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Blue </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--Blue-3); font-size: 6px;'>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Blue-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Blue </f8>
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
                 Blue Magic harness the power of ice and water. 
                 Blue Magic users harness a more supportive role, but can conjure up devastating attacks when pressed.
             </div>
+            <ProgContainer style='height: auto; background: var(--Blue-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--Green-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Green </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--Green-3); font-size: 6px;'>
-                 Green Magic manipulates rocks and the earth as well as telekinesis. 
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Green-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Green </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+               Green Magic harnesses the primal forces of the earth and Telekinesis. 
+               Their magic allows them to manipulate objects, erect defensive barriers, and levitate objects. 
+            </div>
+            <ProgContainer style='height: auto; background: var(--Green-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--Yellow-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Yellow </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--Yellow-3); font-size: 6px;'>
-                 The manipulation air and lightning as well as telepathy. 
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Yellow-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Yellow </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+               Yellow Magic wields the power of wind and lightning, using their abilities for both offense and strategic advantage. 
+               They can create gusts of wind, communicate telepathically, and cast spells that distract or damage enemies. 
+            </div>
+            <ProgContainer style='height: auto; background: var(--Yellow-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--Purple-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Purple </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--Purple-3); font-size: 6px;'>
-                  Manipulation of gravity and the time. Some arts can alter time itself.
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Purple-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Purple </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+               Purple Magic taps into the cosmic forces to manipulate gravity, time, and space. 
+               These mages can defy the natural laws, creating portals and manipulating the weight and movement of objects and themselves. 
+            </div>
+            <ProgContainer style='height: auto; background: var(--Purple-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div><div style='height:5px;'></div><classsubtitle style='background:var(--Mage-4);'>
            Dark Magic
         </classsubtitle>
         <rulebox  style='border-color:var(--Mage-3); background:var(--Mage-1);'>
             <b>Dark Magic</b> is forbidden by the Citadel and assocaited with the power of Morgeth.
          </rulebox>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--PlagueGreen-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Plague </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--PlagueGreen-3); font-size: 6px;'>
-                Manipulation of vermin, poison, acid, and other kinds of decay.
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--PlagueGreen-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Plague </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+                Plague Magic, rooted in the dark and forbidden knowledge of disease and decay, harnesses the power of pestilence and rot. 
+            </div>
+            <ProgContainer style='height: auto; background: var(--PlagueGreen-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--BloodRed-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Blood </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--BloodRed-3); font-size: 6px;'>
-                Manipulation of the Blood. Related to a persons life energy and blood.
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--BloodRed-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Blood </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+                Blood Magic, draws power from life's essence. Masters can manipulate their own and others' blood to perform powerful, often gruesome feats, healing or harming with equal ease.
+            </div>
+            <ProgContainer style='height: auto; background: var(--BloodRed-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--ShadowBlue-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Shadow </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--ShadowBlue-3); font-size: 6px;'>
-                Manipulation of the darkness. Related to nightmares and dark illusions.
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--ShadowBlue-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Shadow </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+                Shadow Magic, harnesses the power of darkness and shadows.  Feared and revered, Shadow Magic can cloak allies, instill terror, and unleash demonic forces.
+            </div>
+            <ProgContainer style='height: auto; background: var(--ShadowBlue-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--DeathBrown-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Death </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--DeathBrown-3); font-size: 6px;'>
-                The creation of undead creatures and the manipulation of dead flesh.
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--DeathBrown-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Death </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+                Death Magic manipulates life and death itself. Can animate corpses, command the undead, and unleash devastating necrotic spells. Feared and respected, Death Magic allows the practitioner to raise armies of the dead, drain life, and even achieve a form of immortality.
+            </div>
+            <ProgContainer style='height: auto; background: var(--DeathBrown-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--SoulTurq-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Soul </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--SoulTurq-3); font-size: 6px;'>
-                Power to control and consme soul ether.
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--SoulTurq-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> 
+                 <f8> Soul </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+                Soul Magic, a dark and potent art, harnesses the power of souls for arcane and often sinister purposes. This feared magic allows the practitioner to control both the living and the dead, making them a formidable force.
+            </div>
+            <ProgContainer style='height: auto; background: var(--SoulTurq-3);'>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+            </ProgContainer>
         </div><div style='height:5px;'></div><classsubtitle style='background:var(--Mage-4);'>
            Occult Magic
         </classsubtitle>
-        <div style='display:grid; grid-template-columns:auto 1fr;'>
-            <abilitysubtitle  style='background:var(--VoidPurple-3); border-radius:4px 0px 0px 4px;'>
-                
-        <div style='background:white; border: solid 1px black; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-     <f8> Void </f8>
-            </abilitysubtitle>
-            <abilitysection class='asecMage' style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  1AP Toward Xxthuul<f8> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-            </abilitysection>
-            <div class='classinfo' style='border-color:var(--VoidPurple-3); font-size: 6px;'>
-                The art of anti-matter magic and nothingness. Undoning the barriers between real and unreal. 
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--VoidPurple-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 <div style='display:inline-block; background:white; height:12px; width:12px; border:solid 1px black; position:relative; top:2px; border-radius: 8px; margin-right: 3px;'></div> <f8> Void </f8>
             </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px; font-size: 6px; padding: 2px;  border: 1px black solid;  border-color:var(--Mage-3); background:white;'>
+                Void Magic delves into the forbidden realms of the occult, manipulating the very fabric of existence with its mastery over anti-matter and nothingness. 
+                Its practitioners, often shrouded in secrecy, it's a potent tool in the hands of those daring enough to wield it.
+            </div>
+            <ProgContainer style='height: auto; background: var(--VoidPurple-3);'>
+                <img 
+        src='../../Resources/Art/Images/4Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent style='height: -webkit-fill-available; margin: 2px 0px;'>%</ProgPercent>
+                <div style='font-size: 6px; grid-column: span 2;'> Req. 30% Toward Xxthuul</div> 
+            </ProgContainer>
         </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Mage-4);'>
             <div>Mage 1 </div>
             <div><img 
@@ -13321,7 +13909,7 @@
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'>
                     <cs>1S:</cs> Prepare a Spell. <br><f7>Must spend cost if applicable.</f7></div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Mage-4);'>
             Cantrips
-        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Ball of Light</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist</b> <keywordMage>1 Fatigue</keywordMage> w/ <div style='
+        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Arcane Sparks</div></div><actionSubtitle style='color:black; margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist</b> <keywordMage>1 Fatigue</keywordMage> w/ <div style='
         display: inline-block;
         
         background:white;
@@ -13337,7 +13925,7 @@
     '>
         Endr
     </div>.
-                <br>Create Ball of <keywordMage>Light 2</keywordMage> that lasts up to 30 Minutes.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Sense Arcane</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                <br>Create <keywordMage>Light 1R</keywordMage> that lasts up to 1 Minute.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Sense Arcane</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Mage-2)); border-color:var(--Mage-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
@@ -13539,7 +14127,7 @@
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'>
                     <cs>1S:</cs> Prepare a Spell. <br><f7>Must spend cost if applicable.</f7></div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Mage-4);'>
             Cantrips
-        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Ball of Light</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist</b> <keywordMage>1 Fatigue</keywordMage> w/ <div style='
+        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Arcane Sparks</div></div><actionSubtitle style='color:black; margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist</b> <keywordMage>1 Fatigue</keywordMage> w/ <div style='
         display: inline-block;
         
         background:white;
@@ -13555,7 +14143,7 @@
     '>
         Endr
     </div>.
-                <br>Create Ball of <keywordMage>Light 2</keywordMage> that lasts up to 3 Hours. Can be put onto a Staff or similar.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Arcane Trick</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                <br>Create <keywordMage>Light 1R</keywordMage> that lasts up to 1 Minute.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Arcane Trick</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Mage-2)); border-color:var(--Mage-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
@@ -13892,7 +14480,7 @@
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'>
                     <cs>1S:</cs> Prepare a Spell. <br><f7>Must spend cost if applicable.</f7></div></challengeText></challengeContainer></div></actionContainter><abilitysubtitle style='background:var(--Mage-4);'>
             Cantrips
-        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Ball of Light</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist</b> <keywordMage>1 Fatigue</keywordMage> w/ <div style='
+        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Arcane Sparks</div></div><actionSubtitle style='color:black; margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist</b> <keywordMage>1 Fatigue</keywordMage> w/ <div style='
         display: inline-block;
         
         background:white;
@@ -13908,8 +14496,7 @@
     '>
         Endr
     </div>.
-                Create Ball of <keywordMage>Light 2</keywordMage>. Lasts up to a 6 hours.
-                Can be put onto a Staff or similar.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '><f9>Arcane Trick</f9></div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                <br>Create <keywordMage>Light 1R</keywordMage> that lasts up to 1 Minute.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '><f9>Arcane Trick</f9></div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Mage-2)); border-color:var(--Mage-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
@@ -13944,7 +14531,7 @@
         Spirit
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'>May do simple magic trick. More Successes improves it. <br><f7> Ex: Snuff Candle, Colored Sparkles, Small Gust of Wind, Write Temporary Arcane Glyph into Surface.</f7> </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Sense Arcane</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Mage-3);'><div style='background:white; color:black; width:100%; font-size:;'><f7>May do simple magic trick. More Successes improves it. <br> Ex: Snuff Candle, Colored Sparkles, Small Gust of Wind, Write Temporary Arcane Glyph into Surface.</f7> </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Mage-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Mage-1); border-style:solid; border-color:var(--Mage-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Mage-1);'><div style='text-align:left; '>Sense Arcane</div></div><actionSubtitle style='color:black; margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Mage-2)); border-color:var(--Mage-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
@@ -14331,12 +14918,6 @@
                  <div style='background:var(--Monk-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px;  border-color:var(--Monk-3);  font-size: 8px; padding:1px 0px 0px 4px;'>
                     Athlete (3 Levels)
                 </div>
-            </div>
-            <div class='classinfo' style='border-color:var(--Monk-3); grid-column: 1 / span 2; margin-top:0px;'>
-                Bone Breakers combine the Rage of Barbarians and the martial artistry of the Monk into a fearsome style of melee fighting.
-                No grappler is as feared as the Bone Breaker and it's said they enjoy no sound more then their opponents limbs bones crunching in the hands and enjoy drinking Blood Draughts before battle to enhance their strength.
-                Their techniques include stomping on their opponent's face, gouging out their eyes, and slamming them down on their necks.
-                Powerful Bone Breakers are even known to rip limbs directly off their foe's bodies.
             </div>
         </div>
         <div style='display:grid; grid-template-columns:auto 1fr auto;'>
@@ -16712,7 +17293,7 @@
         Int
     </div></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to all Allies Stealth Checks.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Nimble Fingers<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to fine finger movements. <f8>Ex. Picking Lock, Disarming Trap, Stealing</f8></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Covert Movement<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hiding/Sneaking</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Acrobatic<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Acrobatics Challenges. May attempt some that others cannot.</div></challengeText></challengeContainer></div></actionContainter><rulebox style='border-color:var(--Rogue-3);  background:var(--Rogue-1);'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to all Allies Stealth Checks.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Nimble Fingers<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to fine finger movements. <f8>Ex. Picking Lock, Disarming Trap, Stealing</f8></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Covert Movement<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hiding/Sneaking</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Acrobatic<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Acrobatics Challenges. May attempt some that others cannot.</div></challengeText></challengeContainer></div></actionContainter><rulebox style='border-color:var(--Rogue-3);  background:var(--Rogue-1);'>
             <b>Hidden Items:</b> 1E may be hidden in such a way that it is rarely found when searched.
             <br> <b>Readied Items:</b> May have +2 Readied Items.
         </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Rogue-4);'>
@@ -17028,7 +17609,7 @@
         Int
     </div></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to all Allies Stealth Checks.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Nimble Fingers<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to fine finger movements. <f8>Ex. Picking Lock, Disarming Trap, Stealing</f8></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Covert Movement<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hiding/Sneaking, May reroll.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Acrobatic<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Acrobatics Challenges. <f7>May make attempts others can't.</f7></div></challengeText></challengeContainer></div></actionContainter><rulebox style='border-color:var(--Rogue-3);  background:var(--Rogue-1);'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to all Allies Stealth Checks.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Nimble Fingers<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to fine finger movements. <f8>Ex. Picking Lock, Disarming Trap, Stealing</f8></div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Covert Movement<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'>+<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hiding/Sneaking, May reroll.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Rogue-3);     ; background:var(--Rogue-1); border-style:solid; border-color:var(--Rogue-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Rogue-1);'><div style='text-align:left; '><f10>Acrobatic<f10></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Rogue-3);'><div style='background:white; color:black; width:100%; font-size:;'><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Acrobatics Challenges. <f7>May make attempts others can't.</f7></div></challengeText></challengeContainer></div></actionContainter><rulebox style='border-color:var(--Rogue-3);  background:var(--Rogue-1);'>
             <div style='height:2px;'></div> <b>Hidden Items:</b> 1E may be hidden on person. May draw hidden items as Free Action.
             <div style='height:2px;'></div> <b>Readied Items:</b> May have +3 Readied Items.
         </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Rogue-4);'>
@@ -17751,9 +18332,9 @@
                  <b>Vampire</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b> Druid 1 + Class + Class</b>
             </div>
             <div class='classinfo' style='border-color:var(--Cultist-3); margin-top:-1px;'>
-               It is said those whose vampirism manifests most like it's ancient origins gain the power of the Blood Wing.
+               It is said those whose vampirism manifests most like it's ancient origins gain the power of the Spirit of the Bat.
                 These are vampires who may transform into giant man sized bats who fly through the night sky.
-                Blood Wings tend to accumulate a person swam of other bats and fly with great speed, often dragging their foes high into the air for dinner and then dropping them to the deaths.
+                Spirit of the Bats tend to accumulate a person swam of other bats and fly with great speed, often dragging their foes high into the air for dinner and then dropping them to the deaths.
             </div>
         </div>
         <div style='display:grid; grid-template-columns:auto 1fr auto;'>
@@ -17979,5 +18560,5 @@
         </div></rulecard></div></div>    </div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Class_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:35 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Class_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:43 GMT -->
 </html>

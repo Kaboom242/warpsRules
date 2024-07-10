@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Bard_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Bard_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:41 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Bard Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -839,12 +877,7 @@
             <b>Bards</b> specialize in using music to assist allies in combat.
             Bards gain their power from Yavera, the God of Art and mischeif.
             The power of a Bard's music can influence minds, invigorate allys, and confuse enemies.
-            <br><b>Hearten</b> songs are those played to soothe the party on the road, and often involve creating songs and legends around the party itself.
             <br><b>Playing in Combat</b> is used to channel musical power, granted through Yavara, to enhance the Bard's allies or sow discord in their enemies.
-            Songs are mainly played through an instrument, but can be enhanced by singing and dancing.
-            The more <b>Harmony</b> a Bard is able to achieve, the stronger the effect.
-            <br><b>Embelishments</b> are more advanced chords and notes a Bard may play to ehance their performance, but require greater concentration.
-            <br><b>Perfect Harmony</b> is something all Bards strive to acheive, and allows them to channel the power of music to it's full effect.
         </rulebox><classsubtitle style='background:var(--Bard-4);'>
            <img 
         src='../../../Resources/Art/Images/ClassBasic.svg' 
@@ -930,7 +963,7 @@
                     Spellsong 1
                 </abilitysubtitle>
                 <div style='background:var(--Bard-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 0px 0px 4px;  border-color:var(--Bard-3);  font-size: 8px; padding:1px 0px 0px 4px; '>
-                    <b>Bard 1/2</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Mage 1/2</b> 
+                    <b>Bard 2/1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Mage 1/2</b> 
                 </div>
             </div>
             <div style='display:grid; grid-template-row:auto 1fr;  grid-gap:0px 1px;'>
@@ -953,7 +986,7 @@
                 Chaos Knight 1
             </abilitysubtitle>
             <div style='background:var(--Bard-1); border: 1px solid; border-radius: 0px;  border-color:var(--Bard-3);  font-size: 8px; padding:1px 0px 1px 4px;'>
-                <b>Fallen Cleric 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Barbarian 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bard 1</b>  <br> <b>OR</b> <godreq>Yavarra</godreq> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Paladin 1 (Fallen)</b>
+                <b>Fallen Cleric 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Fighter 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bard 1</b>  <br> <b>OR</b> <godreq>Yavarra</godreq> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Paladin 1 (Fallen)</b>
             </div>
             <div style='border-radius: 0px 4px 4px 0px; border: 1px solid; border-left: 0px none; border-color:var(--Bard-3);  background: white; padding: 0px 3px; font-size: 7px; font-style: italic; font-weight:500;   display:flex;   flex-direction:column;  justify-content:space-around;'>
                 <span> See <b>Cleric</b>. </span>
@@ -2939,8 +2972,8 @@
             
             padding: 0px 0px 0px 0px;
         '> that is paired with Ally. Songs may radiate from Seraphim's location with <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>.
-                <br><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Dancer Effect.
-                <br><cs>3S:</cs> +2 to Seraphim’s Guiding Step.
+                <br><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Seraphim’s Guiding Step..
+                <br><cs>3S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> to Seraphim’s Guiding Step.
                 <br><b>Seraphim</b> Each Round does Guiding Step Action.
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Guiding Step:</b> <div style='
         display: inline-block;
@@ -3238,8 +3271,8 @@
             
             padding: 0px 0px 0px 0px;
         '> that is paired with Ally. Songs may radiate from Seraphim's location with <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>.
-                <br><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Dancer Effect.
-                <br><cs>3S:</cs> +2 to Seraphim’s Guiding Step.
+                <br><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Seraphim’s Guiding Step.
+                <br><cs>3S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> to Seraphim’s Guiding Step.
                 <br><b>Seraphim</b> Each Round does Guiding Step Action.
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Guiding Step:</b> <div style='
         display: inline-block;
@@ -3416,8 +3449,6 @@
     '>
         Spirit
     </div> to a Play Action for rest of combat (Once only.)
-                <br><sc>3S:</sc> Can spend Harmony on Prayers for rest of combat.
-                <br><sc>3S:</sc> For rest of combat, can <cs>1S:</cs> Store <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Harmony.
                 </div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div id='Sheppard of Song' style='grid-column: 1 / -1;font-size: 25px;font-weight: 900;color: white;margin-bottom:-6px;'>Sheppard of Song</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Bard-4);'>
             <div>Sheppard of Song 1</div>
             <div><img 
@@ -5681,5 +5712,5 @@
                 </div></challengeText></challengeContainer></div></actionContainter></rulecard></div></div>    </div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Bard_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Bard_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:41 GMT -->
 </html>

@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/MagicItems_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:33 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/MagicItems_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:40 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Magic Item Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -986,12 +1024,25 @@
         '></div></div><div style='display: grid;grid-template-columns: auto;grid-template-rows: auto 1fr auto;grid-gap: 1px 2px;'><div style='display: grid;grid-template-columns: auto; grid-template-rows: auto; grid-auto-flow: row;grid-gap: 2px 2px;font-size: 10px;'><div></div><div style='display: grid;grid-template-columns: auto 1fr;grid-template-rows: auto;grid-gap: 1px;font-size: 11px;'><div style='display: grid;grid-template-columns: auto 1fr;border: solid 1px;border-color: var(--Green-3);background: white;color: black; font-weight: 600;text-align: left;'><div  style='background: var(--Green-3);color: white;font-weight: 800;border-radius: 4px 0px 0px 4px;margin-left: -1px;margin-bottom: -1px;padding-left: 1px;padding-right: 3px;display: table-cell;display: flex; justify-content: center;flex-direction: column;'>Cost</div><div style='display: flex; align-items:center;background: white;padding: 1px 4px 0px 3px;border-radius: 0px 4px 4px 0px;'><f8>1 Emerald + 5 Spell Materials&nbsp;</f8></div></div><div style='display: grid;grid-template-columns: auto 1fr;border: solid 1px;border-color: var(--Green-3);background: white;color: black; font-weight: 600;text-align: left;'><div  style='background: var(--Green-3);color: white;font-weight: 800;border-radius: 4px 0px 0px 4px;margin-left: -1px;margin-bottom: -1px;padding-left: 1px;padding-right: 3px;display: table-cell;display: flex; justify-content: center;flex-direction: column;'>Prepared</div><div style='display: flex; align-items:center;background: white;padding: 1px 4px 0px 3px;border-radius: 0px 4px 4px 0px;'><div style='margin-left: auto;'>/1&nbsp;</div></div></div></div><div style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px;'><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Green-3);    ;'><div style='text-align:center;'><div style='text-align:left;'>Cast</div></div> <actionSubtitle style=''></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'></div></actionContainter><div style='display:grid; grid-gap:2px;'><actionContainter style='font-size: NULL;; grid-template-columns:1fr; ; '><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '><div style='display:grid; gird-template-rows:auto auto;'><challengeHead style='; background:var(--Green-2); display:flex; justify-content:center; text-align:center; border-radius:4px 0px 0px 0px;'><div style='display:flex; align-items:center; font-size:9px;'><div>Backlash</div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Green-2); border-style:solid; border-width: 2px; border-radius: 0px 0px 0px 4px;'><div style='background:white; color:black; width:100%; font-size:;'><b><f12>15</f12></b></div></challengeText></div><challengeText style='; ; background:white; border-color:var(--Green-3);'><div style='background:white; color:black; width:100%; font-size:;'>
                                         <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Fatigue per Backlash.
                                     </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:1fr; ; '><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Green-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>
-                                        Next <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Rounds, 3 Meters doing Circle 1 <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Blast Dmg fall 2 per Round within the surrounding 4R.
-                                        <br> Afterwards in the Target Area a Meteor doing Blast Dmg:
-                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Within 1R <b style='font-weight:700; color: black;'>10<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>10<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg.
-                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Within 2RL <b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg.
-                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Within 3R-5R <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg.
-                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Within 6-8R <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg.
+                                        All within 6R Resist 3 Falling w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div>.
+                                        <br> Open a Chasm which leads deep underground. Chasm will create cracks in random spaces. Falling is at least 40' Dmg.
+                                        <br> At the same time create a Spire at least Cricle 1 and 40' Tall.
+                                        <br><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Fatigue per Backlash.
                                     </div></challengeText></challengeContainer></div></actionContainter></div></div></div><div style='border-radius: 4px 4px 4px 4px;overflow: hidden;text-overflow: ellipsis;padding: 0px 5px;font-size: 10px;color: Black;display: grid;grid-template-rows: 1fr auto;'><div><img 
         src='../../Resources/Art/Images/CardNote.svg' 
         height='14px'
@@ -1329,8 +1380,8 @@
             left: 0;
             
             padding: 0px 0px 0px 0px;
-        '> Open an abyss where creatures fom the nether void may pass into our reality.</div><div style='display: grid; grid-template-columns: auto;'><div><b>Price:</b> 50G</div></div></div></div></div></div></div><b>Total Execution Time:</b> 0.15039896965027 Seconds</div>
+        '> Open an abyss where creatures fom the nether void may pass into our reality.</div><div style='display: grid; grid-template-columns: auto;'><div><b>Price:</b> 50G</div></div></div></div></div></div></div><b>Total Execution Time:</b> 0.14139103889465 Seconds</div>
     </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/MagicItems_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:33 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/MagicItems_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:40 GMT -->
 </html>

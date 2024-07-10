@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Monk_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Monk_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Monk Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -946,12 +984,6 @@
                  <div style='background:var(--Monk-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px;  border-color:var(--Monk-3);  font-size: 8px; padding:1px 0px 0px 4px;'>
                     Athlete (3 Levels)
                 </div>
-            </div>
-            <div class='classinfo' style='border-color:var(--Monk-3); grid-column: 1 / span 2; margin-top:0px;'>
-                Bone Breakers combine the Rage of Barbarians and the martial artistry of the Monk into a fearsome style of melee fighting.
-                No grappler is as feared as the Bone Breaker and it's said they enjoy no sound more then their opponents limbs bones crunching in the hands and enjoy drinking Blood Draughts before battle to enhance their strength.
-                Their techniques include stomping on their opponent's face, gouging out their eyes, and slamming them down on their necks.
-                Powerful Bone Breakers are even known to rip limbs directly off their foe's bodies.
             </div>
         </div>
         <div style='display:grid; grid-template-columns:auto 1fr auto;'>
@@ -9163,5 +9195,5 @@
         </rulebox></rulecard></div></div>    </div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Monk_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Monk_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 </html>

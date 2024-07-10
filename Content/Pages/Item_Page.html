@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Pages/Item_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:27 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Pages/Item_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:34 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Item Pages</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -948,7 +986,7 @@
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Hook Hand<f9> Prosthetic</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Hook attached to a severed arm to use as a tool or weapon.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Turquoise-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Turquoise-3);'><div style='padding: 1px 5px 1px 2px;'>Pegleg<f9> Prosthetic</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>30G</f8></div><div style='display:flex; align-items:center;'>Wooden peg applied to a leg stump to faciliate some walking.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Medicine<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>A unique combination of herbs and healing power</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Orange-4);'>Crafting<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
-                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Cooking Supplies<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Cast Iron firm handle, dangeous to hold when hot.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Cooking Pot<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Cast Iron firm handle, dangeous to hold when hot.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Sewing Kit<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Consists of Needle, Thread, Scissors, pins, pin cushion, and thimble.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Mortar Pestle<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Consists of stone bowl and pestle.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Weapon Repair Kit<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Kit for doing field repairs on weapons.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
@@ -1119,7 +1157,7 @@
                 border-style:solid solid solid none; border-width:1px; border-color:var(--PlagueGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--PlagueGreen-3);'><div style='padding: 1px 5px 1px 2px;'>Acid Spray<f9> Major Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Create a spray of acid.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--DarkGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkGreen-3);'><div style='padding: 1px 5px 1px 2px;'>Snake Staff<f9> Uncommon Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Turn staff into a venomous snake.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(---3);'><ItemTitle style='display:flex; align-items:center; background:var(---3);'><div style='padding: 1px 5px 1px 2px;'><f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>---</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
-                border-style:solid solid solid none; border-width:1px; border-color:var(--BloodRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--BloodRed-3);'><div style='padding: 1px 5px 1px 2px;'>Blood Mist<f9> Minor Scroll - Blood</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Createa draining mist of blood.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--BloodRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--BloodRed-3);'><div style='padding: 1px 5px 1px 2px;'>Blood Mist<f9> Minor Scroll - Blood</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Creates draining mist of blood.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--BloodRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--BloodRed-3);'><div style='padding: 1px 5px 1px 2px;'>Leech Life<f9> Major Scroll - Blood</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Drain Life from Target.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--SoulTurq-3);'><ItemTitle style='display:flex; align-items:center; background:var(--SoulTurq-3);'><div style='padding: 1px 5px 1px 2px;'>Soul Barrier<f9> Minor Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5G</f8></div><div style='display:flex; align-items:center;'>Create an aura of souls acting as a defensive barrier.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--ShadowBlue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--ShadowBlue-3);'><div style='padding: 1px 5px 1px 2px;'>Shadow Spawn<f9> Major Scroll - Shadow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>10G</f8></div><div style='display:flex; align-items:center;'>Summon a Shadow Spawn.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
@@ -1133,9 +1171,9 @@
                 border-style:solid solid solid none; border-width:1px; border-color:var(---3);'><ItemTitle style='display:flex; align-items:center; background:var(---3);'><div style='padding: 1px 5px 1px 2px;'><f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'></f8></div><div style='display:flex; align-items:center;'>---</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--DarkGreen-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkGreen-3);'><div style='padding: 1px 5px 1px 2px;'><f14>The Living Swarm</f14><f9> Rare Scroll - Plague</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>A huge swarm of vermin fills the area.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--DarkRed-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkRed-3);'><div style='padding: 1px 5px 1px 2px;'>Flawed Resurrection<f9> Rare Scroll - Death</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Bring back an ally from death... mostly.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
-                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkYellow-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkYellow-3);'><div style='padding: 1px 5px 1px 2px;'>Caravan Of Souls<f9> Rare Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Create a rift through which the souls of the dead travel.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--SoulTurq-3);'><ItemTitle style='display:flex; align-items:center; background:var(--SoulTurq-3);'><div style='padding: 1px 5px 1px 2px;'><f16>Caravan of Souls</f16><f9> Grand Scroll - Soul</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>N/A</f8></div><div style='display:flex; align-items:center;'>Create a caravan of souls attacking enemies.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--DarkBlue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkBlue-3);'><div style='padding: 1px 5px 1px 2px;'>Summon Demon<f9> Rare Scroll - Shadow</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Summon a caged demon.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
-                border-style:solid solid solid none; border-width:1px; border-color:var(--DarkPurple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--DarkPurple-3);'><div style='padding: 1px 5px 1px 2px;'>Black Hole<f9> Rare Scroll - Void</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>20G</f8></div><div style='display:flex; align-items:center;'>Tear a hole through space that pulls in all nearby.</div><div></div></div></ItemPage></page>
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Purple-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Purple-3);'><div style='padding: 1px 5px 1px 2px;'>Black Hole<f9> Grand Scroll - Purple</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>N/A</f8></div><div style='display:flex; align-items:center;'>Powerful black hole to pull and damages all.</div><div></div></div></ItemPage></page>
 
 <page>
     <ItemPage><IPTitle style='background:var(--Green-4);'>Druidic<f12></f12></IPTitle><IPSubTitle style='background:var(--Green-4);'>Items<f12></f12></IPSubTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
@@ -1151,7 +1189,7 @@
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Orange-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Orange-3);'><div style='padding: 1px 5px 1px 2px;'>Pipe<f9> </f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Small wooden pipe used to smoke drugs.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Ale<f9> Alcohol</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>1G for 5</f8></div><div style='display:flex; align-items:center;'>Common alcholic beverages found throughout the land.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Blue-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Blue-3);'><div style='padding: 1px 5px 1px 2px;'>Wine<f9> Alcohol</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G for 5</f8></div><div style='display:flex; align-items:center;'>Expensive alcoholic beverage favored by the wealthy.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
-                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Tobacco<f9> Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3 for 1G</f8></div><div style='display:flex; align-items:center;'>Rolled and Smoked, Good to calm nerves.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
+                border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Tobacco<f9> Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>5 for 1G</f8></div><div style='display:flex; align-items:center;'>Rolled and Smoked, Good to calm nerves.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Trip<f9> Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Mushroom/flower with psychoactive effects.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Sleet<f9> Hard Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Smoked in a pipe to give overwhelming sense of calm.</div><div></div></div><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
                 border-style:solid solid solid none; border-width:1px; border-color:var(--Pink-3);'><ItemTitle style='display:flex; align-items:center; background:var(--Pink-3);'><div style='padding: 1px 5px 1px 2px;'>Fizzyn<f9> Hard Drug</f9></div></ItemTitle><div style='display:flex; align-items:center;'><f8 style='font-weight:800; color:var(--gray-1)'>3G</f8></div><div style='display:flex; align-items:center;'>Smoked in a pipe to give a boost of energy.</div><div></div></div><div style='height:3px;'></div><IPTitle style='background:var(--Orange-4);'>Other Items<f12></f12></IPTitle><div style='display:grid; grid-gap:5px; grid-template-columns:auto auto auto 1fr; padding:0px 3px 0px 0px;
@@ -1167,5 +1205,5 @@
 -->
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Pages/Item_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:28 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Pages/Item_Page.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:34 GMT -->
 </html>

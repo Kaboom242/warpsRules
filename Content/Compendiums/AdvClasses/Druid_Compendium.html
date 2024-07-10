@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Druid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Druid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Druid Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -839,8 +877,9 @@
             <b>Druid</b> are people who have an intense connection to the natural world. They almost always feel more comfortable out in nature then in cities or other crowded places.
             Druids almost always worship Ernok, the God of Nature, and are devoted to protecting the harmony of nature.
             Druids can come from all walks of life, but all find themselves plled ot wild, untamed lands where nature's power and beauty is at it's strongest.
-            <br> <b>Dominions</b> are the parts of the world that the Druid may connect with those places by <b>Harmonizing</b> with them.
-                When Harmonized with a Domain the Druid may perform communions with less cost, summon creatures, and create special aspects.
+            <br> <b>Dominions</b> are the parts of the world that the Druid may connect with those places by  with them.
+            <br> <b>Atuning to a Domain:</b> Druid must be a Survialist 2 in that domain, and fufill the point cost that domain on thier Druidic Aspect Card.
+            <br> <b>Harmonizing:</b> To Harmonize a Druid must have been Atuned to that domain  and be in that domain and therefore may perform communions with less cost, summon creatures, and create special aspects.
             <br> <b>Companions</b> are much like a pet, but with a more powerful and personal connection. Gain a Druid Companion Card.
             <br> <b>Communions</b> involve channeling the power of nature through the Druid's body.
             This can alter the area arond the Druid, but does take a tole on his Body. <b>Wither</b> is the drain this takes on the Druid's life energies.
@@ -1295,164 +1334,179 @@
         </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard  style='background: var(--Druid-1); '><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Druid-4);'>
             <div>Druidic Aspects</div> 
         </rulecardtitle><classsubtitle style='background:var(--Druid-4);'>
-            Items <f7>These be earned as many times as desired.</f7>
+            Items <f7 style='font-weight: 500;'>These be earned as many times as desired.</f7>
         </classsubtitle>
-        <div style='display:grid; grid-template-columns: auto 1fr auto;'>
-            <div style='display:grid; grid-template-columns: 1fr 50px;'>
-                <abilitysubtitle  style='background:var(--Druid-3); color: white; display: flex; align-items: center;border: 1px black solid; border-radius:4px 0px 0px 4px;'>
+        <div style='display:grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 1px;'>
+            <div style='display:grid; grid-template-columns: 1fr 50px; background:var(--Druid-3);'>
+                <abilitysubtitle  style='color: white; display: flex; align-items: center; border-radius:4px 0px 0px 4px;'>
                     Knarled Staff
                 </abilitysubtitle>
-                <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Druid-3);'>
-                    <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                    <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                        <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    </div>
-                </div>
+                <ProgContainer>
+                    <img 
+        src='../../../Resources/Art/Images/1Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
             </div>
-            <div style='display:grid; grid-template-columns: 3fr 2fr;'>
-                <abilitysubtitle  style='background:var(--Druid-3); color: white; align-items: center; border: 1px black solid; border-radius:4px 0px 0px 4px;'>
-                    <f7>Knarled Staff becomes</f7>
-                    <br> Any Druidic Staff
+            <div style='display:grid; grid-template-columns: 3fr 2fr; background:var(--Druid-3);'>
+                <abilitysubtitle  style=' color: white; align-items: center; border-radius:4px 0px 0px 4px;'>
+                    Upgrade Staff
                 </abilitysubtitle>
-                <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px; border: 0.5px solid; border-color:var(--Druid-3);'>
-                    <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/10<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                    <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                        <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
-                    </div>
-                </div>
+                <ProgContainer>
+                    <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+                <div style='grid-column: span 2; color: white; font-size: 7px;'>Wolfwood, Oakbone, Rootantler</div>
             </div>
-            <div style='display:grid; grid-template-columns: auto auto;'>
-                <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+            <div style='display:grid; grid-template-columns: auto auto; background:var(--Druid-3);'>
+                <div  style='border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
                      Brewing<br> Kit
                 </div>
-                 <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                    <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                        <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                    </div>
-                </div>
+                <ProgContainer>
+                    <img 
+        src='../../../Resources/Art/Images/1Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
             </div>
-        </div><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    ;'><div style='text-align:center;'><div style='text-align:left;'><f9>Repair Staff</f9></div></div> <actionSubtitle style='margin-left:3px; margin-top:2px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Druid-2)); border-color:var(--Druid-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
-                                        <nowrap></nowrap>
-                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><f8><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Purple-4);
-        
-        font-weight:700;
-    '>
-        Spirit
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Blue-4);
-        
-        font-weight:700;
-    '>
-        Sense
-    </div></f8></div></challengeInner>
-                                    </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'><f7><sc>2S:</sc> Remove Brk Points. <sc>3S:</sc> Repair Broken Staff.</f7></div></challengeText></challengeContainer></div></actionContainter><classsubtitle style='background:var(--Druid-4);'>
+        </div><classsubtitle style='background:var(--Druid-4);'>
            Domains
-        </classsubtitle><rulebox style='border-color:var(--Druid-3); background:var(--Druid-1);'>
-            Before earning your domain, a druid must learn Survivalist 2 of that same domain.
-        </rulebox>
+        </classsubtitle>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Verdant
+                 Forest
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Temperate gain additional <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs.
+                Req. Survivalist: Verdant.
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Oak
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Hound, Boar, Deer</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Plains</div>      <div style='padding: 0px 4px;'> Boar, Deer</div>      <div style='padding: 0px 4px;'> Agile Cat</div>       <div style='padding: 0px 4px;'> Large Cat</div>
-                    <div style='padding: 0px 4px;'> Pastoral</div>    <div style='padding: 0px 4px;'> Hound, Deer</div>     <div style='padding: 0px 4px;'> Wolf, Elk </div>      <div style='padding: 0px 4px;'> Bear</div>
-                    <div style='padding: 0px 4px;'> Forest</div>      <div style='padding: 0px 4px;'> Boar, Deer</div>      <div style='padding: 0px 4px;'> Wolf, Elk </div>      <div style='padding: 0px 4px;'> Bear</div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Wolf, Elk</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Oak
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Large Cat, Bear</span> 
+                </div>
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Arid
+                 Desert
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Arid gain additional <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs and <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.
+                Req. Survivalist: Arid. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Cactus
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Snake, Deer, Eagle</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Chaparral</div>    <div style='padding: 0px 4px;'> Snake, Deer</div>      <div style='padding: 0px 4px;'> Agile Cat, Terror Bird</div>   <div style='padding: 0px 4px;'> Large Cat</div>
-                    <div style='padding: 0px 4px;'> Desert</div>       <div style='padding: 0px 4px;'> Snake, Eagle</div>     <div style='padding: 0px 4px;'> Agile Cat, Terror Bird</div>   <div style='padding: 0px 4px;'> Crocodile</div>
-                    <div style='padding: 0px 4px;'> Badlands</div>     <div style='padding: 0px 4px;'> Snake, Eagle</div>     <div style='padding: 0px 4px;'> Wolf, Terror Bird</div>        <div style='padding: 0px 4px;'> Crocodile</div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Terror Bird</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Cactus
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Large Cat, Crocodile</span> 
+                </div>
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Lush
+                 Jungle
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Lush gain additional <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs.
+                Req. Survivalist: Lush. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Beast
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Snake, Eagle, Salamander</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Wetlands</div>    <div style='padding: 0px 4px;'> Snake, Eagle</div>        <div style='padding: 0px 4px;'> Agile Cat</div>               <div style='padding: 0px 4px;'> Crocodile</div>
-                    <div style='padding: 0px 4px;'> Rainforest</div>  <div style='padding: 0px 4px;'> Snake, Eagle</div>        <div style='padding: 0px 4px;'> Agile Cat, Terror Bird</div>  <div style='padding: 0px 4px;'> Large Cat </div>
-                    <div style='padding: 0px 4px;'> Jungle</div>      <div style='padding: 0px 4px;'> Snake, Salamander </div>  <div style='padding: 0px 4px;'> Agile Cat, Giant Frog</div>   <div style='padding: 0px 4px;'> Large Cat </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Terror Bird, Giant Frog</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Beast
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Large Cat, Crocodile</span> 
+                </div>
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
@@ -1460,84 +1514,221 @@
                  Arctic
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                When Foraging in Artic gain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs and <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to find Shelter.
+                Req. Survivalist: Lush. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Yeti
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Hound, Eagle, Deer, Boar</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;   border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Alpine</div>          <div style='padding: 0px 4px;'> Hound, Eagle</div>    <div style='padding: 0px 4px;'> Agile Cat, Elk</div>      <div style='padding: 0px 4px;'> Bear</div>
-                    <div style='padding: 0px 4px;'> Tundra</div>          <div style='padding: 0px 4px;'> Hound, Deer</div>     <div style='padding: 0px 4px;'> Wolf, Elk</div>           <div style='padding: 0px 4px;'> Bear </div>
-                    <div style='padding: 0px 4px;'> Coniferous </div>     <div style='padding: 0px 4px;'> Boar, Eagle</div>     <div style='padding: 0px 4px;'> Wolf, Elk</div>           <div style='padding: 0px 4px;'> Bear </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Agile Cat, Elk, Wolf</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Yeti 
-            </div>
-        </div>
-        <div style='display:grid; grid-template-columns: auto 2fr 60px;'>
-            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Freshwater
-            </div>
-            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                Ignore <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> to Combat Checks while swimming in freshwater.
-            </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Bear</span> 
                 </div>
-            </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: auto auto auto auto;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Wetland</div>     <div style='padding: 0px 4px;'> Snake, Piranhas, Salamander </div>    <div style='padding: 0px 4px;'> Turtle, Giant Frog</div>              <div style='padding: 0px 4px;'> Crocodile, Big Turtle</div>
-                    <div style='padding: 0px 4px;'> River</div>       <div style='padding: 0px 4px;'> Crab, Piranhas, Salamander</div>      <div style='padding: 0px 4px;'> Turtle, Dolphin, Giant Frog</div>     <div style='padding: 0px 4px;'> Crocodile, Big Turtle </div>
-                    <div style='padding: 0px 4px;'> Lake </div>       <div style='padding: 0px 4px;'> Crab, Piranhas</div>                  <div style='padding: 0px 4px;'> Turtle, Giant Frog</div>               <div style='padding: 0px 4px;'> Crocodile, Big Turtle </div>
-                </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of Swamp
             </div>
         </div>
         <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
             <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
-                 Oceanic
+                 Mountain
             </div>
             <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
-                Can Drink Seawater. Ignore <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> to Combat Checks while swimming in seawater.
+                Req. Survivalist: Mountain
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Yeti
             </div>
-            <div style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border: 1px black solid; border-radius: 0px 4px 0px 0px; border-color:var(--Druid-3); background:white;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end;'><f8>/5<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
-                <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                    <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:9px; width:9px; border:solid 1px black; border-radius: 5px; font-size:8px; font-weight: 600; justify-content:center;'>i</div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span> </span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span> </span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span> </span> 
                 </div>
             </div>
-            <div class='classdescription' style='grid-column: span 3;  margin-left: 5px; padding-top: 0px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
-                <div style='display:grid; grid-template-columns: 1fr auto auto auto;'>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px 0px 0px 4px;'>Terrain</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 3</div> 
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px;'>Summon: 5</div>
-                    <div style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 0px 4px 4px 0px;'>Summon: 8 (Druid 3)</div>
-                    
-                    <div style='padding: 0px 4px;'> Ice Field</div>     <div style='padding: 0px 4px;'> Seals, Crab</div>               <div style='padding: 0px 4px;'> Walrus, Big Crab</div>                                <div style='padding: 0px 4px;'> Shark, Giant Squid</div>
-                    <div style='padding: 0px 4px;'> Reefs</div>         <div style='padding: 0px 4px;'> Eels, Seals</div>               <div style='padding: 0px 4px;'> Giant Ray, Dolphin, Big Crab</div>                    <div style='padding: 0px 4px;'> Shark </div>
-                    <div style='padding: 0px 4px;'> Ocean </div>        <div style='padding: 0px 4px;'> Jellyfish,Eels, Seals</div>     <div style='padding: 0px 4px;'> Dolphin, Swordfish, Octopus, Big Crab </div>  <div style='padding: 0px 4px;'> Shark </div>
-                    <div style='padding: 0px 4px;'> DeepSea </div>      <div style='padding: 0px 4px;'> Jellyfish, Crab</div>           <div style='padding: 0px 4px;'> Octopus, Swordfish, Big Crab</div>                    <div style='padding: 0px 4px;'> Giant Squid </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 River & Swamp
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Survivalist: River & Swamp. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Swamp
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Crab, Piranhas, Salamander</span> 
                 </div>
-                <hr style='margin: 1px;'>
-                <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of Shark 
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Turtle, Dolphin, Giant Frog</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Crocodile, Big Turtle</span> 
+                </div>
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 Ocean
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Survivalist: Ocean and Sailor. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Shark
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Crab, Jellyfish,Eels, Seals</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Dolphin, Swordfish, Octopus, Big Crab, Walrus</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Shark, Giant Squid</span> 
+                </div>
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 Cave
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Survivalist: Cave.
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Stone
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Snake</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Wolf</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Bear</span> 
+                </div>
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 2fr 80px;'>
+            <div  style='background:var(--Druid-3); border-radius: 4px 0px 0px 4px; color: white;  display: flex; align-items: center; font-weight: 700; font-size: 9px; padding: 1px 2px 1px 5px;'>
+                 Decay
+            </div>
+            <div style='border-left: 1px solid; border-right: 1px solid; border-radius: 0px;font-size: 8px; padding: 2px; font-size: 7px; border: 1px black solid;  border-color:var(--Druid-3); background:white;'>
+                Req. Any Survivalist 2 Terrain and Morgeth. 
+                <br> <b>Aspect Brew</b>(Druid 3)<div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Aspect of the Death
+            </div>
+            <ProgContainer style='background: var(--Druid-3); height: auto;'>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+            <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+            <div class='classdescription' style='grid-column: span 3; display: grid; grid-template-columns: auto auto auto; margin-left: 5px; padding-top: 3px;  border-color:var(--Druid-3);  background: white; font-style: normal;'>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>Summon 3:</span> 
+                    <span>Undead Boar, Hound</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>5:</span>
+                    <span>Undead Wolf</span> 
+                </div>
+                <div>
+                    <span style='background:var(--Druid-2); font-weight:700; padding: 1px 4px; color: white; border-radius: 4px;'>8:<f7>(Druid 3)</f7></span>
+                    <span>Undead Bear, Large Cat</span> 
+                </div>
             </div>
         </div></rulecard></div><div id='Basic' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Basic</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Druid-4);'>
             <div>Druid 1</div>
@@ -1638,7 +1829,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create Circle 1 within 2R for 3 Rounds. All enemies inside are Slow 2.
+            		Create Circle 1 within 1 for 3 Rounds. All enemies inside are Slow 2.
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><f7>Arid/Arctic/Freshwater/Oceanic</f7><br> Mist/Sand Cloud</div></div> <actionSubtitle style='margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
             		Resist 4 Wither (2 Harmonized) w/ <div style='
         display: inline-block;
@@ -1672,7 +1863,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create 1R Circle of Mist around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
+            		Create 1R Circle cloud around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Druid-4);'>
             Brewing
         </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Brew</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
@@ -1813,7 +2004,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create Circle 1 within 2R for 3 Rounds. All enemies inside are Slow 2.
+            		Create Circle 1 within 1 for 3 Rounds. All enemies inside are Slow 2.
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><f7>Arid/Arctic/Freshwater/Oceanic</f7><br> Mist/Sand Cloud</div></div> <actionSubtitle style='margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
             		Resist 4 Wither (2 Harmonized) w/ <div style='
         display: inline-block;
@@ -1847,7 +2038,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create 1R Circle of Mist around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
+            		Create 1R Circle cloud around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Druid-4);'>
             Brewing
         </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Brew</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
@@ -2176,7 +2367,7 @@
         Spirit
     </div>.
                 </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		Create 1R Circle of Mist around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
+            		Create 1 Circle cloud around you for 4 Rounds. Visibility 1 in Mist. Hits in Mist are 6 Only
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'><f7>Arid/Arctic</f7><br> Sand/Snow Blast</div></div> <actionSubtitle style='margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
             		Resist 4 Wither (2 Harmonized) w/ <div style='
         display: inline-block;
@@ -2245,6 +2436,21 @@
         font-weight:700;
     '>
         Endr
+    </div><div style='height:1px;'></div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
     </div>
                     </div></challengeInner>
                                     </challenge>
@@ -2312,7 +2518,7 @@
             
             padding: 0px 0px 0px 0px;
         '></div><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Druid-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>
-                		 Target Resist 3 Poison w/ <div style='
+                		 Targets Resist 3 Poison w/ <div style='
         display: inline-block;
         
         background:white;
@@ -2379,8 +2585,18 @@
     '>
         Sense
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-                    </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Druid-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>
-                		Head
+                    </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><div style='display:flex; align-items:center; margin:0px 2px 0px 2px;'><img 
+        src='../../../Resources/Art/Images/ReturnArrow.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div><challengeHead style='; background:var(--Druid-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>
+                		Push
                     </div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
                 		 <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
         display: inline-block;
@@ -9202,75 +9418,22 @@
         </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Druid-4);'>
             Plant Form
         </abilitysubtitle><rulebox style='border-color:var(--Druid-3); background:var(--Druid-1);'>
-            <b>Plant Mutation:</b> DR1. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to all Rest Action. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Resist Blood Loss.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Plant:</b> May produce 4D Herbs per Week. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hold Breath.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Water:</b> May produce 2D Herbs per Week. Can breath underwater.
-        </rulebox><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Plant: Photosynthesis</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Druid-2)); border-color:var(--Druid-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
-                                        <nowrap></nowrap>
-                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Purple-4);
-        
-        font-weight:700;
-    '>
-        Spirit
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
-                                    </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		<cs>2S:</cs> Don't need to eat today.
-                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Water: Feed From Ocean</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Druid-2)); border-color:var(--Druid-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
-                                        <nowrap></nowrap>
-                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Purple-4);
-        
-        font-weight:700;
-    '>
-        Spirit
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
-                                    </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		<cs>3S:</cs> Don't need to eat today if near ocean.
-                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Decay: Feed From Decay</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Druid-2)); border-color:var(--Druid-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
-                                        <nowrap></nowrap>
-                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Purple-4);
-        
-        font-weight:700;
-    '>
-        Spirit
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
-                                    </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		<cs>3S:</cs> Don't need to eat today if near dead organisms.
+            <b>Plant Mutation:</b> DR1. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to all Rest Action. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Resist Blood Loss. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Resist Exposure.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Artic/Arid/Verdant/Lush:</b> May produce 4D Herbs per Week. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hold Breath.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Fresh Water/Ocean:</b> May produce 2D Herbs per Week. Can breath underwater.
+            <br> <img 
+        src='../../../Resources/Art/Images/Stamina.svg' 
+        height='10px'
+        width='10px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 1px 0px 0px;
+        '> <b>True Communion:</b> May do 2 Communions in a single turn.
+        </rulebox><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Live Off Nature</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+            		If in a Druid Domain: Don't need to eat. Drink 1 Less.
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Gain Follower</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Druid-2)); border-color:var(--Druid-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
@@ -9292,9 +9455,10 @@
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-            		<sc>2S:</sc> Gain Spriggin (Plant)/Mushroom Person (Decay)/Water Elemental (Water). (Max 1)
+            		<sc>2S:</sc> Gain Follower. (Max 1) Type depends on Domain.
+            		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spriggin (Plant)/Mushroom Person (Decay)/Water Elemental (Water).
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Druid-4);'>
-            Plant Form
+            Communion Master
         </abilitysubtitle><div style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px;'><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    ;'><div style='text-align:center;'><div style='text-align:left;'>Remove Wither</div></div> <actionSubtitle style='margin-left:3px; margin-top:2px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Druid-2)); border-color:var(--Druid-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
@@ -9316,41 +9480,10 @@
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Druid-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> -1 Wither.</div></challengeText></challengeContainer></div></actionContainter><div style='display:grid; grid-template-columns:1fr; border-style:solid; border-width:1px; border-color:var(--Druid-3); color:black; font-weight:700; font-size:13px;'>
-                <div style='text-align:right; padding:4px 2px 4px 2px;'>/7 <small>Wither</small></div>
+                <div style='text-align:right; padding:4px 2px 4px 2px;'>/8 <small>Wither</small></div>
                 <div style='text-align:right; padding:0px 1px 0px 1px; margin-top:-5px; font-weight:500;'><f7>Over becomes Fatigue/Wound</f7></div>
             </div></div><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Druid-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Absorb</div></div> <actionSubtitle style='margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:var(--Druid-3); padding:2px; color:black; font-size:; background:white; height:100%;'><div>
-            		Resist 1 Wither w/ <div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Green-4);
-        
-        font-weight:700;
-    '>
-        Endr
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Purple-4);
-        
-        font-weight:700;
-    '>
-        Spirit
-    </div>.
-                    <br> Remove <div style='
+            		Remove <div style='
         display: inline-block;
         
         background:white;
@@ -9856,5 +9989,5 @@
                 </div></challengeText></challengeContainer></div></actionContainter></rulecard></div></div>    </div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Druid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Druid_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 </html>

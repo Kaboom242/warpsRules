@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Ocean_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:36 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Ocean_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:44 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Ocean Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -631,62 +669,115 @@
             display: flex;
         }
         
-        .green1bg {
-            background: var(--Green-1);
+        /* Gray */
+        .gray0bg {
+            background: var(--Gray-0);
         }
-        .green1border {
-            border-color: var(--Green-1);
+        .gray0border {
+            border-color: var(--Gray-0);
         }
-        
-        .green2bg {
-            background: var(--Green-2);
+        .gray1bg {
+            background: var(--Gray-1);
         }
-        .green2border {
-            border-color: var(--Green-2);
+        .gray1border {
+            border-color: var(--Gray-1);
         }
-        
-        .green3bg {
-            background: var(--Green-3);
+        .gray2bg {
+            background: var(--Gray-2);
         }
-        .green3border {
-            border-color: var(--Green-3);
+        .gray2border {
+            border-color: var(--Gray-2);
         }
-        
-        .green4bg {
-            background: var(--Green-4);
+        .gray3bg {
+            background: var(--Gray-3);
         }
-        .green4border {
-            border-color: var(--Green-4);
+        .gray3border {
+            border-color: var(--Gray-3);
         }
-        
-        .turqouise3bg {
-            background: var(--Turquoise-3);
+        .gray4bg {
+            background: var(--Gray-4);
         }
-        .turqouise3border {
-            border-color: var(--Turquoise-3);
+        .gray4border {
+            border-color: var(--Gray-4);
         }
-        
-        .turqouise4bg {
-            background: var(--Turquoise-4);
+        .gray5bg {
+            background: var(--Gray-5);
         }
-        .turqouise4border {
-            border-color: var(--Turquoise-4);
+        .gray5border {
+            border-color: var(--Gray-5);
         }
         
+        /* Red */
+        .red1bg {
+            background: var(--Red-1);
+        }
+        .red1border {
+            border-color: var(--Red-1);
+        }
+        .red2bg {
+            background: var(--Red-2);
+        }
+        .red2border {
+            border-color: var(--Red-2);
+        }
+        .red3bg {
+            background: var(--Red-3);
+        }
+        .red3border {
+            border-color: var(--Red-3);
+        }
+        .red4bg {
+            background: var(--Red-4);
+        }
+        .red4border {
+            border-color: var(--Red-4);
+        }
+        
+        /* Orange */
+        .orange1bg {
+            background: var(--Orange-1);
+        }
+        .orange1border {
+            border-color: var(--Orange-1);
+        }
+        .orange2bg {
+            background: var(--Orange-2);
+        }
+        .orange2border {
+            border-color: var(--Orange-2);
+        }
+        .orange3bg {
+            background: var(--Orange-3);
+        }
+        .orange3border {
+            border-color: var(--Orange-3);
+        }
+        .orange4bg {
+            background: var(--Orange-4);
+        }
+        .orange4border {
+            border-color: var(--Orange-4);
+        }
+        
+        /* Yellow */
+        .yellow1bg {
+            background: var(--Yellow-1);
+        }
+        .yellow1border {
+            border-color: var(--Yellow-1);
+        }
         .yellow2bg {
             background: var(--Yellow-2);
         }
         .yellow2border {
             border-color: var(--Yellow-2);
         }
-        
         .yellow3bg {
             background: var(--Yellow-3);
         }
         .yellow3border {
             border-color: var(--Yellow-3);
         }
-        
         .yellow4bg {
             background: var(--Yellow-4);
         }
@@ -694,6 +785,103 @@
             border-color: var(--Yellow-4);
         }
         
+        /* Green */
+        .green1bg {
+            background: var(--Green-1);
+        }
+        .green1border {
+            border-color: var(--Green-1);
+        }
+        .green2bg {
+            background: var(--Green-2);
+        }
+        .green2border {
+            border-color: var(--Green-2);
+        }
+        .green3bg {
+            background: var(--Green-3);
+        }
+        .green3border {
+            border-color: var(--Green-3);
+        }
+        .green4bg {
+            background: var(--Green-4);
+        }
+        .green4border {
+            border-color: var(--Green-4);
+        }
+        
+        /* Turquoise */
+        .turquoise1bg {
+            background: var(--Turquoise-1);
+        }
+        .turquoise1border {
+            border-color: var(--Turquoise-1);
+        }
+        .turquoise2bg {
+            background: var(--Turquoise-2);
+        }
+        .turquoise2border {
+            border-color: var(--Turquoise-2);
+        }
+        .turquoise3bg {
+            background: var(--Turquoise-3);
+        }
+        .turquoise3border {
+            border-color: var(--Turquoise-3);
+        }
+        .turquoise4bg {
+            background: var(--Turquoise-4);
+        }
+        .turquoise4border {
+            border-color: var(--Turquoise-4);
+        }
+        
+        /* Blue */
+        .blue1bg {
+            background: var(--Blue-1);
+        }
+        .blue1border {
+            border-color: var(--Blue-1);
+        }
+        .blue2bg {
+            background: var(--Blue-2);
+        }
+        .blue2border {
+            border-color: var(--Blue-2);
+        }
+        .blue3bg {
+            background: var(--Blue-3);
+        }
+        .blue3border {
+            border-color: var(--Blue-3);
+        }
+        .blue4bg {
+            background: var(--Blue-4);
+        }
+        .blue4border {
+            border-color: var(--Blue-4);
+        }
+        
+        /* Purple */
+        .purple1bg {
+            background: var(--Purple-1);
+        }
+        .purple1border {
+            border-color: var(--Purple-1);
+        }
+        .purple2bg {
+            background: var(--Purple-2);
+        }
+        .purple2border {
+            border-color: var(--Purple-2);
+        }
+        .purple3bg {
+            background: var(--Purple-3);
+        }
+        .purple3border {
+            border-color: var(--Purple-3);
+        }
         .purple4bg {
             background: var(--Purple-4);
         }
@@ -701,26 +889,162 @@
             border-color: var(--Purple-4);
         }
         
-        .blue2bg {
-            background: var(--Blue-2);
+        /* Pink */
+        .pink1bg {
+            background: var(--Pink-1);
         }
-        .blue2border {
-            border-color: var(--Blue-2);
+        .pink1border {
+            border-color: var(--Pink-1);
+        }
+        .pink2bg {
+            background: var(--Pink-2);
+        }
+        .pink2border {
+            border-color: var(--Pink-2);
+        }
+        .pink3bg {
+            background: var(--Pink-3);
+        }
+        .pink3border {
+            border-color: var(--Pink-3);
+        }
+        .pink4bg {
+            background: var(--Pink-4);
+        }
+        .pink4border {
+            border-color: var(--Pink-4);
         }
         
-        .blue3bg {
-            background: var(--Blue-3);
+        /* DarkGreen */
+        .darkgreen1bg {
+            background: var(--DarkGreen-1);
         }
-        .blue3border {
-            border-color: var(--Blue-3);
+        .darkgreen1border {
+            border-color: var(--DarkGreen-1);
+        }
+        .darkgreen2bg {
+            background: var(--DarkGreen-2);
+        }
+        .darkgreen2border {
+            border-color: var(--DarkGreen-2);
+        }
+        .darkgreen3bg {
+            background: var(--DarkGreen-3);
+        }
+        .darkgreen3border {
+            border-color: var(--DarkGreen-3);
+        }
+        .darkgreen4bg {
+            background: var(--DarkGreen-4);
+        }
+        .darkgreen4border {
+            border-color: var(--DarkGreen-4);
         }
         
-        .blue4bg {
-            background: var(--Blue-4);
+        /* DarkBlue */
+        .darkblue1bg {
+            background: var(--DarkBlue-1);
         }
-        .blue4border {
-            border-color: var(--Blue-4);
+        .darkblue1border {
+            border-color: var(--DarkBlue-1);
         }
+        .darkblue2bg {
+            background: var(--DarkBlue-2);
+        }
+        .darkblue2border {
+            border-color: var(--DarkBlue-2);
+        }
+        .darkblue3bg {
+            background: var(--DarkBlue-3);
+        }
+        .darkblue3border {
+            border-color: var(--DarkBlue-3);
+        }
+        .darkblue4bg {
+            background: var(--DarkBlue-4);
+        }
+        .darkblue4border {
+            border-color: var(--DarkBlue-4);
+        }
+        
+        /* DarkYellow */
+        .darkyellow1bg {
+            background: var(--DarkYellow-1);
+        }
+        .darkyellow1border {
+            border-color: var(--DarkYellow-1);
+        }
+        .darkyellow2bg {
+            background: var(--DarkYellow-2);
+        }
+        .darkyellow2border {
+            border-color: var(--DarkYellow-2);
+        }
+        .darkyellow3bg {
+            background: var(--DarkYellow-3);
+        }
+        .darkyellow3border {
+            border-color: var(--DarkYellow-3);
+        }
+        .darkyellow4bg {
+            background: var(--DarkYellow-4);
+        }
+        .darkyellow4border {
+            border-color: var(--DarkYellow-4);
+        }
+        
+        /* DarkRed */
+        .darkred1bg {
+            background: var(--DarkRed-1);
+        }
+        .darkred1border {
+            border-color: var(--DarkRed-1);
+        }
+        .darkred2bg {
+            background: var(--DarkRed-2);
+        }
+        .darkred2border {
+            border-color: var(--DarkRed-2);
+        }
+        .darkred3bg {
+            background: var(--DarkRed-3);
+        }
+        .darkred3border {
+            border-color: var(--DarkRed-3);
+        }
+        .darkred4bg {
+            background: var(--DarkRed-4);
+        }
+        .darkred4border {
+            border-color: var(--DarkRed-4);
+        }
+        
+        /* DarkPurple */
+        .darkpurple1bg {
+            background: var(--DarkPurple-1);
+        }
+        .darkpurple1border {
+            border-color: var(--DarkPurple-1);
+        }
+        .darkpurple2bg {
+            background: var(--DarkPurple-2);
+        }
+        .darkpurple2border {
+            border-color: var(--DarkPurple-2);
+        }
+        .darkpurple3bg {
+            background: var(--DarkPurple-3);
+        }
+        .darkpurple3border {
+            border-color: var(--DarkPurple-3);
+        }
+        .darkpurple4bg {
+            background: var(--DarkPurple-4);
+        }
+        .darkpurple4border {
+            border-color: var(--DarkPurple-4);
+        }
+
         
     </style>
 
@@ -978,7 +1302,7 @@
         font-weight:700;
     '>
         Int
-    </div> <sc>2S:</sc> Avoid. <fc>1S or Less:</fc> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to all Hulls</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Events</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Island:</b>  <span style='padding: 0px 2px;'>You see a small island. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Food, <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Desert Island:</b>  <span style='padding: 0px 2px;'>Small sandy island with a few palm trees, and rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Island Village:</b>  <span style='padding: 0px 2px;'>Island with a small fishing village. Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale, +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Crew Health.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Shipwreck Island:</b>  <span style='padding: 0px 2px;'>Island with A Smashed Ships on the rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Derelict Ship:</b>  <span style='padding: 0px 2px;'>Ship with no crew, abandoned.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 6 : </span></b></div><div><b>  Pirates:</b>  <span style='padding: 0px 2px;'>Pirate Ship threatens ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 12 : </span></b></div><div><b>  Mer-People:</b>  <span style='padding: 0px 2px;'>Hostile Merpeople treat with ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Fishfolk:</b>  <span style='padding: 0px 2px;'>A group of fishfolk ambush the crew in the night.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 - 18 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Plesiosaurus:</b>  <span style='padding: 0px 2px;'>An angry Plesiosaurus attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>19 - 21 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Moray Eel:</b>  <span style='padding: 0px 2px;'>An angry Dire Moray Eel attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>22 - 24 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Sea Serpents:</b>  <span style='padding: 0px 2px;'>A group of Sea Serpents and a Lightning Eel attack the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Kraken:</b>  <span style='padding: 0px 2px;'>A Kraken attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Whale:</b>  <span style='padding: 0px 2px;'>A Dire Wheel attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>27 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Jellyfish Queen:</b>  <span style='padding: 0px 2px;'>A giant Jellyfish rises into the air and launches jellyfish brood onto the ship.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Tidal Maw:</b>  <span style='padding: 0px 2px;'>A giant whrilpool opens into the sea swallowing all that is near. Those who survive find they are inside the stomach of a truly monsterously sized whale. Other things seem to live inside as well.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Serpent Hurricane:</b>  <span style='padding: 0px 2px;'>At the center of the Storm, Twists a massive spinning Sea serpent, Lightning firing from its eye like scales</span> </div></div></div></div><div></div></SectionContainer></RegionPage><RegionPage style='background:white; color:black;'><RegionTitle class='blue3bg'>Clam Ocean </RegionTitle><SectionContainer class='blue3border' style='font-size:10px; grid-column:1/-1; padding:1px 4px 1px 4px;'>An ocean that often has few winds.</SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Wind<f8>&nbsp;&nbsp;(Weekly)</f8></div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
+    </div> <sc>2S:</sc> Avoid. <fc>1S or Less:</fc> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to all Hulls</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Events</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Island:</b>  <span style='padding: 0px 2px;'>You see a small island. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Food, <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Desert Island:</b>  <span style='padding: 0px 2px;'>Small sandy island with a few palm trees, and rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Island Village:</b>  <span style='padding: 0px 2px;'>Island with a small fishing village. Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale, +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Crew Health.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Shipwreck Island:</b>  <span style='padding: 0px 2px;'>Island with A Smashed Ships on the rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Derelict Ship:</b>  <span style='padding: 0px 2px;'>Ship with no crew, abandoned.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 6 : </span></b></div><div><b>  Pirates:</b>  <span style='padding: 0px 2px;'>Pirate Ship threatens ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 12 : </span></b></div><div><b>  Mer-People:</b>  <span style='padding: 0px 2px;'>Hostile Merpeople treat with ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Fishfolk:</b>  <span style='padding: 0px 2px;'>A group of fishfolk ambush the crew in the night.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 - 18 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Plesiosaurus:</b>  <span style='padding: 0px 2px;'>An angry Plesiosaurus attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>19 - 21 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Moray Eel:</b>  <span style='padding: 0px 2px;'>An angry Dire Moray Eel attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>22 - 24 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Sea Serpents:</b>  <span style='padding: 0px 2px;'>A group of Sea Serpents and a Lightning Eel attack the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Kraken:</b>  <span style='padding: 0px 2px;'>A Kraken attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Whale:</b>  <span style='padding: 0px 2px;'>A Dire Wheel attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>27 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Jellyfish Queen:</b>  <span style='padding: 0px 2px;'>A giant Jellyfish rises into the air and launches jellyfish brood onto the ship.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Tidal Maw:</b>  <span style='padding: 0px 2px;'>A giant whrilpool opens into the sea swallowing all that is near. Those who survive find they are inside the stomach of a truly monsterously sized whale. Other things seem to live inside as well.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Serpent Hurricane:</b>  <span style='padding: 0px 2px;'>At the center of the Storm, Twists a massive spinning Sea serpent, Lightning firing from its eye like scales</span> </div></div></div></div><div></div></SectionContainer></RegionPage><RegionPage style='background:white; color:black;'><RegionTitle class='blue3bg'>Calm Ocean </RegionTitle><SectionContainer class='blue3border' style='font-size:10px; grid-column:1/-1; padding:1px 4px 1px 4px;'>An ocean that often has few winds.</SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Wind<f8>&nbsp;&nbsp;(Weekly)</f8></div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
     <b>1:</b> Stopped. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>2:</b> Stopped. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>3:</b> Halved. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>4:</b> <b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>5:</b> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>6:</b> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>.
 </div></div></SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Drift</div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
     <b>Direction:</b> If this is first day drifting roll for random direction.
@@ -1095,7 +1419,7 @@
     '>
         Endr
     </div>. <sc>3S:</sc> Unbeach ship. (Requires whole crew.)
-    </span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Events</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Island:</b>  <span style='padding: 0px 2px;'>You see a small island. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Food, <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Desert Island:</b>  <span style='padding: 0px 2px;'>Small sandy island with a few palm trees, and rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Island Village:</b>  <span style='padding: 0px 2px;'>Island with a small fishing village. Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale, +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Crew Health.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Shipwreck Island:</b>  <span style='padding: 0px 2px;'>Island with A Smashed Ships on the rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Derelict Ship:</b>  <span style='padding: 0px 2px;'>Ship with no crew, abandoned.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 6 : </span></b></div><div><b>  Pirates:</b>  <span style='padding: 0px 2px;'>Pirate Ship threatens ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 12 : </span></b></div><div><b>  Mer-People:</b>  <span style='padding: 0px 2px;'>Hostile Merpeople treat with ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Fishfolk:</b>  <span style='padding: 0px 2px;'>A group of fishfolk ambush the crew in the night.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 - 18 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Plesiosaurus:</b>  <span style='padding: 0px 2px;'>An angry Plesiosaurus attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>19 - 21 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Moray Eel:</b>  <span style='padding: 0px 2px;'>An angry Dire Moray Eel attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>22 - 24 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Sea Serpents:</b>  <span style='padding: 0px 2px;'>A group of Sea Serpents attack the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Jellyfish Dreadnought:</b>  <span style='padding: 0px 2px;'>A group of Jellyfish Dreadnoughts attack the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Whale:</b>  <span style='padding: 0px 2px;'>A Dire Wheel attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>27 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Leviathan:</b>  <span style='padding: 0px 2px;'>A Leviathan attempts to destroy the ship.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Cannibal Bay:</b>  <span style='padding: 0px 2px;'>A dangeroud reef which contains small rocky out croppings and the remains of many vessels. There is no food on these rocky island chains and those that survive tend to do so by cannibalizing on the new comers that get caught on the reef.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Transparent Sea:</b>  <span style='padding: 0px 2px;'>The Blue murky waters clear up slowly revealing the sea floor, and all the fish swiming underneath, At the center lays a beatiful underwater city and palace.</span> </div></div></div></div><div></div></SectionContainer></RegionPage><RegionPage style='background:white; color:black;'><RegionTitle class='blue3bg'>Icy Ocean </RegionTitle><SectionContainer class='blue3border' style='font-size:10px; grid-column:1/-1; padding:1px 4px 1px 4px;'>An icy ocean that sometimes freezes over and has icebergs.</SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Wind<f8>&nbsp;&nbsp;(Weekly)</f8></div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
+    </span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Events</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Island:</b>  <span style='padding: 0px 2px;'>You see a small island. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Food, <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Desert Island:</b>  <span style='padding: 0px 2px;'>Small sandy island with a few palm trees, and rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Island Village:</b>  <span style='padding: 0px 2px;'>Island with a small fishing village. Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale, +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Crew Health.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Shipwreck Island:</b>  <span style='padding: 0px 2px;'>Island with A Smashed Ships on the rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Derelict Ship:</b>  <span style='padding: 0px 2px;'>Ship with no crew, abandoned.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 6 : </span></b></div><div><b>  Pirates:</b>  <span style='padding: 0px 2px;'>Pirate Ship threatens ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 12 : </span></b></div><div><b>  Mer-People:</b>  <span style='padding: 0px 2px;'>Hostile Merpeople treat with ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Fishfolk:</b>  <span style='padding: 0px 2px;'>A group of fishfolk ambush the crew in the night.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 - 18 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Plesiosaurus:</b>  <span style='padding: 0px 2px;'>An angry Plesiosaurus attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>19 - 21 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Moray Eel:</b>  <span style='padding: 0px 2px;'>An angry Dire Moray Eel attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>22 - 24 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Sea Serpents:</b>  <span style='padding: 0px 2px;'>A group of Sea Serpents attack the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Jellyfish Dreadnought:</b>  <span style='padding: 0px 2px;'>A group of Jellyfish Dreadnoughts attack the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Whale:</b>  <span style='padding: 0px 2px;'>A Dire Wheel attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>27 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Leviathan:</b>  <span style='padding: 0px 2px;'>A Leviathan attempts to destroy the ship.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Cannibal Bay:</b>  <span style='padding: 0px 2px;'>A dangeroud reef which contains small rocky out croppings and the remains of many vessels. There is no food on these rocky island chains and those that survive tend to do so by cannibalizing on the new comers that get caught on the reef.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Transparent Sea:</b>  <span style='padding: 0px 2px;'>The Blue murky waters clear up slowly revealing the sea floor, and all the fish swiming underneath, At the center lays a beatiful underwater city and palace.</span> </div></div></div></div><div></div></SectionContainer></RegionPage><RegionPage style='background:white; color:black;'><RegionTitle class='blue3bg'>Polar Ocean </RegionTitle><SectionContainer class='blue3border' style='font-size:10px; grid-column:1/-1; padding:1px 4px 1px 4px;'>An icy ocean that sometimes freezes over and has icebergs.</SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Wind<f8>&nbsp;&nbsp;(Weekly)</f8></div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
     <b>1:</b> Stopped. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>2:</b> <b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>3:</b> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>4:</b> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>5:</b> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>6:</b> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>.
 </div></div></SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Drift</div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
     <b>Direction:</b> If this is first day drifting roll for random direction.
@@ -1122,7 +1446,7 @@
                                     <br>6: More Severe
                                 </div>
                             </div>
-                        </div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 4 : </span></b></div><div><b>  Rain:</b>  <span style='padding: 0px 2px;'>The ship hulls is pelted with rain.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 - 8 : </span></b></div><div><b>  Hail:</b>  <span style='padding: 0px 2px;'>Does <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to each part of Ship and <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to the Crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 - 12 : </span></b></div><div><b>  Gale:</b>  <span style='padding: 0px 2px;'>Move Ship <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> in Random Direction. Stop at coast.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 16 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Winter, Spring</div> Drift Ice:</b>  <span style='padding: 0px 2px;'>Ship is trapped and cannot move. Drift Ice may encompass up to <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> World Spaces May attempt to walk on ice.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Obstacle</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 3 : </span></b></div><div><b>  Rotten Food:</b>  <span style='padding: 0px 2px;'>Lose <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> casks of food due to rats and rot.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 - 6 : </span></b></div><div><b>  Lost Water:</b>  <span style='padding: 0px 2px;'>Lose <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> casks of water due to leaks and damage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 9 : </span></b></div><div><b>  Whirlpool:</b>  <span style='padding: 0px 2px;'><b>Ship Challenge:</b> <div style='
+                        </div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 4 : </span></b></div><div><b>  Rain:</b>  <span style='padding: 0px 2px;'>The ship hulls is pelted with rain.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 - 8 : </span></b></div><div><b>  Hail:</b>  <span style='padding: 0px 2px;'>Does <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to each part of Ship and <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to the Crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 - 12 : </span></b></div><div><b>  Gale:</b>  <span style='padding: 0px 2px;'>Move Ship <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> in Random Direction. Stop at coast.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 16 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Winter, Spring</div> Drift Ice:</b>  <span style='padding: 0px 2px;'>Ship is trapped and cannot move. Drift Ice may encompass up to <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> World Spaces May attempt to walk on ice.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>17 - 20 : </span></b></div><div><b>  Snowstorm:</b>  <span style='padding: 0px 2px;'>Visibility is reduced to zero. Move at half speed.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>21 - 24 : </span></b></div><div><b>  Freezing Fog:</b>  <span style='padding: 0px 2px;'>The temperature drops drastically, causing icy conditions. Crew must make a toughness check or suffer <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> cold damage.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Obstacle</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 3 : </span></b></div><div><b>  Rotten Food:</b>  <span style='padding: 0px 2px;'>Lose <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> casks of food due to rats and rot.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 - 6 : </span></b></div><div><b>  Lost Water:</b>  <span style='padding: 0px 2px;'>Lose <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> casks of water due to leaks and damage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 9 : </span></b></div><div><b>  Whirlpool:</b>  <span style='padding: 0px 2px;'><b>Ship Challenge:</b> <div style='
         display: inline-block;
         
         background:white;
@@ -1182,12 +1506,96 @@
         font-weight:700;
     '>
         Int
-    </div> <sc>2S:</sc> Avoid. <fc>1S or Less:</fc> <b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to chosen Hull.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Events</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Island:</b>  <span style='padding: 0px 2px;'>You see a small island. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Food, <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Desert Island:</b>  <span style='padding: 0px 2px;'>Small sandy island with a few palm trees, and rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Island Village:</b>  <span style='padding: 0px 2px;'>Island with a small fishing village. Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale, +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Crew Health.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Shipwreck Island:</b>  <span style='padding: 0px 2px;'>Island with A Smashed Ships on the rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Derelict Ship:</b>  <span style='padding: 0px 2px;'>Ship with no crew, abandoned.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 6 : </span></b></div><div><b>  Pirates:</b>  <span style='padding: 0px 2px;'>Pirate Ship threatens ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 12 : </span></b></div><div><b>  Mer-People:</b>  <span style='padding: 0px 2px;'>Hostile Merpeople treat with ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 17 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Plesiosaurus:</b>  <span style='padding: 0px 2px;'>An angry Plesiosaurus attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>18 - 20 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Sea Serpents:</b>  <span style='padding: 0px 2px;'>A group of Sea Serpents attack the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>21 - 23 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Jellyfish Dreadnought:</b>  <span style='padding: 0px 2px;'>A group of Jellyfish Dreadnoughts attack the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>24 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Kraken:</b>  <span style='padding: 0px 2px;'>A Kraken attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Whale:</b>  <span style='padding: 0px 2px;'>A Dire Wheel attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Jellyfish Queen:</b>  <span style='padding: 0px 2px;'>A giant Jellyfish rises into the air and launches jellyfish brood onto the ship.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Icy Graveyard:</b>  <span style='padding: 0px 2px;'>An icefield which has trapped many ships inside it. Some of the ships are abadonded or long dead. Some may contain crew still trying to survive in the ice prison.
-        It is rumored a giant monster lurks under the icefield and the only way to free the ship would be to attack it head on.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Mirror Sea:</b>  <span style='padding: 0px 2px;'>Late at night, the Sea darkens and turns as black as the night sky, shining point like lights start to twinkle in the water, the sky's inky visage slowly fades to blue the starts grow into tiny floating bits of ice.
-        The crew get the sensation they are sailing upside down among the stars, looking up at the sea above them. As they sail to unknown places before the twilight of dawn reverses the effect.
-        </span> </div></div></div></div><div></div></SectionContainer></RegionPage></div>    <div style='font-weight:700; margin:10px 5px 5px 5px; color:white; font-size:25px;'>Specific Oceans</div>
+    </div> <sc>2S:</sc> Avoid. <fc>1S or Less:</fc> <b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to chosen Hull.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 15 : </span></b></div><div><b>  Frozen Rigging:</b>  <span style='padding: 0px 2px;'>The rigging freezes, making it difficult to maneuver. Lose 1S<div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> speed for the next <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> days.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 - 18 : </span></b></div><div><b>  Ice Floes:</b>  <span style='padding: 0px 2px;'>Navigating through ice floes is treacherous. Reduce speed by half.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Events</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Island:</b>  <span style='padding: 0px 2px;'>You see a small island. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Food, <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Desert Island:</b>  <span style='padding: 0px 2px;'>Small sandy island with a few palm trees, and rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Island Village:</b>  <span style='padding: 0px 2px;'>Island with a small fishing village. Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale, +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Crew Health.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Shipwreck Island:</b>  <span style='padding: 0px 2px;'>Island with A Smashed Ships on the rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Derelict Ship:</b>  <span style='padding: 0px 2px;'>Ship with no crew, abandoned.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 6 : </span></b></div><div><b>  Pirates:</b>  <span style='padding: 0px 2px;'>Pirate Ship threatens ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 12 : </span></b></div><div><b>  Mer-People:</b>  <span style='padding: 0px 2px;'>Hostile Merpeople treat with ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 17 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Plesiosaurus:</b>  <span style='padding: 0px 2px;'>An angry Plesiosaurus attacks the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>18 - 20 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Sea Serpents:</b>  <span style='padding: 0px 2px;'>A group of Sea Serpents attack the boat.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>21 - 23 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Jellyfish Dreadnought:</b>  <span style='padding: 0px 2px;'>A group of Jellyfish Dreadnoughts attack the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>24 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Kraken:</b>  <span style='padding: 0px 2px;'>A Kraken attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Whale:</b>  <span style='padding: 0px 2px;'>A Dire Wheel attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Jellyfish Queen:</b>  <span style='padding: 0px 2px;'>A giant Jellyfish rises into the air and launches jellyfish brood onto the ship.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Icy Graveyard:</b>  <span style='padding: 0px 2px;'>An icefield which has trapped many ships inside it. Some of the ships are abandoned or long dead. Some may contain crew still trying to survive in the ice prison. It is rumored a giant monster lurks under the icefield and the only way to free the ship would be to attack it head on.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Mirror Sea:</b>  <span style='padding: 0px 2px;'>Late at night, the sea darkens and turns as black as the night sky, with shining point-like lights starting to twinkle in the water. The sky's inky visage slowly fades to blue and the stars grow into tiny floating bits of ice. The crew gets the sensation they are sailing upside down among the stars, looking up at the sea above them as they sail to unknown places before the twilight of dawn reverses the effect.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Frozen Wrecks:</b>  <span style='padding: 0px 2px;'>A field of frozen wrecks lies ahead. The ships are covered in ice and may hold valuable cargo or deadly traps. Investigating these wrecks could yield great rewards or peril.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Ancient Iceberg:</b>  <span style='padding: 0px 2px;'>An iceberg with ancient carvings and symbols is spotted. It could be a marker for hidden treasure or a warning of dangers ahead. Deciphering the carvings may reveal its secrets.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Frozen Citadel:</b>  <span style='padding: 0px 2px;'>A massive ice structure looms on the horizon. This ancient citadel, encased in ice, could hold treasures of a long-forgotten empire or be the home of powerful ice sorcerers. Exploring it could be dangerous but rewarding.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b>  Glacial Cavern:</b>  <span style='padding: 0px 2px;'>A hidden cavern beneath a glacier is discovered. It is said that this cavern leads to the lair of a strong creature guards immense riches. Only the bravest or most foolhardy would dare to enter.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b>  Ship of the Damned:</b>  <span style='padding: 0px 2px;'>An eerie, spectral ship is seen drifting in the icy waters. It is said to be crewed by the souls of sailors who died in these frigid seas. Boarding this ship could lead to a wealth of knowledge or a curse upon the crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b>  Lost Expedition:</b>  <span style='padding: 0px 2px;'>Signs of a lost expedition appear, including abandoned camps and equipment. Following these clues might lead to survivors, hidden relics, or even a map to a legendary artifact buried in the ice.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b>  Frozen Temple:</b>  <span style='padding: 0px 2px;'>A temple dedicated to a forgotten ice deity is found encased in a glacier. The temple might hold sacred artifacts, forbidden knowledge, or dangerous guardians that protect its secrets.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b>  Icebound Forest:</b>  <span style='padding: 0px 2px;'>A forest of trees entirely encased in ice lies ahead. Legends say the forest is enchanted, and those who enter might find themselves lost in time or discover hidden portals to other realms.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b>  Cursed Shipwreck:</b>  <span style='padding: 0px 2px;'>A shipwreck on the ice shows signs of a violent end. Investigation might reveal a tragic story, haunted spirits, or cursed treasure that brings misfortune to those who claim it.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b>  Aurora's Gate:</b>  <span style='padding: 0px 2px;'>A shimmering gateway appears in the sky, formed by the Northern Lights. It is said to lead to a mythical realm of ice and snow, where ancient beings reside. Entering it could provide immense power or eternal entrapment.</span> </div></div></div></div><div></div></SectionContainer></RegionPage><RegionPage style='background:white; color:black;'><RegionTitle class='blue3bg'>Tropical Ocean </RegionTitle><SectionContainer class='blue3border' style='font-size:10px; grid-column:1/-1; padding:1px 4px 1px 4px;'>A warm, vibrant ocean filled with colorful coral reefs, seagrass meadows, and an abundance of marine life.</SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Wind<f8>&nbsp;&nbsp;(Weekly)</f8></div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
+    <b>1:</b> Stopped. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>2:</b> <b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>3:</b> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>4:</b> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>5:</b> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>6:</b> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>.
+</div></div></SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg ' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; margin:1px;'>Drift</div><div style='padding:1px 2px 1px 2px; font-size:10px;'>
+    <b>Direction:</b> If this is first day drifting roll for random direction.
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>1/2:</b> 45-90 degrees counter clockwise of previous direction. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>3/4:</b> Same as previous direction. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>5/6:</b> 45-90 degrees clockwise of previous direction.
+    <br><b>Distance:</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>.
+</div></div></SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Temperature</div><div style='padding:1px 2px 1px 2px; font-size:9px;'>    
+    <b>Summer:</b> Warm <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Heat
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Fall/Spring:</b> Warm <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Heat
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Winter:</b> Mild <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> Heat
+</div></div></SectionContainer><SectionContainer class='blue3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><SectionTitle class='blue3bg' style='font-size:14px;'>
+                    Events
+                    <span style='font-size:9px;'>&nbsp;&nbsp; 1-12 None,&nbsp;&nbsp; 13-14: Weather,&nbsp;&nbsp; 15-16: Obstacle,&nbsp;&nbsp; 17: Events,&nbsp;&nbsp;
+                    18-19: Encounters,&nbsp;&nbsp; 20: Hooks</span>
+                </SectionTitle><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px; flex-direction:column;'>
+                            <div>Weather</div>
+                            <div style='font-size:7px; display:inline-block;'>
+                                <div>
+                                    Daily Progression (d6)
+                                    <br>1/2: End Event
+                                    <br>3: Less Severe
+                                    <br>4/5: No Change
+                                    <br>6: More Severe
+                                </div>
+                            </div>
+                        </div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 4 : </span></b></div><div><b>  Clear Skies:</b>  <span style='padding: 0px 2px;'>The sun shines brightly, with no clouds in sight.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 - 8 : </span></b></div><div><b>  Tropical Storm:</b>  <span style='padding: 0px 2px;'>Heavy rain and strong winds batter the ship. <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to sails.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 - 12 : </span></b></div><div><b>  Heatwave:</b>  <span style='padding: 0px 2px;'>Intense heat causes fatigue. <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Fatigue to crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 16 : </span></b></div><div><b>  Calm Seas:</b>  <span style='padding: 0px 2px;'>The ocean is eerily calm, with hardly a wave in sight.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Obstacle</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 3 : </span></b></div><div><b>  Coral Reef:</b>  <span style='padding: 0px 2px;'>Ship must navigate through a dense coral reef. <b>Ship Challenge:</b> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int
+    </div> <sc>2S:</sc> Avoid damage. <fc>1S or Less:</fc> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to hull.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 - 6 : </span></b></div><div><b>  Seaweed Tangled:</b>  <span style='padding: 0px 2px;'>Propeller or rudder gets tangled in seaweed. Takes <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> hours to clear.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 9 : </span></b></div><div><b>  Sandbank:</b>  <span style='padding: 0px 2px;'>Ship runs aground on a hidden sandbank. <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to hull. Takes <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> hours to free.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 - 12 : </span></b></div><div><b>  Whirlpool:</b>  <span style='padding: 0px 2px;'><b>Ship Challenge:</b> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int
+    </div> <sc>3S:</sc> Avoid. <fc>2S or Less:</fc> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to all hulls and <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg to crew.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Events</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Island:</b>  <span style='padding: 0px 2px;'>You see a small tropical island. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Food, <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Water.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Desert Island:</b>  <span style='padding: 0px 2px;'>Small sandy island with a few palm trees, and rocks.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Island Village:</b>  <span style='padding: 0px 2px;'>Island with a small fishing village. Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale, +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Crew Health.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Shipwreck:</b>  <span style='padding: 0px 2px;'>Wreck of an old ship is found. Possible valuable salvage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Floating Debris:</b>  <span style='padding: 0px 2px;'>Drifting wood and debris, possibly from a wreck or lost cargo.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b>  Volcanic Island:</b>  <span style='padding: 0px 2px;'>A volcanic island is spotted, with smoke and occasional lava flows. Rich in minerals but dangerous.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b>  Mysterious Fog:</b>  <span style='padding: 0px 2px;'>A thick fog envelops the ship, reducing visibility to near zero. Strange lights are seen in the mist.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 6 : </span></b></div><div><b>  Piranha Swarm:</b>  <span style='padding: 0px 2px;'>A swarm of piranhas attacks, biting crew and damaging the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 - 12 : </span></b></div><div><b>  Jellyfish:</b>  <span style='padding: 0px 2px;'>A large group of jellyfish drifts near the ship. Contact causes stings and damage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 18 : </span></b></div><div><b>  Cookie Cutter Shark:</b>  <span style='padding: 0px 2px;'>Small but vicious, these sharks take circular bites out of the hull.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>19 - 24 : </span></b></div><div><b>  Shark:</b>  <span style='padding: 0px 2px;'>A lone shark circles the ship, threatening to attack.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>25 - 29 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Puffer Fish:</b>  <span style='padding: 0px 2px;'>A giant puffer fish inflates and threatens to ram the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>30 - 34 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Swordfish:</b>  <span style='padding: 0px 2px;'>A swordfish uses its sharp bill to puncture the hull.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>35 - 39 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Lionfish:</b>  <span style='padding: 0px 2px;'>A massive lionfish, with venomous spines, approaches the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>40 - 44 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Giant Catfish:</b>  <span style='padding: 0px 2px;'>A giant catfish bumps against the hull, causing damage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>45 - 49 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Giant Mantis Shrimp:</b>  <span style='padding: 0px 2px;'>A giant mantis shrimp, with powerful claws, attacks the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>50 - 54 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Electric Eel:</b>  <span style='padding: 0px 2px;'>A massive electric eel sends shocks through the water, affecting the crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>55 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Giant Octopus:</b>  <span style='padding: 0px 2px;'>A giant octopus wraps its tentacles around the ship, trying to pull it under.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>56 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Giant Clam:</b>  <span style='padding: 0px 2px;'>A giant clam with a tentacle tongue snaps at the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>57 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Fish Mage (Aboleth):</b>  <span style='padding: 0px 2px;'>A powerful Fish Mage uses magic to attack the ship and control the crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>58 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Kraken:</b>  <span style='padding: 0px 2px;'>A Kraken attempts to destroy the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>59 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Leviathan:</b>  <span style='padding: 0px 2px;'>A Leviathan rises from the depths, threatening to swallow the ship whole.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>60 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Moray Eel:</b>  <span style='padding: 0px 2px;'>A giant moray eel slithers onto the deck, attacking the crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>61 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Plesiosaurus:</b>  <span style='padding: 0px 2px;'>A Plesiosaurus emerges, trying to capsize the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>62 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Dire Whale:</b>  <span style='padding: 0px 2px;'>A massive whale crashes into the ship, causing significant damage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>63 - 68 : </span></b></div><div><b>  Merperson:</b>  <span style='padding: 0px 2px;'>A merperson with a fish body approaches, curious but cautious.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>69 - 74 : </span></b></div><div><b>  Merperson Soldier:</b>  <span style='padding: 0px 2px;'>A group of merperson soldiers, armed and ready for conflict.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>75 - 80 : </span></b></div><div><b>  Merperson Mage:</b>  <span style='padding: 0px 2px;'>A merperson mage uses water magic to either aid or hinder the crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>81 - 86 : </span></b></div><div><b>  Merperson Bard / Siren:</b>  <span style='padding: 0px 2px;'>A merperson bard or siren sings, luring the crew into a trance.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>87 - 92 : </span></b></div><div><b>  Fishman:</b>  <span style='padding: 0px 2px;'>A humanoid fishman approaches, possibly seeking trade or conflict.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>93 - 98 : </span></b></div><div><b>  Fishman Lord:</b>  <span style='padding: 0px 2px;'>A fishman lord, commanding several fishfolk, makes demands of the crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>99 - 104 : </span></b></div><div><b>  OctoPerson:</b>  <span style='padding: 0px 2px;'>A being with an octopus body and humanoid features engages the crew.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>105 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Scylla:</b>  <span style='padding: 0px 2px;'>A monstrous creature with eel and octopus features threatens the ship.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>106 - 111 : </span></b></div><div><b>  Crab Person:</b>  <span style='padding: 0px 2px;'>A crab person with a hard shell and pincers approaches.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>112 - 117 : </span></b></div><div><b>  Frog Person:</b>  <span style='padding: 0px 2px;'>A frog person leaps onto the deck, possibly seeking help or causing trouble.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>118 - 123 : </span></b></div><div><b>  Dire Pelican:</b>  <span style='padding: 0px 2px;'>A giant pelican swoops down, trying to snatch crew members or supplies.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>124 - 128 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Turtle (Snapping Turtle):</b>  <span style='padding: 0px 2px;'>A massive snapping turtle bites at the hull, trying to break it apart.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>129 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Turtle Island:</b>  <span style='padding: 0px 2px;'>A massive turtle, mistaken for an island, begins to move, causing chaos.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='blue3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Sunken Treasure:</b>  <span style='padding: 0px 2px;'>Rumors of a sunken treasure ship filled with gold and jewels. Finding it could make the crew rich but may attract dangerous attention.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Lost Civilization:</b>  <span style='padding: 0px 2px;'>An ancient underwater city is discovered. It could hold magical artifacts and lost knowledge but is guarded by powerful sea creatures.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Haunted Reef:</b>  <span style='padding: 0px 2px;'>A coral reef is said to be haunted by the spirits of sailors who died there. The crew experiences eerie occurrences and ghostly apparitions.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Mystic Whirlpool:</b>  <span style='padding: 0px 2px;'>A large, glowing whirlpool appears, rumored to be a portal to another realm. Entering it could lead to adventure or doom.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Pirate Hideout:</b>  <span style='padding: 0px 2px;'>An island known to be a pirate hideout is nearby. It could hold stolen treasures but is heavily guarded.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b>  Mermaid's Song:</b>  <span style='padding: 0px 2px;'>The crew hears a beautiful song luring them towards dangerous rocks. Resisting the allure is difficult and failure could be disastrous.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b>  Crystal Cove:</b>  <span style='padding: 0px 2px;'>A hidden cove filled with glowing crystals is found. These crystals might have magical properties or be highly valuable.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b>  Sea Turtle Migration:</b>  <span style='padding: 0px 2px;'>A massive migration of sea turtles is underway. Following them might lead to rich fishing grounds or undiscovered islands.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b>  Underwater Ruins:</b>  <span style='padding: 0px 2px;'>The ruins of an ancient temple are found underwater. Exploring it might yield powerful relics or unleash ancient curses.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b>  Floating Market:</b>  <span style='padding: 0px 2px;'>A bustling floating market of traders and exotic goods. This is a rare opportunity to trade and gather valuable supplies.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b>  Volcanic Activity:</b>  <span style='padding: 0px 2px;'>An underwater volcano is active nearby, creating new islands and potential danger. The water is warm and filled with volcanic minerals.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b>  Giant Coral:</b>  <span style='padding: 0px 2px;'>A massive, enchanted coral structure that glows at night. It is rumored to have healing properties and hidden chambers.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b>  Algal Bloom:</b>  <span style='padding: 0px 2px;'>A large area of the ocean is covered in an algal bloom. The bloom is toxic and makes navigation difficult.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>14 : </span></b></div><div><b>  Whale Graveyard:</b>  <span style='padding: 0px 2px;'>An area where many whales have come to die. The bones create an eerie landscape under the water, rumored to be haunted.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>15 : </span></b></div><div><b>  Living Island:</b>  <span style='padding: 0px 2px;'>An island that is actually a giant sea creature. It moves slowly, and its back is covered in vegetation and small animals.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 : </span></b></div><div><b>  Magic Storm:</b>  <span style='padding: 0px 2px;'>A storm with magical properties approaches. The rain heals wounds, but the lightning can cause strange transformations.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>17 : </span></b></div><div><b>  Fountain of Youth:</b>  <span style='padding: 0px 2px;'>A small island with a hidden spring that grants extended youth and vitality. Guarded by mythical creatures.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>18 : </span></b></div><div><b>  Singing Rocks:</b>  <span style='padding: 0px 2px;'>Rocks that emit a beautiful, hypnotic melody when struck by waves. They are said to be enchanted and attract various sea creatures.</span> </div></div></div></div><div></div></SectionContainer></RegionPage></div>    <div style='font-weight:700; margin:10px 5px 5px 5px; color:white; font-size:25px;'>Specific Oceans</div>
     <div style='display:grid; grid-gap:10px; grid-auto-flow:rows;'></div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Ocean_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:36 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Ocean_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:44 GMT -->
 </html>

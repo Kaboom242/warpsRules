@@ -1,6 +1,6 @@
 <html>
     
-<!-- Mirrored from 3.128.189.186:8080/Content/Print/Abilities_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Print/Abilities_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
         <title>Print Abilities</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -813,6 +851,8 @@
     }
     
 </style>
+
+
     </head>
     <style type="text/css">
         body {
@@ -820,217 +860,260 @@
         }
     </style>
     <body style='background:white;'>
-        <div style='height: 11in;width: 8.5in;background: white; box-sizing: border-box;border-radius: 0px;border-style: solid;border-color: white;border-width: 0.125in 0.25in 0.25in 0.25in;overflow: hidden;position: relative;display: flex;align-items: flex-start;flex-direction: column;border-radius: 0px;'><div style='display:grid;grid-template-rows: 1fr 10px 1fr 10px;grid-template-columns: 1fr;background:white;grid-gap: 0px 0px;grid-auto-flow: row;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 10px auto 10px;background:white;grid-gap: 0px 0px;grid-auto-flow: row;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Gray-4);'>
+        <div style='height: 11in;width: 8.5in;background: white; box-sizing: border-box;border-radius: 0px;border-style: solid;border-color: white;border-width: 0.125in 0.25in 0.25in 0.25in;overflow: hidden;position: relative;display: flex;align-items: flex-start;flex-direction: column;border-radius: 0px;'><div style='display:grid;grid-template-rows: 1fr 10px 1fr 10px;grid-template-columns: 1fr;background:white;grid-gap: 0px 0px;grid-auto-flow: row;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 10px auto 10px;background:white;grid-gap: 0px 0px;grid-auto-flow: row;'><rulecard style='background: #FFDDCB;'><rulecardtitle style='display:grid; grid-template-columns:1fr; background: #006607;'>
             <div>Survivalist <f7>Skill</f7></div>
-        </rulecardtitle><abilitysection class='asecGray'>
+        </rulecardtitle><abilitysection style='background: #72D378;'>
             A <b>Survivalist</b> is able to survive off the land and manage dangerous terrain.
         </abilitysection>
-        <div style='display:grid; grid-template-columns:100px 1fr auto;'>
-            <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
+        <div style='height:2px;'></div>
+        <abilitytitlebox style='background:#199421;'>
+            <abilitysubtitle>
                 
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Survivalist 1
+         Survivalist (1)
             </abilitysubtitle>
-            <abilitysection class='asecGray' 
-            style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/10<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
+            <ProgContainer>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+        </abilitytitlebox>
+        <div style='display: grid; grid-template-columns: 3fr 2fr; grid-gap: 2px 1px;'>
+            <abilitytitlebox style='background:#199421;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         Verdant
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#BEEEC1;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Temperate Terrain, Green landscape, Forests.
             </abilitysection>
-            <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-            </div>
-        </div>
-        <abilitysection class='asecGray'>
-            <b>Forage/Hunt/Find Shelter/Use Tinder:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-        </abilitysection>
-        <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
-                Survialist 2
-            </abilitysubtitle>
-        </div>
-        <div style='display:grid; grid-gap:1px; grid-template-columns:1fr 1fr;'>
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            <abilitytitlebox style='background:#157D5B;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Arid</b></f10>: <f7>Chaparral, Desert, Badlands</f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Lush
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B6E5D5;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Jungle, Dense foliage.
+            </abilitysection>
+            <abilitytitlebox style='background:#BC5420;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Lush</b></f10>: <f7>Wetlands, Rainforest, Jungle</f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Desert
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#FFB18A;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Dry, arid, desert like terrain.
+            </abilitysection>
+            <abilitytitlebox style='background:#34788E;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Verdant</b></f10>: <f7>Plains, Pastoral, Forest, </f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Arctic
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B5D7E2;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Cold Climate, Snowy area, Glacial, Icy Fields,  
+            </abilitysection>
+            <abilitytitlebox style='background:#BC5420;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Artic</b></f10>: <f7>  Alpine, Coniferous, Tundra, Ice Field</f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            </div><abilitysection class='asecGray'>
-            <b>Forage/Hunt/Find Shelter/Use Tinder:</b> +<b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-        </abilitysection>
-        <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
-                Survialist 3
-            </abilitysubtitle>
-        </div>
-        <div style='display:grid; grid-gap:1px; grid-template-columns:1fr 1fr 1fr;'>
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Alpine:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Mountain
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#FFB18A;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Peaks and Slopes
+            </abilitysection>
+            <abilitytitlebox style='background:#157D5B;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Badlands:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         River & Swamp
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain <br> Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B6E5D5;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Any place with fresh water, lakes rivers, swamps, bogs  
+            </abilitysection>
+            <abilitytitlebox style='background:#34788E;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Chaparral:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Oceanic
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B5D7E2;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                The ocean, surface and deep
+            </abilitysection>
+            <abilitytitlebox style='background:#BC5420;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Coniferous:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Cave
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Desert:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Forest:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Ice Field:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Pastoral:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Plains:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Jungle:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Tundra:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Wet Lands:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            </div><abilitysection class='asecGray'>
-            <b>Forage/Hunt/Find Shelter/Use Tinder:</b> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Knowledge (Terrain):</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> 
-        </abilitysection><div style='height:3px;'></div>
-        <abilitysectiontitle class='astGray'>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#FFB18A;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Narrow rocky caves, Dark spelunking.
+            </abilitysection></div><div style='height:3px;'></div>
+        <abilitysectiontitle  style='background: #00573A;'>
             Actions
         </abilitysectiontitle>
         
         <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray'>
-                Survialist
+            <abilitysubtitle style='background:#199421;'>
+                Survialist 1
             </abilitysubtitle>
         </div>
-        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Forage</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#72D378;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#72D378;-1); border-style:solid; border-color:#72D378; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#72D378;-1);'><div style='text-align:left; '>Forage</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Resist:</b> <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
         display: inline-block;
         
@@ -1048,7 +1131,7 @@
         Endr
     </div>
                     &nbsp;&nbsp;&nbsp;  <b>Attempt Additional Forage:</b> Resist <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div>.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#72D378); border-color:#72D378;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1080,9 +1163,14 @@
         font-weight:700;
     '>
         Endr
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><br><b>Skill Bonus</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b>Region</b></div></challengeInner>
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> 1 Rummage. <cs>1S:</cs> 2 Herbs. <cs>2S:</cs> 1 Food </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Hunt</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'>
+                    <cs>1S:</cs> 1 Rummage
+                    <cs>1S:</cs> 2 Herbs
+                    <cs>2S:</cs> 1 Food
+                    <br><sc>1S:</sc> Refill Tinderbox
+                    </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#FFB18A;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#FFB18A;-1); border-style:solid; border-color:#FFB18A; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#FFB18A;-1);'><div style='text-align:left; '>Hunt /<br> Fish</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#FFB18A;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Resist:</b> <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
         display: inline-block;
         
@@ -1098,8 +1186,8 @@
         font-weight:700;
     '>
         Endr
-    </div> <f7>Cannot be done in Darkness.</f7></div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+    </div> Req. Tool; bow/spear/fishing rod/net, etc.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#FFB18A); border-color:#FFB18A;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1131,12 +1219,12 @@
         font-weight:700;
     '>
         Agl
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='height:1px;'></div><b>Skill Bonus</b></div></challengeInner>
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#FFB18A;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <sc>2S:</sc>Kill Small(2 Meat) Creature. 
                     <br><sc>3S:</sc>Medium(4 Meat). <sc>4S:</sc>Large(6 Meat + Cloak).
-                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Find/Make<div style='height:1px;'></div> Shelter</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#B6E5D5;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#B6E5D5;-1); border-style:solid; border-color:#B6E5D5; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#B6E5D5;-1);'><div style='text-align:left; '>Find/Make<div style='height:1px;'></div> Shelter</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#B6E5D5;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Resist:</b> <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
         display: inline-block;
         
@@ -1153,7 +1241,7 @@
     '>
         Endr
     </div></div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#B6E5D5); border-color:#B6E5D5;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1185,18 +1273,26 @@
         font-weight:700;
     '>
         Int
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><br><b>Skill Bonus</b></div></challengeInner>
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#B6E5D5;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <sc>1S:</sc> +1 Heat/Cool Dice.
-                    <br><sc>2S:</sc> +2 Heat/Cold Protrection.
+                    <br><sc>2S:</sc> +2 Heat/Cold Protection.
+                    <br><sc>2S + Region/Weather Mod:</sc> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div>, Make Fire.
                 </div></challengeText></challengeContainer></div></actionContainter>
         <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray'>
-                Terrain Specialist
+            <abilitysubtitle style='background:#199421;'>
+                Terrain Specialist (2)
             </abilitysubtitle>
         </div>
-        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Knowledge (Terrain)</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Knowledge about area's monsters /plants.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Gather Tinder</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist:</b><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        <abilitysection  style='background:#BEEEC1;'>
+            <b>All Actions are only applicable in the given Terrain.</b>
+        </abilitysection><div style='height:1px;'></div><abilitysection  style='background:#BEEEC1;'>
+            May reroll <b>Forage</b>, Hunt</b>, and <b>Make/Find Shelter</b> Checks once without using Fatigue.
+        </abilitysection><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#72D378;     ; background:var(--#72D378;-1); border-style:solid; border-color:#72D378; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#72D378;-1);'><div style='text-align:left; '><f9>Knowledge (Terrain)</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'>Knowledge about area's plants and Geography.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#64B99D;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#64B99D;-1); border-style:solid; border-color:#64B99D; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#64B99D;-1);'><div style='text-align:left; '><f9>Monster Knowledge</f9></div></div><actionSubtitle style='color:black; margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#64B99D); border-color:#64B99D;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
         
         background:white;
@@ -1206,18 +1302,12 @@
         border-style: solid;
         border-radius: 4px;
         border-color: black;
-        color: var(--Green-4);
+        color: var(--Int);
         
         font-weight:700;
     '>
-        Endr
-    </div>&nbsp;&nbsp;&nbsp;&nbsp; Refill Tinderbox.</div></challengeText></challengeContainer></div></actionContainter>
-        <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray'>
-                Terrain Expert
-            </abilitysubtitle>
-        </div>
-        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Fire By Hand</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist:</b><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        Int
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
         display: inline-block;
         
         background:white;
@@ -1227,13 +1317,15 @@
         border-style: solid;
         border-radius: 4px;
         border-color: black;
-        color: var(--Green-4);
+        color: var(--Turquoise-4);
         
         font-weight:700;
     '>
-        Endr
-    </div>&nbsp;&nbsp;&nbsp;&nbsp; Create a Fire without using any tools.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Guide</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+        Cha
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#64B99D;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> All allies gain +1 Will against Terrain specific monster.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#72D378;     ; background:var(--#72D378;-1); border-style:solid; border-color:#72D378; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#72D378;-1);'><div style='text-align:left; '><f9>Guide</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#72D378); border-color:#72D378;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1267,217 +1359,260 @@
         Cha
     </div></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Party's Resist Travel Fatigue check.</div></challengeText></challengeContainer></div></actionContainter></rulecard><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Gray-4);'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Party's Resist Travel Fatigue check.</div></challengeText></challengeContainer></div></actionContainter></rulecard><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div><rulecard style='background: #FFDDCB;'><rulecardtitle style='display:grid; grid-template-columns:1fr; background: #006607;'>
             <div>Survivalist <f7>Skill</f7></div>
-        </rulecardtitle><abilitysection class='asecGray'>
+        </rulecardtitle><abilitysection style='background: #72D378;'>
             A <b>Survivalist</b> is able to survive off the land and manage dangerous terrain.
         </abilitysection>
-        <div style='display:grid; grid-template-columns:100px 1fr auto;'>
-            <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
+        <div style='height:2px;'></div>
+        <abilitytitlebox style='background:#199421;'>
+            <abilitysubtitle>
                 
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Survivalist 1
+         Survivalist (1)
             </abilitysubtitle>
-            <abilitysection class='asecGray' 
-            style='display:grid; grid-template-columns:1fr auto; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/10<div style='display:inline; color:black; font-weight:800;'>AP</div><f8></div>
+            <ProgContainer>
+                <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+        </abilitytitlebox>
+        <div style='display: grid; grid-template-columns: 3fr 2fr; grid-gap: 2px 1px;'>
+            <abilitytitlebox style='background:#199421;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         Verdant
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#BEEEC1;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Temperate Terrain, Green landscape, Forests.
             </abilitysection>
-            <div style='display: flex; justify-content: center; align-items: center; grid-gap: 2px; margin-right: 2px; margin-left: 2px;'>
-                
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-                <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>
-            </div>
-        </div>
-        <abilitysection class='asecGray'>
-            <b>Forage/Hunt/Find Shelter/Use Tinder:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-        </abilitysection>
-        <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
-                Survialist 2
-            </abilitysubtitle>
-        </div>
-        <div style='display:grid; grid-gap:1px; grid-template-columns:1fr 1fr;'>
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            <abilitytitlebox style='background:#157D5B;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Arid</b></f10>: <f7>Chaparral, Desert, Badlands</f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Lush
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B6E5D5;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Jungle, Dense foliage.
+            </abilitysection>
+            <abilitytitlebox style='background:#BC5420;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Lush</b></f10>: <f7>Wetlands, Rainforest, Jungle</f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Desert
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#FFB18A;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Dry, arid, desert like terrain.
+            </abilitysection>
+            <abilitytitlebox style='background:#34788E;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Verdant</b></f10>: <f7>Plains, Pastoral, Forest, </f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Arctic
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:500; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B5D7E2;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Cold Climate, Snowy area, Glacial, Icy Fields,  
+            </abilitysection>
+            <abilitytitlebox style='background:#BC5420;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         <f10><b>Artic</b></f10>: <f7>  Alpine, Coniferous, Tundra, Ice Field</f7></div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>/5</b><div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> <div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            </div><abilitysection class='asecGray'>
-            <b>Forage/Hunt/Find Shelter/Use Tinder:</b> +<b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-        </abilitysection>
-        <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray' style='border-radius:4px 0px 0px 0px;'>
-                Survialist 3
-            </abilitysubtitle>
-        </div>
-        <div style='display:grid; grid-gap:1px; grid-template-columns:1fr 1fr 1fr;'>
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Alpine:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Mountain
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#FFB18A;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Peaks and Slopes
+            </abilitysection>
+            <abilitytitlebox style='background:#157D5B;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Badlands:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         River & Swamp
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain <br> Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B6E5D5;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Any place with fresh water, lakes rivers, swamps, bogs  
+            </abilitysection>
+            <abilitytitlebox style='background:#34788E;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Chaparral:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Oceanic
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#B5D7E2;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                The ocean, surface and deep
+            </abilitysection>
+            <abilitytitlebox style='background:#BC5420;; border-radius: 4px 0px 0px 4px; filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));'>
+                <abilitysubtitle>
+                    
             <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Coniferous:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
+         Cave
+                    <div style='font-size: 7px; font-weight: 400;'>
+                        - Terrain Specialist (2)
+                    </div>
+                </abilitysubtitle>
+                <ProgContainer>
+                    <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
             
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Desert:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Forest:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Ice Field:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Pastoral:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Plains:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Jungle:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Tundra:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            
-            <div style='display:grid; grid-template-columns:1fr;'>
-                <abilitysection class='asecGray' 
-                style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px; font-weight:700; background:white; border-radius:0px 4px 4px 0px;'>
-                    <div>
-            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
-         Wet Lands:</div>
-                    <div style='display:flex; align-items:center; justify-content:flex-end; '><f8>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/3<div style='display:inline; color:black; font-weight:800;'>AP</div><f8><div style='display:inline-flex; background:white; color:grey; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></div>
-                </abilitysection>
-            </div>
-            </div><abilitysection class='asecGray'>
-            <b>Forage/Hunt/Find Shelter/Use Tinder:</b> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Knowledge (Terrain):</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> 
-        </abilitysection><div style='height:3px;'></div>
-        <abilitysectiontitle class='astGray'>
+            padding: 0px 0px 0px 0px;
+        '>
+                    <ProgPercent>%</ProgPercent>
+                </ProgContainer>
+            </abilitytitlebox>
+            <abilitysection class='asecGray' style='background:#FFB18A;; border-radius: 0px 4px 4px 0px; margin-left: -1px;'>
+                Narrow rocky caves, Dark spelunking.
+            </abilitysection></div><div style='height:3px;'></div>
+        <abilitysectiontitle  style='background: #00573A;'>
             Actions
         </abilitysectiontitle>
         
         <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray'>
-                Survialist
+            <abilitysubtitle style='background:#199421;'>
+                Survialist 1
             </abilitysubtitle>
         </div>
-        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Forage</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#72D378;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#72D378;-1); border-style:solid; border-color:#72D378; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#72D378;-1);'><div style='text-align:left; '>Forage</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Resist:</b> <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
         display: inline-block;
         
@@ -1495,7 +1630,7 @@
         Endr
     </div>
                     &nbsp;&nbsp;&nbsp;  <b>Attempt Additional Forage:</b> Resist <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div>.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#72D378); border-color:#72D378;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1527,9 +1662,14 @@
         font-weight:700;
     '>
         Endr
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><br><b>Skill Bonus</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b>Region</b></div></challengeInner>
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> 1 Rummage. <cs>1S:</cs> 2 Herbs. <cs>2S:</cs> 1 Food </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Hunt</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'>
+                    <cs>1S:</cs> 1 Rummage
+                    <cs>1S:</cs> 2 Herbs
+                    <cs>2S:</cs> 1 Food
+                    <br><sc>1S:</sc> Refill Tinderbox
+                    </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#FFB18A;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#FFB18A;-1); border-style:solid; border-color:#FFB18A; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#FFB18A;-1);'><div style='text-align:left; '>Hunt /<br> Fish</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#FFB18A;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Resist:</b> <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
         display: inline-block;
         
@@ -1545,8 +1685,8 @@
         font-weight:700;
     '>
         Endr
-    </div> <f7>Cannot be done in Darkness.</f7></div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+    </div> Req. Tool; bow/spear/fishing rod/net, etc.</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#FFB18A); border-color:#FFB18A;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1578,12 +1718,12 @@
         font-weight:700;
     '>
         Agl
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='height:1px;'></div><b>Skill Bonus</b></div></challengeInner>
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#FFB18A;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <sc>2S:</sc>Kill Small(2 Meat) Creature. 
                     <br><sc>3S:</sc>Medium(4 Meat). <sc>4S:</sc>Large(6 Meat + Cloak).
-                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Find/Make<div style='height:1px;'></div> Shelter</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#B6E5D5;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#B6E5D5;-1); border-style:solid; border-color:#B6E5D5; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#B6E5D5;-1);'><div style='text-align:left; '>Find/Make<div style='height:1px;'></div> Shelter</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#B6E5D5;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Resist:</b> <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
         display: inline-block;
         
@@ -1600,7 +1740,7 @@
     '>
         Endr
     </div></div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#B6E5D5); border-color:#B6E5D5;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1632,18 +1772,26 @@
         font-weight:700;
     '>
         Int
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><br><b>Skill Bonus</b></div></challengeInner>
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#B6E5D5;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <sc>1S:</sc> +1 Heat/Cool Dice.
-                    <br><sc>2S:</sc> +2 Heat/Cold Protrection.
+                    <br><sc>2S:</sc> +2 Heat/Cold Protection.
+                    <br><sc>2S + Region/Weather Mod:</sc> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div>, Make Fire.
                 </div></challengeText></challengeContainer></div></actionContainter>
         <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray'>
-                Terrain Specialist
+            <abilitysubtitle style='background:#199421;'>
+                Terrain Specialist (2)
             </abilitysubtitle>
         </div>
-        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Knowledge (Terrain)</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>Knowledge about area's monsters /plants.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Gather Tinder</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist:</b><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        <abilitysection  style='background:#BEEEC1;'>
+            <b>All Actions are only applicable in the given Terrain.</b>
+        </abilitysection><div style='height:1px;'></div><abilitysection  style='background:#BEEEC1;'>
+            May reroll <b>Forage</b>, Hunt</b>, and <b>Make/Find Shelter</b> Checks once without using Fatigue.
+        </abilitysection><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#72D378;     ; background:var(--#72D378;-1); border-style:solid; border-color:#72D378; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#72D378;-1);'><div style='text-align:left; '><f9>Knowledge (Terrain)</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'>Knowledge about area's plants and Geography.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#64B99D;    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--#64B99D;-1); border-style:solid; border-color:#64B99D; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#64B99D;-1);'><div style='text-align:left; '><f9>Monster Knowledge</f9></div></div><actionSubtitle style='color:black; margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#64B99D); border-color:#64B99D;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
         
         background:white;
@@ -1653,18 +1801,12 @@
         border-style: solid;
         border-radius: 4px;
         border-color: black;
-        color: var(--Green-4);
+        color: var(--Int);
         
         font-weight:700;
     '>
-        Endr
-    </div>&nbsp;&nbsp;&nbsp;&nbsp; Refill Tinderbox.</div></challengeText></challengeContainer></div></actionContainter>
-        <div style='display:grid; grid-template-columns:1fr;'>
-            <abilitysubtitle class='astGray'>
-                Terrain Expert
-            </abilitysubtitle>
-        </div>
-        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Fire By Hand</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><b>Resist:</b><div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        Int
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
         display: inline-block;
         
         background:white;
@@ -1674,13 +1816,15 @@
         border-style: solid;
         border-radius: 4px;
         border-color: black;
-        color: var(--Green-4);
+        color: var(--Turquoise-4);
         
         font-weight:700;
     '>
-        Endr
-    </div>&nbsp;&nbsp;&nbsp;&nbsp; Create a Fire without using any tools.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);     ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '><f9>Guide</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+        Cha
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#64B99D;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> All allies gain +1 Will against Terrain specific monster.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:#72D378;     ; background:var(--#72D378;-1); border-style:solid; border-color:#72D378; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--#72D378;-1);'><div style='text-align:left; '><f9>Guide</f9></div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:#72D378); border-color:#72D378;background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
                                         <nowrap></nowrap>
                                         <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
         display: inline-block;
@@ -1714,8 +1858,8 @@
         Cha
     </div></div></challengeInner>
                                     </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Party's Resist Travel Fatigue check.</div></challengeText></challengeContainer></div></actionContainter></rulecard><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div></div><div style='border-style:dotted none none none; border-width:2px; border-color:black; position:relative; top:5px; border-radius:0px;'></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 10px auto 10px;background:white;grid-gap: 0px 0px;grid-auto-flow: row;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;width: 353.175px;height: 489.736px;grid-gap: 2px;align-items: stretch;'><div></div></div><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;width: 353.175px;height: 489.736px;grid-gap: 2px;align-items: stretch;'><div></div></div><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div></div><div style='border-style:dotted none none none; border-radius:0px; border-width:2px; border-color:black; position:relative; top:5px;'></div></div></div>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:#72D378;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Party's Resist Travel Fatigue check.</div></challengeText></challengeContainer></div></actionContainter></rulecard><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div></div><div style='border-style:dotted none none none; border-width:2px; border-color:black; position:relative; top:5px; border-radius:0px;'></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: auto 10px auto 10px;background:white;grid-gap: 0px 0px;grid-auto-flow: row;'><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;width: 353.175px;height: 489.736px;grid-gap: 2px;align-items: stretch;'><div></div></div><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div><div style='display:grid;grid-template-rows: 1fr;grid-template-columns: 1fr;grid-auto-flow: row;background:white;width: 353.175px;height: 489.736px;grid-gap: 2px;align-items: stretch;'><div></div></div><div style='border-style:none dotted none none; border-radius:0px; border-width:2px; border-color:black; position:relative; right:5px;'></div></div><div style='border-style:dotted none none none; border-radius:0px; border-width:2px; border-color:black; position:relative; top:5px;'></div></div></div>
     </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Print/Abilities_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Print/Abilities_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 </html>

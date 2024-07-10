@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:33 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:41 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Archer Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -1088,7 +1126,7 @@
                 <div>Legendary Outlaw</div>
             </masterabilitysubtitle>
             <div style=' background:var(--Archer-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Archer-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
-                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bandit 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Rogue 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div>  Crimminal ( 20 Rep. ) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Bandit 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div>  Crimminal ( 20 Rep. ) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
         display: inline-block;
         
         background:white;
@@ -2701,8 +2739,7 @@
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Archer-4);'>
             Quick Fire
         </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Archer-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Archer-1); border-style:solid; border-color:var(--Archer-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Archer-1);'><div style='text-align:left; '>Quick Firing</div></div></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Archer-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-                    <b>Active Nock:</b> May Nock an Arrow as an Active Action.
-                    <div style='height:1px;'></div><b>Quick Reload:</b> May Nock Arrow as a Free Action.
+                    <b>Quick Reload:</b> May Nock Arrow as a Free Action.
                     <div style='height:1px;'></div><img 
         src='../../../Resources/Art/Images/Stamina.svg' 
         height='10px'
@@ -3072,8 +3109,7 @@
                 </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Archer-4);'>
             Quick Fire
         </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Archer-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Archer-1); border-style:solid; border-color:var(--Archer-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Archer-1);'><div style='text-align:left; '>Quick Firing</div></div></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Archer-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-                    <b>Active Nock:</b> May Nock an Arrow as an Active Action.
-                    <div style='height:1px;'></div><b>Quick Reload:</b> May Nock Arrow as a Free Action.
+                    <b>Quick Reload:</b> May Nock Arrow as a Free Action.
                     <div style='height:1px;'></div><b>Active Shot</b>: May Shoot as an Active Action.
                 </div></challengeText></challengeContainer></div></actionContainter><rulebox style='border-color:var(--Archer-3); background:var(--Archer-1);'>
             <b>Prone Shot:</b> Can shoot while prone with no penalty.
@@ -3420,8 +3456,9 @@
         </abilitysubtitle><rulebox style='border-color:var(--Archer-3); background:var(--Archer-1);'>
             <b>Shooting Skill:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hunt.
             <div style='height:1px;'></div><b>Guiding:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> to <b>Guide</b>.
+            <div style='height:1px;'></div><b>Monster Knowledge:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <b>Monster Knoweldge</b>.
             <div style='height:1px;'></div> <b>Wilderness Stealth:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Stealth Challenges in Wilderness.
-            <div style='height:1px;'></div> <b>Terrain Advantage:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Aim in trained Survilaist 2 Terrain, <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Aim in trained Survialist 3 Terrain. 
+            <div style='height:1px;'></div> <b>Terrain Advantage:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Aim in trained Survilaist 2 Terrain. 
         </rulebox><rulebox style='border-color:var(--Archer-3); background:var(--Archer-1);'>
             <b>Using Herbs:</b> May use and Herb to remove <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound from Dog or <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound from Ally/Self.
         </rulebox><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Archer-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Fletch</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
@@ -3537,8 +3574,9 @@
         </abilitysubtitle><rulebox style='border-color:var(--Archer-3); background:var(--Archer-1);'>
             <b>Shooting Skill:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hunt.
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Guiding:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <b>Guide</b>.
+            <div style='height:1px;'></div><b>Monster Knowledge:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to <b>Monster Knoweldge</b>.
             <div style='height:1px;'></div> <b>Wilderness Stealth:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Stealth Challenges in Wilderness.
-            <div style='height:1px;'></div> <b>Terrain Advantage:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Aim in trained Survilaist 2 Terrain, <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Aim in trained Survialist 3 Terrain. 
+            <div style='height:1px;'></div> <b>Terrain Advantage:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Aim in trained Survilaist 2 Terrain. 
             <div style='height:1px;'></div> <b>Using Herbs:</b> Use Herb to remove <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound from Dog or <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound from Ally/Self.
         </rulebox><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Archer-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Fletch</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Archer-2)); border-color:var(--Archer-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
@@ -5125,5 +5163,5 @@
         </div></rulecard></div></div>    </div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:33 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Archer_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:41 GMT -->
 </html>

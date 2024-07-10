@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Vampire_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Vampire_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Vampire Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -813,6 +851,7 @@
     }
     
 </style>
+
 </head>
 <style type="text/css">
     body {
@@ -907,9 +946,9 @@
                  <b>Vampire</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b> Druid 1 + Class + Class</b>
             </div>
             <div class='classinfo' style='border-color:var(--Cultist-3); margin-top:-1px;'>
-               It is said those whose vampirism manifests most like it's ancient origins gain the power of the Blood Wing.
+               It is said those whose vampirism manifests most like it's ancient origins gain the power of the Spirit of the Bat.
                 These are vampires who may transform into giant man sized bats who fly through the night sky.
-                Blood Wings tend to accumulate a person swam of other bats and fly with great speed, often dragging their foes high into the air for dinner and then dropping them to the deaths.
+                Spirit of the Bats tend to accumulate a person swam of other bats and fly with great speed, often dragging their foes high into the air for dinner and then dropping them to the deaths.
             </div>
         </div>
         <div style='display:grid; grid-template-columns:auto 1fr auto;'>
@@ -948,7 +987,192 @@
                 These vampires have gone furthest in their transformation such as that their bodies are incredibly durable.
                 They may have other vampires submit to their will and even claim dominion over some land which is then cast into a near permanent darkness as long as they control it.
             </div>
-        </div></rulecard></div><div id='Advanced' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Advanced</div><div id='Nightstalker' style='grid-column: 1 / -1;font-size: 25px;font-weight: 900;color: white;margin-bottom:-6px;'>Nightstalker</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
+        </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard style='background: #BA5AC1;'><rulecardtitle style='display:grid; grid-template-columns:1fr; background:#930000;'>
+            <div>Vampirism</div>
+        </rulecardtitle><abilitysection style='background:#FFBBBB;;'>
+           Vampirism comes about via a bite from a Vampire. Those who want to become a vampire, may have a Vampire perform the bite and hope they survive the sickness.
+            <br>
+           <b>Getting Afflicted:</b> Gain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Vampire Sickness <b>(VS)</b> Con Points.
+        </abilitysection><div style='height:2px;'></div>
+        <abilitytitlebox style='background:#830B8B;'>
+            <abilitysubtitle>
+                
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         1: Vampirism Sickness
+            </abilitysubtitle>
+            <ProgContainer>
+                <img 
+        src='../../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+        </abilitytitlebox>
+        <abilitysection style='background: #E2A9E6;;'>
+        	3 Con (<b>B</b>) in Daylight
+        	<br> <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> when eating any Food, <sc>1S:</sc> Throw it up and it has no effect.
+        	<br> May Vampire Bite <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 8px;'><b>6 Only</b> </div>
+            <div style='height:1px;'></div>
+        	<b>Remove Vampirism Sickness:</b>
+        	<br> Drink Holy Water: Take 1S+4D Vital Wound, Change 2D Con(VS) to Illness.
+		    <br> Once all VS removed, remove Vampirism Sickness.
+            <div style='height:1px;'></div>
+        	<b>Become Vampire Fledgling:</b>
+		    <br> After Drinking 6 Blood can become Vampire Fledgling.
+        </abilitysection><div style='height:2px;'></div>
+        <abilitytitlebox style='background:#311B93;; grid-template-columns: 1fr 1fr 1fr;'>
+            <abilitysubtitle>
+                
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         2: Vampire Fledgling
+            </abilitysubtitle>
+            <div style='display:flex; align-items:center; justify-content:flex-end; background: white; border-radius: 4px; margin:2px; padding: 2px;'><f8>/6 <b>Blood</b><f8></div>
+            <ProgContainer>
+                <img 
+        src='../../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+        </abilitytitlebox>
+        <abilitysection style='background:#BCB2E9;; '>
+        	3 Con (<b>B</b>) in Daylight
+        	<br> Dark Vision +2
+        	<br> <b>Vile:</b> Weak to Azeal's Holy Attacks. 
+        	<br> <b>Thirst:</b> Drinking water is meaningless. Every 4 Days Resist 4 Thirst w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>. 
+            <br> <b>Become a Vampire:</b>
+		    <br> After Drinking 12 more Blood can become a vampire.
+        </abilitysection><div style='height:2px;'></div>
+        <abilitytitlebox style='background:#D50E0E;; grid-template-columns: 1fr 1fr 1fr;'>
+            <abilitysubtitle>
+                
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         3: Vampire
+            </abilitysubtitle>
+            <div style='display:flex; align-items:center; justify-content:flex-end; background: white; border-radius: 4px; margin:2px; padding: 2px;'><f8>/12 <b>Blood</b><f8></div>
+            <ProgContainer>
+                <img 
+        src='../../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+        </abilitytitlebox>
+        <abilitysection style='background:#FFBBBB;;'>
+            Have a blurry reflection in mirrors.
+        	<br> 2 Con (<b>B</b>) in Daylight. If Body Areas exposed to sunlight catch fire Burning <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>.
+        	<br> <b>Bed Rest:</b> Only applied if sleeping in a completely enclosed area with no light. (Aka Coffin) Can't be too exposed to elements
+        	<br> Each Day: Remove <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound/Fatigue.
+        	<br> Dark Vision
+        	<br> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Challenges to Hide in Darkness
+        	<br> <b>Vile:</b> Weak to Azeal's Holy Attacks. Churches can’t heal you, Con point while inside, and Burning 2D upon entering.
+	            Touching Holy Implements applies Burning 1S+2D and 1S+3D Dmg.
+        	<br> <b>Thirst:</b> Drinking water is meaningless. Every 7 Days Resist 4 Thirst w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>. 
+        	<br> Drink 1 Blood: Remove 1 Harm/Wound or Fatigue.
+        </abilitysection><div style='height:3px;'></div>
+        <abilitysectiontitle class='astGray' style='background: #930000;'>
+            Actions
+        </abilitysectiontitle>
+        <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Red-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Vampire Bite</div></div> <actionSubtitle style='margin-left:3px;'>Grapple</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'><F8>Killing someone gives 4 Blood Total. 
+                        People already dying or children may have less blood.</f8>
+                    </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='display:inline; font-weight:700; color:var(--Turquoise-4);'>Cha</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='display:inline; font-weight:700; color:var(--Green-4);'>Endr</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'><sc>2S</sc>: Drink or store 1 Blood. <i><f6>(May Drink 4 Blood from a person max.)</f6></i>
+                        <br> Regain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Stamina, may remove 1 Hunger/Thirst 
+                        <br> <f7>(Stale Humanoid/Non-Humanoid Blood: <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Thirst/Hunger)</f7>
+                    </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto auto 1fr;; '><challengeHead style='; background:var(--Red-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>Dmg: Pierce</div></div></challengeHead>
+                                    <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Red-2)); border-color:var(--Red-2);background:white;; '>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='; ; background:white; border-color:var(--Red-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                        Resists 3 Illness w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>
+                    	<br><b>Bleed 3</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
+                	</div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div id='Advanced' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Advanced</div><div id='Nightstalker' style='grid-column: 1 / -1;font-size: 25px;font-weight: 900;color: white;margin-bottom:-6px;'>Nightstalker</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
             <div>Nightstalker 1</div> 
             <div><img 
         src='../../../Resources/Art/Images/ClassMulticlass.svg' 
@@ -2583,8 +2807,8 @@
                                     </challenge>
                                 <challengeText style='; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>Bleed 2, <div style='display: inline-block;background: var(--Gray-1);color: black;font-weight: 800;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;'> 
             ArPen 
-    </div> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div id='Blood Wing' style='grid-column: 1 / -1;font-size: 25px;font-weight: 900;color: white;margin-bottom:-6px;'>Blood Wing</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
-            <div>Blood Wing 1</div>
+    </div> <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div id='Spirit of the Bat' style='grid-column: 1 / -1;font-size: 25px;font-weight: 900;color: white;margin-bottom:-6px;'>Spirit of the Bat</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
+            <div>Spirit of the Bat 1</div>
             <div><img 
         src='../../../Resources/Art/Images/ClassAdvanced.svg' 
         height='14px'
@@ -2852,7 +3076,7 @@
     </div></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-                    May continue flying movement after Attack.
+                    May continue flying movement after Attack. Drop Target at beginning of next Round.
                     <br> <cs>1S:</cs>Enter Grapple.
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Vampire Bite</div></div> <actionSubtitle style='margin-left:3px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
@@ -2964,7 +3188,7 @@
                 <br> <cs>1S:</cs> +1 Summon Point.
                 <br><b>3 Summon Points:</b> Summon Bat Swarm. (Max 1)
                 </div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
-            <div>Blood Wing 2</div>
+            <div>Spirit of the Bat 2</div>
             <div><img 
         src='../../../Resources/Art/Images/ClassAdvanced.svg' 
         height='14px'
@@ -3247,7 +3471,7 @@
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>
-                    May continue flying movement after Attack.
+                    May continue flying movement after Attack. Drop Target at beginning of next Round unless you Carry them.
                     <br> <cs>1S:</cs>Enter Grapple.
                 </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Carry </div></div> <actionSubtitle style='margin-left:3px;'>Grapple</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
                                     <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
@@ -3530,5 +3754,5 @@
                 </div></challengeText></challengeContainer></div></actionContainter></rulecard></div></div>    </div>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/AdvClasses/Vampire_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/AdvClasses/Vampire_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 </html>

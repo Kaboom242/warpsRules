@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Print/Regions_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Print/Regions_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Print Regions</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -631,62 +669,115 @@
             display: flex;
         }
         
-        .green1bg {
-            background: var(--Green-1);
+        /* Gray */
+        .gray0bg {
+            background: var(--Gray-0);
         }
-        .green1border {
-            border-color: var(--Green-1);
+        .gray0border {
+            border-color: var(--Gray-0);
         }
-        
-        .green2bg {
-            background: var(--Green-2);
+        .gray1bg {
+            background: var(--Gray-1);
         }
-        .green2border {
-            border-color: var(--Green-2);
+        .gray1border {
+            border-color: var(--Gray-1);
         }
-        
-        .green3bg {
-            background: var(--Green-3);
+        .gray2bg {
+            background: var(--Gray-2);
         }
-        .green3border {
-            border-color: var(--Green-3);
+        .gray2border {
+            border-color: var(--Gray-2);
         }
-        
-        .green4bg {
-            background: var(--Green-4);
+        .gray3bg {
+            background: var(--Gray-3);
         }
-        .green4border {
-            border-color: var(--Green-4);
+        .gray3border {
+            border-color: var(--Gray-3);
         }
-        
-        .turqouise3bg {
-            background: var(--Turquoise-3);
+        .gray4bg {
+            background: var(--Gray-4);
         }
-        .turqouise3border {
-            border-color: var(--Turquoise-3);
+        .gray4border {
+            border-color: var(--Gray-4);
         }
-        
-        .turqouise4bg {
-            background: var(--Turquoise-4);
+        .gray5bg {
+            background: var(--Gray-5);
         }
-        .turqouise4border {
-            border-color: var(--Turquoise-4);
+        .gray5border {
+            border-color: var(--Gray-5);
         }
         
+        /* Red */
+        .red1bg {
+            background: var(--Red-1);
+        }
+        .red1border {
+            border-color: var(--Red-1);
+        }
+        .red2bg {
+            background: var(--Red-2);
+        }
+        .red2border {
+            border-color: var(--Red-2);
+        }
+        .red3bg {
+            background: var(--Red-3);
+        }
+        .red3border {
+            border-color: var(--Red-3);
+        }
+        .red4bg {
+            background: var(--Red-4);
+        }
+        .red4border {
+            border-color: var(--Red-4);
+        }
+        
+        /* Orange */
+        .orange1bg {
+            background: var(--Orange-1);
+        }
+        .orange1border {
+            border-color: var(--Orange-1);
+        }
+        .orange2bg {
+            background: var(--Orange-2);
+        }
+        .orange2border {
+            border-color: var(--Orange-2);
+        }
+        .orange3bg {
+            background: var(--Orange-3);
+        }
+        .orange3border {
+            border-color: var(--Orange-3);
+        }
+        .orange4bg {
+            background: var(--Orange-4);
+        }
+        .orange4border {
+            border-color: var(--Orange-4);
+        }
+        
+        /* Yellow */
+        .yellow1bg {
+            background: var(--Yellow-1);
+        }
+        .yellow1border {
+            border-color: var(--Yellow-1);
+        }
         .yellow2bg {
             background: var(--Yellow-2);
         }
         .yellow2border {
             border-color: var(--Yellow-2);
         }
-        
         .yellow3bg {
             background: var(--Yellow-3);
         }
         .yellow3border {
             border-color: var(--Yellow-3);
         }
-        
         .yellow4bg {
             background: var(--Yellow-4);
         }
@@ -694,6 +785,103 @@
             border-color: var(--Yellow-4);
         }
         
+        /* Green */
+        .green1bg {
+            background: var(--Green-1);
+        }
+        .green1border {
+            border-color: var(--Green-1);
+        }
+        .green2bg {
+            background: var(--Green-2);
+        }
+        .green2border {
+            border-color: var(--Green-2);
+        }
+        .green3bg {
+            background: var(--Green-3);
+        }
+        .green3border {
+            border-color: var(--Green-3);
+        }
+        .green4bg {
+            background: var(--Green-4);
+        }
+        .green4border {
+            border-color: var(--Green-4);
+        }
+        
+        /* Turquoise */
+        .turquoise1bg {
+            background: var(--Turquoise-1);
+        }
+        .turquoise1border {
+            border-color: var(--Turquoise-1);
+        }
+        .turquoise2bg {
+            background: var(--Turquoise-2);
+        }
+        .turquoise2border {
+            border-color: var(--Turquoise-2);
+        }
+        .turquoise3bg {
+            background: var(--Turquoise-3);
+        }
+        .turquoise3border {
+            border-color: var(--Turquoise-3);
+        }
+        .turquoise4bg {
+            background: var(--Turquoise-4);
+        }
+        .turquoise4border {
+            border-color: var(--Turquoise-4);
+        }
+        
+        /* Blue */
+        .blue1bg {
+            background: var(--Blue-1);
+        }
+        .blue1border {
+            border-color: var(--Blue-1);
+        }
+        .blue2bg {
+            background: var(--Blue-2);
+        }
+        .blue2border {
+            border-color: var(--Blue-2);
+        }
+        .blue3bg {
+            background: var(--Blue-3);
+        }
+        .blue3border {
+            border-color: var(--Blue-3);
+        }
+        .blue4bg {
+            background: var(--Blue-4);
+        }
+        .blue4border {
+            border-color: var(--Blue-4);
+        }
+        
+        /* Purple */
+        .purple1bg {
+            background: var(--Purple-1);
+        }
+        .purple1border {
+            border-color: var(--Purple-1);
+        }
+        .purple2bg {
+            background: var(--Purple-2);
+        }
+        .purple2border {
+            border-color: var(--Purple-2);
+        }
+        .purple3bg {
+            background: var(--Purple-3);
+        }
+        .purple3border {
+            border-color: var(--Purple-3);
+        }
         .purple4bg {
             background: var(--Purple-4);
         }
@@ -701,26 +889,162 @@
             border-color: var(--Purple-4);
         }
         
-        .blue2bg {
-            background: var(--Blue-2);
+        /* Pink */
+        .pink1bg {
+            background: var(--Pink-1);
         }
-        .blue2border {
-            border-color: var(--Blue-2);
+        .pink1border {
+            border-color: var(--Pink-1);
+        }
+        .pink2bg {
+            background: var(--Pink-2);
+        }
+        .pink2border {
+            border-color: var(--Pink-2);
+        }
+        .pink3bg {
+            background: var(--Pink-3);
+        }
+        .pink3border {
+            border-color: var(--Pink-3);
+        }
+        .pink4bg {
+            background: var(--Pink-4);
+        }
+        .pink4border {
+            border-color: var(--Pink-4);
         }
         
-        .blue3bg {
-            background: var(--Blue-3);
+        /* DarkGreen */
+        .darkgreen1bg {
+            background: var(--DarkGreen-1);
         }
-        .blue3border {
-            border-color: var(--Blue-3);
+        .darkgreen1border {
+            border-color: var(--DarkGreen-1);
+        }
+        .darkgreen2bg {
+            background: var(--DarkGreen-2);
+        }
+        .darkgreen2border {
+            border-color: var(--DarkGreen-2);
+        }
+        .darkgreen3bg {
+            background: var(--DarkGreen-3);
+        }
+        .darkgreen3border {
+            border-color: var(--DarkGreen-3);
+        }
+        .darkgreen4bg {
+            background: var(--DarkGreen-4);
+        }
+        .darkgreen4border {
+            border-color: var(--DarkGreen-4);
         }
         
-        .blue4bg {
-            background: var(--Blue-4);
+        /* DarkBlue */
+        .darkblue1bg {
+            background: var(--DarkBlue-1);
         }
-        .blue4border {
-            border-color: var(--Blue-4);
+        .darkblue1border {
+            border-color: var(--DarkBlue-1);
         }
+        .darkblue2bg {
+            background: var(--DarkBlue-2);
+        }
+        .darkblue2border {
+            border-color: var(--DarkBlue-2);
+        }
+        .darkblue3bg {
+            background: var(--DarkBlue-3);
+        }
+        .darkblue3border {
+            border-color: var(--DarkBlue-3);
+        }
+        .darkblue4bg {
+            background: var(--DarkBlue-4);
+        }
+        .darkblue4border {
+            border-color: var(--DarkBlue-4);
+        }
+        
+        /* DarkYellow */
+        .darkyellow1bg {
+            background: var(--DarkYellow-1);
+        }
+        .darkyellow1border {
+            border-color: var(--DarkYellow-1);
+        }
+        .darkyellow2bg {
+            background: var(--DarkYellow-2);
+        }
+        .darkyellow2border {
+            border-color: var(--DarkYellow-2);
+        }
+        .darkyellow3bg {
+            background: var(--DarkYellow-3);
+        }
+        .darkyellow3border {
+            border-color: var(--DarkYellow-3);
+        }
+        .darkyellow4bg {
+            background: var(--DarkYellow-4);
+        }
+        .darkyellow4border {
+            border-color: var(--DarkYellow-4);
+        }
+        
+        /* DarkRed */
+        .darkred1bg {
+            background: var(--DarkRed-1);
+        }
+        .darkred1border {
+            border-color: var(--DarkRed-1);
+        }
+        .darkred2bg {
+            background: var(--DarkRed-2);
+        }
+        .darkred2border {
+            border-color: var(--DarkRed-2);
+        }
+        .darkred3bg {
+            background: var(--DarkRed-3);
+        }
+        .darkred3border {
+            border-color: var(--DarkRed-3);
+        }
+        .darkred4bg {
+            background: var(--DarkRed-4);
+        }
+        .darkred4border {
+            border-color: var(--DarkRed-4);
+        }
+        
+        /* DarkPurple */
+        .darkpurple1bg {
+            background: var(--DarkPurple-1);
+        }
+        .darkpurple1border {
+            border-color: var(--DarkPurple-1);
+        }
+        .darkpurple2bg {
+            background: var(--DarkPurple-2);
+        }
+        .darkpurple2border {
+            border-color: var(--DarkPurple-2);
+        }
+        .darkpurple3bg {
+            background: var(--DarkPurple-3);
+        }
+        .darkpurple3border {
+            border-color: var(--DarkPurple-3);
+        }
+        .darkpurple4bg {
+            background: var(--DarkPurple-4);
+        }
+        .darkpurple4border {
+            border-color: var(--DarkPurple-4);
+        }
+
         
     </style>
 
@@ -1034,5 +1358,5 @@
     </div> <sc>2S:</sc> +1 Fatigue	<sc>1S:</sc> +1 Fatigue. +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Impact Wound. <fc>0S:</fc> +2 Fatigue. +<b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Impact Wound.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b>  Large River:</b>  <span style='padding: 0px 2px;'>Must go around $1S<div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Spaces. Requires Water Vessel to Pass. Resist 1-3 Fatigue per Space (See Water Vessel).</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'><div style='text-align:center;'>Interior/ Entrance</div></div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Small Earthen crack:</b>  <span style='padding: 0px 2px;'>The earth seemingly opened up in this spot revealing whats below</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Burrow:</b>  <span style='padding: 0px 2px;'>A Med sized creature has been digging, a large amount of piled dirt sits outside the burrow.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Sink Hole:</b>  <span style='padding: 0px 2px;'>A circlur hole jutting down.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Muddy Cave:</b>  <span style='padding: 0px 2px;'>Rocks and mudd form a half collapsed cave. The ground is rough and uncertain and little light enters.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Bone Structure:</b>  <span style='padding: 0px 2px;'>A structure mostly made of bones and rocks is built around a rocky cave. It feels very old.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Boon</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Old Campsite:</b>  <span style='padding: 0px 2px;'>Firepit with wood, if searching around can find some arrows, and old knife</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Fake Rock:</b>  <span style='padding: 0px 2px;'>Large rock can be opened up and gold found inside. Stick around and bandits might show up.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Rich Grasses:</b>  <span style='padding: 0px 2px;'>A patch of earth has vibrant plantlife containing some rare herbs. Gain <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Herbs.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Abandoned Kill:</b>  <span style='padding: 0px 2px;'>A creature has died recently but the hunter never claimed his kill for some reason. Gain 7 Raw Meat.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Inhabitants</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Hermit:</b>  <span style='padding: 0px 2px;'>An old practitioner of shamanistic practices lives in the fileds far from civilization.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Group of 4 Adventures, heavy wounded, one missing a leg, another missing a hand. </span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Hunter and son, out searching for game for a few days.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>3 Dwarves pulling a wagon full of rocks</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Soldiers riding horses, protecting the land</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Farming Family, with everything they own and 1 sickly horse looking worse for wear.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Traveler:</b>  <span style='padding: 0px 2px;'>Fancy Carriage with 2 Good Horses, 4 heavily armed gaurds, escort a noble of high standing</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Fortification:</b>  <span style='padding: 0px 2px;'>Highway Bandits have created a "Toll road"</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Fortification:</b>  <span style='padding: 0px 2px;'>Kings Soldiers, defending the road established a "Toll"</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b>  Fortification:</b>  <span style='padding: 0px 2px;'>Bandits Hidden Hideout</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Village:</b>  <span style='padding: 0px 2px;'>A small collection of huts is built around a watering hole. Some pasture animals wander the outskirts.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b>  Outpost:</b>  <span style='padding: 0px 2px;'>A small fort is dug into the earth, with various soldiers patrolling the nearby area.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Road</div> Caravan:</b>  <span style='padding: 0px 2px;'>2 Mechants, 3 Gaurds, and 3 horse loaded up.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 - 4 : </span></b></div><div><b>  Hell Pig:</b>  <span style='padding: 0px 2px;'>A pack of 3 to 7 Hell Pig salks the party, hoping ofr a meal.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 - 8 : </span></b></div><div><b>  Giant Cat:</b>  <span style='padding: 0px 2px;'>1 to 3 Giant Cats stalk the area, and may find the party a source of food if they are not careful.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 - 12 : </span></b></div><div><b>  Gnolls:</b>  <span style='padding: 0px 2px;'>A band of 3 to 6 Gnolls moves throuhg this area, robbing and killing anyone to weak to stop them</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 - 16 : </span></b></div><div><b>  Dire Elephants:</b>  <span style='padding: 0px 2px;'>1 Massive Dire Elephant, likes to keep its distance, but if the party gets close will charge them down.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>17 - 19 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Lizardmen:</b>  <span style='padding: 0px 2px;'>A hunting party of 2 to 5 Lizardmen stalks through the area.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>20 - 22 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Terror Bird:</b>  <span style='padding: 0px 2px;'>This area is hunting ground for a ground of 2-6 Terror Birds which chase their quary across the plains.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>23 - 25 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Dire Rhino:</b>  <span style='padding: 0px 2px;'>1-2 Dire Rhinos like to silently grass, butt will charge if provoked.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>26 - 28 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Uncommon</div> Chimera:</b>  <span style='padding: 0px 2px;'>1 best not lock eyes with one, will hunt the party down, for a meal or sport.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>29 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Cyclops:</b>  <span style='padding: 0px 2px;'>A cyclops has a cave in the area which he occasionaly leaves to hunt on anyone unlucky enough to be nearby.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>30 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Drake:</b>  <span style='padding: 0px 2px;'>A nest of 2-4 Drakes has been made on the cliffs nearby, and they may hunt the party for food if seen.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>31 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Skeletons:</b>  <span style='padding: 0px 2px;'>A slaughtered village has cursed the men who attacked it, who now hold a barren fort as undead guardians.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='yellow2bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Traveler's Scream:</b>  <span style='padding: 0px 2px;'>Traveler is under attack by bandits.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Localized Storm:</b>  <span style='padding: 0px 2px;'>On the horrizon the party spots dark clouds that seem to stay unmoving above a certain point. </span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Slave Trade:</b>  <span style='padding: 0px 2px;'>Party encounters a group of slaves being carted off by some guards</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Burning Village:</b>  <span style='padding: 0px 2px;'>A village is being ravaged by a band gnolls, possible uner orders from a local warlord.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Hunting Party:</b>  <span style='padding: 0px 2px;'>A nearby settlement has decided to hunt a nearby Dire Elephant, hoping it's tusks will being good fortune. They are willing to pay those who wish to come along for the fight.</span> </div></div></div></div><div></div></SectionContainer></RegionPage></div><page></page>
 </body>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Print/Regions_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:29:34 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Print/Regions_Print.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:42:42 GMT -->
 </html>

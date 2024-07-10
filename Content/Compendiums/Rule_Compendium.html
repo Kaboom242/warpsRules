@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:23 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:27 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Rule Compendium</title>
@@ -323,6 +323,10 @@
     .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
     .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
     
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
     f7 {
         display:inline;
         font-size:7px;
@@ -370,10 +374,17 @@
         font-weight:700; 
         color:white;
         font-size:9px;
-        border-radius:4px 4px 0px 0px;
         margin-top: 0px;
         padding:1px 2px 1px 5px;
-        background:var(--Gray-3);
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
     }
     masterabilitysubtitle{
         font-weight:700; 
@@ -404,14 +415,41 @@
     .astGreen{background:var(--Green-3);}
     .astBlue{background:var(--Blue-3);}
     .astOrange{background:var(--Orange-3);}
+    
     abilitysection{
-        border:solid 1px; 
-        border-radius:4px;
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
         font-size:80%;
         padding:1px 2px 1px 2px; 
         background:var(--Gray-1); 
-        border-color:var(--Gray-3);
     }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
     .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
     .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
     .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
@@ -813,6 +851,7 @@
     }
     
 </style>
+
 </head>
 <style type="text/css">
     body {
@@ -1158,7 +1197,7 @@
             <div style='height:1px;'></div><b9>Flanking:</b9> If attacking Target from opposite sides, each attacker gets <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hit.
         </rulebox>
         <actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Breather</div></div><actionSubtitle style='color:black; margin-left:3px;'>After Combat</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>After Combat Characters remove Harm, Stamina Loss, Terror, Will, and other temporary effects.
-                <br> For Characters who have recieved Wounds see the <b>Wounds Section</b>.</div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Grappling_1'><rulecardtitle><span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>2</span> Grappling</rulecardtitle><div style='padding: 0px 2px; font-size: 8px; '>
+                <br> For Characters who have received Wounds see the <b>Wounds Section</b>.</div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Grappling_1'><rulecardtitle><span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>2</span> Grappling</rulecardtitle><div style='padding: 0px 2px; font-size: 8px; '>
                 <b>Grappling</b> Characters may only attempt Grapple Actions.
                 <br><b>Prevent</b> is done against each Grapple Action Targeting you.
                 <br><b>Assist</b> is used to add Successes to an Ally's Grapple Action.
@@ -2978,42 +3017,7 @@
             padding: 0px 0px 0px 0px;
         '>&#10680 </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Limb (Legs) Can't be used. Knockdown occurs.
             <div style='height:1px;'></div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>KO</b> </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Cannot Move or attempt Actions other than <b>Catch Breath</b>, <b>Recover</b>, or <b>Remove</b>.
-        </div><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    ;'><div style='text-align:center;'><div style='text-align:left;'>Aid</div></div> <actionSubtitle style='margin-left:3px; margin-top:2px;'>Full / Active:<div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
-                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
-                                        <nowrap></nowrap>
-                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><f8><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Turquoise-4);
-        
-        font-weight:700;
-    '>
-        Cha
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Int);
-        
-        font-weight:700;
-    '>
-        Int
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b><br><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b>First Aid Bonus</b></f8></div></challengeInner>
-                                    </challenge>
-                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> Remove 1 Harm from Inactive Ally.</div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><rulecardsubtitle>Constitution</rulecardsubtitle>
+        </div><div style='height:2px;'></div><rulecardsubtitle>Constitution</rulecardsubtitle>
         <div style='font-size: 8px; padding: 0px 2px;'>
             A Character's Constitution represents a Character general health and wellbeing.
             <br><b>Con Points</b> such as Fatigue, Hunger, etc. and get recorded in the Constitution Meter.
@@ -3060,7 +3064,7 @@
         </div><div style='height:2px;'></div><rulecardsubtitle>Wounds</rulecardsubtitle>
             <div style='font-size: 8px; padding: 0px 2px;'>
                 <b>Wounds:</b> Wounds are injuries that stick around after Combat and take a while to heal.
-                <br><b>Fresh Wounds:</b> When first receved in Combat Wounds are marked as Fresh Wounds.
+                <br><b>Fresh Wounds (F) vs Old Wounds (O):</b> When first receved in Combat Wounds are marked only in the Fresh Wounds <b>F</b> box.
                 <br><b>Post Combat Rest:</b> This occurs once able to rest for about an hour or so after a Combat. 
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In a Post Combat Rest Characters may remove <div style='
         display: inline-block;
@@ -3089,7 +3093,7 @@
             
             padding: 0px 1px 0px 0px;
         '>.</f7>
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All non Fresh Wounds become normal Wounds.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All non Fresh Wounds become Old Wounds and the <b>O</b> box is checked as well.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Illness per Fresh Wound not removed. (Max: 4) 
             </div><div style='height:2px;'></div><rulecardsubtitle><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
         src='../../Resources/Art/Images/Injured.svg' 
@@ -3601,7 +3605,7 @@
     '>
         Spirit
     </div>. 
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; May use 2 Inspiration to gain Sociopath Aspect.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; May use 2 AP to gain Sociopath Aspect.
             <br><b>Witnessing Traumas:</b> Cannibalism, Cold Blooded Murder performed by an ally.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resist 1 Dread w/ <div style='
         display: inline-block;
@@ -4395,9 +4399,9 @@
                 <br> <f6>Alcohol and Drugs can also boost Morale!</f6></div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><rulecardsubtitle>Time Skips</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
             <f7></f7>
             The GM may allow Characters to time skip forward for weeks, months, or more.
-            When doing do Characters may be able to remove Wounds, Dread, etc. and even gain Morale or Inspiration if the situation permits.
+            When doing do Characters may be able to remove Wounds, Dread, etc. and even gain Morale or AP if the situation permits.
             Alternatively in certain harsher situations (working on a ship) Character may need to lose or resist Fatigue or Morale loss.
-        </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Travel'><rulecardtitle> Travel + Survival + Character Progression <f8></f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>11</span></rulecardtitle><rulecardsubtitle>Travel</rulecardsubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Travel</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+        </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Travel'><rulecardtitle> Travel + Survival <f8></f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>11</span></rulecardtitle><rulecardsubtitle>Travel</rulecardsubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Travel</div></div> <actionSubtitle style='margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
                     Travel 1 World Space (10 Miles). Resist <b>Travel Difficulty</b> Fatigue w/ <div style='
         display: inline-block;
         
@@ -4518,10 +4522,10 @@
         font-weight:700;
     '>
         Endr
-    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='height:1px;'></div><b>Region Bonus</b></div></challengeInner>
+    </div></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
-                    <cs>1S:</cs> 1 Rummage. <cs>1S:</cs> 2 Herbs. <cs>2S:</cs> 1 Food.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Find Shelter</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                    <cs>1S:</cs> 1 Rummage. <cs>2S:</cs> 1 Food.</div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Gray-1); border-style:solid; border-color:black; border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Gray-1);'><div style='text-align:left; '>Find Shelter</div></div><actionSubtitle style='color:black; margin-left:3px;'>Interim</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
                     <b>Resist:</b> <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><b>w</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
         display: inline-block;
         
@@ -4573,20 +4577,93 @@
     </div></div></challengeInner>
                                     </challenge>
                                 <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
-                    <sc>2S:</sc> May make Fire. +1 Warmth/Cool Dice.</div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><rulecardsubtitle>Character Progression</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
-            Characters progress though gaining <div style='display:inline; color:black; font-weight:800;'>XP</div>, <div style='display:inline; color:black; font-weight:800;'>AP</div>, and <b>Inspiration</b>.
-            <br> <div style='display:inline; color:black; font-weight:800;'>XP</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Character's experience in battle. Gained through quests and combat.
-            <br> <div style='display:inline; color:black; font-weight:800;'>AP</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Characters general experience. Gained through quests and exploration.
-            <br>&nbsp;&nbsp;&nbsp;  <b>Note:</b> When receiving <div style='display:inline; color:black; font-weight:800;'>XP</div> or <div style='display:inline; color:black; font-weight:800;'>AP</div>, Characters may choose to gain Morale instead.
-            <br>&nbsp;&nbsp;&nbsp;  Also when gaining <div style='display:inline; color:black; font-weight:800;'>XP</div> Characters may use it as <div style='display:inline; color:black; font-weight:800;'>AP</div> at GM's discretion.
-            <br> <b>Inspiration <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div>:</b> Knowledge, insight, or epiphanies to progress toward specific skills. 
-            <br> Inspiration can be gained directly, by accumulating enough Successes over multiple Checks, passing a difficult Challenge, and many other ways.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There are many ways to engage with the world to gain <b>Inspiration</b>.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Challenges:</b> Taking on difficult feats. Such as a daring climb or risky infiltration.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Exploration:</b> Finding new areas or unknown treasures.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Knowledge:</b> Reading a book or researching at a library.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Socialization:</b> NPCs may have knowledge or insights that Characters can learn from.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Training:</b> Teachers may impart Inspiration, for free or a price.
+                    <sc>2S:</sc> May make Fire. +1 Warmth/Cool Dice.</div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Progression'><rulecardtitle> Character Progression <f8></f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>12</span></rulecardtitle><div style='padding-left: 3px;'><f8>Characters improve their Abilities, Talents, and Classes by gaining Experience from quests and combat, and by earning Progress through interacting with the world.</f8><br> <f8><img 
+        src='../../Resources/Art/Images/XProgress.svg' 
+        height='18px'
+        width='18px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '><b8>Earning Experience:</b8> Experience is one part of the training towards the next class. Characters gain Experience by: completing quests or by engaging in combat</f8></div><rulecardsubtitle>Progress</rulecardsubtitle><div style='padding-left: 3px;'><f8>Progress reflects a character's growth through roleplaying, exploring, interacting with NPCs, and completing personal quests and character arcs. 
+                It is measured as a percentage, representing how much of a particular side story or skill development is complete. 
+                </f8>
+                <br>
+                <f8><b8>Earning Progress:</b8> Characters can use their free time or days off to gain Progress as a Day Action by doing a Challenge. However, progress can sometimes be obtained during a quest.
+                    A Challenge is about taking on difficult feats. The more risky and interesting, generally the faster you progress. 
+                    If it's not interesting or boring, even if you get successes, you might not be rewarded with much or any progress.
+                </f8><div style='padding-left: 10px;'>
+                    <f8><b>Partial Progress:</b> Even partial progress can be beneficial. For example, a character who is 50% through learning to swim might receive a bonus on swim checks.</f8>
+                    <br><f8><b>Completion:</b> Most progress requires a capstone event or significant challenge to reach completion.</f8>
+                    <br><f8><b>Capstone Event:</b> This is the climax of your character's journey to gain a new Ability. It's a moment to remember. Something more than a check happens, make a story.</f8>
+                </div>
+            <f8>Challenges generally fall into one of these Categories:</f8>
+            <div style='padding-left: 10px; font-size: 8px;'>
+                <div><b>Exploration:</b> Be out in the world, or in a specific place</div>
+                <div><b>Knowledge:</b> Reading a book or researching at a library.</div>
+                <div><b>Physical Training:</b> Working out, gaining fatigue, and training your muscles.</div>
+                <div><b>Socialization:</b> NPCs may have knowledge or insights that characters can learn from.</div>
+            </div></div><rulecardsubtitle>Progress Rank (Difficulty)</rulecardsubtitle><div style='padding-left: 3px;'><f8>Rank represents the difficulty of completing a task, rated from 1 to 5. The higher the rank, the more time and effort required.</f8>
+            <div style='padding-left: 10px; font-size: 8px;'>
+                <div style='height:3px;'></div> <img 
+        src='../../Resources/Art/Images/1Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Easy, a minor roleplay moment. Typically 40-80% progress per attempt.
+                <div style='height:3px;'></div> <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Moderate difficulty. Typically 30-50% progress per attempt.
+                <div style='height:3px;'></div> <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Challenging. Typically 15-25% progress per attempt.
+                <div style='height:3px;'></div> <img 
+        src='../../Resources/Art/Images/4Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Difficult. Typically 10-20% progress per attempt.
+                <div style='height:3px;'></div> <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Very difficult, requiring a major event or defining moment. Gain 5-15% progress per attempt.
+            </div>
+            <f8>More successes in a progress challenge generally result in more progress toward completion. If a character gets 0 successes, they may gain 0% progress or a minimal amount.</f8>
         </div></rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Glossary_1'><rulecardtitle>Glossary <f8>A - I</f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>12</span></rulecardtitle><rulebox>
             <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> <b>5</b>s do not count as Successes. Each additional applies <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>-</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doesn't effect <b>Resist/Rest/Catch Breath/Compose Self</b>.
@@ -4777,17 +4854,51 @@
             <div style='height:2px;'></div><b9>Dying:</b9> Slowly dying. Con Point represented by <b style='font-weight:900;'>(D)</b>. See <b>Injuries Section</b>.
             <div style='height:1px;'></div><b9>Encumbrance:</b9> How difficult an Item is to carry. See <b>Items Section</b>.
             <div style='height:1px;'></div><b9>Exposure:</b9> The effects of cold/warm weather. 
-                <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Con Point represented by <b style='font-weight:900;'>(EH)</b> for Heat and <b style='font-weight:900;'>(EC)</b> for Cold.
-                <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; See <b>Daily Section</b>.
+                <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Con Point represented by <b style='font-weight:900;'>(EH)</b> for Heat and <b style='font-weight:900;'>(EC)</b> for Cold. See <b>Daily Section</b>.
             <div style='height:1px;'></div><b9>Falling:</b9> Causes Impact Damage. See <b>Blast/Impact Section</b>.
             <div style='height:1px;'></div><b9>Fatigue:</b9> Long term exertion. Con Point represented by <b style='font-weight:900;'>(F)</b>.
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px;'>1F</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Gain 1 Fatigue. <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px; '>2F</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Gain 2 Fatigue. <div style='display:inline-block; background: white; color: black; font-weight:700; padding: 0px 1px 0px 2px; border:solid 1px black; border-radius:10px; font-size:8px; '>3F</div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Gain 3 Fatigue.
             <div style='height:1px;'></div><div style='height:1px;'></div><b9>Flanking:</b9> If attacking Target from opposite sides, each attacker gets <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hit.
-            <div style='height:1px;'></div><b9>Grappling:</b9> When Characters are linked by grabbing/wrestling. See <b>Grappling Section</b>.
+            <div style='height:1px;'></div><b9>Frozen:</b9> 
+                    <b>1-3:</b> <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> Pace 1. (0 if already 1).
+                    <b>4-6:</b> Can't Move/Act. 
+                    <b>7:</b> Dying
+                    <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove Active/Free(<div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>) w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div>
     </rulebox>
     </rulecard></div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard id='Glossary_2'><rulecardtitle>Glossary <f8>H - Z</f8> <span style='color:white; float:right; font-weight:600; padding:0px 3px 0px 3px;'>13</span></rulecardtitle>
         <rulebox>
-            <b9>Hunger:</b9> Loss of energy due to lack of food. Con Point represented by <b style='font-weight:900;'>(H)</b>.
+            <b9>Grappling:</b9> When Characters are linked by grabbing/wrestling. See <b>Grappling Section</b>.
+            <div style='height:1px;'></div><b9>Hunger:</b9> Loss of energy due to lack of food. Con Point represented by <b style='font-weight:900;'>(H)</b>.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Eating 1 Food:</b> Prevents 1 Hunger (daily resist) <b>OR</b> an <b style='font-weight:900;'>(H)</b> becomes a Fatigue.
             <div style='height:1px;'></div><b9>Illness (I):</b9> Toll taken by sickness or disease. Con Point represented by <b style='font-weight:900;'>(I)</b>. 
             <div style='height:1px;'></div><b9>Impact:</b9> Dmg that is spread over multiple areas. See <b>Blast/Impact Section</b>.
@@ -4849,7 +4960,7 @@
         '> (typically legs.)
             <div style='height:1px;'></div><b9>Morale:</b9> Character's long term confidence and resolve. See <b>Morale Section</b>.
             <div style='height:2px;'></div><b9>Mortal Wound (M):</b9> Slowly dying. See <b>Injuries Section</b>.
-            <div style='height:1px;'></div><b9>Pin:</b9> Stop Target's Movement and enter Grapple. If so may attempt Pin Actions. 
+            <div style='height:1px;'></div><b9>Pin:</b9> Stop Target's Movement and enter Grapple. If so, may attempt Pin Actions. 
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dmg Effect only applies upon 1 or more Dmg. Pin Actions ignore Armor.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dmg from Pin Actions is applied to the Body Area Pin was applied to.
             <div style='height:1px;'></div><b9>Poison:</b9> Resist Poison w/ <div style='
@@ -4908,7 +5019,7 @@
         Agl
     </div> <fc>0S:</fc> Lose Arm/Leg. +3 Bleed. <fc>1S:</fc> Lose Hand/Foot. +2 Bleed.
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<f7>These effects are not prevented by Mend. Some effects may reattach Body Areas.</f7>
-            <div style='height:1px;'></div><b9>Slowed:</b9> Some Effect is making it difficult for Character to move or act.
+            <div style='height:1px;'></div><b9>Slowed:</b9> Some Effect is making it difficult for a Character to move or act.
                 <div style='height:1px;'></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>1-3:</b> Pace is 1  (0 if already 1). <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>. <b>4 or more:</b> Can't Move, or attempt most Actions.
             <div style='height:1px;'></div><b9>Sinking:</b9> <i>Wearing metal armor, carrying heavy items.</i> Sink 1 Spaces per Round.
             <div style='height:1px;'></div><b9><img 
@@ -4926,7 +5037,7 @@
             <div style='height:1px;'></div><b9>Step:</b9> Move 1 Space. Must not be Slowed and have a Pace of 1 or more.
             <div style='height:1px;'></div><b9>Stress:</b9> Fear or strain the linger. Con Point represented by <b style='font-weight:900;'>(S)</b>.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Removed by using <b>1 Morale</b>.
-            <div style='height:1px;'></div><b9>Swimming:</b9> Can't breath unless at surface. Cannot attempt <img 
+            <div style='height:1px;'></div><b9>Swimming:</b9> Can't breathe unless at surface. Cannot attempt <img 
         src='../../Resources/Art/Images/Mobile.svg' 
         height='12px'
         width='12px' 
@@ -4973,12 +5084,12 @@
             Vehicles are represented by Vehicle Cards, where the Vehicle information is stored.
         </div><rulecardsubtitle>Vehicle Travel</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
             <b>Vehicle Travel</b> allows Characters to ride the Vehicle for days at a time, often with a room in the Vehicle for sleeping.
-            <br> <b>Day Speed:</b> How far the Vehicle can travel in single day.
-            <br> <b>Crew:</b> How many people are needed for the boat to able to travel in the boat.
+            <br> <b>Day Speed:</b> How far the Vehicle can travel in a single day.
+            <br> <b>Crew:</b> How many people are needed for the boat to be able to travel in the boat.
             <br> <b>Occupants:</b> How many people the boat can carry. 
             <br> <b>Port:</b> Where a Vehicle can port, meaning dock and safely and unload cargo.
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Any:</b> Anywhere. <b>Port:</b> Any region port. <b>Deep Port:</b> Only select large ports.
-            <br> <b>Adrift:</b> When a ship us broken or unmmanned and merely follows the ocean currents.
+            <br> <b>Adrift:</b> When a ship is broken or unmanned and merely follows the ocean currents.
         </div><div style='height:2px;'></div><rulecardsubtitle>Cargo</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
             <b>Cargo (C):</b> Ships list how many boxes of Cargo <b>(C)</b> the ship can carry. Each is 10<b6>E</b6>.
             <br> <b>Food (5G):</b> Food for the crew.
@@ -4989,8 +5100,8 @@
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Minor:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <b>Major:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> <b>Epic:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>
 
         </div><div style='height:2px;'></div><rulecardsubtitle>Crew Health/Morale</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
-            <b>Crew Health</b> states the the crews status regarding, injuries, sickness and death.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Injuries:</b> Wounds the crew has which can typicaly be healed through R&R.
+            <b>Crew Health</b> states the crew's status regarding injuries, sickness and death.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Injuries:</b> Wounds the crew has which can typically be healed through R&R.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Casualties:</b> Deaths and debilitating injuries. Removed through Hiring at a Port.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Critical:</b> Almost everyone on the crew is dead. Removed through Hiring at a Port.
             <b>Morale</b> is the mental health of the Crew.
@@ -4999,23 +5110,23 @@
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>1-2 (Disgruntled):</b> Unhappy. May even pick fights. <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> on all Ship Actions. 
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>0 (Mutiny):</b> Adrift. Can't attempt Ship Actions. Typically an armed revolt occurs.
         </div><div style='height:2px;'></div><rulecardsubtitle>Oceans</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
-            <b>Ocean Regions</b> have information which describes how they effect travel through them.
-            <br> <b>Wind:</b> This is done daily and may increase or decrease the ships travel speed that day.
-            <br> <b>Drift:</b> This is the direction and distnace traveled if Adrift.
+            <b>Ocean Regions</b> have information which describes how they affect travel through them.
+            <br> <b>Wind:</b> This is done daily and may increase or decrease the ship's travel speed that day.
+            <br> <b>Drift:</b> This is the direction and distance traveled if Adrift.
             <br> <b>Sea Challenge:</b> These are challenges that each PC with a Sailor Ability may attempt.
         </div><div style='height:2px;'></div><rulecardsubtitle>Vehicle Combat</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
             <b>Vehicle Combat</b> occurs when there is combat between or on Vehicles.
             <br><b>Vehicle Combat Round</b> a Vehicle will move every 5 Rounds of Standard Combat. 
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If there is no Standard Combat occuring, this can be ignored.
-            <br> <b>Combat Speed:</b> How far the Veicle travels in a single Vehicle Combat Round.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If there is no Standard Combat occurring, this can be ignored.
+            <br> <b>Combat Speed:</b> How far the Vehicle travels in a single Vehicle Combat Round.
             <br> <b>Boat Combat:</b> Terrain on a boat in Combat is considered Difficult 1. 
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A strom or large waves are considered Difficult 2.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A storm or large waves are considered Difficult 2.
         </div><rulecardsubtitle>Ports</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
             <b>Personal:</b> 1G Full Repair	
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Small:</b> 2G + 1 Day per Dmg, 5G + 2 Days per Brk.
             <br><b>Medium:</b> 3G + 1 Day per Dmg, 10G + 5 Days per Brk.
             <br><b>Large:</b> 5G + 1 Day per Dmg, 20G + 7 Days per Brk.
-            <br><b>Shore Leave:</b> Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale and remove <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Injuries/Casulaties per week.
+            <br><b>Shore Leave:</b> Gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Morale and remove <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Injuries/Casualties per week.
         </div></rulecard></div></div>    
     <div style='
     width: 800px;
@@ -5088,8 +5199,8 @@
         <BasicsSection>
             <BasicsHeader>Checks</BasicsHeader>
             <BasicsText><div>
-                Resolution in WARPS is done via a Check which invovles rolling a given number of Dice, usually a Character's Value in an assocated Stat, and then counting the Successes.
-                <br><b>Stats:</b> These describe a Characters core appitudes. A <div style='
+                Resolution in WARPS is done via a Check which involves rolling a given number of Dice, usually a Character's Value in an associated Stat, and then counting the Successes.
+                <br><b>Stats:</b> These describe a Characters core aptitudes. A <div style='
         display: inline-block;
         
         background:white;
@@ -5113,7 +5224,7 @@
             <BasicsText><div>
                 <b>Dice:</b> D6s. Added to a Check using a +<b style='font-weight:700; color: black;'>X<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> notation. Ex: +<b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> would add 2 Dice to a Check.
                 <br><b>Value:</b> The amount of Points a Character has in a Stat.
-                <br><b>Roll:</b> The total ampount of Dice being rolled for a Check. Includes all the Stats and any other added Dice.
+                <br><b>Roll:</b> The total amount of Dice being rolled for a Check. Includes all the Stats and any other added Dice.
                 <br><b>Auto Successes:</b> Added to a Check using a +<b style='font-weight:700; color: black;'>X<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> notation. For example +<b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> would add 1 Success to the total.
                 <br><b>Result:</b> Sumtotal of all Success, including those via the Roll and Auto Successes.
             </div></BasicsText>
@@ -5124,15 +5235,15 @@
                 Checks can be categorized in the following ways:
                 <br><b>Action Check:</b> Made as part of an Action (as opposed to an Action).
                 <br><b>Challenge Check:</b> Made as part of a Challenge. Typically has one or more Stats.
-                <br><b>Stat Check:</b> Check that invovles the associated Stat. 
+                <br><b>Stat Check:</b> Check that involves the associated Stat. 
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Resist</BasicsHeader>
             <BasicsText><div>
                 Resist Checks Reduce the amount of something that would be applied.
-                Each Success on Resist Check reduces it's points by 1.
-                For example Burning 2 is being applied and a Character gets <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> to Resist in, than only Burning 1 would be applied instead.
+                Each Success on Resist Check reduces its points by 1.
+                For example Burning 2 is being applied and a Character gets <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> to Resist in, then only Burning 1 would be applied instead.
             </div></BasicsText>
         </BasicsSection>
                         
@@ -5156,7 +5267,7 @@
         <BasicsSection>
             <BasicsHeader>Spaces</BasicsHeader>
             <BasicsText><div>
-               Often in combat, the world is divided into roughly 5 feet by 5 feet Spaces, typically on Hex Grid.<br>These Spaces can be considered 5 feet tall and stacked vertcially as well. 
+               Often in combat, the world is divided into roughly 5 feet by 5 feet Spaces, typically on Hex Grid.<br>These Spaces can be considered 5 feet tall and stacked vertically as well. 
                <br><img 
         src='../../Resources/Art/Images/0H.svg' 
         height='12px'
@@ -5167,7 +5278,7 @@
             left: 0;
             
             padding: 0px 0px 0px 0px;
-        '><b>:</b> Can only Target Effect the Space the Effect thakes place.
+        '><b>:</b> Can only Target Effect the Space the Effect takes place.
                <br><img 
         src='../../Resources/Art/Images/1H.svg' 
         height='12px'
@@ -5189,13 +5300,13 @@
             left: 0;
             
             padding: 0px 0px 0px 0px;
-        '><b>:</b> Represents one ranged unit. This is equivalent to 3 Space.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>It is recommended to use and on hand measuring short cut (like a roughly 6' pencil or marker.</i>
+        '><b>:</b> Represents one ranged unit. This is equivalent to 3 spaces.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>It is recommended to use and on hand measuring short cut (like a roughly 6' pencil or marker.</i>
                <br><b>Line of Sight:</b> Most Hits go through each Space, meaning anything between them and the Target is Hit first, typically stopping the Hit.
-               <br><b>Blast:</b> A type of Hit that covers and area, hitting everything inside.
-               <br><b>Circle X:</b> Effects every Space X away from Effect. Circle 0 only effects the current Space.
-               <br><b>Semi-Circle X:</b> Effects all Spaces X away in a Half-Circle from Effect. Semi-Circle 0 only effects the current Space. 
-               <br><b>Cone X:</b> Effects all Spaces X away in a 45 degree cone from Effect. Cone 0 only effects the current Space. 
-               <br><b>Thrown:</b> Travels in an arc, and may move over things in it's way.
+               <br><b>Blast:</b> A type of Hit that covers an area, hitting everything inside.
+               <br><b>Circle X:</b> Effects every Space X away from Effect. Circle 0 only affects the current Space.
+               <br><b>Semi-Circle X:</b> Effects all Spaces X away in a Half-Circle from Effect. Semi-Circle 0 only affects the current Space. 
+               <br><b>Cone X:</b> Effects all Spaces X away in a 45 degree cone from Effect. Cone 0 only affects the current Space. 
+               <br><b>Thrown:</b> Travels in an arc, and may move over things in its way.
                <br><b>Diagonals:</b> If a distance would be measured diagonally (vertically and horizontally) the distance is the shortest of the two.
             </div></BasicsText>
         </BasicsSection>
@@ -5203,26 +5314,26 @@
             <BasicsHeader>Actions</BasicsHeader>
             <BasicsText><div>
                 Each Round a Character may choose one Action, which may involve Attacking, Running, or many other options.
-                Their are several types of Actions which can be divided into two major types, Combat Actions and Long Term Actions. 
+                There are several types of Actions which can be divided into two major types, Combat Actions and Long Term Actions. 
                 <br><b>Combat Actions:</b> While Combat Actions can be done out of Combat, they are often done in Combat situations and have a type determining how much focus they require in that setting.
                 <br>&nbsp;&nbsp;&nbsp;<b>Use Action:</b> Something a Character can attempt as long as they can pay the cost. Additional restrictions may be listed.
                 <br>&nbsp;&nbsp;&nbsp;<b>Active Action:</b> Can be mobile while doing, Can move Pace and Block/Dodge. Typically cannot move after attempting Active Actions.
-                <br>&nbsp;&nbsp;&nbsp;<b>Full Action:</b> Require focus. Can only do the chosen Action. Cannot Move Pace or attempt Defend Action (ex:Block/Dodge)
+                <br>&nbsp;&nbsp;&nbsp;<b>Full Action:</b> Require focus. Can only do the chosen Action. Cannot only 1 Space max. Cannot attempt Defend Action (ex:Block/Dodge)
                 <br>&nbsp;&nbsp;&nbsp;<b>Defense Action:</b> Can be attempted as a reaction to an Attack.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Dodge Action:</b> Typically reduce Hit of Strike and Proj. Does not effect Blasts.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Dodge Action:</b> Typically reduce Hit of Strike and Proj. Does not affect Blasts.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Block Action:</b> Typically reduce Hit of Strike only. If reduced to 0, apply Attack to Item/Body Area used to Block.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Cover Action:</b> Involves sheilding oneself with an object. Typically reduces Hit of Proj and Blast Hits.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Cover Action:</b> Involves shielding oneself with an object. Typically reduces Hit of Proj and Blast Hits.
                 <br>&nbsp;&nbsp;&nbsp;<b>Free Action:</b> Can be done at any time. These may be done once per Round unless otherwise stated.
                 <br>&nbsp;&nbsp;&nbsp;<b>Grapple Action:</b> While in a Grapple these are the only Actions you can do.
                 <br><b>Long Term Actions:</b> These Actions typically take hours and cannot be done in Combat.
-                <br>&nbsp;&nbsp;&nbsp;<b>Shift Action:</b> Action requires a signifigant part of a Character's Day. See the Shift + Daily + Downtime Section for more info.
+                <br>&nbsp;&nbsp;&nbsp;<b>Shift Action:</b> Action requires a significant part of a Character's Day. See the Shift + Daily + Downtime Section for more info.
                 <br>&nbsp;&nbsp;&nbsp;<b>Interim Action:</b> Takes somewhere between 5 and 30 minutes.
-                <br><b>Actions Sub-Types:</b> Actions may have one or more Sub-Types which may have in game consequences. Some examples are listed here, but there are others.
-                <br>&nbsp;&nbsp;&nbsp;<b>Nurse:</b> A special type of a Shift Action. A Character can only be the the Target of a single Nurse Action at a time. 
+                <br><b>Actions Subtypes:</b> Actions may have one or more Subtypes which may have in game consequences. Some examples are listed here, but there are others.
+                <br>&nbsp;&nbsp;&nbsp;<b>Nurse:</b> A special type of a Shift Action. A Character can only be the Target of a single Nurse Action at a time. 
                 <br>&nbsp;&nbsp;&nbsp;<b>Prone:</b> Actions Characters can only do while Prone.
                 <br>&nbsp;&nbsp;&nbsp;<b>Swimming:</b> Actions Characters can only do while in water deep enough to swim in.
                 <br>&nbsp;&nbsp;&nbsp;<b>Climbing:</b> Actions Characters can only do while hanging/climbing on to a vertical surface.
-                <br>&nbsp;&nbsp;&nbsp;<b>Practice:</b> Actions ussed to hone a Characters skills.
+                <br>&nbsp;&nbsp;&nbsp;<b>Practice:</b> Actions used to hone a Characters skills.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5237,7 +5348,7 @@
             <BasicsText><div>
                 In addition to the standard Standing other Movement States.
                 In these Movement States Characters can only attempt Actions with the Movement State listed in the subtitle. (These often allow the CHaracters to access other Actions.)
-                Switching from one movement state to other can involve an Action as Prone to Standing, but often is a Free Action (to start climbing from the ground.)
+                Switching from one movement state to another can involve an Action as Prone to Standing, but often is a Free Action (to start climbing from the ground.)
                 <br><b>Prone:</b> Character is off their feet or otherwise on the ground.
                 <br><b>Swimming:</b> Character is mostly/completely submerged in liquid.
                 <br><b>Climbing:</b> Character is hanging on to a semi-vertical surface.
@@ -5247,10 +5358,10 @@
             <BasicsHeader>Effects</BasicsHeader>
             <BasicsText><div>
                 The Effect of an Action, states what happens when the Action is attempted.
-                <br>Some Effects have Sucess costs that must be expended from an associated Check.
+                <br>Some Effects have Success costs that must be expended from an associated Check.
                 <br>&nbsp;&nbsp;&nbsp;<sc>XS:</sc> This effect can occur once if the associated Check has enough Successes to be expended on it.
-                <br>&nbsp;&nbsp;&nbsp;<cs>XS:</cs> This effect can occur multiple times, as long as there are enough Success for each time activated.
-                <br>&nbsp;&nbsp;&nbsp;<fs>XS:</fs> This effect occurs if the amount of Successes mathes the amount here, regardless of the ishes of the Character. 
+                <br>&nbsp;&nbsp;&nbsp;<cs>XS:</cs> This effect can occur multiple times, as long as there is enough Success for each time activated.
+                <br>&nbsp;&nbsp;&nbsp;<fs>XS:</fs> This effect occurs if the amount of Successes matches the amount here, regardless of the wishes of the Character. 
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5270,7 +5381,7 @@
                 <br>Pace may be a type a movement across different environment types.
                 <br><b>Pace Types</b> 
                 <div style='margin-left:10px;'>
-                    <b>Ground:</b> Moving over a relatively flat surface like walking. Pace is assumed to Ground based unless stated otherwise.
+                    <b>Ground:</b> Moving over a relatively flat surface like walking. Pace is assumed to be Ground based unless stated otherwise.
                     <br><b>Surface:</b> Can move across any surface even horizontal and inverted.
                     <br><b>Swim:</b> Moving through a liquid such as Water.
                     <br><b>Fly:</b> Moving through the Air. These often include a Min-Speed which must be moved or the Character falls. Flying Characters may move downwards up to 10 Spaces per Round.
@@ -5318,7 +5429,7 @@
                 When Attacking a Hit Check is made to determine the Hit Value of the Attacker.
                 The remaining value left over after the Target's Defend Check can be used to choose a Body Area from the Target’s Hit Box.
                 <br>Hits are denoted by Checks with a Hit Heading, which can be a <b>Strike</b> or a <b>Proj</b> (Projectile).
-                <br>The Target may use a Defense Action to limit the Hit. Different tpyes of Defensive Actions may apply depending on the type of Hit.
+                <br>The Target may use a Defense Action to limit the Hit. Different types of Defensive Actions may apply depending on the type of Hit.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5327,7 +5438,7 @@
                 Each Character has a Hit Box with each Body Area that can be Hit, and a corresponding value needed to Hit it. When successfully Hit, Attacks typically apply Damage to the corresponding Damage Meter.
                 <br>Arms are typically divided into a <b>Main Arm (M)</b> which is primarily used for holding weapons and special tasks, and an <b>Off Arm (O)</b>.
                 <br>Some Hits, typically with <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b> may require rolling a die to randomly determine which of the possible Body Areas is Hit.
-                This effect can be ignored, and the body area chosen with an additiona success.
+                This effect can be ignored, and the body area chosen with an additional success.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5343,7 +5454,7 @@
             <BasicsHeader>Damage<br>Types</BasicsHeader>
             <BasicsText><div>
                 Damage can come in various forms, some of which may have certain interactions with certain armors, Characters, etc.
-                <br>If Damage Types are seperated by a '/' then the ser may choose 1 of those whenever making an Attack. 
+                <br>If Damage Types are separated by a '/' then the ser may choose 1 of those whenever making an Attack. 
             	<br><b>Physical Damage:</b> Damage caused by physical trauma/force.
             	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Bash:</b> Blunt force or bludgeoning damage such as from a hammer or club.
             	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Slash:</b> Slicing or cutting damage such as from a sword or claws.
@@ -5351,10 +5462,10 @@
             	<br><b>Energy Damage:</b> Damage that comes from focused energy, often from magic or technology.
             	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Energy:</b> A generic type of Energy Damage which can be from many non-specific origins.
             	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Fire:</b> Energy from heat or fire.
-            	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ice:</b> Energy from concetrated cold or ice.
+            	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ice:</b> Energy from concentrated cold or ice.
             	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Elec:</b> Concentrated electrical energy.
-            	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Light:</b> Energy from concetrated light, often related to in-universe deities.
-            	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Dark:</b> Energy from concetrated darkness, often related to in-universe deities.
+            	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Light:</b> Energy from concentrated light, often related to in-universe deities.
+            	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Dark:</b> Energy from concentrated darkness, often related to in-universe deities.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5382,7 +5493,7 @@
             left: 0;
             
             padding: 0px 0px 0px 0px;
-        '>:</b> Used for a movement. Character cannot stand/move their listed Pace if lost.
+        '>:</b> Used for a movement. Characters cannot stand/move their listed Pace if lost.
             </div></BasicsText>
         </BasicsSection>
                         
@@ -5393,8 +5504,8 @@
             <BasicsHeader>Challenge</BasicsHeader>
             <BasicsText><div>
                 A Challenge is a freeform Check typically prompted by the GM. This may include seeing if the Character can jump over a ravine, push a boulder, resist pain, etc.
-                <br>The outcome is based on the number of Sucesses of the Challenge, with more required for a more difficult outcome.
-                <br>Challenges can happen both and and out of Combat, and can be done as team, over time, or versus other Characters.
+                <br>The outcome is based on the number of Successes of the Challenge, with more required for a more difficult outcome.
+                <br>Challenges can happen both in and out of Combat, and can be done as a team, over time, or versus other Characters.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5454,14 +5565,14 @@
             <BasicsHeader>Multi-Round</BasicsHeader>
             <BasicsText><div>
                 A type of Challenge where Successes are accumulated over time.
-                These can add tension to make players work over multiple Round. Can be used in place of a very difficult check.
+                These can add tension to make players work over multiple rounds. Can be used in place of a very difficult check.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Contest</BasicsHeader>
             <BasicsText><div>
                 A type of Challenge Success determined by winning a Check against one or more other Characters.
-                Can be listed with a single stat, or with seperate Checks for the different Characters.
+                Can be listed with a single stat, or with separate Checks for the different Characters.
                 Ties can be determined randomly by a 50/50 roll (Ex: Odds vs Evens).
             </div></BasicsText>
         </BasicsSection>
@@ -5472,8 +5583,8 @@
         <BasicsSection>
             <BasicsHeader>Constitution</BasicsHeader>
             <BasicsText><div>
-                A Character's Constitution can be effected by Con Points such as Fatigue, Hunger, Dhydration, Drowsiness, Dread, etc.
-                Con Points are logged in a Characters Status Section with each poin rcorded by its assocaited letter (Ex: 'H' for Hunger). Different Con Points have different means of removal.
+                A Character's Constitution can be affected by Con Points such as Fatigue, Hunger, Dehydration, Drowsiness, Dread, etc.
+                Con Points are logged in a Characters Status Section with each point recorded by its associated letter (Ex: 'H' for Hunger). Different Con Points have different means of removal.
                 <br>The size of a Character's Status Meter is determined by their Species (typically 3).
                 <br>As Characters gain too many detrimental Constitution Points they have a <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;'><b>6 Only</b> </div> Status applied to them. Even more points lead to a <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
         src='../../Resources/Art/Images/skull_white.svg' 
@@ -5530,13 +5641,13 @@
         border-radius:4px; padding:0px 2px 0px 2px; font-weight:700;
         position:relative; top:-1px;'>Morale</div></BasicsHeader>
             <BasicsText><div>
-                Morale is a Charactrer's mental strength and health. 
+                Morale is a Character's mental strength and health. 
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Mental Effects</BasicsHeader>
             <BasicsText><div>
-                Mental Effects are something negatively effects a Character's mental health. There are three types of Mental Effects: Terror, Stress, and Dread.
+                Mental Effects are something that negatively affects a Character's mental health. There are three types of Mental Effects: Terror, Stress, and Dread.
                 <br>Each point of Terror/Dread goes into a Character's Constitution Meter with a Tr (Terror) or a Dr (Dread).
                 <br><b>Terror</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div>  Character's immediate mental anguish and fear over a situation.
                 <br><b>Stress</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:2px;'>:</div> Lingering psychological trauma that can last for days.
@@ -5549,7 +5660,7 @@
                 A Character can remove all Mental Effects they currently have with a Mental Breakdown. 
                 In a Mental Breakdown a Character gains a Trauma Card.
                 If a Character already has two Trauma Cards types they take an Insanity Card instead.
-                A Character can only have up to one cards of this type.
+                A Character can only have up to one card of this type.
                 <br><b>Trauma:</b> A lingering mental problem such as Depression, Nightmares, or the Shakes.
                 <br><b>Insanity:</b> A severe mental crisis that may end with the Character or others severely hurt or dead.
             </div></BasicsText>
@@ -5574,7 +5685,7 @@
             <BasicsText><div>
                 Abilities are one of the key things that define a Character.
                 Abilities list several Character Skills that are granted to the Character that has them.
-                Abilities are devided into Classes, Talentes, and Doctrines and are represented by Ability Cards, which Characters gain by Training.
+                Abilities are divided into Classes, Talented, and Doctrines and are represented by Ability Cards, which Characters gain by Training.
                 Sequenced Abilities must be gotten in order. (Ex: Runner 1 must be learned before Runner 2.)
                 <blue>Only 1 Ability Card can be used in a single round, meaning Characters cannot use any Bonus or Action from two different Ability Cards in the same Round.</blue>
             </div></BasicsText>
@@ -5584,13 +5695,13 @@
             <BasicsText><div>
                 Abilities are gained by Training.
                 Training is done through the Train Action which grants Characters <div style='display:inline; color:black; font-weight:800;'>AP</div>.
-                A Character cannot use the Skills assocaited with an Ability until they have fully trained it.
+                A Character cannot use the Skills associated with an Ability until they have fully trained it.
                 <br> <b>Study:</b> Abilities with the Study keyword cannot be gained without a text to study from.
                     Some study materials are listed as Uncommon or Rare, meaning they are harder to find in the world.
                     (If a rarity is not listed, it is considered Common.)
                 <br> <b>Teachers:</b> Teachers may grant bonuses to Train Actions.
                     If Training with a Teacher, Characters do not need a Study Material.
-                    Any Character with an Ability may acts as a Teacher for another Character.
+                    Any Character with an Ability may act as a Teacher for another Character.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5598,7 +5709,7 @@
             <BasicsText><div>
                 Classes are a Character's primary combat skills.
                 Class Abilities are often divided into levels.
-                Classes also have an associated Class Card which contain information about the Class and can be used to track Class Training.
+                Classes also have an associated Class Card which contains information about the Class and can be used to track Class Training.
                 <br> <b>Basic Classes:</b> These are the first classes in the game, and act as a foundation for Advanced Classes.
                 <br> <b>Advanced Classes:</b> Skills that require deeper levels of training and typically require at least 3 Base Class levels.
                 <br> <b>Master Classes:</b> Rare skills that few characters progress. Typically take a minimum of 7 Classes to be available. A Character may only obtain 1 Master Level class.
@@ -5607,14 +5718,14 @@
         <BasicsSection>
             <BasicsHeader>Talents</BasicsHeader>
             <BasicsText><div>
-                Talents are mostly non-Combat Abilities such a Vocation or Athletic skill.
+                Talents are mostly non-Combat Abilities such as Vocation or Athletic skill.
                 Talents are divided into Talent Types.
-                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Athletics:</b> Physcial skills such as Climbing and Riding.</blue>
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Athletics:</b> Physical skills such as Climbing and Riding.</blue>
                 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Wilderness:</b> Skills that involve using or surviving in the wilderness.</blue>
                 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Crafts:</b> Creating Items from raw resources.</blue>
                 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Arts:</b> Artistic skills such as music and painting.</blue>
                 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Intellectual:</b> Study in specific field of knowledge.</blue>
-                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Organization:</b> Memebership or rank in a organization within the world.</blue>
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <blue><b>Organization:</b> Membership or rank in an organization within the world.</blue>
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5622,21 +5733,21 @@
             <BasicsText><div>
                 Doctrines represent a connection and worship of a god or divine being within the universe.
                 The being grants specific special bonuses and abilities for performing acts and deeds supporting the deity. 
-                It is up to GM to role play the interests and thoughts of the god.
+                It is up to the GM to role play the interests and thoughts of the god.
                 <br> <b>Initiation:</b> In addition to standard training, Characters must be initiated into a Doctrine.
-                This Initation typically involves some physical ceremony to connect them to the will of the god.
-                Initations are often done through an organization involved with the god, though sometimes the god may grant more direct forms of initation.
+                This Initiation typically involves some physical ceremony to connect them to the will of the god.
+                Invitations are often done through an organization involved with the god, though sometimes the god may grant more direct forms of initiation.
                 <br> <b>Favor:</b> The interest or support of a god.
                 Favor grants skills to Characters they may use.
                 Favor is typically granted by a god for doing acts which they support and taken away for acts that go against their interests.
-                Since GM's roleplay the gods, they may choose how much favor is granted or lost, though it typically is from 1, a minor act such a helping a begger, to 5, a large act such as destroying an opposing temple.
-                GM's may role dice to determine how much Favor is granted from a god as well.
+                Since GM's roleplay the gods, they may choose how much favor is granted or lost, though it typically is from 1, a minor act such as helping a beggar, to 5, a large act such as destroying an opposing temple.
+                GM's may roll dice to determine how much Favor is granted from a god as well.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Character Level</BasicsHeader>
             <BasicsText><div>
-                Character level is based on the amount Class Cards they have obtained.
+                Character level is based on the amount of Class Cards they have obtained.
                 <br> <b>Basic Characters:</b> 1-3
                 <br> <b>Advanced Classes:</b> 4-7
                 <br> <b>Elite Characters:</b> 8
@@ -5646,9 +5757,9 @@
         <BasicsSection>
             <BasicsHeader>Legend Points (LP)</BasicsHeader>
             <BasicsText><div>
-                As Characters progress in their journies they gain fame, fortune, and may start becoming legends in their own right.
-                As thi happens Characters also gain more innate ability to go along with that status.
-                <br><b>Minor Fame (3LP):</b> <b>+1 Stat Point.</b> Character may be newsworthy for some deeds thye have done primarilly ath the local level. 
+                As Characters progress in their journeys they gain fame, fortune, and may start becoming legends in their own right.
+                As it happens Characters also gain more innate ability to go along with that status.
+                <br><b>Minor Fame (3LP):</b> <b>+1 Stat Point.</b> Character may be newsworthy for some deeds they have done primarily at the local level. 
                 <br><b>Renown (6LP):</b> <b>+1 Stat Point.</b> Many have heard of the Character and word of their exploits has traveled far.
                 <br><b>Legend (9LP):</b> <b>+1 Stat Point.</b> Character is famous and many songs are sung and tales told of their incredible deeds.
             </div></BasicsText>
@@ -5660,15 +5771,15 @@
         <BasicsSection>
             <BasicsHeader>Interims</BasicsHeader>
             <BasicsText><div>
-                An Interim is a preiod of time that typically takes between 5 and 30 minutes. 
-                Interim Actions can only be done in this time. An Interim cannot take place if the Characters are rushed (Ex: Being chased.) 
+                An Interim is a period of time that typically takes between 5 and 30 minutes. 
+                Interim Actions can only be done at this time. An Interim cannot take place if the Characters are rushed (Ex: Being chased.) 
                 <br>A <b>Breather</b> is a common Interim Action in which Characters catch their breath and treat their wounds, allowing Characters to remove Stamina Loss and Harm.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>World Spaces</BasicsHeader>
             <BasicsText><div>
-                The world is divided in World Spaces, each with a diameter of aproximently 10 miles. Traveling through a World Space typically incurs resisting a listed amount of Fatigue usally ranging from 0 to 5.
+                The world is divided in World Spaces, each with a diameter of approximately 10 miles. Traveling through a World Space typically incurs a listed amount of Fatigue usually ranging from 0 to 5.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5681,14 +5792,14 @@
         <BasicsSection>
             <BasicsHeader>Penalties</BasicsHeader>
             <BasicsText><div>
-                Some in-game effects will apply Penalties (Dice, Successes, etc.) to Checks. Whenever recieving multiple Penalties of the same type, always only apply the greater one.
-                For example a Character has a -2S Armor Pentaly and a -1S Armor Penalty, they would only apply the -2S Armor Penalty.
+                Some in-game effects will apply Penalties (Dice, Successes, etc.) to Checks. Whenever receiving multiple Penalties of the same type, always only apply the greater one.
+                For example a Character has a -2S Armor Penalty and a -1S Armor Penalty, they would only apply the -2S Armor Penalty.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Rule Zero</BasicsHeader>
             <BasicsText><div>
-                Because WARPS does not include a rule for everything possible thing, it is up to the GM to use/ignore/create rules as they see fit, according to what makes sense and what is best for the game/world they are playing.
+                Because WARPS does not include a rule for everything possible, it is up to the GM to use/ignore/create rules as they see fit, according to what makes sense and what is best for the game/world they are playing.
             </div></BasicsText>
         </BasicsSection>                
         <SubTitle>
@@ -5946,7 +6057,7 @@
         Athletics
     </div></BasicsHeader>
             <BasicsText><div>
-                Speed and mobilty.
+                Speed and mobility.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -5979,7 +6090,7 @@
             <BasicsHeader style='padding:2px;'>Item Cards</BasicsHeader>
             <BasicsText><div>
                 Each Item is represented by an Item Card taken by the Character who currently has the item.
-                <br>There are several types of Items invluding Weapons, Armor, and others.
+                <br>There are several types of Items including Weapons, Armor, and others.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6040,7 +6151,7 @@
         <BasicsSection>
             <BasicsHeader style='padding:2px;'>Carriers</BasicsHeader>
             <BasicsText><div>
-                These carry other Items such as a backpack or puch and have <b6>E</b6> Slots for Characters to hold Items.
+                These carry other Items such as a backpack or pouch and have <b6>E</b6> Slots for Characters to hold Items.
                 <br> Any <b6>E</b6> Slots a Character has filled on a Carrier, are applied to the wearer's total.
             </div></BasicsText>
         </BasicsSection>
@@ -6052,8 +6163,8 @@
                 For example, without an Ability that says otherwise, you cannot Attack and Block with the same sword in the same Round.
                 <br><b>Readied Items:</b> These are Items that are worn on the body and can be Drawn as a Free Action. A Readied Item can usually be any Item 1<b6>E</b6> or Less. Ex: Sword worn on a belt.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Sidearm:</b> These Items can be Readied regardless of their <b6>E</b6>.
-                <br><b>Worn Items:</b> Worn Items are Worn on the location stated. Armor worn only protect those locations when they are Hit.
-                <br><b>Carried Items:</b> Carried Items are those that in in a backpack or similar. Usually getting an Item out of a Carrier is a Active Action.
+                <br><b>Worn Items:</b> Worn Items are Worn on the location stated. Armor worn only protects those locations when they are Hit.
+                <br><b>Carried Items:</b> Carried Items are those that are in a backpack or similar. Usually getting an Item out of a Carrier is an Active Action.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6061,7 +6172,7 @@
             <BasicsText><div>
                 Items can take Damage similar to Characters. Like Characters, Items with DR reduce that Damage by the DR value.
                 <br>Damage is applied to Item <b>Damage Points (Dmg)</b>, then, if no more remain, to Item's <b>Broken Points (Brk)</b>.
-                <br>If no more Damage Points or Broken Points reamin, the Item is <b>Broken</b> and cannot be used until repaired.
+                <br>If no more Damage Points or Broken Points remain, the Item is <b>Broken</b> and cannot be used until repaired.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Damage Resistance (DR):</b> Amount of Damage ignored. May list an associated Type it applies to, otherwise applies to all Damage.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Damage Points (Dmg):</b> Damage to Item that can usually be removed through field repairs.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Broken Points (Brk):</b> Damage to Item that requires special techniques or equipment to remove.
@@ -6080,7 +6191,7 @@
             <BasicsText><div>
                 Item Keywords apply special effects to Items.
                 <br><b>Dmg Back:</b> Applies associated DM Back to whatever Body Area/Item that successfully Strikes it.
-                <!--<br><b>Proficiency:</b> Rules after a <span><gc style='background: var(--Gray-2);'>P</gc></span>, require a character to have proficency with this item to do. 
+                <!--<br><b>Proficiency:</b> Rules after a <span><gc style='background: var(--Gray-2);'>P</gc></span>, require a character to have proficiency with this item to do. 
                     <br>Rules after <gc style='background: var(--Gray-2);'>M</gc>, require a character to have master to do.-->
                 <br><b>Threaten:</b> You+Target Attacking each other, <b>Contest:</b> <div style='
         display: inline-block;
@@ -6121,12 +6232,12 @@
             <BasicsHeader style='padding:2px;'>Resources and Crafting</BasicsHeader>
             <BasicsText><div>
                 Resources are types of Items that can often be used to craft other Items.
-                General Resouces are often just listed by their type (Ex: Herb) while Special or Rare types are often listed specifically (Ex: Blood Flower (Herb)).
-                <br><b>Special Resouces:</b> Specical and more valuable version of resource. These resources are worth x10<b6>G</b6> the price of the standard resource unless stated otherwise. 
-                <br><b>Rare Resouces:</b> Rare and paticularly valuable version of the resource. These resources are worth x50<b6>G</b6> the price of the standard resource unless stated otherwise.
-                <br><b>Reusing Resouces:</b> Turning a crafted Item back into resources can be done at GM discretion.
-                    Typiclly Metal, Cloth, String can almost always be reused. 
-                    Typicaly Remanants, Herbs, Stone, and Orichalcum cannot be reused.
+                General Resources are often just listed by their type (Ex: Herb) while Special or Rare types are often listed specifically (Ex: Blood Flower (Herb)).
+                <br><b>Special Resources:</b> Special and more valuable version of resource. These resources are worth x10<b6>G</b6> the price of the standard resource unless stated otherwise. 
+                <br><b>Rare Resources:</b> Rare and particularly valuable version of the resource. These resources are worth x50<b6>G</b6> the price of the standard resource unless stated otherwise.
+                <br><b>Reusing Resources:</b> Turning a crafted Item back into resources can be done at GM discretion.
+                    Typically Metal, Cloth, String can almost always be reused. 
+                    Typically Remnants, Herbs, Stone, and Orichalcum cannot be reused.
             </div></BasicsText>
         </BasicsSection>
         -->
@@ -6137,7 +6248,7 @@
         <BasicsSection>
             <BasicsHeader style='padding:2px;'>Non-Player Characters (NPCs)</BasicsHeader>
             <BasicsText><div>
-                In WARPS GMs will control many other people and creatures. These are repsented using an <b>NPC Card</b> and, if appropriate, a <b>NPC Status Card</b>.
+                In WARPS GMs will control many other people and creatures. These are represented using an <b>NPC Card</b> and, if appropriate, a <b>NPC Status Card</b>.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6145,10 +6256,10 @@
             <BasicsText><div>
                 NPCs Cards contain all the information needed to NPCs in battle or in a campaign.
                 <br><b>Basics:</b> The front of an NPC Card contains its Species (and possibly additional Species types), a reference picture, Hitbox, and information about how
-                    it may fit into the campiagn or ecology of the world.
+                    it may fit into the campaign or ecology of the world.
                 <br><b>Stats, Difficulty, Body Areas, Common Action Dice (ex: Dash, Dodge, etc.)</b>
-                <br><b>Abilities:</b> These are the special abilties the NPC can use. This may include special info about their body or special powewrs.
-                    It may also include Tactics about how these abilities can be used. This section may also include basic species info such as Appitite or reward for defeatign them.
+                <br><b>Abilities:</b> These are the special abilities the NPC can use. This may include special info about their body or special powers.
+                    It may also include Tactics about how these abilities can be used. This section may also include basic species info such as Appetite or reward for defeating them.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6331,8 +6442,8 @@
         </BasicsSection>                <BasicsSection>
             <BasicsHeader>Inspiration</BasicsHeader>
             <BasicsText><div>
-                Represents Characters learning and growing from their experiences. Typically Characters will recieve 1-3 <b>Inspiration</b> per Session.
-                <br>Combat <b>Inspiration</b> can recieved for:
+                Represents Characters learning and growing from their experiences. Typically Characters will receive 1-3 <b>Inspiration</b> per Session.
+                <br>Combat <b>Inspiration</b> can receive for:
                 <br><b>Combat:</b> Typically 1 <b>Inspiration</b> per Combat, 3 <b>Inspiration</b> for a very dangerous Combat.
                 <br><b>Quests:</b> 1 <b>Inspiration</b> for a Minor Quest, 3 <b>Inspiration</b> for a Major Quest.
             </BasicsText></div>
@@ -6352,7 +6463,7 @@
                 <b>Puzzles:</b> Typically 1 <div style='display:inline-block; 
         color:var(--Gray-4); background:var(--Gray-1);
         border-radius:4px; padding:0px 2px 0px 2px; font-weight:700;
-        position:relative; top:-1px;'>Morale</div> and taking about 20min to solve.
+        position:relative; top:-1px;'>Morale</div> and taking about 20 min to solve.
                 <br><b>Journeys:</b> +<div style='
         display: inline-block;
         
@@ -6438,7 +6549,7 @@
             <BasicsHeader>Regions</BasicsHeader>
             <BasicsText><div>
                 Regions represent the locations of the world. 
-                A <b>Region Sheet</b> contains info that can be used to determine things such as Character's survival, encounters, visual discriptions, and weather.
+                A <b>Region Sheet</b> contains info that can be used to determine things such as Character's survival, encounters, visual descriptions, and weather.
                 GMs can use either prebuilt Regions, make their own regions, or use basic Region info.
                 Regions are divided into Region Basics, Scenery, Events, and Quests.
             </div></BasicsText>
@@ -6446,20 +6557,20 @@
         <BasicsSection>
             <BasicsHeader>Region Types</BasicsHeader>
             <BasicsText><div>
-                <b>Types:</b> Regions typs break regions into broad categories.
+                <b>Types:</b> Regions types break regions into broad categories.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Arid:</b> Very dry and hot climates for large portions of the year.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Lush:</b> Very dense in plantlife.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Severe:</b> Is marked by very cold temperatures, either in the winter or year round.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Temperate:</b> Mostly conssiting of mild weather.
-                <br><b>Sub Types:</b> These are sub types of biomes. Each has a corresponding General Region Sheet as well.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Temperate:</b> Mostly consisting of mild weather.
+                <br><b>Sub Types:</b> These are subtypes of biomes. Each has a corresponding General Region Sheet as well.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Alpine:</b> A high and cold biome usually found on steep mountain ranges and plateaus.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Badlands:</b> An area made up of mostly uneven rocks with little vegitation.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Badlands:</b> An area made up of mostly uneven rocks with little vegetation.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Chaparral:</b> A dry area with scatter shrubbery.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Coniferous:</b> A forest often made of tall evergreen trees and typically in higher and mountainous areas. 
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Desert:</b> An area made up primarily of grainu dry dirt and rolling sand dunes.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Desert:</b> An area made up primarily of dry dirt and rolling sand dunes.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Forest:</b> A standard forest, typically in cool temperatures.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ice Field:</b> An area consisting of massive ice shelves, often with fissures. Extremely dangerous.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Jungle:</b> An area of very dense trees and plantlife, often warm and humid.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Jungle:</b> An area of very dense trees and plant life, often warm and humid.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Pastoral:</b> Cool area with long fields and some trees.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Plains:</b> Area of sparse woodlands along with grass and shrubs.
                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Tundra:</b> A barren area found in very cold climates.
@@ -6486,22 +6597,22 @@
             <BasicsText><div>
                 For each World Space the GM may make a Scarcity Check using <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>.
                 The Scarcity Check determines things about the space such as how lush or barren the area is.
-                <br> <cs>Barren 0S:</cs> Area has relatively low fauna, and comparitively less water/food/resources.
+                <br> <cs>Barren 0S:</cs> Area has relatively low fauna, and comparatively less water/food/resources.
                 <br> <cs>Standard 1S:</cs> Area average fauna/water/food/resources.
-                <br> <cs>Plentiful 2S/3S:</cs> Area has relatively high amount of fauna, and comparitively more water/food/resources.
+                <br> <cs>Plentiful 2S/3S:</cs> Area has relatively high amount of fauna, and comparatively more water/food/resources.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Forage Results</BasicsHeader>
             <BasicsText><div>
                 Lists the results of a Character's Forage Roll such as how much Rummage is found.
-                This may include an attempt to Hunt, which requires the use of an Bow and Arrow or some other Hunting tool.
+                This may include an attempt to Hunt, which requires the use of a Bow and Arrow or some other Hunting tool.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Scenery</BasicsHeader>
             <BasicsText><div>
-                Scenery is used to create a description of the environment. This can also be used a seed for a more expansive or person description as well.
+                Scenery is used to create a description of the environment. This can also be used as a seed for a more expansive or personal description as well.
                 <br> There are Scenery descriptions for each type of area: Barren, Standard, and Plentiful.
                 <br> Scenery can be chosen randomly or chosen by the GM.
             </div></BasicsText>
@@ -6514,7 +6625,7 @@
             <BasicsText><div>
                 Events are things the Characters find or that happen to the Characters while in the region.
                 <br> Events can be chosen by the GM or determined randomly, or mixed.
-                Additionally Events can be used however the GM wants, including tying together different ones or using just parts to tie more directly into the sotry of the particular campaign.
+                Additionally Events can be used however the GM wants, including tying together different ones or using just parts to tie more directly into the story of the particular campaign.
                 <br> Events are divided into categories such as Weather, Obstacles, Crossings, Settlements, Aid, Encounters, Interiors/Entrances, and Incidents.
             </div></BasicsText>
         </BasicsSection>
@@ -6527,7 +6638,7 @@
         <BasicsSection>
             <BasicsHeader>Obstacles</BasicsHeader>
             <BasicsText><div>
-                Obsticles are things which impede the Character's travels, often creating additional hardship.
+                Obstacles are things which impede the Character's travels, often creating additional hardship.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6546,7 +6657,7 @@
         <BasicsSection>
             <BasicsHeader>Settlements</BasicsHeader>
             <BasicsText><div>
-                These are settlements, typically of humanoids, that are nuetral or helpful for the Characters.
+                These are settlements, typically of humanoids, that are neutral or helpful for the Characters.
                 Often these involve Villages or Towns. See the Settlements section for more details.
             </div></BasicsText>
         </BasicsSection>
@@ -6560,14 +6671,14 @@
             <BasicsHeader>Encounters</BasicsHeader>
             <BasicsText><div>
                 Encounters are the types of creatures that may fight or be dangerous to the Characters.
-                When used by the GM these may be Active (acting the Characters), Passive (in a place where the Characters may choose to attack them), or Stalking (actively hunting, ambushing, or otherwise attempting to attach the party.).
+                When used by the GM these may be Active (acting the Characters), Passive (in a place where the Characters may choose to attack them), or Stalking (actively hunting, ambushing, or otherwise attempting to attack the party.).
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Interior/<br> Entrance</BasicsHeader>
             <BasicsText><div>
-                These are locations that the Characters might explore. Often they have monsters or treaure inside.
-                Additionally these section may be used to describe areas the Characters find themselves in.
+                These are locations that the Characters might explore. Often they have monsters or treasure inside.
+                Additionally these sections may be used to describe areas the Characters find themselves in.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6602,7 +6713,7 @@
             <BasicsText><div>
                 Settlements are places where many creatures, typically humanoids, live and depending on the size offer various goods and services.
                 <br> Settlements are divided into Villages, Towns, and Cities.
-                Each type of Settlement has a cooresponding <b>General Settlement Sheet</b> which describes the basic activities and services available in the Settlement.                
+                Each type of Settlement has a corresponding <b>General Settlement Sheet</b> which describes the basic activities and services available in the Settlement.                
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6617,7 +6728,7 @@
             <BasicsHeader>Towns</BasicsHeader>
             <BasicsText><div>
                 Towns are bigger than Villages but not as big as Cities and usually have a population between 500 to 5,000 people.
-                <br> Towns are typically marked on the map though some not on the map may be sometimes be found in some Regions.
+                <br> Towns are typically marked on the map though some not on the map may sometimes be found in some Regions.
                 <br> Like Villages Towns often have specific characteristics listed within the Region they are in.
             </div></BasicsText>
         </BasicsSection>
@@ -6626,13 +6737,13 @@
             <BasicsText><div>
                 Cities are the biggest type of Settlement and typically have between 10,000 and 1,000,000 people.
                 <br> Cities are almost always marked on the map. 
-                In addition to a General City Sheet, most Cities have a <b>City Sheet</b> listing Scenery, Events, and Quests specific to that particualr City.
+                In addition to a General City Sheet, most Cities have a <b>City Sheet</b> listing Scenery, Events, and Quests specific to that particular City.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>City Sheets</BasicsHeader>
             <BasicsText><div>
-                Each Specific City Cheet will have 
+                Each Specific City Check will have 
                 <blue>Weather
                 Holidays/Festivals
                 Labor/Training
@@ -6653,7 +6764,7 @@
         <BasicsSection>
             <BasicsHeader>Time Table</BasicsHeader>
             <BasicsText><div>
-                In WARPS times passes as it normaly does, one day after another.
+                In WARPS, time passes as it normally does, one day after another.
                 Each day passed can be marked on the WARPS Time Table. Which has a place of Seasons, and Months.
                 The Time Table may also be used to track various weather events.
             </div></BasicsText>
@@ -6728,14 +6839,14 @@
         <BasicsSection>
             <BasicsHeader>Introduction</BasicsHeader>
             <BasicsText><div>
-                Character Creation is the process of the creating your Player Character for WARPS.
-                You will likely have this Character for a while, so feel free to put as much thought as you need till you are satasfied with your Character.
+                Character Creation is the process of creating your Player Character for WARPS.
+                You will likely have this Character for a while, so feel free to put as much thought as you need till you are satisfied with your Character.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Stat Points</BasicsHeader>
             <BasicsText><div>
-                These points are used for Character Stats and other things that represent a Character's natural abilities and apititudes.
+                These points are used for Character Stats and other things that represent a Character's natural abilities and aptitudes.
                 <br>The amount of Stat Points a Character starts with and can spend is listed on their Culture Card.
             </div></BasicsText>
         </BasicsSection>
@@ -6749,7 +6860,7 @@
         <BasicsSection>
             <BasicsHeader>Inspiration &nbsp;<div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></BasicsHeader>
             <BasicsText><div>
-                Moments and experiences a Character had that allowed to gain knowledge and progress in their abilities. 
+                Moments and experiences a Character had that allowed them to gain knowledge and progress in their abilities. 
                 <br>The amount of Character Points a Character starts with and can spend is listed on their Culture Card.
             </div></BasicsText>
         </BasicsSection>
@@ -6810,13 +6921,13 @@
         <BasicsSection>
             <BasicsHeader>Character Sheet</BasicsHeader>
             <BasicsText><div>
-                Take a Character Sheet cooresponding to your Species Card. (Ex: Human, Elf, Dwarf, etc.) The Species will determine which kind of Character Sheet your Character will use unless stated otherwise.
+                Take a Character Sheet corresponding to your Species Card. (Ex: Human, Elf, Dwarf, etc.) The Species will determine which kind of Character Sheet your Character will use unless stated otherwise.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Stats</BasicsHeader>
             <BasicsText><div>
-                Fill out your Stats from your Culture Card on Character Sheet.
+                Fill out your Stats from your Culture Card on the Character Sheet.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6828,7 +6939,7 @@
         <BasicsSection>
             <BasicsHeader>Capacity</BasicsHeader>
             <BasicsText><div>
-                A Character's Capacity <b><div style='
+                A Character's Capacity = <b><div style='
         display: inline-block;
         
         background:white;
@@ -6876,20 +6987,56 @@
     </div> + Species Capacity Mod</b>
             </div></BasicsText>
         </BasicsSection>
+        <BasicsSection>
+            <BasicsHeader>Morale</BasicsHeader>
+            <BasicsText><div>
+                A Character's Morale = <b>1 + <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha
+    </div> + <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div> + Morale Mod</b>
+            </div></BasicsText>
+        </BasicsSection>
                         
         <SubTitle>
-            3. Cutomization
+            3. Customization
         </SubTitle>
         <BasicsSection>
-            <BasicsHeader>Cutomization</BasicsHeader>
+            <BasicsHeader>Customization</BasicsHeader>
             <BasicsText><div style='width:100%;'>
-                Customization is done via spending points <div style='display:inline; color:black; font-weight:800;'>CP</div> on Abilties, Aspects, and other Character creation options. 
+                Customization is done via spending points <div style='display:inline; color:black; font-weight:800;'>CP</div> on Abilities, Aspects, and other Character creation options. 
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Abilities</BasicsHeader>
             <BasicsText><div style='width:100%;'>
-                Abilities are represented by Ability Cards. These inclde both Talents, Classes, and Doctrines.
+                Abilities are represented by Ability Cards. These include both Talents, Classes, and Doctrines.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6909,23 +7056,23 @@
             <BasicsHeader>Aspects</BasicsHeader>
             <BasicsText><div style='width:100%;'>
                 Aspects are represented by Aspect Cards and can be both positive, often called Edges, or negative, often called Drawbacks.
-                Some have special stat reqirements as well.
+                Some have special stat requirements as well.
                 <br> <b>Edges</b> (Green Cards) are Aspects that provide a net-positive and require spending <div style='display:inline; color:black; font-weight:800;'>CP</div>.
-                <br> <b>Drawbacks</b> (Red Cards) are Aspects that provide a net-negative and increase a Chacters spendable <div style='display:inline; color:black; font-weight:800;'>CP</div> when taken. A Character can have up to 5 Drawbacks.
+                <br> <b>Drawbacks</b> (Red Cards) are Aspects that provide a net-negative and increase a Characters spendable <div style='display:inline; color:black; font-weight:800;'>CP</div> when taken. A Character can have up to 5 Drawbacks.
                 <br> <b>Stat Drawbacks</b> are special Drawbacks that bring a Stat to 0. A Character may take more than 1 but can only gain 1 SP this way.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Gold</BasicsHeader>
             <BasicsText><div style='width:100%;'>
-                Character may spend their starting Gold on any items in the game.
-                <br> Additionally 1<div style='display:inline; color:black; font-weight:800;'>CP</div> may be spend to gain 5<b6>G</b6>.
+                Characters may spend their starting Gold on any items in the game.
+                <br> Additionally 1<div style='display:inline; color:black; font-weight:800;'>CP</div> may be spent to gain 5<b6>G</b6>.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Other</BasicsHeader>
             <BasicsText><div style='width:100%;'>
-                1<b>SP</b> may be spend to gain 20<div style='display:inline; color:black; font-weight:800;'>CP</div> or 100<b6>G</b6>.
+                1<b>SP</b> may be spent to gain 20<div style='display:inline; color:black; font-weight:800;'>CP</div> or 100<b6>G</b6>.
             </div></BasicsText>
         </BasicsSection>
                         
@@ -6947,20 +7094,20 @@
         <BasicsSection>
             <BasicsHeader>Basics</BasicsHeader>
             <BasicsText><div style='width:100%;'>
-                A Description typically includes things such as a Character's Height, Eye and Hair Color, and other notable physicla features.
+                A Description typically includes things such as a Character's Height, Eye and Hair Color, and other notable physical features.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Bio</BasicsHeader>
             <BasicsText><div>
-                A Characters should have some information about where is from, their family, as well as some connections they ave in the world, such as friends or asssociates.
+                A Characters should have some information about where they are from, their family, as well as some connections they have in the world, such as friends or associates.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
             <BasicsHeader>Goals</BasicsHeader>
             <BasicsText><div>
                 A drive that is personal to the Character and is worked out with the GM when chosen (this can often be in private).
-                These should be difficult to accomplish, and can be can be from the Character Goal List, or created personally by the Player. 
+                These should be difficult to accomplish, and can be from the Character Goal List, or created personally by the Player. 
                 Either way, a Personal Goal should be worked out with the GM before the game starts.
                 <br>You may choose a Personal Goal from this list or create your own.
                 <div style='height:1px;'></div>
@@ -6977,7 +7124,7 @@
                     </div>
                     <div style='background:white display:grid grid-template-columns:1fr grid-gap:1px'>
                         <div style='display:grid grid-template-columns:1fr border:solid 1px black'>
-                            <div style='font-size:9px; padding:2px 1px 0px 1px;'><b>Wealth</b> Gain enough money that you can life a life of leisure and luxury.</div>
+                            <div style='font-size:9px; padding:2px 1px 0px 1px;'><b>Wealth</b> Gain enough money that you can live a life of leisure and luxury.</div>
                         </div>
                     </div>
                     <div style='background:white display:grid grid-template-columns:1fr grid-gap:1px'>
@@ -7022,7 +7169,7 @@
                     </div>
                     <div style='background:white display:grid grid-template-columns:1fr grid-gap:1px'>
                         <div style='display:grid grid-template-columns:1fr border:solid 1px black'>
-                            <div style='font-size:9px; padding:2px 1px 0px 1px;'><b>Run a Business</b> Operate a succesful business producing a handy profit.</div>
+                            <div style='font-size:9px; padding:2px 1px 0px 1px;'><b>Run a Business</b> Operate a successful business producing a handy profit.</div>
                         </div>
                     </div>
                     <div style='background:white display:grid grid-template-columns:1fr grid-gap:1px'>
@@ -7042,7 +7189,7 @@
                     </div>
                     <div style='background:white display:grid grid-template-columns:1fr grid-gap:1px'>
                         <div style='display:grid grid-template-columns:1fr border:solid 1px black'>
-                            <div style='font-size:9px; padding:2px 1px 0px 1px;'><b>Resurecetion</b> Bring someone back through foribdden dark magic.</div>
+                            <div style='font-size:9px; padding:2px 1px 0px 1px;'><b>Resurrection</b> Bring someone back through forbidden dark magic.</div>
                         </div>
                     </div>
                     <div style='background:white display:grid grid-template-columns:1fr grid-gap:1px'>
@@ -7056,7 +7203,7 @@
         <BasicsSection>
             <BasicsHeader>Complications</BasicsHeader>
             <BasicsText><div>
-                Complications are things that create challenges for Characters as they try to acheive their goals.
+                Complications are things that create challenges for Characters as they try to achieve their goals.
                 These can be things such as crippling drug addiction, a feared enemy, or memory loss.
             </div></BasicsText>
         </BasicsSection>
@@ -7073,5 +7220,5 @@
 </body>
 
 
-<!-- Mirrored from 3.128.189.186:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jun 2024 02:28:27 GMT -->
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:34 GMT -->
 </html>

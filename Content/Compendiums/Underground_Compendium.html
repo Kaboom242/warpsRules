@@ -1,0 +1,1193 @@
+<html>
+
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Underground_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Underground Region Compendium</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    
+    keywordAzeal
+    {
+        display:inline;
+        color:var(--Cleric-4);
+        font-weight: 700;
+    }
+    keywordTyrannus
+    {
+        display:inline;
+        color:var(--Barbarian-4);
+        font-weight: 700;
+    }
+    keywordYavera
+    {
+        display:inline;
+        color:var(--Bard-4);
+        font-weight: 700;
+    }
+    keywordErnok
+    {
+        display:inline;
+        color:var(--Druid-4);
+        font-weight: 700;
+    }
+    keywordMorgeth
+    {
+        display:inline;
+        color:var(--SoulTurq-3);
+        font-weight: 700;
+    }
+    keywordXythuul {
+        display:inline;
+        color:var(--Xythuul-2);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
+    }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    
+    abilitysection{
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+    }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        background: white;
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style></head>
+<style type='text/css'>
+    
+        body { width: 800px;}
+        page {
+            height: 11in;
+            width: 8.5in; /*825px;*/
+            background: white; 
+            box-sizing: border-box;
+            border-radius: 0px;
+            border-style: solid;
+            /*Print Helper Borders*/
+            /*border-color: <?=HSL('Red',true,90)?>;*/
+            /*border-width: 0.125in 0.25in 1.20in 0.25in;*/
+            /*Display Borders*/
+            border-color: white;
+            border-width: 0.125in 0.25in 1.20in 0.25in;
+            margin: 1px;
+            /*overflow: hidden;*/
+                
+            position: relative;
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-rows: min-content;
+            grid-gap: 2px;
+            
+            color: black;
+            font-size: 10px;
+        }
+        RegionPage {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            grid-auto-flow: column dense;
+            grid-gap:1px;
+        }
+        RegionTitle {
+            border: solid 0px black;
+            border-radius: 4px 4px 0px 0px;
+            padding: 1px 2px 1px 2px;
+            font-size: 20px;
+            font-weight: 700;
+            grid-column: 1/-1;
+            background:  var(--Purple-4);
+            color: white;
+        }
+        InnerTitle {
+            border: solid 0px black;
+            border-radius: 0px 0px 0px 0px;
+            padding: 0px 1px 1px 1px;
+            font-size: 15px;
+            font-weight: 700;
+            grid-column: 1/-1;
+            background:  var(--Purple-4);
+            color: white;
+        }
+        InnerContainer {
+            border: solid 3px var(--Purple-4);
+            border-radius: 4px;
+            /*padding: 1px 2px 1px 2px;*/
+            margin:0px 2px 0px 2px;
+            display:grid;
+        }
+        InnerSectionContainer {
+            /*padding: 1px 2px 1px 2px;*/
+            width: 100%;
+            padding:1px;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            grid-auto-flow: column dense;
+            grid-gap:1px;
+        }
+        SectionContainer {
+            border: solid 3px var(--Purple-3);
+            border-radius: 4px;
+            /*padding: 1px 2px 1px 2px;*/
+            width: 100%;
+        }
+        SectionTitle {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            background:  var(--Purple-3);
+            color: white;
+            width: 100%;
+            padding-left: 5px; 
+            padding-bottom: 2px; 
+            margin-bottom:1px;
+            /*right:0px;*/
+        }
+        gf { 
+            font-weight: 700;
+            font-size: 80%;
+        }
+        innerforage { 
+            font-weight: 500;
+            font-size: 10px;
+            display:grid;
+            grid-template-columns:auto 1fr;
+            grid-gap:2px;
+        }
+        tabDiv {
+            padding-left: 5px;
+            margin-bottom: 1px;
+            display: flex;
+        }
+        
+        /* Gray */
+        .gray0bg {
+            background: var(--Gray-0);
+        }
+        .gray0border {
+            border-color: var(--Gray-0);
+        }
+        .gray1bg {
+            background: var(--Gray-1);
+        }
+        .gray1border {
+            border-color: var(--Gray-1);
+        }
+        .gray2bg {
+            background: var(--Gray-2);
+        }
+        .gray2border {
+            border-color: var(--Gray-2);
+        }
+        .gray3bg {
+            background: var(--Gray-3);
+        }
+        .gray3border {
+            border-color: var(--Gray-3);
+        }
+        .gray4bg {
+            background: var(--Gray-4);
+        }
+        .gray4border {
+            border-color: var(--Gray-4);
+        }
+        .gray5bg {
+            background: var(--Gray-5);
+        }
+        .gray5border {
+            border-color: var(--Gray-5);
+        }
+        
+        /* Red */
+        .red1bg {
+            background: var(--Red-1);
+        }
+        .red1border {
+            border-color: var(--Red-1);
+        }
+        .red2bg {
+            background: var(--Red-2);
+        }
+        .red2border {
+            border-color: var(--Red-2);
+        }
+        .red3bg {
+            background: var(--Red-3);
+        }
+        .red3border {
+            border-color: var(--Red-3);
+        }
+        .red4bg {
+            background: var(--Red-4);
+        }
+        .red4border {
+            border-color: var(--Red-4);
+        }
+        
+        /* Orange */
+        .orange1bg {
+            background: var(--Orange-1);
+        }
+        .orange1border {
+            border-color: var(--Orange-1);
+        }
+        .orange2bg {
+            background: var(--Orange-2);
+        }
+        .orange2border {
+            border-color: var(--Orange-2);
+        }
+        .orange3bg {
+            background: var(--Orange-3);
+        }
+        .orange3border {
+            border-color: var(--Orange-3);
+        }
+        .orange4bg {
+            background: var(--Orange-4);
+        }
+        .orange4border {
+            border-color: var(--Orange-4);
+        }
+        
+        /* Yellow */
+        .yellow1bg {
+            background: var(--Yellow-1);
+        }
+        .yellow1border {
+            border-color: var(--Yellow-1);
+        }
+        .yellow2bg {
+            background: var(--Yellow-2);
+        }
+        .yellow2border {
+            border-color: var(--Yellow-2);
+        }
+        .yellow3bg {
+            background: var(--Yellow-3);
+        }
+        .yellow3border {
+            border-color: var(--Yellow-3);
+        }
+        .yellow4bg {
+            background: var(--Yellow-4);
+        }
+        .yellow4border {
+            border-color: var(--Yellow-4);
+        }
+        
+        /* Green */
+        .green1bg {
+            background: var(--Green-1);
+        }
+        .green1border {
+            border-color: var(--Green-1);
+        }
+        .green2bg {
+            background: var(--Green-2);
+        }
+        .green2border {
+            border-color: var(--Green-2);
+        }
+        .green3bg {
+            background: var(--Green-3);
+        }
+        .green3border {
+            border-color: var(--Green-3);
+        }
+        .green4bg {
+            background: var(--Green-4);
+        }
+        .green4border {
+            border-color: var(--Green-4);
+        }
+        
+        /* Turquoise */
+        .turquoise1bg {
+            background: var(--Turquoise-1);
+        }
+        .turquoise1border {
+            border-color: var(--Turquoise-1);
+        }
+        .turquoise2bg {
+            background: var(--Turquoise-2);
+        }
+        .turquoise2border {
+            border-color: var(--Turquoise-2);
+        }
+        .turquoise3bg {
+            background: var(--Turquoise-3);
+        }
+        .turquoise3border {
+            border-color: var(--Turquoise-3);
+        }
+        .turquoise4bg {
+            background: var(--Turquoise-4);
+        }
+        .turquoise4border {
+            border-color: var(--Turquoise-4);
+        }
+        
+        /* Blue */
+        .blue1bg {
+            background: var(--Blue-1);
+        }
+        .blue1border {
+            border-color: var(--Blue-1);
+        }
+        .blue2bg {
+            background: var(--Blue-2);
+        }
+        .blue2border {
+            border-color: var(--Blue-2);
+        }
+        .blue3bg {
+            background: var(--Blue-3);
+        }
+        .blue3border {
+            border-color: var(--Blue-3);
+        }
+        .blue4bg {
+            background: var(--Blue-4);
+        }
+        .blue4border {
+            border-color: var(--Blue-4);
+        }
+        
+        /* Purple */
+        .purple1bg {
+            background: var(--Purple-1);
+        }
+        .purple1border {
+            border-color: var(--Purple-1);
+        }
+        .purple2bg {
+            background: var(--Purple-2);
+        }
+        .purple2border {
+            border-color: var(--Purple-2);
+        }
+        .purple3bg {
+            background: var(--Purple-3);
+        }
+        .purple3border {
+            border-color: var(--Purple-3);
+        }
+        .purple4bg {
+            background: var(--Purple-4);
+        }
+        .purple4border {
+            border-color: var(--Purple-4);
+        }
+        
+        /* Pink */
+        .pink1bg {
+            background: var(--Pink-1);
+        }
+        .pink1border {
+            border-color: var(--Pink-1);
+        }
+        .pink2bg {
+            background: var(--Pink-2);
+        }
+        .pink2border {
+            border-color: var(--Pink-2);
+        }
+        .pink3bg {
+            background: var(--Pink-3);
+        }
+        .pink3border {
+            border-color: var(--Pink-3);
+        }
+        .pink4bg {
+            background: var(--Pink-4);
+        }
+        .pink4border {
+            border-color: var(--Pink-4);
+        }
+        
+        /* DarkGreen */
+        .darkgreen1bg {
+            background: var(--DarkGreen-1);
+        }
+        .darkgreen1border {
+            border-color: var(--DarkGreen-1);
+        }
+        .darkgreen2bg {
+            background: var(--DarkGreen-2);
+        }
+        .darkgreen2border {
+            border-color: var(--DarkGreen-2);
+        }
+        .darkgreen3bg {
+            background: var(--DarkGreen-3);
+        }
+        .darkgreen3border {
+            border-color: var(--DarkGreen-3);
+        }
+        .darkgreen4bg {
+            background: var(--DarkGreen-4);
+        }
+        .darkgreen4border {
+            border-color: var(--DarkGreen-4);
+        }
+        
+        /* DarkBlue */
+        .darkblue1bg {
+            background: var(--DarkBlue-1);
+        }
+        .darkblue1border {
+            border-color: var(--DarkBlue-1);
+        }
+        .darkblue2bg {
+            background: var(--DarkBlue-2);
+        }
+        .darkblue2border {
+            border-color: var(--DarkBlue-2);
+        }
+        .darkblue3bg {
+            background: var(--DarkBlue-3);
+        }
+        .darkblue3border {
+            border-color: var(--DarkBlue-3);
+        }
+        .darkblue4bg {
+            background: var(--DarkBlue-4);
+        }
+        .darkblue4border {
+            border-color: var(--DarkBlue-4);
+        }
+        
+        /* DarkYellow */
+        .darkyellow1bg {
+            background: var(--DarkYellow-1);
+        }
+        .darkyellow1border {
+            border-color: var(--DarkYellow-1);
+        }
+        .darkyellow2bg {
+            background: var(--DarkYellow-2);
+        }
+        .darkyellow2border {
+            border-color: var(--DarkYellow-2);
+        }
+        .darkyellow3bg {
+            background: var(--DarkYellow-3);
+        }
+        .darkyellow3border {
+            border-color: var(--DarkYellow-3);
+        }
+        .darkyellow4bg {
+            background: var(--DarkYellow-4);
+        }
+        .darkyellow4border {
+            border-color: var(--DarkYellow-4);
+        }
+        
+        /* DarkRed */
+        .darkred1bg {
+            background: var(--DarkRed-1);
+        }
+        .darkred1border {
+            border-color: var(--DarkRed-1);
+        }
+        .darkred2bg {
+            background: var(--DarkRed-2);
+        }
+        .darkred2border {
+            border-color: var(--DarkRed-2);
+        }
+        .darkred3bg {
+            background: var(--DarkRed-3);
+        }
+        .darkred3border {
+            border-color: var(--DarkRed-3);
+        }
+        .darkred4bg {
+            background: var(--DarkRed-4);
+        }
+        .darkred4border {
+            border-color: var(--DarkRed-4);
+        }
+        
+        /* DarkPurple */
+        .darkpurple1bg {
+            background: var(--DarkPurple-1);
+        }
+        .darkpurple1border {
+            border-color: var(--DarkPurple-1);
+        }
+        .darkpurple2bg {
+            background: var(--DarkPurple-2);
+        }
+        .darkpurple2border {
+            border-color: var(--DarkPurple-2);
+        }
+        .darkpurple3bg {
+            background: var(--DarkPurple-3);
+        }
+        .darkpurple3border {
+            border-color: var(--DarkPurple-3);
+        }
+        .darkpurple4bg {
+            background: var(--DarkPurple-4);
+        }
+        .darkpurple4border {
+            border-color: var(--DarkPurple-4);
+        }
+
+        
+    </style>
+
+<body style='background:black;'>
+    <div style='font-weight:700; margin:5px 5px 5px 5px; color:white; font-size:25px;'>Underground Regions</div>
+    <div style='display:grid; grid-gap:10px; grid-auto-flow:rows;'><RegionPage style='background:white; color:black;'><RegionTitle class='darkyellow3bg'>Underground Caves <f10>Caverns, Subterranean</f10></RegionTitle><SectionContainer class='darkyellow3border' style='font-size:10px; grid-column:1/-1; padding:1px 4px 1px 4px;'>A labyrinth of tunnels and caverns, teeming with unique subterranean features.</SectionContainer><SectionContainer class='darkyellow3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><SectionTitle class='darkyellow3bg' style='font-size:14px;'>Scenery</SectionTitle><div style='display:grid; grid-gap:2px; grid-template-columns:1fr;'><div class='' style='font-size:9px; background:lightgrey; padding:1px;'><b>Grass (Horse Feed):</b> </div><div style='padding:0px 0px 1px 0px; font-size:9px;'><div style='display:grid; grid-gap:2px 0px; grid-template-columns:auto auto auto 1fr 120px;'>
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 1. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Caves</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A maze of tunnels and caverns with winding paths and mysterious echoes.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Labyrinth, Echoing Sounds</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 2. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Spider Tunnels</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Web-filled tunnels where giant spiders lurk, spinning their traps.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Spiders</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 3. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Ice Caverns</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Dirty Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Frozen caverns with icicles hanging from the ceiling and a chilling atmosphere.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Slippery Surfaces</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 4. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Giant Crystal Caverns</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Caverns filled with enormous, glittering crystals that catch and reflect light in mesmerizing patterns.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Shining Crystals</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 5. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Thermal Springs</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Hot Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Areas with hot springs and geysers, filling the air with steam and sulfuric scents.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Boiling Pools</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 6. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Abyssal Chasm</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A bottomless pit with ancient creatures that crawl out of the depths, exuding an aura of fear.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Deep Abyss, Echoing Cries</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 7. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Magic Grotto</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Enchanted Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Enchanted grotto with fairies and magical pools surrounded by luminescent flora.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Magical Aura</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 8. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Glass Caves</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Pitch-black obsidian caves with reflective mirror corridors, sharp angles, and dangerous spikes.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Shattered Glass</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 9. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Subterranean River</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>An underground river cutting through the rock, providing a source of fresh water.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> River Rapids</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 10. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Rocky Passages</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Meager</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Narrow, rocky passages that make navigation difficult.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Claustrophobic Spaces</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 11. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Underground Aquifer</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Dirty Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>0<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Disgusting</div> </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A large, still lake in the depths of the caverns, its waters dark and foreboding.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Hidden Depths</div></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 12. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Crystal Pools</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'><div style='display:inline; background: lightblue; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Water</div> <div style='display:inline; font-size:7px;'><b>Forage/Hunt:</b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b>, <b>Rummage:</b> Mystery</div> </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Shallow pools filled with crystal-clear water that glow with a faint light.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'><div style='display:inline; font-size:7px;'><b>Suggested:</b> Glowing Water</div></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 13. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Echoing Caverns</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Wide caverns where every sound is amplified and echoed.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 14. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Stalactite Caves</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Caves filled with stalactites hanging from the ceiling, creating a forest of stone.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 15. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Dusty Passages</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Passages filled with fine dust that chokes and blinds.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 16. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Silent Hollow</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>A cavern where no sound seems to penetrate, creating an eerie silence.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 17. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Lava Tubes</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Tunnels formed by ancient lava flows, now cooled and solidified.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 18. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Mossy Caves</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Caves with walls covered in soft, glowing moss.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 19. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Crystal Formations</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Beautiful formations of crystals growing from the cave walls and ceilings.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 20. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Deep Chasms</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Chasms that drop off into darkness, with no visible bottom.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:white; border-radius:0px; padding:1px 3px 0px 3px;'><b> 21. </b></div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><b>Giant Crystals</b></div> 
+            <div style='background:white; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:white; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Massive crystals that glow with an inner light, providing a strange illumination.</span></div> 
+            <div style='background:white; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        
+            <div style='display:flex; background:lightgrey; border-radius:0px; padding:1px 3px 0px 3px;'><b> 22. </b></div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><b>Gemstone Veins</b></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 4px 0px 0px;'>  </div>
+            <div style='background:lightgrey; border-radius:0px; padding:1px 3px 0px 0px;'><span style='padding: 0px 2px;'>Veins of precious gemstones running through the walls of the cave.</span></div> 
+            <div style='background:lightgrey; border-radius:0px; padding:1px 0px 0px 0px;'></div>
+        </div></div></div></SectionContainer><SectionContainer class='darkyellow3border' style='grid-column:1/-1; display:grid; grid-gap:2px;'><SectionTitle class='darkyellow3bg' style='font-size:14px;'>
+                    Events
+                    <span style='font-size:9px;'>&nbsp;&nbsp; 1-8 None,&nbsp;&nbsp; 9-10: Weather,&nbsp;&nbsp; 11-12: Obstacle,&nbsp;&nbsp; 13: Interior/Entrance,&nbsp;&nbsp;
+                    14-15: Boon,&nbsp;&nbsp; 16-17: Inhabitants,&nbsp;&nbsp; 18-19: Encounters,&nbsp;&nbsp; 20: Hooks</span>
+                </SectionTitle><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='darkyellow3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Obstacle</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Collapsed Tunnel:</b>  <span style='padding: 0px 2px;'>A tunnel has collapsed, blocking the way and requiring excavation. +1 Travel Fatigue.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Narrow Passages:</b>  <span style='padding: 0px 2px;'>Tight, cramped passages that make movement difficult. +1 Travel Fatigue.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Rockfall:</b>  <span style='padding: 0px 2px;'>Rocks fell from the ceiling, blocking the path and creating a hazard. +1 Travel Fatigue.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Bottomless Pit:</b>  <span style='padding: 0px 2px;'>A deep chasm that must be carefully navigated to avoid falling.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Stalactite Forest:</b>  <span style='padding: 0px 2px;'>A dense area of stalactites and stalagmites that obstructs movement.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b>  Mudslide:</b>  <span style='padding: 0px 2px;'>A section of the tunnel has turned to mud, making movement difficult and dangerous.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b>  Boulder Blockage:</b>  <span style='padding: 0px 2px;'>A large boulder has rolled into the path, blocking the way.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b>  Flooded Tunnel:</b>  <span style='padding: 0px 2px;'>A tunnel is filled with water, requiring swimming or another way to traverse.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b>  Sharp Rocks:</b>  <span style='padding: 0px 2px;'>Jagged rocks that must be carefully navigated to avoid injury.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b>  Steep Climb:</b>  <span style='padding: 0px 2px;'>A steep incline/decline that requires careful climbing to traverse.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b>  Cave-In:</b>  <span style='padding: 0px 2px;'>A recent cave-in has made the path treacherous and unstable.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b>  Sticky Webs:</b>  <span style='padding: 0px 2px;'>Thick webs that slow progress and might contain spiders.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b>  Narrow Ledge:</b>  <span style='padding: 0px 2px;'>A narrow ledge that must be carefully walked across to avoid falling.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='darkyellow3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'><div style='text-align:center;'>Interior/ Entrance</div></div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Hidden Entrance:</b>  <span style='padding: 0px 2px;'>An entrance hidden behind a waterfall or dense foliage, almost invisible unless actively sought out.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Ancient Door:</b>  <span style='padding: 0px 2px;'>A massive, intricately carved stone door that guards the entrance, adorned with runes and ancient symbols.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Crack in the Earth:</b>  <span style='padding: 0px 2px;'>A narrow crack in the ground that leads into the underground, requiring careful navigation to enter.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Cave Mouth:</b>  <span style='padding: 0px 2px;'>A large, gaping cave mouth, easily visible from a distance and beckoning adventurers with an ominous aura.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Waterlogged Tunnel:</b>  <span style='padding: 0px 2px;'>A tunnel partially submerged in water, forcing explorers to wade through to reach the caves.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Overgrown Path:</b>  <span style='padding: 0px 2px;'>A path overgrown with thick vegetation, hiding the entrance from casual passersby.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Ritual Stone:</b>  <span style='padding: 0px 2px;'>A stone altar near the entrance, covered in offerings and signs of ritualistic use by local inhabitants.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Sinkhole:</b>  <span style='padding: 0px 2px;'>A large sinkhole that provides an entrance to the underground, with loose rocks and unstable ground.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Cliffside Cave:</b>  <span style='padding: 0px 2px;'>A cave entrance situated high on a cliffside, accessible only by climbing or flying.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Ancient Ruins:</b>  <span style='padding: 0px 2px;'>The entrance is within ancient, crumbling ruins, hinting at a lost civilization that once thrived here.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Treacherous Slope:</b>  <span style='padding: 0px 2px;'>A steep slope leading down into the entrance, making descent dangerous without proper equipment.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Mysterious Portal:</b>  <span style='padding: 0px 2px;'>A magical portal that opens to the underground caverns, shimmering with arcane energy.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Rocky Outcrop:</b>  <span style='padding: 0px 2px;'>A rocky outcrop with a hidden entrance behind it, concealed from view by natural formations.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>14 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Guarded Entrance:</b>  <span style='padding: 0px 2px;'>The entrance is guarded by statues or other markers, indicating a significant or protected site.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Swirling Vortex:</b>  <span style='padding: 0px 2px;'>A swirling vortex of air or water that acts as an entrance, requiring a leap of faith to enter.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='darkyellow3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Boon</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Hidden Cache:</b>  <span style='padding: 0px 2px;'>A stash of valuable supplies hidden away by previous explorers or residents. Contains useful equipment and provisions.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Magic Spring:</b>  <span style='padding: 0px 2px;'>A spring with healing or otherwise beneficial properties, capable of restoring health and curing ailments.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +3B</div> Ancient Knowledge:</b>  <span style='padding: 0px 2px;'>A repository of ancient scrolls or books with valuable knowledge, offering insights into the cave's history and secrets.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +1B</div> Restful Oasis:</b>  <span style='padding: 0px 2px;'>A safe, comfortable place to rest and recover, providing shelter and security from the cave's dangers.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Protective Amulet:</b>  <span style='padding: 0px 2px;'>An amulet that offers protection or other benefits, potentially warding off evil or enhancing abilities.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Friendly Guide:</b>  <span style='padding: 0px 2px;'>A knowledgeable guide who offers assistance, helping to navigate the caves and avoid hazards.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +3B</div> Enchanted Weapon:</b>  <span style='padding: 0px 2px;'>A weapon with magical properties, capable of dealing significant damage or having special effects.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +1B</div> Natural Shelter:</b>  <span style='padding: 0px 2px;'>A well-hidden shelter that provides safety and comfort, allowing for rest and recuperation.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Rare Herbs:</b>  <span style='padding: 0px 2px;'>Herbs with medicinal or magical properties, useful for healing potions or other concoctions.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +3B</div> Treasure Trove:</b>  <span style='padding: 0px 2px;'>A trove of valuable items, including gold, gems, and other riches.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Mystic Crystal:</b>  <span style='padding: 0px 2px;'>A crystal that grants special abilities or knowledge, potentially enhancing magical powers.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Resilient Armor:</b>  <span style='padding: 0px 2px;'>Armor that offers exceptional protection, capable of withstanding significant damage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +1B</div> Safe Passage:</b>  <span style='padding: 0px 2px;'>A hidden path that avoids dangers and obstacles, providing a quick and safe route through the caves.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>14 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +3B</div> Ancient Relic:</b>  <span style='padding: 0px 2px;'>A powerful relic from an ancient civilization, imbued with magic and history.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>1/6: +2B</div> Friendly Spirit:</b>  <span style='padding: 0px 2px;'>A spirit that offers guidance and aid, providing valuable information or assistance.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='darkyellow3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Inhabitants</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Cave Dwellers:</b>  <span style='padding: 0px 2px;'>A group of people who live permanently in the caves, adapted to the dark and self-sufficient.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Giant Spiders:</b>  <span style='padding: 0px 2px;'>A colony of giant spiders, weaving massive webs and hunting for prey.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Bat Swarm:</b>  <span style='padding: 0px 2px;'>A large swarm of bats, filling the air with their high-pitched cries and flitting movements.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Blind Fish:</b>  <span style='padding: 0px 2px;'>A pool of fish adapted to the dark, their lack of sight compensated by heightened other senses.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Crystal Golems:</b>  <span style='padding: 0px 2px;'>Living beings made of crystal and rock, guarding the deeper parts of the caves.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Fungus Beasts:</b>  <span style='padding: 0px 2px;'>Creatures that blend into the fungal environment, attacking intruders with poisonous spores.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Ogre:</b>  <span style='padding: 0px 2px;'>Monstrous brutes that have stinky hollows, territorial and dangerous to intruders.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Rare</div> Hill Giant:</b>  <span style='padding: 0px 2px;'>Massive giants that sleep most of the year in their hill caves, awakening only to feed and defend their territory.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Dark Elves:</b>  <span style='padding: 0px 2px;'>A reclusive community of elves, living in the shadows and practicing dark magic.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Mole Men:</b>  <span style='padding: 0px 2px;'>Humanoid creatures adapted to underground life, skilled in digging and navigating the caves.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Lost Miners:</b>  <span style='padding: 0px 2px;'>Miners who got lost and adapted to cave life, often hostile and desperate for supplies.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Drakes:</b>  <span style='padding: 0px 2px;'>Small, dragon-like creatures that hoard treasure and guard their nests fiercely.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Cave Bears:</b>  <span style='padding: 0px 2px;'>Giant bears adapted to the dark, hibernating in the depths and fiercely territorial.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>14 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Giant Worms:</b>  <span style='padding: 0px 2px;'>Massive worms that burrow through the rock, creating new passages and tunnels.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Fairy Folk:</b>  <span style='padding: 0px 2px;'>Small, magical beings that inhabit the caves, often mischievous but potentially helpful.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Lava Lizards:</b>  <span style='padding: 0px 2px;'>Lizards adapted to live near lava, their bodies resistant to heat and fire.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='darkyellow3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Encounters</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Ambush:</b>  <span style='padding: 0px 2px;'>A sudden attack by cave inhabitants, catching the party off guard.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Negotiation:</b>  <span style='padding: 0px 2px;'>A chance to negotiate with intelligent cave dwellers, potentially forming alliances or securing safe passage.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Rescue:</b>  <span style='padding: 0px 2px;'>Finding someone who needs to be rescued, either a fellow explorer or a cave inhabitant.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Trading:</b>  <span style='padding: 0px 2px;'>Encountering someone willing to trade goods, offering a chance to acquire rare items.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Combat:</b>  <span style='padding: 0px 2px;'>A hostile encounter with dangerous creatures, requiring the party to fight for their lives.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Guidance:</b>  <span style='padding: 0px 2px;'>A friendly guide offers to help navigate the caves, guiding the party deeper to the bottom strata.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Betrayal:</b>  <span style='padding: 0px 2px;'>Someone previously friendly turns hostile, revealing hidden motives.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Discovery:</b>  <span style='padding: 0px 2px;'>Finding something valuable or significant, such as ancient artifacts or hidden passages.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Puzzle:</b>  <span style='padding: 0px 2px;'>A complex puzzle that needs to be solved to proceed, involving logic, dexterity, or knowledge.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Treasure:</b>  <span style='padding: 0px 2px;'>Finding a hidden treasure, either in a chest or guarded by creatures.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Trap:</b>  <span style='padding: 0px 2px;'>Falling into a cleverly hidden trap, requiring quick thinking to escape.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Alliance:</b>  <span style='padding: 0px 2px;'>Forming an alliance with another group, offering mutual benefits and protection.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Escape:</b>  <span style='padding: 0px 2px;'>Needing to escape from a dangerous situation, such as a cave-in or rising water levels.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>14 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Mystery:</b>  <span style='padding: 0px 2px;'>Encountering something mysterious and unexplained, sparking curiosity and further exploration.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>15 : </span></b></div><div><b> <div style='display:inline; background: lightgrey; border: none; border-radius: 4px; padding: 0px 2px; font-size:7px; font-weight:600;'>Common</div> Injury:</b>  <span style='padding: 0px 2px;'>Dealing with an injury sustained during exploration, requiring medical attention or magical healing.</span> </div></div></div></div><div style='display:grid; grid-gap:2px; grid-template-columns:100px 1fr;'><div class='darkyellow3bg' style='color:white; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:11px; padding:2px; margin-left:2px;'>Hooks</div><div style='padding:1px 2px 1px 2px; font-size:9px;'><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>1 : </span></b></div><div><b>  Missing Person:</b>  <span style='padding: 0px 2px;'>Someone has gone missing in the caves and needs to be found, possibly a friend or an important figure.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>2 : </span></b></div><div><b>  Ghost Mining Village:</b>  <span style='padding: 0px 2px;'>Deserted village and all the mining equipment, looks like everyone disappeared yesterday.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>3 : </span></b></div><div><b>  Carved Obelisk:</b>  <span style='padding: 0px 2px;'>Standing alone, an obelisk with ancient writing depicts an evil sealed.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>4 : </span></b></div><div><b>  Disappearing Miners:</b>  <span style='padding: 0px 2px;'>Miners have been disappearing in the deeper tunnels, and no one knows why. Their families seek answers and closure.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>5 : </span></b></div><div><b>  Strange Rumblings:</b>  <span style='padding: 0px 2px;'>Unusual tremors and rumblings are felt throughout the cave system. Something big and possibly dangerous is moving underground.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>6 : </span></b></div><div><b>  Glowing Mushrooms:</b>  <span style='padding: 0px 2px;'>A cluster of bioluminescent mushrooms is spreading rapidly, and their glow is attracting all sorts of creatures, both benign and hostile.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>7 : </span></b></div><div><b>  Echoes of the Past:</b>  <span style='padding: 0px 2px;'>Ancient murals and carvings have been discovered in a newly opened cavern, depicting a lost civilization. What happened to them?</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>8 : </span></b></div><div><b>  The Lost City:</b>  <span style='padding: 0px 2px;'>Rumors speak of a lost underground city filled with treasures and dangers, hidden deep within the cave system.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>9 : </span></b></div><div><b>  The Crystal Cavern:</b>  <span style='padding: 0px 2px;'>A cavern filled with rare and valuable crystals has been discovered, but it's guarded by territorial creatures.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>10 : </span></b></div><div><b>  Stolen Children:</b>  <span style='padding: 0px 2px;'>Children have gone missing from nearby villages, and tracks lead into the caves. Who or what is taking them?</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>11 : </span></b></div><div><b>  The Cursed Pool:</b>  <span style='padding: 0px 2px;'>A pool of water deep in the caves is said to be cursed, causing madness and death to those who drink from it.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>12 : </span></b></div><div><b>  The Forgotten Temple:</b>  <span style='padding: 0px 2px;'>An ancient temple dedicated to a long-forgotten god lies deep within the caves, filled with traps and guardians.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>13 : </span></b></div><div><b>  The Dark Elf Threat:</b>  <span style='padding: 0px 2px;'>A community of Dark Elfs is plotting an attack on the surface world, and the party must stop them before it's too late.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>14 : </span></b></div><div><b>  The Underground River:</b>  <span style='padding: 0px 2px;'>An underground river has been discovered, potentially leading to uncharted parts of the cave system, or even to another realm.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>15 : </span></b></div><div><b>  The Guardian Beast:</b>  <span style='padding: 0px 2px;'>A powerful beast is guarding something precious in the caves. To claim the treasure, the beast must be defeated or appeased.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>16 : </span></b></div><div><b>  The Slaver's Den:</b>  <span style='padding: 0px 2px;'>A group of slavers is using part of the cave system as a base to imprison and trade captives. Free the slaves and stop the slavers.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>17 : </span></b></div><div><b>  The Cavern of Whispers:</b>  <span style='padding: 0px 2px;'>A cavern where the very walls seem to whisper secrets and lies, driving those who stay too long to madness.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>18 : </span></b></div><div><b>  The Chasm:</b>  <span style='padding: 0px 2px;'>A massive chasm splits the cave system, and something is stirring in its depths. Exploring it could be highly dangerous, but potentially rewarding.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>19 : </span></b></div><div><b>  The Illithid Colony:</b>  <span style='padding: 0px 2px;'>An illithid (mind flayer) colony has been discovered, plotting to expand their influence and enslave more minds.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>20 : </span></b></div><div><b>  The Lava Tubes:</b>  <span style='padding: 0px 2px;'>Lava tubes deep in the earth are both a hazard and a potential source of power. Navigating them requires skill and caution.</span> </div></div><div style='display:grid; grid-gap:2px; grid-template-columns:auto 1fr;'><div style='display:flex; '><b><span style='color:darkgrey;'>21 : </span></b></div><div><b>  The Sealed Door:</b>  <span style='padding: 0px 2px;'>A massive, sealed door has been found deep within the caves. What lies beyond it? And why was it sealed?</span> </div></div></div></div><div></div></SectionContainer></RegionPage></div>
+</body>
+
+<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Underground_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:44 GMT -->
+</html>
