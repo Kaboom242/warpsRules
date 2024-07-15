@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:27 GMT -->
+<!-- Mirrored from 3.141.9.40:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 02:43:13 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Rule Compendium</title>
@@ -2717,7 +2717,7 @@
     '>
         Stat
     </div>.
-                            <br>`<f7>Stats depend on type of exertion. 
+                            <br><f7>Stats depend on type of exertion. 
                                 <i>Ex: <div style='
         display: inline-block;
         
@@ -4088,8 +4088,8 @@
                             <br><sc>3S:</sc> Head + Target chooses 1 Limb. Knockdown.</div></challengeText></challengeContainer></div></actionContainter>
                 </div>
             </ruleboxTab>
-            <div style='height:1px;'></div><b>Collision:</b> If Character collides with an object <b>Impact</b> Dmg is applied.
-            <br><b>Falling:</b> Characters/Items Fall 10 Spaces/Round. Landing causes Impact Hit.
+            <div style='height:1px;'></div><b>Collision:</b> If Character collides with an object <b>Impact</b> Dmg is applied. <f7>(Landing in water Reduces Falling Damage Level by 1.)</f7> 
+            <br><b>Falling:</b> Characters/Items Fall 10 Spaces/Round. Landing causes Impact Hit. 
                 <ruleboxTab style='margin-top:0px;'>
                     <b6>5-10':</b6> <f7><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>+<b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></f7>&nbsp;&nbsp;&nbsp;
                     <b6>10-50':</b6> <f7><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b>+<b style='font-weight:700; color: black;'>5<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></f7>&nbsp;&nbsp;&nbsp;
@@ -6146,6 +6146,7 @@
         Endr
     </div> + Species Capacity Mod</b>
                 <br> Some smaller items take up 1/5 <b6>E</b6>. These can be rounded down to 0, if carrying less than 5 in any particular Capacity area.
+                <br> Note: A average human weighs about 100<b6>E</b6>.
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -6857,13 +6858,6 @@
                 <br>The amount of Character Points a Character starts with and can spend is listed on their Culture Card.
             </div></BasicsText>
         </BasicsSection>
-        <BasicsSection>
-            <BasicsHeader>Inspiration &nbsp;<div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div></BasicsHeader>
-            <BasicsText><div>
-                Moments and experiences a Character had that allowed them to gain knowledge and progress in their abilities. 
-                <br>The amount of Character Points a Character starts with and can spend is listed on their Culture Card.
-            </div></BasicsText>
-        </BasicsSection>
                         
         <SubTitle>
             1. Culture
@@ -6885,7 +6879,7 @@
         <BasicsSection>
             <BasicsHeader>Starting Points</BasicsHeader>
             <BasicsText><div>
-                This is the amount of <div style='display:inline; color:black; font-weight:800;'>CP</div> and <div style='display:inline-flex; background:lightgray; color:black; height:11px; width:11px; border:solid 1px black; border-radius: 5px; font-weight: 600; justify-content:center;'>i</div> your Character has to spend on Abilities and Aspects. 
+                This is the amount of <div style='display:inline; color:black; font-weight:800;'>CP</div> your Character has to spend on Abilities and Aspects. 
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -7028,9 +7022,64 @@
             3. Customization
         </SubTitle>
         <BasicsSection>
-            <BasicsHeader>Customization</BasicsHeader>
+            <BasicsHeader>Spending CP</BasicsHeader>
             <BasicsText><div style='width:100%;'>
-                Customization is done via spending points <div style='display:inline; color:black; font-weight:800;'>CP</div> on Abilities, Aspects, and other Character creation options. 
+                Spend CP directly on Aspects, or convert CP to progress on Ability Cards.
+                <br> 1CP for <img 
+        src='../../Resources/Art/Images/1Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> = 100%; 
+                <br> 1CP for <img 
+        src='../../Resources/Art/Images/2Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> = 50%; (2CP = 100%)
+                <br> 1CP for <img 
+        src='../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> = 33%; (3CP = 100%) 
+                <br> 1CP for <img 
+        src='../../Resources/Art/Images/4Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> = 25%; (4CP = 100%) 
+                <br> 1CP for <img 
+        src='../../Resources/Art/Images/5Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> = 20%; (5CP = 100%) 
             </div></BasicsText>
         </BasicsSection>
         <BasicsSection>
@@ -7220,5 +7269,5 @@
 </body>
 
 
-<!-- Mirrored from 3.140.250.11:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2024 20:41:34 GMT -->
+<!-- Mirrored from 3.141.9.40:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 02:43:19 GMT -->
 </html>
