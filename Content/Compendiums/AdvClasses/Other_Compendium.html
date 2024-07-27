@@ -1,0 +1,1645 @@
+<html>
+
+<!-- Mirrored from 18.188.108.249:8080/Content/Compendiums/AdvClasses/Other_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 07:18:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Other Classes Compendium</title>
+    <style>
+    b1 /*Bold*/ {Font-weight: 100;}
+    b2 /*Bold*/ {Font-weight: 200;}
+    b3 /*Bold*/ {Font-weight: 300;}
+    b4 /*Bold*/ {Font-weight: 400;}
+    b5 /*Bold*/ {Font-weight: 500;}
+    b6 /*Bold*/ {Font-weight: 600;}
+    b7 /*Bold*/ {Font-weight: 700;}
+         b /*Bold*/ {Font-weight: 700;}
+    b8 /*Bold*/ {Font-weight: 800;}
+    b9 /*Bold*/ {Font-weight: 900;}
+    bf10 /*Bold*/ {Font-weight: 700; font-size: 10px}
+
+    sc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: black;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    cs
+    {
+        display: inline-block;
+        background: white;
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        border-radius: 4px;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    fc /*success cost (<sc>1S:</sc> effect)*/
+    { 
+        display: inline-block;
+        background: hsla(0,55%,30%,1);
+        padding: 0px 3px 0px 3px;
+        margin: 1px 1px 1px 1px;
+        border-style: none;
+        border-radius: 4px;
+        color: White;
+        Font-weight: 800;
+        line-height: 1.1;
+    }
+    stat 
+    {
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: black;
+        
+        font-weight:700;
+    }
+    dc /*Damage Cost*/ {
+        background:hsla(0,55%,30%,1);
+        border-radius: 4px;
+        color: white;
+        Font-weight: 500;
+        padding: 0px 2px 0px 2px;
+    }
+    mini /* Useful for small suplmental text*/
+    {
+       display:inline-block; 
+       font-size:8px;
+    }
+    noWrap
+    {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    end {
+        align-self: center;
+        display: grid;
+        grid-auto-flow: column; 
+        grid-gap: 0px 2px;
+        align-items: end;
+        justify-content: left;
+    }    
+    hit {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+
+    }
+    dmg {
+        display: inline-block;
+        background: hsla(21.6,0%,40%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 1px 2px;
+        margin: 1px 0px;
+        min-height: 14px;
+        
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+    }
+    dmgEffect
+    {
+        display: inline-block;
+        background: hsla(0,55%,95%,1);
+        color: hsla(0,55%,20%,1);
+        border-color: hsla(0,55%,20%,1);
+        color: black;
+        font-size:9px;
+        font-weight: 400;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 0px 2px;
+    }
+    lvl {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0px 2px 0px 3px;
+        border-radius: 4px 0px 0px 4px;
+        font-weight: 800;
+        background: hsla(0,0%,25%,1);
+        color: white;
+        margin-top: 1px;
+    }
+    resist {
+        display:inline-block;
+        background:white; 
+        padding:1px 2px 1px 2px;
+        margin-top:1px;
+        margin-left:3px;
+        border-radius:4px;
+        color:black;
+        font-weight:400;
+        margin-bottom:1px;
+    }
+    cb {
+        display:inline-block; 
+        border-style:solid; 
+        border-radius: 4px;
+        border-color: var(--Gray-2);
+        border-width:1px; 
+        height: min-content;
+        /*background:white;*/
+        padding: 0px 2px 0px 0px; 
+    }
+    gc { /*Grey Cost*/
+         /*display: inline-block;*/
+        background: var(--Gray-1);
+        padding: 0px 2px 0px 2px;
+        border-style: none;
+        border-radius: 4px 0px 0px 4px;
+        height: 100%;
+        color: black;
+        Font-weight: 800;
+        line-height: 1.1;   
+    }
+    sb{
+        display:inline; 
+        padding:0px 2px 0px 2px; 
+        border:1px solid var(--Gray-3); 
+        background:--var(Gray-1); 
+        border-radius:4px;
+    }
+    sbi{
+        display:inline;
+        font-size:90%;
+        font-weight: 700;
+    }
+    
+    keyword {
+        display:inline;
+        color:hsla(244.8,55%,40%,1);
+        font-weight: 700;
+    }
+    keywordGray {
+        display:inline;
+        color:var(--Gray-4);
+        font-weight: 700;
+    }
+    keywordred {
+        display:inline;
+        color:var(--Red-4);
+        font-weight: 700;
+    }
+    .kRed{color:var(--Red-4);}
+    keywordyellow {
+        display:inline;
+        color:var(--Yellow-4);
+        font-weight: 700;
+    }
+    keywordpurple {
+        display:inline;
+        color:var(--Purple-4);
+        font-weight: 700;
+    }
+    keywordpink {
+        display:inline;
+        color:var(--Pink-4);
+        font-weight: 700;
+    }
+    keywordturquoise {
+        display:inline;
+        color:var(--Turquoise-4);
+        font-weight: 700;
+    }
+    keywordgreen {
+        display:inline;
+        color:var(--Green-4);
+        font-weight: 700;
+    }
+    keywordblue {
+        display:inline;
+        color:var(--Blue-4);
+        font-weight: 700;
+    }
+    keywordorange {
+        display:inline;
+        color:var(--Orange-4);
+        font-weight: 700;
+    }
+    
+    
+    keywordAzeal
+    {
+        display:inline;
+        color:var(--Cleric-4);
+        font-weight: 700;
+    }
+    keywordTyrannus
+    {
+        display:inline;
+        color:var(--Barbarian-4);
+        font-weight: 700;
+    }
+    keywordYavera
+    {
+        display:inline;
+        color:var(--Bard-4);
+        font-weight: 700;
+    }
+    keywordErnok
+    {
+        display:inline;
+        color:var(--Druid-4);
+        font-weight: 700;
+    }
+    keywordMorgeth
+    {
+        display:inline;
+        color:var(--SoulTurq-3);
+        font-weight: 700;
+    }
+    keywordXythuul {
+        display:inline;
+        color:var(--Xythuul-2);
+        font-weight: 700;
+    }
+    
+    titleword {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Gray-4);
+    }
+    .twRed { background:var(--Red-3); }
+    .twTurquoise { background:var(--Turquoise-3); }
+    .twPurple { background:var(--Purple-3); }
+    .twGreen { background:var(--Green-3); }
+    .twBlue { background:var(--Blue-3); }
+    titlewordred {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Red-4);
+    }
+    titlewordpurple {
+        display:inline;
+        font-weight:800;
+        color:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        background:var(--Purple-4);
+    }
+    
+    titlewordfree {
+        display:inline;
+        font-weight:800;
+        background:white;
+        padding:0px 4px 0px 4px;
+        border-radius:4px;
+        border-style:solid;
+        border-width:1px;
+        color:black;
+        border-color:black;
+    }
+    .twfRed { color:var(--Red-4); border-color:var(--Red-4);}
+    .twfTurquoise { color:var(--Turquoise-4); border-color:var(--Turquoise-4);}
+    .twfGreen { color:var(--Green-4); border-color:var(--Green-4);}
+    .twfBlue { color:var(--Blue-4); border-color:var(--Blue-4);}
+    .twfOrange { color:var(--Orange-4); border-color:var(--Orange-4);}
+    
+    f6 {
+        display:inline;
+        font-size:6px;
+    }
+    f7 {
+        display:inline;
+        font-size:7px;
+    }
+    f8 {
+        display:inline;
+        font-size:8px;
+    }
+    f9 {
+        display:inline;
+        font-size:9px;
+    }
+    f10 {
+        display:inline;
+        font-size:10px;
+    }
+    f11 {
+        display:inline;
+        font-size:11px;
+    }
+    f12 {
+        display:inline;
+        font-size:12px;
+    }
+    f13 {
+        display:inline;
+        font-size:13px;
+    }
+    f14 {
+        display:inline;
+        font-size:13px;
+    }
+    f15 {
+        display:inline;
+        font-size:14px;
+    }
+    f16 {
+        display:inline;
+        font-size:16px;
+    }
+    gtxt {
+        color: hsl(0, 0%, 70%);
+    }
+    abilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        display: flex;
+        grid-gap: 4px;
+        align-items: center;
+    }
+    abilitytitlebox
+    {
+        display:grid; 
+        grid-template-columns:3fr 1fr;  
+        border-radius: 5px 5px 0px 0px; 
+    }
+    masterabilitysubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:9px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+        display: flex;
+        align-items: center;
+    }
+    abilitysectiontitle{
+        font-weight:700; 
+        color:white;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    .astGray{background:var(--Gray-3);}
+    .astRed{background:var(--Red-3);}
+    .astPink{background:var(--Pink-3);}
+    .astPurple{background:var(--Purple-3);}
+    .astYellow{background:var(--Yellow-3);}
+    .astTurquoise{background:var(--Turquoise-3);}
+    .astGreen{background:var(--Green-3);}
+    .astBlue{background:var(--Blue-3);}
+    .astOrange{background:var(--Orange-3);}
+    
+    abilitysection{
+        margin-top: -1px;
+        filter: drop-shadow(0px 1px rgba(0, 0, 0, 0.5));
+        /*border-bottom:solid 1px; */
+        border-color: gray;
+        border-radius: 0px 0px 4px 4px;
+        font-size:80%;
+        padding:1px 2px 1px 2px; 
+        background:var(--Gray-1); 
+    }
+    
+    ProgContainer 
+    {
+        display:grid; 
+        grid-template-columns: auto 1fr; 
+        grid-gap: 3px; 
+        align-items: center; 
+        height: 20px; 
+        color: white; 
+        padding-right: 3px; 
+    }
+    ProgPercent
+    {
+        background: white; 
+        height: 17px; 
+        color:black;  
+        font-weight: 800; 
+        display: flex; 
+        align-items: center; 
+        flex-direction:row-reverse; 
+        padding-right: 2px;
+        border-radius: 4px;
+    }
+    
+    .asecGray{background:var(--Gray-1); border-color:var(--Gray-3);}
+    .asecRed{background:var(--Red-1); border-color:var(--Red-3);}
+    .asecPink{background:var(--Pink-1); border-color:var(--Pink-3);}
+    .asecPurple{background:var(--Purple-1); border-color:var(--Purple-3);}
+    .asecYellow{background:var(--Yellow-1); border-color:var(--Yellow-3);}
+    .asecTurquoise{background:var(--Turquoise-1); border-color:var(--Turquoise-3);}
+    .asecGreen{background:var(--Green-1); border-color:var(--Green-3);}
+    .asecBlue{background:var(--Blue-1); border-color:var(--Blue-3);}
+    .asecOrange{background:var(--Orange-1); border-color:var(--Orange-3);}
+    
+    .vCenter{display:flex; align-items:center;}
+    
+    red
+    {
+        display: inline;
+        color: red;
+    }
+    
+    blue
+    {
+        display: inline;
+        color: blue;
+    }
+    
+    bpcombat
+    {
+        display:inline;
+        font-weight:800;
+        color: red;
+    }
+    bpgold
+    {
+        display:inline;
+        font-weight:800;
+        color: #fcba03;
+    }
+    bpsurvival
+    {
+        display:inline;
+        font-weight:800;
+        color: #0cbec4;
+    }
+    bprecovery
+    {
+        display:inline;
+        font-weight:800;
+        color: #1250e0;
+    }
+    bputility
+    {
+        display:inline;
+        font-weight:800;
+        color: #850ba3;
+    }
+    bptotal
+    {
+        display:inline;
+        font-weight:800;
+        color: black;
+    }
+    
+    .classinfo
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        grid-column: span 3; 
+        background: white;
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    .classdescription
+    {
+        margin-left: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        padding-top: 2px;
+        font-size: 7px; 
+        font-style: italic; 
+        font-weight:500; 
+        border: 1px solid;  
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    classsubtitle{
+        font-weight:700; 
+        color:white;
+        font-size:11px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+        padding:1px 2px 1px 5px;
+        background:var(--Gray-3);
+    }
+    
+    godreq {
+        font-weight:700; 
+        color:var(--Gray-3);
+    }
+
+    godreqlight {
+        font-weight:700; 
+        color: #f2f2f2;
+    }
+
+    
+</style>
+</style><link rel='stylesheet' type='text/css' href='../../../Resources/style.css'><link rel='stylesheet' type='text/css' href='../../../Resources/normalize.css'><style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+</style><style> @import url('https://fonts.googleapis.com/css?family=Francois+One'); </style><style> @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap'); </style><style>
+    actionContainter {
+        display:grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 2px;
+    }
+    actionTitle {
+        background: hsla(122.4,0%,20%,1);
+        border-radius: 4px 0px 0px 4px;
+        margin-right: -1px;
+        color: white;
+        font-weight: 800;
+        padding: 2px;
+        
+        display:inline-flex;
+        justify-content: center;
+        align-items:center;
+       
+    }
+    actionSubtitle {
+        font-weight: 700; 
+        display:inline-flex; 
+        justify-content: center;
+        padding: 0px 2px;
+        font-style:italic;
+        font-size: 75%;
+        display:block;
+    }
+    challengeContainer {
+        display: inline-grid; 
+        grid-template-columns: auto;  
+        grid-auto-flow:column; 
+        justify-content: start;
+        
+        grid-template-columns:auto auto 1fr;
+    }
+    challengeHead {
+        background: hsla(122.4,0%,30%,1);
+        border-radius: 4px 0px 0px 4px;
+        padding: 2px;
+        
+        color: white;
+        font-weight: 700;
+        padding-right:3px;
+        
+        display:inline-flex;
+        align-items:center;
+    }
+    challenge {
+        display:flex;
+        border-radius: 4px;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid solid solid none;
+        border-color: hsla(122.4,0%,44%,1) ;
+        
+        background: hsla(122.4,0%,44%,1);
+        
+        font-weight: 500;
+        color: white;
+        
+        border-radius:4px 0px 0px 4px;
+        
+        align-items:center;
+        border-radius:0px
+    }
+    challengeInner {
+        display:flex;
+        background: white;
+        padding: 2px;
+        color: black;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-left: 4px;
+        height:100%; 
+        align-items:center;
+        font-size: 80%;
+        width:100%;
+    }
+    challengeText {
+        display:inline-flex;
+        align-items:center;
+        border-radius:0px 4px 4px 0px;
+        border-width:1px;
+        border-style:solid solid solid none;
+        border-color:black;
+        padding:1px 2px 1px 1px;
+        font-size: 80%;
+    }
+    RuleTitle {
+        display: block;
+        color: Black; 
+        border-radius: 100px 100px 0px 0px; 
+        padding: 2px 2px 2px 15px;
+        margin-bottom: 0px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px; 
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+    small{
+        display:inline-block;
+        font-size:80%;
+    }
+    
+    
+    situationHeader {
+        background: hsla(122.4,0%,81%,1); 
+        color: Black; 
+        border: 1px solid black; 
+        border-radius: 4px;
+        font-weight: 800; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px 1px 0px 1px;
+        font-size:80%;
+    }
+    
+    RuleSection {
+        display:grid; 
+        grid-template-columns:80px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    RuleHeader {
+        background:hsla(41.4,0%,78%,1);
+        font-weight:600;
+        font-size:10px;
+        color:black;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    rulecard
+    {
+        display:grid; 
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:3.70in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardmetadata
+    {
+        background:white; 
+        color:black; 
+        padding:2px;
+        width:100%;
+        border-radius:4px;
+        font-size:11px;
+    }
+    rulecardwide
+    {
+        display:grid; 
+        grid-template-rows:auto 1fr;
+        grid-gap:1px;
+        align-content:start;
+        height:5.20in; width:7.30in; padding:0px; color:black;
+        font-size:10px;
+        background:white;
+        border-radius:4px;
+    }
+    rulecardtitle {
+        background:black;
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        padding:2px 5px 1px 5px;
+        border-radius:4px;
+    }
+    rulecardsubtitle {
+        /*background: hsla(122.4,0%,40%,1);*/
+        background: black;
+        color: white;
+        font-weight:700;
+        font-size: 9px;
+        padding: 2px 2px 1px 2px;
+        border-radius:4px 4px 0px 0px;
+        margin-top: 0px;
+    }
+    
+    rulebox {
+        display: block;
+        border-radius:4px; border:solid 1px black; 
+        padding:1px 2px 1px 2px; 
+        font-size:8px;
+        background:var(--Gray-1);
+    }
+    .rbRed {background:var(--Red-1); border-color:var(--Red-3);}
+    ruleboxTab {
+        display: block;
+        margin-left:10px; 
+        margin-top:2px; 
+        font-size:8px;
+    }
+    
+    
+    SubTitle {
+        display: block;
+        background:var(--Gray-3);  
+        color: black; 
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+        
+        background: white; 
+        padding: 2px 0px 0px 0px; 
+        border-bottom: 2px solid black; 
+        border-radius: 0px;
+    }
+    
+    BasicsSection {
+        display:grid; 
+        grid-template-columns: 100px 1fr; 
+        grid-auto-flow:column; 
+        width:100%; 
+        grid-gap:2px;
+    }
+    
+    BasicsHeader {
+        background:var(--Gray-1);
+        color:black;
+        font-weight:600;
+        font-size:12px;
+        border-right: 1px solid black;
+        padding-left: 2px;
+        margin-left: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:start;
+    }
+    BasicsHeaders {
+        background:var(--Gray-3);
+        color:white;
+        font-weight:700;
+        font-size:12px;
+        border-radius:4px 4px 4px 4px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    BasicsText {
+        background:white;
+        font-weight:400;
+        font-size:10px;
+        color:black;
+        display:flex;
+        align-items:center;
+        padding:2px 0px 2px 0px;
+    }
+    SideTitleContentGrid {
+        display:grid; 
+        grid-auto-flow:column; 
+        grid-template-columns:auto 1fr; 
+        grid-gap:2px; 
+    }
+    RotatedTitleContainer 
+    {
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        padding:1px; 
+        font-weight:600; 
+        width:20px; 
+        border-style:solid; 
+        border-width:1px; 
+        border-radius: 4px;
+        font-size:10px; 
+        background: var(--Gray-2);
+    }
+    RotatedTitle {
+        transform:rotate(-90deg); 
+        transform-origin: 50% 50%;
+        white-space: nowrap;
+    }
+    
+</style>
+</head>
+<style type="text/css">
+    body {
+         width: 100%;
+    }
+    .linkHead0
+    {
+        font-weight: 900;
+        padding-bottom: 0px;
+        font-size: 16px;
+    }
+</style>
+<body style='background:hsla(0,0%,40%,1); padding-left:5px;'>
+    <div style='position: fixed; left: 0px; top: 0px; display: flex; flex-direction: column; height: 100%; background: white; padding: 0px;'>
+            <a class=linkHead0 href='#Basic'>Basic</a>
+            <a class=linkHead0 href='#Pure'>Pure</a>
+            <a class=linkHead0 href='#Multiclass'>Multiclass</a>
+            <a class=linkHead0 href='#Mini-Class'>Mini Class</a>
+    </div>
+    <div style='margin-left: 135px;'>
+    <div style='display: grid;grid-template-rows: 1fr;grid-template-columns: repeat(auto-fill, 356px);grid-gap: 8px 8px;grid-auto-flow: row;'><div id='Class Info' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Class Info</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard style='background: var(--Cultist-2); '><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Cultist-4);'>
+            <div>Other</div>
+        </rulecardtitle><classsubtitle style='background:var(--Cultist-4);'>
+           <img 
+        src='../../../Resources/Art/Images/ClassBasic.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Basic
+        </classsubtitle>
+        <div style='display:grid; grid-template-columns: auto 1fr;'>
+            <masterabilitysubtitle  style='background:var(--Cultist-4); border-radius:4px 0px 0px 4px;'>
+                <div>Exotic Animal Trainer</div>
+            </masterabilitysubtitle>
+            <div style=' background:var(--Cultist-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Cultist-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
+                 No Requirements
+            </div>
+            <div class='classdescription' style='grid-column: span 2;  margin-left: 5px;  border-color:var(--Cultist-3);  background: white;'>
+                An Exotic Animal Trainer is someone who has spent enough time with powerful and monstrous animals to build a relationship with them.
+                This can happen via proximity or even just by spending enough money to have the animal trained to the bidding of the owner.
+                Regardless, controlling these beasts provides considerable advantage on the battlefield, as they are capable of inflicting massive damage at the behest of their owner.
+            </div>
+        </div><div style='height:3px;'></div><rulecardtitle style='display:grid; grid-template-columns:1fr; background:var(--Cultist-4);'>
+            <div><f9><img 
+        src='../../../Resources/Art/Images/ClassMaster.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> Master</f9> </div> 
+        </rulecardtitle>
+        <div style='display:grid; grid-template-columns: auto 1fr;'>
+            <masterabilitysubtitle  style='background:var(--Cultist-4); border-radius:4px 0px 0px 4px;'>
+                <div>Stalker</div>
+            </masterabilitysubtitle>
+            <div style=' background:var(--Cultist-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Cultist-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
+                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Hunter 1 + Ranger 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Survivalist 2 (3 Environments) + Survivalist 3 (4 Environments) <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr 2
+    </div> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense 2
+    </div>
+            </div>
+            <div class='classdescription' style='grid-column: span 2;  margin-left: 5px;  border-color:var(--Cultist-3);  background: white;'>
+                Throughout the world of Urdun, a select group that few have heard of, has taken it amongst themselves to keep the natural order by challenging those monsters which threaten it.
+                They are called Stalkers, and this elite order is one of the most exclusive in the world, requiring incredible skill with blade, bow, potion making, and complete dedication to the craft.
+                In order to enter, one must drink and sacred draught and be cleansed by Ernok, and emerges with enhances senses and reflexes.
+                Stalkers may switch between bow and blade as Free Action and create powerful poisons capable of inflicting heavy damage to their prey as will as enhancing their stats.
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 1fr;'>
+            <masterabilitysubtitle  style='background:var(--Cultist-4); border-radius:4px 0px 0px 4px;'>
+                <div>Pirate Lord</div>
+            </masterabilitysubtitle>
+            <div style=' background:var(--Cultist-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Cultist-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
+                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>Rogue 1 + Fighter 1/Barbarian 1 + Bard 1/Artificer 1</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Pirate <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Sailor 3 <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> Criminal <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha 2
+    </div> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Dex 2
+    </div>
+            </div>
+            <div class='classdescription' style='grid-column: span 2;  margin-left: 5px;  border-color:var(--Cultist-3);  background: white;'>
+                Feared most of all across the high seas of Urdun is the Pirate Lord.
+                These are sailors who have achieved mastery of sailing and fighting as well as built a personal legend such that their crews are willing to follow them to the ends of the earth.
+                Pirate Lords have elite skills in naval warfare and crew member willing to lay down their lives for them.
+                They also gain a parrot that can be used in battle and are expert fighters with a hooked hand.
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 1fr;'>
+            <masterabilitysubtitle  style='background:var(--Cultist-4); border-radius:4px 0px 0px 4px;'>
+                <div>Aether Rift Summoner</div>
+            </masterabilitysubtitle>
+            <div style=' background:var(--Cultist-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Cultist-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
+                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>3 of (Bard 1 + Druid 1 + Mage 1 + Cleric 1 + Cultist 1)</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha 2
+    </div> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int 2
+    </div>
+            </div>
+            <div class='classdescription' style='grid-column: span 2;  margin-left: 5px;  border-color:var(--Cultist-3);  background: white;'>
+                While many serve a single god, the soul of the Aether Rift Summoner is entuned to vibrations of divine ether at a deeper level.
+                They may use this to harmonize with the powers of multiple gods, bending the ether to summon powerful divine beings to fight at their behest.
+                In order to be a Aether Rift Summoner, one must be versed in multiple levels of diving and ethereal manipulation such as that of the Bard, Druid, Cleric, and Mage.
+            </div>
+        </div>
+        <div style='display:grid; grid-template-columns: auto 1fr;'>
+            <masterabilitysubtitle  style='background:var(--Cultist-4); border-radius:4px 0px 0px 4px;'>
+                <div>Jack of All Trades</div>
+            </masterabilitysubtitle>
+            <div style=' background:var(--Cultist-1); border-left: 1px solid; border-right: 1px solid;  border-radius: 0px 4px 0px 0px;  border-color:var(--Cultist-3);  font-size: 8px; padding:1px 4px 1px 4px;'>
+                 <b>Elite Character</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> <b>5 of (Archer 1 + Barbarian 1 + Bard 1 + Cleric 1 + Druid 1 + Fighter 1 + Mage 1 + Monk 1 + Rogue 1)</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div> + All Stats 1 + 5 Stats => 2
+            </div>
+            <div class='classdescription' style='grid-column: span 2;  margin-left: 5px;  border-color:var(--Cultist-3);  background: white;'>
+                While some seek mastery over a single domain, or even a couple, a Jack of All Trades seeks to become proficient in all of them.
+                These rare but extremely talented individuals can really do it all, fight on the front lines, shoot arrows, cast spells, and even play a hearty tune.
+                At the very ends of this difficult path, the Jack of All Trades finds the overlap between their various occupations allowing them to improve their abilities even more.
+                True to their name, the Jack of All Trades might not be the best at anything, but happens to be good at everything.
+            </div>
+        </div></rulecard></div><div id='Stalker' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Stalker</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
+            <div>Stalker</div>
+            <div><img 
+        src='../../../Resources/Art/Images/ClassMaster.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> <f10>Master<f10></div>
+        </rulecardtitle><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Initiation
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            Must seek and find the Guild of Stalkers.
+            When doing so, must go through the Trial of the Potion to unlock abilites.
+        </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Physical Enhancements
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            Dark Vision and Heat Vision
+        	<br> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Defend
+        	<br> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hit and Shoot
+        	<br> +1 Pace
+        	<br> All Hunter require 1 less Wither.
+        	<br> +1 to 2 Dog Stats
+        </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Abilities
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            <b>Fluid Combat:</b> May switch between Bow and Sword once per Round as a Free Action.
+            <br><b>Herbal Healing:</b> Herb removes <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Wound from Ally/Self/Dog.
+        </rulebox><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Cultist-1); border-style:solid; border-color:var(--Cultist-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Cultist-1);'><div style='text-align:left; '>Monster Blade</div></div><actionSubtitle style='color:black; margin-left:3px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                <b>Req using blood of a monster.</b>
+                <br> Blade does <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg against that monster permanently. Each Blade can only have one Monster Type.
+                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Sense Monsters</div></div> <actionSubtitle style='margin-left:3px;'>Challenge</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Blue-4);
+        
+        font-weight:700;
+    '>
+        Sense
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                    See if any monsters are nearby. May apply to humanoids as well.
+                </div></challengeText></challengeContainer></div></actionContainter><div style='display:grid; grid-template-columns:auto 1fr; grid-gap:2px;'><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);    ;'><div style='text-align:center;'><div style='text-align:left;'>Liquor<br> of the<br> Divine</div></div> <actionSubtitle style=''></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Create (Day):</b> Use Herb + Water, Gain 2 Wound</div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'><b>Drink (Active):</b> 
+                        For rest of the day gain +1 to all Stats.
+	                    <br> <b>At end of Day:</b> Resist 5 Wither if you drink it. Anyone else resists 8 Fatigue w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div>.</div></challengeText></challengeContainer></div></actionContainter><div style='display:grid; grid-template-columns:1fr; border-style:solid; border-width:1px; border-color:var(--Cultist-3); color:black; font-weight:700; font-size:13px;'>
+                <div style='text-align:right; padding:4px 2px 4px 2px; display: flex; align-items: flex-end;'>&nbsp;&nbsp;&nbsp;&nbsp;/1 <small></small></div>
+            </div></div></rulecard></div><div id='Pirate Lord' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Pirate Lord</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
+            <div>Pirate Lord</div>
+            <div><img 
+        src='../../../Resources/Art/Images/ClassMaster.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> <f10>Master<f10></div>
+        </rulecardtitle><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Crew
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            Gain a Crew of Pirates. 2 Pirates are typically willing to follow you into dry land.
+        </rulebox><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);     ; background:var(--Cultist-1); border-style:solid; border-color:var(--Cultist-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Cultist-1);'><div style='text-align:left; '>Recruit</div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Day</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>+1 Fatigue/Stress. <br> <cs>2S:</cs> Get a new recruit.
+                </div></challengeText></challengeContainer></div></actionContainter><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Fleet
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            Each ship captured, joins your fleet.
+        	<br><b>Fleet Income:</b>
+        		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Sailboat:</b> <b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Gold per Week
+        		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Longship:</b> <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Gold per Week
+        		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Galley/Frigate:</b> <b style='font-weight:700; color: black;'>6<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Gold per Week.
+        </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Fleet Combat
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            <b>Fleet Manuevers:</b> +1 Combat Movement in the Ship you are on.
+            <br><b>Resourceful Repairs:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Repair and Reload on the Ship you are on.
+            <br><b>Cannon Modifications:</b> Cannons do <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Dmg.
+        </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Ship Master
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            <b>Deck Master:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Defend on a boat. <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>3<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Challenges involving moving around boat (ex: climbing rigging, swinging on rigging, jumping from boat to boat).
+            <br><b>Cannon Expert:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Cannon Reload.
+            <br><b>Hook Fighter:</b> <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Hit and Dmg with a Hook Hand.
+        </rulebox><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Parrot
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            Gain Parrot.
+        </rulebox>
+        <div style='display:grid; grid-template-columns: auto auto; gap:2px;'>
+            <div style='
+            font-weight:800; display:flex; justify-content:center; align-items: center;
+            border: 2px solid black;
+        '>
+                Parrot
+            </div>
+            <div style='
+            background: black;
+            display:grid; grid-template-columns: auto auto auto auto auto; gap:1px;
+            border: 2px solid black;
+        '>
+                <div style='
+            background:black; color:white; border-radius:0px; 
+            font-weight:600; display:flex; justify-content:center; align-items: center;
+        '> 
+                    Body Area
+                </div>
+                <div style='
+            background:black; color:white; border-radius:0px; 
+            font-weight:600; display:flex; justify-content:center; align-items: center;
+        '> 
+                    Harm
+                </div>
+                <div style='
+            background:black; color:white; border-radius:0px; 
+            font-weight:600; display:flex; justify-content:center; align-items: center;
+        '>
+                    Wound
+                </div>
+                <div style='
+            background:black; color:white; border-radius:0px; 
+            font-weight:600; display:flex; justify-content:center; align-items: center;
+        '>
+                    Harm
+                </div>
+                <div style='
+            background:black; color:white; border-radius:0px; 
+            font-weight:600; display:flex; justify-content:center; align-items: center;
+        '>
+                    Crit
+                </div>
+                <div style='
+            background:white; border-radius:0px; 
+         border-radius:0px 0px 0px 4px; '>
+                    <sc>1S:</sc> Body
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Pace:</b> 4 (Air)
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Ascend <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Orange-4);
+        
+        font-weight:700;
+    '>
+        Agl
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> 
+                </div>
+                <div style='
+            display:grid; gap:2px;
+            background:var(--Dmg-1); border-radius:0px; 
+            font-weight:500; display:flex; justify-content:center; align-items: center;
+        '>
+                    
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+        
+                </div>
+                <div style='
+            display:grid; gap:2px;
+            background:var(--Dmg-2); border-radius:0px; 
+            font-weight:500; display:flex; justify-content:center; align-items: center;
+        '>
+                    
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+        
+                </div>
+                <div style='
+            display:grid; gap:2px;
+            background:var(--Dmg-3); border-radius:0px; 
+            font-weight:500; display:flex; justify-content:center; align-items: center;
+        '>
+                    
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+         
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+        
+                </div>
+                <div style='
+            display:grid; gap:2px;
+            background:var(--Dmg-4); border-radius:0px; 
+            font-weight:500; display:flex; justify-content:center; align-items: center;
+         border-radius:0px 0px 4px 0px; '>
+                    
+            <div style='background:white; border-radius:10px; width:8px; height:8px; display:inline-block;'></div>
+        
+                </div>
+            </div>
+        </div>
+        <abilitysubtitle style='background:var(--Cultist-4);'>
+            Parrot Actions
+        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);     ; background:var(--Cultist-1); border-style:solid; border-color:var(--Cultist-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Cultist-1);'><div style='text-align:left; '>Distract</div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto auto 1fr;; '><challengeHead style='; background:var(--Cultist-2);'><div style='display:flex; align-items:center; font-size:9px;'><div><img 
+        src='../../../Resources/Art/Images/1H.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                    <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; '>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> Reduce Hit or Defend of Targer by 1.
+                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);     ; background:var(--Cultist-1); border-style:solid; border-color:var(--Cultist-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Cultist-1);'><div style='text-align:left; '>Blind</div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Active</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto auto 1fr;; '><challengeHead style='; background:var(--Cultist-2);'><div style='display:flex; align-items:center; font-size:9px;'><div><img 
+        src='../../../Resources/Art/Images/1H.svg' 
+        height='12px'
+        width='12px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '></div></div></challengeHead>
+                                    <challenge style='border-radius:0px 0px 0px 0px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; '>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> Blind 1.
+                </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);     ; background:var(--Cultist-1); border-style:solid; border-color:var(--Cultist-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Cultist-1);'><div style='text-align:left; '>Dodge</div></div><actionSubtitle style='color:black; margin-left:3px; margin-top:2px;'>Defend</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'><cs>1S:</cs> Reduce Strike/Proj by 1.
+                </div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div id='Aether Rift Summoner' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Aether Rift Summoner</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
+            <div>Aether Rift Summoner</div>
+            <div><img 
+        src='../../../Resources/Art/Images/ClassMaster.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> <f10>Master<f10></div>
+        </rulecardtitle><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Summoning
+        </abilitysubtitle><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Cultist-3);    align-items:flex-start; flex-direction:column; justify-content:center; ; background:var(--Cultist-1); border-style:solid; border-color:var(--Cultist-3); border-width:1px;'><div style='text-align:center; color:black; border-radius:40px; background:var(--Cultist-1);'><div style='text-align:left; '>Summon</div></div><actionSubtitle style='color:black; margin-left:3px;'>Full</actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Cultist-2)); border-color:var(--Cultist-2);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><b>Choose Two:</b> <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>/</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div></div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                <cs>1S:</cs> +1 Summon Point.
+                </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Cultist-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>4 Summon</div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                Resist 3 Fatigue w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div>. 
+                Shows up for <b style='font-weight:700; color: black;'>4<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha
+    </div> Rounds. 
+                You control, but it may refuse you if it goes against it's values.
+                <br><b>Choose 1:</b>
+                <br><b>Must follow Azeal:</b> Angel
+                <br><b>Must follow Ernok:</b> Blessed Chimera
+                <br><b>Must follow Yavarra:</b> Big Scary Satyr
+                <br><b>Must follow Tyrannus:</b> Blood Demon
+                <br><b>Must follow Morgeth:</b> Death Demon
+                <br> 
+                </div></challengeText></challengeContainer><challengeContainer style='grid-template-columns:auto 1fr;; '><challengeHead style='; background:var(--Cultist-2);'><div style='display:flex; align-items:center; font-size:9px;'><div>10 Summon</div></div></challengeHead><challengeText style='; ; background:white; border-color:var(--Cultist-3);'><div style='background:white; color:black; width:100%; font-size:;'>
+                Resist 6 Fatigue w/ <div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Green-4);
+        
+        font-weight:700;
+    '>
+        Endr
+    </div>. 
+                Shows up for <b style='font-weight:700; color: black;'>2<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>S</div></b><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Purple-4);
+        
+        font-weight:700;
+    '>
+        Spirit
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Int);
+        
+        font-weight:700;
+    '>
+        Int
+    </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Turquoise-4);
+        
+        font-weight:700;
+    '>
+        Cha
+    </div> Rounds. 
+                You control, but it may refuse you if it goes against it's values.
+                <br><b>Choose 1:</b>
+                <br><b>Must follow Azeal:</b> Seraphim
+                <br><b>Must follow Ernok:</b> Epic Spirit Beast (Giant Elk Beast)
+                <br><b>Must follow Yavarra:</b> Multi-faced Multiarmed Giant Woman who Floats (Kind of a Hindu thing)
+                <br><b>Must follow Tyrannus:</b> Epic Beefy Blood Minotaur
+                <br><b>Must follow Morgeth:</b> Reaper (Giant Skeleton of Death w/ Scythe)
+                <br> 
+                </div></challengeText></challengeContainer></div></actionContainter></rulecard></div><div id='Jack of all Trades' style='grid-column: 1 / -1;font-size: 30px;font-weight: 900;color: white;margin-bottom:-6px;'>Jack of all Trades</div><div style='display:grid; grid-template-columns:356px ; grid-gap:2px;'><rulecard><rulecardtitle style='display:grid; grid-template-columns:1fr auto; background:var(--Cultist-4);'>
+            <div>Jack of All Trades</div>
+            <div><img 
+        src='../../../Resources/Art/Images/ClassMaster.svg' 
+        height='14px'
+        width='14px' 
+        style='
+            position: relative;
+            top: 1px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '> <f10>Master<f10></div>
+        </rulecardtitle><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Master of the Basics
+        </abilitysubtitle><rulebox style='border-color:var(--Cultist-3);  background:var(--Cultist-1);'>
+            Any Basic Class you have or get, gain +1 Level. Ex: Archer 1 -> Archer 2.
+        </rulebox><div style='height:2px;'></div><div style='height:2px;'></div><abilitysubtitle style='background:var(--Cultist-4);'>
+            Additional Stat Increases
+        </abilitysubtitle>
+        <abilitytitlebox style='background:grey; grid-template-columns: 1fr 100px;'>
+            <abilitysubtitle>
+                +1 Stat
+            </abilitysubtitle>
+            <ProgContainer>
+                <img 
+        src='../../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+        </abilitytitlebox>
+        <abilitytitlebox style='background:grey; grid-template-columns: 1fr 100px;'>
+            <abilitysubtitle>
+                +1 Stat
+            </abilitysubtitle>
+            <ProgContainer>
+                <img 
+        src='../../../Resources/Art/Images/3Progress.svg' 
+        height='15px'
+        width='15px' 
+        style='
+            position: relative;
+            top: 0px;
+            left: 0;
+            
+            padding: 0px 0px 0px 0px;
+        '>
+                <ProgPercent>%</ProgPercent>
+            </ProgContainer>
+        </abilitytitlebox></rulecard></div></div>    </div>
+</body>
+
+<!-- Mirrored from 18.188.108.249:8080/Content/Compendiums/AdvClasses/Other_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 07:18:46 GMT -->
+</html>
