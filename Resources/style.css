@@ -368,4 +368,105 @@ img{
     --Cultist-2: #8d8a93;
     --Cultist-3: #626964;
     --Cultist-4: #353c46;
+    
+    /*Jobs  https://pixelied.com/colors/color-palette-generator? */
+    --Student-1: #edf7ca;
+    --Student-2: #76c893;
+    --Student-3: #52b69a;
+    --Student-4: #1a759f;
+    
+    --Doctor-1: #ffa9a3;
+    --Doctor-2: #bf0a26;
+    --Doctor-3: #bf0a26;
+    --Doctor-4: #a10220;
+    
+    --Engineer-1: #e9f5db;
+    --Engineer-2: #90a955;
+    --Engineer-3: #87986a;
+    --Engineer-4: #37471b;
+    
+    --Scientist-1: #cffff1;
+    --Scientist-2: #5390d9;
+    --Scientist-3: #5e60ce;
+    --Scientist-4: #6930c3;
+    
+    --SuperScientist-1: #b4eafa;
+    --SuperScientist-2: #48bfe3;
+    --SuperScientist-3: #3f37c9;
+    --SuperScientist-4: #480ca8;
+    
+    --Martialist-1: #f7b267;
+    --Martialist-2: #f79d65;
+    --Martialist-3: #c84e38;
+    --Martialist-4: #ac2d27;
+    
+    --NimbleMartialist-1: #dab785;
+    --NimbleMartialist-2: #f79d65;
+    --NimbleMartialist-3: #c06649;
+    --NimbleMartialist-4: #04395e;
+    
+    --ToughMartialist-1: #fed0bb;
+    --ToughMartialist-2: #e88f7a;
+    --ToughMartialist-3: #b3523b;
+    --ToughMartialist-4: #8c2f39;
+    
+    --SlyMartialist-1: #dec9e9;
+    --SlyMartialist-2: #a06cd5;
+    --SlyMartialist-3: #b43e8f;
+    --SlyMartialist-4: #3c096c;
+    
+    --HorseRider-1: #edc4b3;
+    --HorseRider-2: #cd9777;
+    --HorseRider-3: #9d6b53;
+    --HorseRider-4: #774936;
+    
+    --Cowboy-1: #edc4b3;
+    --Cowboy-2: #cd9777;
+    --Cowboy-3: #9d6b53;
+    --Cowboy-4: #ac6911;
+    
+    --Gunslinger-1: #edc4b3;
+    --Gunslinger-2: #cd9777;
+    --Gunslinger-3: #9a8873;
+    --Gunslinger-4: #63282b;
+    
+    --Gangster-1: #e8dfbe;
+    --Gangster-2: #b88b4a;
+    --Gangster-3: #533e2d;
+    --Gangster-4: #242331;
+    
+    --Pickpocket-1: #eacdc2;
+    --Pickpocket-2: #9d576d;
+    --Pickpocket-3: #774c60;
+    --Pickpocket-4: #624381;
+    
+    --Cutpurse-1: #eacdc2;
+    --Cutpurse-2: #9d576d;
+    --Cutpurse-3: #784d4d;
+    --Cutpurse-4: #6d273c;
+    
+    --MartialArtist-1: #fcddbc;
+    --MartialArtist-2: #b88b4a;
+    --MartialArtist-3: #b6532f;
+    --MartialArtist-4: #621708;
+    
+    --MartialArtistNinja-1: #979dac;
+    --MartialArtistNinja-2: #0466c8;
+    --MartialArtistNinja-3: #023e7d;
+    --MartialArtistNinja-4: #001845;
+    
+    --MartialArtistBoxer-1: #f2d3bc;
+    --MartialArtistBoxer-2: #ebc2b4;
+    --MartialArtistBoxer-3: #cf4c42;
+    --MartialArtistBoxer-4: #730b00;
+    
+    --MartialArtistWrestler-1: #fae6c2;
+    --MartialArtistWrestler-2: #ebc2b4;
+    --MartialArtistWrestler-3: #bc3908;
+    --MartialArtistWrestler-4: #621708;
+    
+    --MartialArtistMaster-1: #fae6c2;
+    --MartialArtistMaster-2: #bb4d00;
+    --MartialArtistMaster-3: #9c2f16;
+    --MartialArtistMaster-4: #691e06;
 }
