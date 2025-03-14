@@ -1,6 +1,6 @@
 <html>
 
-<!-- Mirrored from 3.14.1.4:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 22:16:25 GMT -->
+<!-- Mirrored from 3.19.237.38:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Mar 2025 06:00:54 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <title>Rule Compendium</title>
@@ -3064,10 +3064,8 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Removing Collapsed:</b> If Character would no longer be in Weak, remove Collapsed.
         </div><div style='height:2px;'></div><rulecardsubtitle>Wounds</rulecardsubtitle>
             <div style='font-size: 8px; padding: 0px 2px;'>
-                <b>Wounds:</b> Wounds are injuries that stick around after Combat and take a while to heal.
-                <br><b>Fresh Wounds (F) vs Old Wounds (O):</b> When first receved in Combat Wounds are marked only in the Fresh Wounds <b>F</b> box.
-                <br><b>Post Combat Rest:</b> This occurs once able to rest for about an hour or so after a Combat. 
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In a Post Combat Rest Characters may remove <div style='
+                <b>Wounds:</b> Wounds are injuries that stick around after Combat and take a while to heal.<br><b>Healing Points:</b> Wounds are removed when the wound accumulates 3 <b>Healing Points</b>.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Body Areas takes Dmg:</b> All its wounds lose Treated and lose all Healing Points.<br><b>Healing:</b> At end of day Characters role <div style='
         display: inline-block;
         
         background:white;
@@ -3082,37 +3080,8 @@
         font-weight:700;
     '>
         Fort
-    </div> Fresh Wounds. 
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp <f7>May use Morale. May not use Will/<img 
-        src='../../Resources/Art/Images/Stamina.svg' 
-        height='10px'
-        width='10px' 
-        style='
-            position: relative;
-            top: 0px;
-            left: 0;
-            
-            padding: 0px 1px 0px 0px;
-        '>.</f7>
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All non Fresh Wounds become Old Wounds and the <b>O</b> box is checked as well.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Characters gain <b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Illness per Fresh Wound not removed. (Max: 4) 
-                <br> <b>Natural Healing:</b> <div style='
-        display: inline-block;
-        
-        background:white;
-        padding:0px 2px 0px 2px;
-        
-        border-width:1px;
-        border-style: solid;
-        border-radius: 4px;
-        border-color: black;
-        color: var(--Red-4);
-        
-        font-weight:700;
-    '>
-        Fort
-    </div> Wounds are removed every week.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is rolled 7 days after the last wound recieved. (New Wounds reset this timer.)
+    </div><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> <cs>1S:</cs> +1 Healing Point to a Wound.
+                <br><b>Treated Wounds:</b> Treated Wounds heal haster, removing the <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> from Healing.
             </div><div style='height:2px;'></div><rulecardsubtitle><div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;height: 15px;'><img 
         src='../../Resources/Art/Images/Injured.svg' 
         height='12px'
@@ -4186,7 +4155,32 @@
             </div>
         </div><div style='height:2px;'></div><rulecardsubtitle>Resting</rulecardsubtitle><div style='padding: 0px 2px; font-size: 8px; '>
             Rest Actions are important as they're one of the few ways to remove Fatigue.
-        </div><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    ;'><div style='text-align:center;'><div style='text-align:left;'>Rest</div></div> <actionSubtitle style=''></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+        </div><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    ;'><div style='text-align:center;'><div style='text-align:left;'>Healing</div></div> <actionSubtitle style=''></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:auto 1fr;; '>
+                                    <challenge style='border-radius:4px 0px 0px 4px;  background:var(--Gray-3)); border-color:var(--Gray-3);background:white;; border-style:solid; border-width:2px 3px 2px 2px;'>
+                                        <nowrap></nowrap>
+                                        <challengeInner style=';margin-left:0px;'><div style='text-align:center;'><div style='
+        display: inline-block;
+        
+        background:white;
+        padding:0px 2px 0px 2px;
+        
+        border-width:1px;
+        border-style: solid;
+        border-radius: 4px;
+        border-color: black;
+        color: var(--Red-4);
+        
+        font-weight:700;
+    '>
+        Fort
+    </div><div style='height:1px;'></div>
+                <div style='display: inline-block;background: var(--Dmg-3);color: white;font-weight: 500;font-size: 9px;white-space: nowrap;padding: 1px;border-style: solid;border-color: black;border-width: 1px;border-radius: 4px;padding-left: 0px;padding: 0px 1px 0px 1px;font-size: 7px;'><b>6 Only</b> </div> if Wound hasn't<br> been treated.
+                <br><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> if getting Bed Rest.
+                </div></challengeInner>
+                                    </challenge>
+                                <challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
+                    <cs>1S:</cs> +1 Healing Point to a single Wound.<div style='height:1px;'></div> <b>3 Healing Points:</b> Remove Wound.
+                    </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    ;'><div style='text-align:center;'><div style='text-align:left;'>Rest</div></div> <actionSubtitle style=''></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='margin-left:-1px; padding-left:3px;; ; background:white; border-color:black;'><div style='background:white; color:black; width:100%; font-size:;'>
                     Remove 1 Fatigue <b>OR</b> Remove <div style='
         display: inline-block;
         
@@ -4223,6 +4217,7 @@
     </div><div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> Mortal Wound/Infection.
                     </div></challengeText></challengeContainer></div></actionContainter><actionContainter style='font-size: NULL;; grid-template-columns:auto 1fr; ; '><actionTitle style='background:var(--Gray-4);    align-items:flex-start; flex-direction:column; justify-content:center;;'><div style='text-align:center;'><div style='text-align:left;'>Bed Rest</div></div> <actionSubtitle style=''></actionSubtitle></actionTitle><div style='display:grid; grid-auto-flow:row; grid-gap:1px; background:none;'><challengeContainer style='grid-template-columns:1fr;; '><challengeText style='border-style:solid; border-radius:4px; border-color:black; padding:2px; color:black; font-size:; background:white; height:100%;'><div>
                     <b>Each Day if staying in a bed:</b> <i>Eg: Inn, Cabin.</i>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div style='display:inline; font-weight:800; margin-left:1px; margin-right:1px;'>+</div><b style='font-weight:700; color: black;'>1<div style='display: inline;color:var(--Gray-3);font-weight: 800;'>D</div></b> to Healing.
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove 1 Fatigue <b>OR</b> Remove <div style='
         display: inline-block;
         
@@ -7166,5 +7161,5 @@
 </body>
 
 
-<!-- Mirrored from 3.14.1.4:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2025 22:16:30 GMT -->
+<!-- Mirrored from 3.19.237.38:8080/Content/Compendiums/Rule_Compendium.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Mar 2025 06:00:59 GMT -->
 </html>
